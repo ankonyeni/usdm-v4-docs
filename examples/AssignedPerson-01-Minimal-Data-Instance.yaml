@@ -1,0 +1,9 @@
+id: AssignedPerson_003
+name: Alice Brown
+jobTitle: Study Pharmacist
+personName:
+  id: PersonName_003
+  familyName: Brown
+  givenNames: 
+    - Alice
+

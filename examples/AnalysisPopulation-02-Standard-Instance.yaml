@@ -1,0 +1,6 @@
+id: AnalysisPopulation_Std_01
+text: The Safety Population includes all participants who received at least one dose of the study intervention.
+name: Safety Population
+label: Safety Set
+description: Primary population for the evaluation of safety and tolerability.
+

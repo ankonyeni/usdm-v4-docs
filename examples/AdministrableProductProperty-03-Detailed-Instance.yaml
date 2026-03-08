@@ -1,0 +1,20 @@
+id: AdminProductProp_Det_01
+name: Dynamic Viscosity
+type:
+  id: Code_PhysicalProp_02
+  code: C158424
+  codeSystem: ncit
+  codeSystemVersion: 24.04e
+  decode: Physical Property
+text: 40 mPa.s
+quantity:
+  id: Quant_Visc_01
+  value: 40
+  unit:
+    id: Alias_mPas
+    standardCode:
+      id: Code_mPas
+      code: mPa.s
+      codeSystem: UCUM
+      decode: millipascal second
+

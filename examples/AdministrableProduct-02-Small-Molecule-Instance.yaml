@@ -1,0 +1,31 @@
+id: AdminProd_Std_88
+name: Pirtobrutinib Oral Tablet
+label: Jaypirca 100 mg Tablet
+description: A non-covalent (reversible) Bruton's tyrosine kinase (BTK) inhibitor.
+administrableDoseForm:
+  id: AliasCode_Tablet
+  standardCode:
+    id: Code_Tablet
+    code: C42998
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Tablet
+sourcing:
+  id: Code_Central
+  code: C215659
+  codeSystem: ncit
+  codeSystemVersion: 24.04e
+  decode: Central Sourcing
+productDesignation:
+  id: Code_IMP
+  code: C202579
+  codeSystem: ncit
+  codeSystemVersion: 24.04e
+  decode: Investigational Medicinal Product
+pharmacologicClass:
+  id: Code_PK_Inhibitor
+  code: C1404
+  codeSystem: ncit
+  codeSystemVersion: 24.04e
+  decode: Protein Kinase Inhibitor
+

@@ -1,0 +1,7 @@
+id: Abbr_002
+abbreviatedText: SAE
+expandedText: Serious Adverse Event
+notes:
+  - id: Comment_001
+    text: Any untoward medical occurrence that at any dose results in death, is life-threatening, requires inpatient hospitalization, or results in persistent disability.
+

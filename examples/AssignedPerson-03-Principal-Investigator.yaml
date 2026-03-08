@@ -1,0 +1,18 @@
+id: AssignedPerson_PI_001
+name: Dr. Jane Smith, MD, PhD
+label: Lead Principal Investigator
+description: Primary investigator responsible for oversight at the central site.
+jobTitle: Principal Investigator
+personName:
+  id: PersonName_001
+  givenNames: 
+    - Jane
+  familyName: Smith
+  prefixes: 
+    - Dr.
+  suffixes:
+    - "MD"
+    - "PhD"
+  text: Dr. Jane Smith, MD, PhD
+organization: Organization_Site_A
+

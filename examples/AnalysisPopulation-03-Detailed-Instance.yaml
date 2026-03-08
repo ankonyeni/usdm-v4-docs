@@ -1,0 +1,11 @@
+id: AnalysisPopulation_Det_01
+text: The Intent-to-Treat (ITT) Population includes all randomized participants who have at least one post-baseline efficacy assessment.
+name: Intent-to-Treat Population
+label: ITT Population
+description: This population will be used as the primary set for all efficacy analyses based on the treatment assigned at randomization.
+notes:
+  - id: Comment_AP_01
+    text: Consistent with ICH E9 guidelines for statistical principles in clinical trials.
+subsetOf:
+  - PopulationDefinition_Randomized_01
+

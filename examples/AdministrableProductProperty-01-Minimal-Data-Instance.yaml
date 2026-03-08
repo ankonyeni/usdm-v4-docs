@@ -1,0 +1,10 @@
+id: AdminProductProp_Min_01
+name: Appearance
+type:
+  id: Code_PhysicalProp
+  code: C158424
+  codeSystem: ncit
+  codeSystemVersion: 24.04e
+  decode: Physical Property
+text: White to off-white powder
+

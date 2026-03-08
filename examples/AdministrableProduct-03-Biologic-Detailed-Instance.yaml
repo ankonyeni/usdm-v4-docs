@@ -1,0 +1,104 @@
+id: AdminProd_Det_77
+name: Pembrolizumab Solution for Infusion
+label: Keytruda 100 mg/4 mL
+description: A humanized monoclonal antibody that blocks the interaction between PD-1 and its ligands, PD-L1 and PD-L2.
+administrableDoseForm:
+  id: AliasCode_Infusion
+  standardCode:
+    id: Code_Infusion
+    code: C42945
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Injection, solution
+sourcing:
+  id: Code_Local
+  code: C215660
+  codeSystem: ncit
+  codeSystemVersion: 24.04e
+  decode: Local Sourcing
+productDesignation:
+  id: Code_Reference
+  code: C156473
+  codeSystem: ncit
+  codeSystemVersion: 24.04e
+  decode: Auxiliary Medicinal Product
+properties:
+  - id: AdminProductProp_PH_01
+    name: PH
+    type:
+      id: Code_ChemicalProp
+      code: C25126
+      codeSystem: ncit
+      codeSystemVersion: 24.04e
+      decode: Chemical Property
+    text: 5.5
+    quantity:
+      value: 5.5
+  - id: AdminProductProp_Osmolality_01
+    name: Osmolality
+    type:
+      id: Code_PhysicalProp
+      code: C25205
+      codeSystem: ncit
+      codeSystemVersion: 24.04e
+      decode: Physical Property
+    text: 270 mOsm/kg
+    quantity:
+      value: 270
+      unit:
+        id: Alias_mOsm_kg
+        standardCode:
+          id: Code_mOsm_kg
+          code: mOsm/kg
+          codeSystem: UCUM
+          decode: milliosmole per kilogram
+notes:
+  - id: Comment_Storage_01
+    text: Store refrigerated at 2°C to 8°C (36°F to 46°F) in original carton to protect from light.
+identifiers:
+  - id: AdminProdID_UNII_02
+    text: DPT0O3T46P
+    scope:
+      id: Org_FDA
+      name: Food and Drug Administration
+      identifier: FDA
+      identifierScheme: UNII
+      type:
+        id: Code_Regulatory
+        code: C88081
+        codeSystem: ncit
+        codeSystemVersion: 24.04e
+        decode: Regulatory Authority
+ingredients:
+  - id: Ingredient_Pembrolizumab
+    role:
+      id: Code_Active
+      code: C82533
+      codeSystem: ncit
+      codeSystemVersion: 24.04e
+      decode: Active Ingredient
+    substance:
+      id: Substance_Pembrolizumab
+      name: Pembrolizumab
+      strengths:
+        - id: Strength_25mg_mL
+          name: 25 mg/mL
+          numerator:
+            value: 25
+            unit:
+              id: Alias_mg
+              standardCode:
+                id: Code_mg
+                code: mg
+                codeSystem: UCUM
+                decode: milligram
+          denominator:
+            value: 1
+            unit:
+              id: Alias_mL
+              standardCode:
+                id: Code_mL
+                code: mL
+                codeSystem: UCUM
+                decode: milliliter
+

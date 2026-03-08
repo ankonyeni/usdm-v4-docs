@@ -1,0 +1,17 @@
+id: AdminProd_Min_99
+name: Adalimumab Injection
+administrableDoseForm:
+  id: AliasCode_Injection
+  standardCode:
+    id: Code_Injection
+    code: C42946
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Injection
+productDesignation:
+  id: Code_IMP
+  code: C202579
+  codeSystem: ncit
+  codeSystemVersion: 24.04e
+  decode: Investigational Medicinal Product
+

@@ -1,0 +1,13 @@
+id: AssignedPerson_CRC_002
+name: Robert J. Johnson
+label: Primary Site Coordinator
+description: Responsible for subject recruitment and data entry.
+jobTitle: Clinical Research Coordinator
+personName:
+  id: PersonName_002
+  givenNames: 
+    - Robert
+  familyName: Johnson
+  text: Robert Johnson
+organization: Organization_Sponsor_Corp
+

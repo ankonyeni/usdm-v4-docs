@@ -1,0 +1,9 @@
+id: Abbr_003
+abbreviatedText: MedDRA
+expandedText: Medical Dictionary for Regulatory Activities
+notes:
+  - id: Comment_002
+    text: A clinically-validated international medical terminology used by regulatory authorities and the regulated biopharmaceutical industry.
+  - id: Comment_003
+    text: Used throughout the entire regulatory process, from pre-marketing to post-marketing.
+
