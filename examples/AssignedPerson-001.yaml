@@ -1,8 +1,0 @@
-id: AP-001
-name: Alice Brown
-jobTitle: Study Pharmacist
-personName:
-  id: PER-001
-  familyName: Brown
-  givenNames: 
-    - Alice
