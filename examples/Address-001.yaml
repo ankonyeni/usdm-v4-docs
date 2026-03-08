@@ -1,4 +1,2 @@
-# Example scaffold for Address (Address)
-# Reference: docs/classes/Address.md
-# Replace placeholder values with a real example instance.
-id: TODO
+id: ADDR-001
+text: Piazza del Colosseo, 1, 00184 Roma RM, Italy

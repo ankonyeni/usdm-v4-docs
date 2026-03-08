@@ -1,0 +1,6 @@
+id: ABBR-002
+abbreviatedText: RECIST
+expandedText: Response Evaluation Criteria in Solid Tumors
+notes:
+  - id: NT0001
+    text: Response Evaluation Criteria in Solid Tumors (RECIST 1.1) is the standard, validated method for assessing cancer treatment efficacy using imaging

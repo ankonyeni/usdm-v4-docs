@@ -1,0 +1,14 @@
+id: AP-003
+name: Dr. Jane Smith
+label: Lead Principal Investigator
+description: Primary investigator responsible for oversight at the central site.
+jobTitle: Principal Investigator
+personName:
+  id: PER-003
+  givenNames: 
+    - Jane
+  familyName: Smith
+  prefixes: 
+    - Dr.
+  text: Dr. Jane Smith
+organization: Organization_Site_A

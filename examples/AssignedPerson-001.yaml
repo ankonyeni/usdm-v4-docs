@@ -1,9 +1,8 @@
-# Example scaffold for Assigned Person (AssignedPerson)
-# Reference: docs/classes/AssignedPerson.md
-# Replace placeholder values with a real example instance.
-id: TODO
-name: TODO
-personName: {}
-jobTitle: TODO
-label: TODO
-description: TODO
+id: AP-001
+name: Alice Brown
+jobTitle: Study Pharmacist
+personName:
+  id: PER-001
+  familyName: Brown
+  givenNames: 
+    - Alice
