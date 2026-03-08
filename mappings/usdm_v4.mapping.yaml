@@ -1,0 +1,201 @@
+version: 1
+
+source:
+  repository: https://github.com/cdisc-org/DDF-RA
+  release: v4.0.0
+  lock_file: upstream/cdisc-ddf-ra/v4.0.0/source-lock.json
+  model_path: upstream/cdisc-ddf-ra/v4.0.0/Deliverables/UML/dataStructure.yml
+
+target:
+  schema_path: schemas/usdm_v4.linkml.yaml
+  schema:
+    id: https://example.org/usdm/v4/linkml
+    name: usdm_v4
+    title: USDM v4 LinkML
+    description: LinkML representation generated from the CDISC DDF-RA USDM v4 dataStructure.yml model.
+    default_prefix: usdm
+    default_range: string
+    imports:
+      - linkml:types
+    prefixes:
+      linkml: https://w3id.org/linkml/
+      usdm: https://example.org/usdm/v4/
+      ncit: http://purl.obolibrary.org/obo/NCIT_
+
+source_model:
+  root_entity_kind: class
+  class_container: root
+  root_class: Study
+  class_fields:
+    title: Preferred Term
+    description: Definition
+    modifier: Modifier
+    is_a: Super Classes
+    slots: Attributes
+    exact_mappings: NCI C-Code
+    annotations:
+      nci_c_code: NCI C-Code
+      preferred_term: Preferred Term
+      description: Definition
+      modifier: Modifier
+
+  slot_fields:
+    name: Model Name
+    title: Preferred Term
+    type: Type
+    ref_key: $ref
+    cardinality: Cardinality
+    description: Definition
+    inherited_from: Inherited From
+    relationship_type: Relationship Type
+    model_name: Model Name
+    model_representation: Model Representation
+    preferred_term: Preferred Term
+    exact_mappings: NCI C-Code
+    annotations:
+      nci_c_code: NCI C-Code
+      preferred_term: Preferred Term
+      description: Definition
+      relationship_type: Relationship Type
+      model_name: Model Name
+      model_representation: Model Representation
+
+defaults:
+  naming:
+    preserve_class_names: true
+    preserve_slot_names: false
+    slot_name_source: Model Name
+    slot_name_fallback: source_key
+
+  classes:
+    modifier_to_abstract:
+      Abstract: true
+      Concrete: false
+    if_modifier_missing:
+      abstract: false
+    emit_abstract_false: false
+    class_uri_pattern: usdm:{class_name}
+
+  slots:
+    strategy: class_local
+    add_in_declared_order: true
+    identifier_slot_names:
+      - id
+    preserve_source_annotations: true
+    relationship_type_inline:
+      source_field: Relationship Type
+      destination_field: inlined
+      map:
+        Value: true
+        Ref: false
+      on_missing: omit
+      on_unknown_value: error
+
+  cardinality_map:
+    "1":
+      required: true
+      multivalued: false
+    "0..1":
+      required: false
+      multivalued: false
+    "0..2":
+      required: false
+      multivalued: true
+      maximum_cardinality: 2
+    "0..*":
+      required: false
+      multivalued: true
+    "1..*":
+      required: true
+      multivalued: true
+
+  ref_resolution:
+    type_list_policy: union_any_of
+    on_unknown_ref: error
+
+    primitive_refs:
+      "#/string":
+        kind: scalar
+        range: string
+      "#/boolean":
+        kind: scalar
+        range: boolean
+      "#/integer":
+        kind: scalar
+        range: integer
+      "#/number":
+        kind: scalar
+        range: float
+      "#/float":
+        kind: scalar
+        range: float
+      "#/date":
+        kind: scalar
+        range: date
+      "#/datetime":
+        kind: scalar
+        range: datetime
+      "#/uri":
+        kind: scalar
+        range: uri
+
+    class_refs:
+      prefix: "#/"
+      kind: class
+      strip_prefix: true
+      validate_target_exists_in_source: true
+      target_lookup: top_level_key
+
+    overrides: {}
+
+  inheritance:
+    source_field: Super Classes
+    destination_field: is_a
+    ref_key: $ref
+    ref_prefix: "#/"
+    strip_prefix: true
+    ref_list_policy: single_ref_required
+    validate_target_exists_in_source: true
+    on_missing: omit
+    on_unknown_ref: error
+
+  inherited_slots:
+    source_field: Inherited From
+    ref_key: $ref
+    ref_prefix: "#/"
+    strip_prefix: true
+    ref_list_policy: single_ref_required
+    validate_target_exists_in_source: true
+    omit_when_class_is_a: true
+    on_missing: omit
+    on_unknown_ref: error
+
+  exact_mappings:
+    enabled: true
+    destination_field: exact_mappings
+    source_field: NCI C-Code
+    curie_prefix: ncit
+    curie_template: ncit:{value}
+    value_pattern: ^C[0-9]+$
+    on_missing: omit
+    on_invalid_value: error
+    preserve_source_annotation: true
+
+emission:
+  include_schema_annotations: true
+  schema_annotations:
+    source_repository: https://github.com/cdisc-org/DDF-RA
+    source_release: v4.0.0
+    source_model_path: Deliverables/UML/dataStructure.yml
+  include_exact_mappings: true
+  include_class_annotations: false
+  include_slot_annotations: false
+
+overrides:
+  classes:
+    Study:
+      tree_root: true
+  slots:
+    instanceType:
+      ignore: true
+  refs: {}

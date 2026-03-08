@@ -1,0 +1,89 @@
+# {% if schema.title %}{{ schema.title }}{% else %}{{ schema.name }}{% endif %}
+
+{% if schema.description %}{{ schema.description }}{% endif %}
+
+URI: {{ schema.id }}
+
+Name: {{ schema.name }}
+
+{% set type_names = gen.all_type_object_names() %}
+{% set tree_roots = gen.all_class_objects()|selectattr('tree_root')|list %}
+{% set enum_objects = gen.all_enum_objects()|list %}
+{% set subset_objects = schemaview.all_subsets().values()|list %}
+
+{% if include_top_level_diagram %}
+
+## Schema Diagram
+
+{% if diagram_type == "mermaid_class_diagram" and tree_roots %}
+{% set root = tree_roots[0] %}
+```{{ gen.mermaid_directive() }}
+ classDiagram
+    class {{ gen.name(root) }}
+    click {{ gen.name(root) }} href "classes/{{ gen.name(root) }}/"
+{% for slot in schemaview.class_induced_slots(root.name)|sort(attribute='name') -%}
+{% if slot.range is not none and slot.range not in type_names -%}
+{% set target = schemaview.get_element(slot.range) -%}
+{% if target -%}
+    {{ gen.name(root) }} --> "{{ gen.cardinality(slot) }}" {{ gen.name(target) }} : {{ gen.name(slot) }}
+    click {{ gen.name(target) }} href "classes/{{ gen.name(target) }}/"
+{% endif -%}
+{% endif -%}
+{% endfor -%}
+```
+{% else %}
+```{{ gen.mermaid_directive() }}
+{{ gen.mermaid_diagram() }}
+```
+{% endif %}
+{% endif %}
+
+## Classes
+
+| Class | Description |
+| --- | --- |
+{% if gen.hierarchical_class_view -%}
+{% for u, v in gen.class_hierarchy_as_tuples() -%}
+| {{ "&nbsp;"|safe*u*8 }}{{ gen.link(schemaview.get_class(v), True) }} | {{ schemaview.get_class(v).description|enshorten }} |
+{% endfor %}
+{% else -%}
+{% for c in gen.all_class_objects()|sort(attribute=sort_by) -%}
+| {{ gen.link(c, True) }} | {{ c.description|enshorten }} |
+{% endfor %}
+{% endif %}
+
+## Slots
+
+| Slot | Description |
+| --- | --- |
+{% for s in gen.all_slot_objects()|sort(attribute=sort_by) -%}
+| {{ gen.link(s, True) }} | {{ s.description|enshorten }} |
+{% endfor %}
+
+{% if enum_objects %}
+## Enumerations
+
+| Enumeration | Description |
+| --- | --- |
+{% for e in enum_objects|sort(attribute=sort_by) -%}
+| {{ gen.link(e, True) }} | {{ e.description|enshorten }} |
+{% endfor %}
+{% endif %}
+
+## Types
+
+| Type | Description |
+| --- | --- |
+{% for t in gen.all_type_objects()|sort(attribute=sort_by) -%}
+| {{ gen.link(t, True) }} | {{ t.description|enshorten }} |
+{% endfor %}
+
+{% if subset_objects %}
+## Subsets
+
+| Subset | Description |
+| --- | --- |
+{% for ss in subset_objects|sort(attribute='name') -%}
+| {{ gen.link(ss, True) }} | {{ ss.description|enshorten }} |
+{% endfor %}
+{% endif %}

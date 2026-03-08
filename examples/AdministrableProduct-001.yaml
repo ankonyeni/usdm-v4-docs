@@ -1,0 +1,9 @@
+# Example scaffold for Administrable Product (AdministrableProduct)
+# Reference: docs/classes/AdministrableProduct.md
+# Replace placeholder values with a real example instance.
+id: TODO
+name: TODO
+administrableDoseForm: {}
+productDesignation: {}
+label: TODO
+description: TODO

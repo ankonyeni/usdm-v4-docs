@@ -1,0 +1,11 @@
+site_name: USDM v4 LinkML Docs
+site_description: LinkML schema and documentation site for CDISC USDM v4 derivative work
+theme:
+  name: mkdocs
+
+extra_javascript:
+  - https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js
+  - javascripts/mermaid-init.js
+
+extra_css:
+  - stylesheets/site-overrides.css

@@ -1,0 +1,12 @@
+# Example scaffold for Study Amendment (StudyAmendment)
+# Reference: docs/classes/StudyAmendment.md
+# Replace placeholder values with a real example instance.
+id: TODO
+name: TODO
+number: TODO
+summary: TODO
+geographicScopes: []
+changes: []
+primaryReason: {}
+label: TODO
+description: TODO

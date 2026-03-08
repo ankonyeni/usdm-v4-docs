@@ -1,0 +1,15 @@
+# Example scaffold for Observational Study Design (ObservationalStudyDesign)
+# Reference: docs/classes/ObservationalStudyDesign.md
+# Replace placeholder values with a real example instance.
+model: {}
+timePerspective: {}
+id: TODO
+name: TODO
+rationale: TODO
+eligibilityCriteria: []
+arms: []
+studyCells: []
+epochs: []
+population: {}
+label: TODO
+description: TODO

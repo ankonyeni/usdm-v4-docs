@@ -1,0 +1,8 @@
+# Example scaffold for Disease/Condition Indication (Indication)
+# Reference: docs/classes/Indication.md
+# Replace placeholder values with a real example instance.
+id: TODO
+name: TODO
+isRareDisease: false
+label: TODO
+description: TODO

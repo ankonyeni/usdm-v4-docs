@@ -1,0 +1,10 @@
+# Example scaffold for Study Arm (StudyArm)
+# Reference: docs/classes/StudyArm.md
+# Replace placeholder values with a real example instance.
+id: TODO
+name: TODO
+type: {}
+dataOriginType: {}
+dataOriginDescription: TODO
+label: TODO
+description: TODO

@@ -1,0 +1,12 @@
+# Example scaffold for Estimand (Estimand)
+# Reference: docs/classes/Estimand.md
+# Replace placeholder values with a real example instance.
+id: TODO
+populationSummary: TODO
+name: TODO
+analysisPopulation: {}
+variableOfInterest: {}
+intercurrentEvents: []
+interventions: []
+label: TODO
+description: TODO

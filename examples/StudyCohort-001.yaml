@@ -1,0 +1,8 @@
+# Example scaffold for Study Cohort (StudyCohort)
+# Reference: docs/classes/StudyCohort.md
+# Replace placeholder values with a real example instance.
+id: TODO
+name: TODO
+includesHealthySubjects: false
+label: TODO
+description: TODO

@@ -1,0 +1,29 @@
+{
+  "upstream_repository": "https://github.com/cdisc-org/DDF-RA",
+  "release_tag": "v4.0.0",
+  "release_commit": "aa303cb32f5d3ceecc68a16803e26720d2c1fc26",
+  "locked_on": "2026-03-07",
+  "files": [
+    {
+      "path": "upstream/cdisc-ddf-ra/v4.0.0/LICENSE",
+      "upstream_path": "LICENSE",
+      "git_blob_sha": "e5c3c83f2b3da7d28ae37554fb81212cf0b156f2",
+      "sha256": "7DE7787967D7F4D687A73D553B12940F21F2D539C31FC7C75462167B12746BAC",
+      "size": 1062
+    },
+    {
+      "path": "upstream/cdisc-ddf-ra/v4.0.0/README.md",
+      "upstream_path": "README.md",
+      "git_blob_sha": "1193927a4ad8494c83b82edda9e9a53abf57d95c",
+      "sha256": "E4A16D0BB2B35006FF7A4BCEEDA69BBC8625D8EA988A5596F3CAF98F49171DF9",
+      "size": 2137
+    },
+    {
+      "path": "upstream/cdisc-ddf-ra/v4.0.0/Deliverables/UML/dataStructure.yml",
+      "upstream_path": "Deliverables/UML/dataStructure.yml",
+      "git_blob_sha": "9e074cfcba77661e4f491f183caf53ee06c6970f",
+      "sha256": "6F49A407AEF41A66DD40A82AD3348672A22CD8874849254D7E4F27D6275DACA6",
+      "size": 269184
+    }
+  ]
+}

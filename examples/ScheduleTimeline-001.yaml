@@ -1,0 +1,10 @@
+# Example scaffold for Schedule Timeline (ScheduleTimeline)
+# Reference: docs/classes/ScheduleTimeline.md
+# Replace placeholder values with a real example instance.
+id: TODO
+name: TODO
+entryCondition: TODO
+mainTimeline: false
+entry: {}
+label: TODO
+description: TODO

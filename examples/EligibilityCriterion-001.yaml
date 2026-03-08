@@ -1,0 +1,10 @@
+# Example scaffold for Study Eligibility Criterion (EligibilityCriterion)
+# Reference: docs/classes/EligibilityCriterion.md
+# Replace placeholder values with a real example instance.
+id: TODO
+name: TODO
+identifier: TODO
+category: {}
+criterionItem: {}
+label: TODO
+description: TODO

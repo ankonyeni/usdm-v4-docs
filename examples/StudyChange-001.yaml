@@ -1,0 +1,10 @@
+# Example scaffold for Study Change (StudyChange)
+# Reference: docs/classes/StudyChange.md
+# Replace placeholder values with a real example instance.
+id: TODO
+name: TODO
+rationale: TODO
+summary: TODO
+changedSections: []
+label: TODO
+description: TODO

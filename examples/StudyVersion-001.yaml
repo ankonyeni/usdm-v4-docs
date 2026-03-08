@@ -1,0 +1,8 @@
+# Example scaffold for Study Version (StudyVersion)
+# Reference: docs/classes/StudyVersion.md
+# Replace placeholder values with a real example instance.
+id: TODO
+versionIdentifier: TODO
+rationale: TODO
+studyIdentifiers: []
+titles: []

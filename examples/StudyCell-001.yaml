@@ -1,0 +1,7 @@
+# Example scaffold for Study Design Cell (StudyCell)
+# Reference: docs/classes/StudyCell.md
+# Replace placeholder values with a real example instance.
+id: TODO
+arm: {}
+epoch: {}
+elements: []

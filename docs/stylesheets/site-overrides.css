@@ -1,0 +1,5 @@
+.navbar .navbar-nav,
+.navbar .navbar-toggler,
+.navbar .navbar-collapse {
+  display: none !important;
+}

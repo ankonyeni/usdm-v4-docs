@@ -1,0 +1,9 @@
+# Example scaffold for Intercurrent Event (IntercurrentEvent)
+# Reference: docs/classes/IntercurrentEvent.md
+# Replace placeholder values with a real example instance.
+strategy: TODO
+id: TODO
+name: TODO
+text: TODO
+label: TODO
+description: TODO

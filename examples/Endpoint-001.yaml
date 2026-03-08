@@ -1,0 +1,10 @@
+# Example scaffold for Study Endpoint (Endpoint)
+# Reference: docs/classes/Endpoint.md
+# Replace placeholder values with a real example instance.
+level: {}
+purpose: TODO
+id: TODO
+name: TODO
+text: TODO
+label: TODO
+description: TODO

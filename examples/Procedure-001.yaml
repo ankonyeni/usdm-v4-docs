@@ -1,0 +1,9 @@
+# Example scaffold for Procedure (Procedure)
+# Reference: docs/classes/Procedure.md
+# Replace placeholder values with a real example instance.
+id: TODO
+name: TODO
+procedureType: TODO
+code: {}
+label: TODO
+description: TODO

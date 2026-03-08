@@ -1,0 +1,8 @@
+# Example scaffold for Subject Enrollment (SubjectEnrollment)
+# Reference: docs/classes/SubjectEnrollment.md
+# Replace placeholder values with a real example instance.
+id: TODO
+name: TODO
+quantity: {}
+label: TODO
+description: TODO

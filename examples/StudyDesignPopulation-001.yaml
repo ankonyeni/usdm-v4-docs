@@ -1,0 +1,8 @@
+# Example scaffold for Study Design Population (StudyDesignPopulation)
+# Reference: docs/classes/StudyDesignPopulation.md
+# Replace placeholder values with a real example instance.
+id: TODO
+name: TODO
+includesHealthySubjects: false
+label: TODO
+description: TODO

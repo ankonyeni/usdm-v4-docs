@@ -1,0 +1,7 @@
+# Example scaffold for Range (Range)
+# Reference: docs/classes/Range.md
+# Replace placeholder values with a real example instance.
+minValue: {}
+maxValue: {}
+isApproximate: false
+id: TODO
