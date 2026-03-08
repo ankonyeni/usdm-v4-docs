@@ -1,116 +1,58 @@
 # USDM v4 LinkML Docs
 
-This repository contains a derivative LinkML representation of the CDISC USDM v4 model and the tooling used to generate browsable documentation for it.
+This repository contains a derivative LinkML representation of the CDISC USDM v4 model and the source materials used to publish the documentation site.
 
-The project workflow is:
+Documentation site:
 
-- vendor a pinned upstream copy of the USDM v4 source model from `cdisc-org/DDF-RA`
-- convert `Deliverables/UML/dataStructure.yml` into LinkML
-- generate reference documentation with `gen-doc`
-- build a static documentation site with MkDocs
-- include hand-authored per-class examples inline in the generated class pages
+- https://ankonyeni.github.io/usdm-v4-docs/
 
-This is an independent derivative documentation project. It is not an official CDISC repository.
+This repository is primarily a publication source repository. It is intended to preserve:
 
-## Repository Structure
+- the pinned upstream USDM v4 source model used as input
+- the derived LinkML schema
+- the mapping and scripts used to regenerate the published documentation
+- the GitHub Actions workflow that publishes the site to GitHub Pages
 
-```text
-.github/                  GitHub Actions workflows
-docs/                     MkDocs source assets and generated reference markdown
-examples/                 Inline YAML examples matched by class name
-mappings/                 Importer mapping rules
-requirements.txt          Runtime dependencies for local and CI use
-requirements-dev.txt      Optional development dependencies
-schemas/                  Generated LinkML schema files
-scripts/                  Importer, build, and helper scripts
-templates/docgen/         Custom LinkML docgen templates
-upstream/                 Pinned vendored upstream DDF-RA source files
-mkdocs.yml                MkDocs configuration
-```
+It is not an official CDISC repository.
 
-## Source Model
+## License
 
-The importer reads this pinned upstream file:
+Unless otherwise noted, the original work in this repository is made available under the MIT License. Vendored and derived third-party material, including the DDF-RA source content under `upstream/`, remains subject to its original licensing and attribution requirements.
 
-```text
-upstream/cdisc-ddf-ra/v4.0.0/Deliverables/UML/dataStructure.yml
-```
+## Attribution
 
-The upstream copy is treated as source input. Do not edit it in place. Any conversion logic belongs in:
+This repository is based in part on content from `cdisc-org/DDF-RA`.
 
-- `mappings/usdm_v4.mapping.yaml`
-- `scripts/transform.py`
+Attribution statement:
 
-## Main Outputs
+- Content based on DDF-RA (GitHub) used under the CC-BY-4.0 license.
 
-- `schemas/usdm_v4.linkml.yaml`: generated LinkML schema
-- `docs/`: generated markdown reference pages and MkDocs assets
-- `site/`: built MkDocs site output
+See [THIRD_PARTY_LICENSES.md](THIRD_PARTY_LICENSES.md) for third-party licensing and attribution details.
 
-## Local Setup
+## Repository Purpose
 
-```powershell
-python -m venv .venv
-.venv\Scripts\Activate.ps1
-python -m pip install --upgrade pip
-python -m pip install -r requirements.txt
-```
+USDM v4 is a large and structurally complex model, and the upstream materials can be difficult to navigate on their own. The model is distributed across the source `dataStructure.yml`, large UML artifacts, and supporting documentation, which makes it harder to follow class relationships, understand the overall structure, and find concrete examples quickly.
 
-## Common Commands
+This repository exists to make the model easier to explore by bringing together:
 
-Verify the vendored upstream source:
-
-```powershell
-python .\scripts\cli.py check-upstream
-```
-
-Generate the LinkML schema:
-
-```powershell
-python .\scripts\cli.py import-schema
-```
-
-Build the reference docs and MkDocs site:
-
-```powershell
-python .\scripts\build_docs.py
-```
-
-## Example Files
-
-Inline examples live in `examples/` and are pulled into the generated class documentation through `gen-doc --example-directory`.
-
-Use this naming convention:
-
-```text
-ClassName-001.yaml
-ClassName-002.yaml
-```
-
-Examples:
-
-- `examples/Abbreviation-001.yaml`
-- `examples/Study-001.yaml`
-
-The filename prefix before the first `-` must exactly match the LinkML class name.
-
-## Documentation Build Notes
-
-The docs build uses:
-
-- `gen-doc --preserve-names`
-- `--subfolder-type-separation`
-- `--truncate-descriptions false`
-- Mermaid class diagrams
-- custom templates from `templates/docgen/`
-
-The generated reference docs are written to `docs/`, and the site is built into `site/`.
-
-## Project Intent
-
-USDM v4 is large and difficult to navigate from the upstream UML assets alone. This repository exists to make the model easier to learn by providing:
-
-- a LinkML form of the model
-- generated per-class documentation
+- the pinned upstream `dataStructure.yml` source model
+- a derived LinkML representation of the model
+- generated class-level documentation for the model
 - inline examples for concrete classes
-- a publishable static documentation site
+
+## Main Contents
+
+- `upstream/`: pinned upstream USDM v4 source inputs
+- `schemas/usdm_v4.linkml.yaml`: derived LinkML schema
+- `mappings/usdm_v4.mapping.yaml`: mapping rules used by the importer
+- `examples/`: example YAML instances used in the published documentation
+- `scripts/`: scripts used to regenerate the schema and documentation
+- `.github/workflows/docs.yml`: GitHub Pages publishing workflow
+
+## Maintenance
+
+This repository is not meant to be under constant active development. It should change only when one of the following changes:
+
+- the LinkML conversion logic or mapping
+- the published examples
+- the GitHub Pages build or publishing workflow
