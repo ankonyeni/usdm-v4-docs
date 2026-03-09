@@ -1,0 +1,22 @@
+id: Activity_011
+name: VITAL_SIGNS
+label: Vital Signs
+description: Vital Signs assessment including blood pressure, pulse, respiratory rate, and body temperature.
+biomedicalConcepts:
+  - BiomedicalConcept_7
+  - BiomedicalConcept_8
+  - BiomedicalConcept_9
+  - BiomedicalConcept_10
+definedProcedures:
+  - id: Procedure_010
+    name: PHYSICAL_EXAM
+    label: Physical Examination
+    description: blood pressure, pulse, and body temperature
+    procedureType: ""
+    code:
+      id: Code_010
+      code: 410188000
+      codeSystem: SNOMED
+      codeSystemVersion: 2026-03-01
+      decode: Taking patient vital signs assessment
+

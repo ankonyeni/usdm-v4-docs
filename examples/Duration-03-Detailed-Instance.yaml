@@ -1,0 +1,11 @@
+id: Duration_003
+text: "Observation period"
+quantity:
+  minValue:
+    value: 12
+    unit: h
+  maxValue:
+    value: 48
+    unit: h
+durationWillVary: true
+reasonDurationWillVary: "Observation time depends on clinical response"

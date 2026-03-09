@@ -1,0 +1,11 @@
+id: Duration_002
+text: "14 to 21 days"
+quantity:
+  minValue:
+    value: 14
+    unit: d
+  maxValue:
+    value: 21
+    unit: d
+durationWillVary: false
+

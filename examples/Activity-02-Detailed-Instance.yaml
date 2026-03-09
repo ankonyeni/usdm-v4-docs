@@ -1,0 +1,9 @@
+id: Activity_009
+name: SCREENING_ASSESSMENTS
+label: Screening Assessments
+description: Group of screening-related activities
+children:
+  - Activity_010
+  - Activity_011
+  - Activity_012
+

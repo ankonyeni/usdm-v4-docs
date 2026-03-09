@@ -1,0 +1,9 @@
+id: CommentAnnot_Deviation_001
+text: Fasting state was not maintained for the required 8 hours prior to the glucose check.
+codes:
+  - id: Code_Protocol_Deviation
+    code: C50996
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Protocol Deviation
+

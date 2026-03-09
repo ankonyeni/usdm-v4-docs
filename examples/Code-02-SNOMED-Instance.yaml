@@ -1,0 +1,9 @@
+id: Code_SNOMED_COVID_002
+code: 840539006
+codeSystem: SNOMED
+codeSystemVersion: 2026-03-01
+decode: COVID-19
+notes:
+  - id: Note_SNOMED_02
+    text: Disease caused by severe acute respiratory syndrome coronavirus 2
+    
