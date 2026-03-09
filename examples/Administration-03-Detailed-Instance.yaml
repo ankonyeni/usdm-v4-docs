@@ -21,6 +21,7 @@ dose:
       id: Code_mg
       code: C28253
       codeSystem: ncit
+      codeSystemVersion: 24.04e
       decode: mg
 frequency:
   id: AliasCode_Q3W
@@ -39,6 +40,7 @@ duration:
       id: Code_min
       code: min
       codeSystem: UCUM
+      codeSystemVersion: 2.2
       decode: minute
 notes:
   - id: Comment_Admin_002

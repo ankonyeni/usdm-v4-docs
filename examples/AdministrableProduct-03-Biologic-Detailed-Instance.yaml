@@ -51,6 +51,7 @@ properties:
           id: Code_mOsm_kg
           code: mOsm/kg
           codeSystem: UCUM
+          codeSystemVersion: 2.2
           decode: milliosmole per kilogram
 notes:
   - id: Comment_Storage_01
@@ -91,6 +92,7 @@ ingredients:
                 id: Code_mg
                 code: mg
                 codeSystem: UCUM
+                codeSystemVersion: 2.2
                 decode: milligram
           denominator:
             value: 1
@@ -100,5 +102,6 @@ ingredients:
                 id: Code_mL
                 code: mL
                 codeSystem: UCUM
+                codeSystemVersion: 2.2
                 decode: milliliter
 

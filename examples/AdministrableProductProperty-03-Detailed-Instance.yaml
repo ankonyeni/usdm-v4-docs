@@ -16,5 +16,6 @@ quantity:
       id: Code_mPas
       code: mPa.s
       codeSystem: UCUM
+      codeSystemVersion: 2.2
       decode: millipascal second
 
