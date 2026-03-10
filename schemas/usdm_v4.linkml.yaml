@@ -116,7 +116,7 @@ classes:
         required: false
         multivalued: true
         inlined: true
-      biomedicalConcepts:
+      biomedicalConceptIds:
         description: A USDM relationship between the Activity and BiomedicalConcept
           classes which identifies the set of biomedical concepts associated with
           the activity.
@@ -124,14 +124,14 @@ classes:
         required: false
         multivalued: true
         inlined: false
-      next:
+      nextId:
         description: A USDM relationship within the Activity class which identifies
           the activity that follows the current activity in the display order.
         range: Activity
         required: false
         multivalued: false
         inlined: false
-      timeline:
+      timelineId:
         description: A USDM relationship between the Activity and ScheduleTimeline
           classes which provides the details associated with an instance of the scheduled
           timeline related to the activity.
@@ -139,21 +139,21 @@ classes:
         required: false
         multivalued: false
         inlined: false
-      children:
+      childIds:
         description: A USDM relationship within the Activity class which identifies
           the set of child activities associated with an activity.
         range: Activity
         required: false
         multivalued: true
         inlined: false
-      previous:
+      previousId:
         description: A USDM relationship within the Activity class which identifies
           the activity that precedes the current activity in the display order.
         range: Activity
         required: false
         multivalued: false
         inlined: false
-      bcSurrogates:
+      bcSurrogateIds:
         description: A USDM relationship between the Activity and BiomedicalConceptSurrogate
           classes which identifies the set of biomedical concept surrogates associated
           with the activity.
@@ -161,7 +161,7 @@ classes:
         required: false
         multivalued: true
         inlined: false
-      bcCategories:
+      bcCategoryIds:
         description: A USDM relationship between the Activity and BiomedicalConceptCategory
           classes which identifies the set of biomedical concept categories associated
           with the activity.
@@ -529,7 +529,7 @@ classes:
         inlined: true
         exact_mappings:
         - ncit:C215544
-      administrableProduct:
+      administrableProductId:
         description: A USDM relationship between the Administration and AdministrableProductDefinition
           classes which identifies the administrable product associated with the administration
           of the product, agent, or therapy.
@@ -537,7 +537,7 @@ classes:
         required: false
         multivalued: false
         inlined: false
-      medicalDevice:
+      medicalDeviceId:
         description: A USDM relationship between the Administration and MedicalDevice
           classes which identifies the medical device associated with an instance
           of product, agent, or therapy administration.
@@ -647,7 +647,7 @@ classes:
         inlined: true
         exact_mappings:
         - ncit:C215525
-      subsetOf:
+      subsetOfIds:
         description: A USDM relationship between the AnalysisPopulation and PopulationDefinition
           classes which identifies the population definition of which the analysis
           population is a subset.
@@ -718,7 +718,7 @@ classes:
         multivalued: false
         exact_mappings:
         - ncit:C215599
-      organization:
+      organizationId:
         description: A USDM relationship between the AssignedPerson and Organization
           classes that identifies that organization to which the assigned person belongs.
         range: Organization
@@ -869,7 +869,7 @@ classes:
         inlined: true
         exact_mappings:
         - ncit:C215533
-      members:
+      memberIds:
         description: A USDM relationship between the BiomedicalConceptCategory and
           BiomedicalConcept classes which identifies the set of biomedical concept
           members associated with the biomedical concept category.
@@ -877,7 +877,7 @@ classes:
         required: false
         multivalued: true
         inlined: false
-      children:
+      childIds:
         description: A USDM relationship within the BiomedicalConceptCategory class
           which identifies the set of child categories of a biomedical concept.
         range: BiomedicalConceptCategory
@@ -1212,7 +1212,7 @@ classes:
     exact_mappings:
     - ncit:C25457
     attributes:
-      context:
+      contextIds:
         description: A USDM relationship between the Condition and the ScheduledActivityInstance
           or Activity classes which identifies the scheduled activity instance or
           activity to which the condition belongs.
@@ -1222,7 +1222,7 @@ classes:
         required: false
         multivalued: true
         inlined: false
-      appliesTo:
+      appliesToIds:
         description: A USDM relationship between the Condition and the Activity, Procedure,
           BiomedicalConcept, BiomedicalConceptSurrogate, or BiomedicalConceptCategory
           classes which identifies the procedure, activity, biomedical concept, biomedical
@@ -1263,7 +1263,7 @@ classes:
         multivalued: false
         exact_mappings:
         - ncit:C47953
-      conditionTarget:
+      conditionTargetId:
         description: A USDM relationship between the ConditionAssignment and ScheduledInstance
           classes which identifies the scheduled instance associated with the condition
           assignment.
@@ -1307,7 +1307,7 @@ classes:
         multivalued: false
         exact_mappings:
         - ncit:C215610
-      appliesTo:
+      appliesToId:
         description: A USDM relationship between the DocumentContentReference and
           StudyDefinitionDocument classes which identifies the study definition document
           to which the document content reference applies.
@@ -1439,14 +1439,14 @@ classes:
         inlined: true
         exact_mappings:
         - ncit:C215537
-      criterionItem:
+      criterionItemId:
         description: A USDM relationship between the EligibilityCriterion and EligibilityCriterionItem
           classes which identifies the item belonging to the eligibility criterion.
         range: EligibilityCriterionItem
         required: true
         multivalued: false
         inlined: false
-      next:
+      nextId:
         description: A USDM relationship within the EligibilityCriterion class which
           identifies the eligibility criterion that follows the current eligibility
           criterion in the display order.
@@ -1454,7 +1454,7 @@ classes:
         required: false
         multivalued: false
         inlined: false
-      previous:
+      previousId:
         description: A USDM relationship within the EligibilityCriterion class which
           identifies the eligibility criterion that precedes the current eligibility
           criterion in the display order.
@@ -1565,7 +1565,7 @@ classes:
         required: false
         multivalued: false
         inlined: true
-      next:
+      nextId:
         description: A USDM relationship within the Encounter class which identifies
           the encounter that chronologically follows the current encounter.
         range: Encounter
@@ -1580,14 +1580,14 @@ classes:
         required: false
         multivalued: false
         inlined: true
-      scheduledAt:
+      scheduledAtId:
         description: A USDM relationship between the Encounter and Timing classes
           which provides information related to the scheduled timing of an encounter.
         range: Timing
         required: false
         multivalued: false
         inlined: false
-      previous:
+      previousId:
         description: A USDM relationship within the Encounter class which identifies
           the encounter that chronologically precedes the current encounter.
         range: Encounter
@@ -1693,7 +1693,7 @@ classes:
         inlined: true
         exact_mappings:
         - ncit:C215521
-      analysisPopulation:
+      analysisPopulationId:
         description: A USDM relationship between the Estimand and AnalysisPopulation
           classes which provides the details associated with an instance of the analysis
           population used to partially define a study estimand.
@@ -1701,7 +1701,7 @@ classes:
         required: true
         multivalued: false
         inlined: false
-      variableOfInterest:
+      variableOfInterestId:
         description: A USDM relationship between the Estimand and Endpoint classes
           which provides the details associated with an instance of the variable of
           interest within a study endpoint used to partially define a study estimand.
@@ -1717,7 +1717,7 @@ classes:
         required: true
         multivalued: true
         inlined: true
-      interventions:
+      interventionIds:
         description: A USDM relationship between the Estimand and StudyIntervention
           classes which identifies the set of study interventions associated with
           the Estimand.
@@ -1933,7 +1933,7 @@ classes:
         multivalued: false
         exact_mappings:
         - ncit:C215581
-      scope:
+      scopeId:
         description: A USDM relationship between the AdministrableProductIdentifier
           and Organization class which provides the details associated with which
           provides the details associated with each organization that has assigned
@@ -2250,7 +2250,7 @@ classes:
         inlined: true
         exact_mappings:
         - ncit:C215618
-      embeddedProduct:
+      embeddedProductId:
         description: A USDM relationship between the MedicalDevice and AdministrableProduct
           classes which identifies the administrable product that is an integral component
           of the medical device.
@@ -2351,7 +2351,7 @@ classes:
         multivalued: false
         exact_mappings:
         - ncit:C215535
-      contentItem:
+      contentItemId:
         description: A USDM relationship between the NarrativeContent and NarrativeContentItem
           classes which identifies the content item associated with the narrative
           content.
@@ -2359,7 +2359,7 @@ classes:
         required: false
         multivalued: false
         inlined: false
-      previous:
+      previousId:
         description: A USDM relationship within the NarrativeContent class which identifies
           the narrative content that precedes the current narrative content in the
           display order.
@@ -2367,7 +2367,7 @@ classes:
         required: false
         multivalued: false
         inlined: false
-      next:
+      nextId:
         description: A USDM relationship within the NarrativeContent class which identifies
           the narrative content that follows the current narrative content in the
           display order.
@@ -2375,7 +2375,7 @@ classes:
         required: false
         multivalued: false
         inlined: false
-      children:
+      childIds:
         description: A USDM relationship within the NarrativeContent class which identifies
           the set of child content associated with an instance of narrative content.
         range: NarrativeContent
@@ -2790,7 +2790,7 @@ classes:
         inlined: true
         exact_mappings:
         - ncit:C215547
-      criteria:
+      criterionIds:
         description: A USDM relationship between the StudyCohort and EligibilityCriterion
           classes which identifies the set of eligibility criteria associated with
           the study cohort.
@@ -2863,7 +2863,7 @@ classes:
         inlined: true
         exact_mappings:
         - ncit:C215520
-      studyIntervention:
+      studyInterventionId:
         description: A USDM relationship between the Procedure and StudyInterventionclasses
           which provides the details associated with an instance of an intervention
           performed during the conduct of a procedure.
@@ -2925,7 +2925,7 @@ classes:
         inlined: true
         exact_mappings:
         - ncit:C215625
-      appliesTo:
+      appliesToIds:
         description: A USDM relationship between the ProductOrganizationRole and either
           the AdministrableProduct or MedicalDevice class that identifies the administrable
           product or medical device to which the product organization role applies.
@@ -2935,7 +2935,7 @@ classes:
         required: false
         multivalued: true
         inlined: false
-      organization:
+      organizationId:
         description: A USDM relationship between the ProductOrganizationRole and Organization
           classes which identifies the organization associated with the product organization
           role.
@@ -3183,7 +3183,7 @@ classes:
         required: false
         multivalued: true
         inlined: true
-      entry:
+      entryId:
         description: A USDM relationship between the ScheduleTimeline and ScheduledInstance
           classes which defines the entry into a scheduled instance (e.g., scheduled
           activity instances or scheduled decision instances) for a timeline.
@@ -3235,7 +3235,7 @@ classes:
     exact_mappings:
     - ncit:C201350
     attributes:
-      activities:
+      activityIds:
         description: A USDM relationship between the ScheduledActivityInstance and
           Activity classes which identifies the set of activities associated with
           a scheduled activity instance.
@@ -3243,7 +3243,7 @@ classes:
         required: false
         multivalued: true
         inlined: false
-      encounter:
+      encounterId:
         description: A USDM relationship between the ScheduledActivityInstance and
           Encounter classes which defines the subject encounter associated with the
           ScheduleActivityInstance.
@@ -3251,7 +3251,7 @@ classes:
         required: false
         multivalued: false
         inlined: false
-      timeline:
+      timelineId:
         description: A USDM relationship between the ScheduledActivityInstance and
           ScheduleTimeline classes which provides the details associated with an instance
           of a scheduled timeline related to a scheduled activity instance.
@@ -3259,7 +3259,7 @@ classes:
         required: false
         multivalued: false
         inlined: false
-      timelineExit:
+      timelineExitId:
         description: A USDM relationship between the ScheduledActivityInstance and
           ScheduleTimelineExit classes which provides the details associated with
           the exit from a timeline related to a scheduled activity instance.
@@ -3332,14 +3332,14 @@ classes:
         multivalued: false
         exact_mappings:
         - ncit:C207531
-      defaultCondition:
+      defaultConditionId:
         description: A USDM relationship within the ScheduledActivityInstance class
           which identifies the default condition within a scheduled activity instance.
         range: ScheduledInstance
         required: false
         multivalued: false
         inlined: false
-      epoch:
+      epochId:
         description: A USDM relationship between the ScheduledActivityInstance and
           StudyEpoch classes which identifies the study epoch associated with a scheduled
           activity instance.
@@ -3580,7 +3580,7 @@ classes:
         required: true
         multivalued: true
         inlined: true
-      previous:
+      previousId:
         description: A USDM relationship within the StudyAmendment class which identifies
           the study amendment that chronologically precedes the current study amendment.
         range: StudyAmendment
@@ -3764,7 +3764,7 @@ classes:
         inlined: true
         exact_mappings:
         - ncit:C215515
-      populations:
+      populationIds:
         description: A USDM relationship between the StudyArm and PopulationDefinition
           classes which identifies the set of populations associated with the study
           arm.
@@ -3790,21 +3790,21 @@ classes:
         required: true
         multivalued: false
         identifier: true
-      arm:
+      armId:
         description: A USDM relationship between the StudyCell and StudyArm classes
           which identifies the study arm associated with a study cell.
         range: StudyArm
         required: true
         multivalued: false
         inlined: false
-      epoch:
+      epochId:
         description: A USDM relationship between the StudyCell and StudyEpoch classes
           which identifies the study epoch associated with a study cell.
         range: StudyEpoch
         required: true
         multivalued: false
         inlined: false
-      elements:
+      elementIds:
         description: A USDM relationship between the StudyCell and StudyElement classes
           which identifies the set of study elements associated with the study cell.
         range: StudyElement
@@ -3902,7 +3902,7 @@ classes:
         required: false
         multivalued: true
         inlined: true
-      indications:
+      indicationIds:
         description: A USDM relationship between the StudyCohort and Indication classes
           which identifies the set of indications associated with the study cohort.
         range: Indication
@@ -3989,7 +3989,7 @@ classes:
         inlined: true
         exact_mappings:
         - ncit:C215565
-      children:
+      childIds:
         description: A USDM relationship within the StudyDefinitionDocument class
           which identifies the set of child documents of a study definition document.
         range: StudyDefinitionDocument
@@ -4253,7 +4253,7 @@ classes:
         required: true
         multivalued: true
         inlined: true
-      documentVersions:
+      documentVersionIds:
         description: A USDM relationship between the InterventionalStudyDesign and
           StudyDefinitionDocumentVersion classes which identifies the version of the
           study definition documents associated with the interventional study design.
@@ -4269,7 +4269,7 @@ classes:
         required: false
         multivalued: true
         inlined: true
-      studyInterventions:
+      studyInterventionIds:
         description: A USDM relationship between the InterventionalStudyDesign and
           StudyIntervention classes which identifies the set of study interventions
           associated with interventional study design.
@@ -4377,7 +4377,7 @@ classes:
         required: false
         multivalued: false
         inlined: true
-      studyInterventions:
+      studyInterventionIds:
         description: A USDM relationship between the StudyElement and StudyIntervention
           classes which identifies the set of study interventions associated with
           the study element.
@@ -4460,14 +4460,14 @@ classes:
         inlined: true
         exact_mappings:
         - ncit:C215516
-      previous:
+      previousId:
         description: A USDM relationship within the StudyEpoch class which identifies
           the study epoch that chronologically precedes the current study epoch.
         range: StudyEpoch
         required: false
         multivalued: false
         inlined: false
-      next:
+      nextId:
         description: A USDM relationship within the StudyEpoch class which identifies
           the study epoch that chronologically follows the current study epoch.
         range: StudyEpoch
@@ -4664,14 +4664,14 @@ classes:
         required: false
         multivalued: false
         inlined: true
-      organizations:
+      organizationIds:
         description: A USDM relationship between the StudyRole and Organization classes
           which identifies the set of organizations associated with the study role.
         range: Organization
         required: false
         multivalued: true
         inlined: false
-      appliesTo:
+      appliesToIds:
         description: A USDM relationship between the StudyRole and either StudyVersion
           or StudyDesign classes that identifies the study version or study design
           to which the study role applies.
@@ -4853,7 +4853,7 @@ classes:
         required: false
         multivalued: true
         inlined: true
-      documentVersions:
+      documentVersionIds:
         description: A USDM relationship between the StudyVersion and StudyDefinitionDocumentVersion
           classes which identifies the version of the study definition document associated
           with the study version.
@@ -5011,7 +5011,7 @@ classes:
         required: false
         multivalued: false
         inlined: true
-      forStudyCohort:
+      forStudyCohortId:
         description: A USDM relationship between the SubjectEnrollment and StudyCohort
           classes which identifies the study cohort to which the subject enrollment
           applies.
@@ -5019,7 +5019,7 @@ classes:
         required: false
         multivalued: false
         inlined: false
-      forStudySite:
+      forStudySiteId:
         description: A USDM relationship between the SubjectEnrollment and StudySite
           classes which identifies the study site to which the subject enrollment
           applies.
@@ -5155,7 +5155,7 @@ classes:
         inlined: true
         exact_mappings:
         - ncit:C215548
-      dictionary:
+      dictionaryId:
         description: A USDM relationship between the Characteristic and SyntaxTemplateDictionary
           classes which provides the set of dictionary entries related to characteristics.
         range: SyntaxTemplateDictionary
@@ -5316,7 +5316,7 @@ classes:
         multivalued: false
         exact_mappings:
         - ncit:C201343
-      relativeToScheduledInstance:
+      relativeToScheduledInstanceId:
         description: A USDM relationship between the Timing and ScheduledInstance
           classes which identifies the scheduled instance (e.g., scheduled activity
           instances or scheduled decision instances) to which the timing is relative
@@ -5325,7 +5325,7 @@ classes:
         required: false
         multivalued: false
         inlined: false
-      relativeFromScheduledInstance:
+      relativeFromScheduledInstanceId:
         description: A USDM relationship between the Timing and ScheduledInstance
           classes which identifies the scheduled instance (e.g., scheduled activity
           instances or scheduled decision instances) to which the timing applies.

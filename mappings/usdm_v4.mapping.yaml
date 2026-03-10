@@ -63,9 +63,7 @@ source_model:
 defaults:
   naming:
     preserve_class_names: true
-    preserve_slot_names: false
-    slot_name_source: Model Name
-    slot_name_fallback: source_key
+    preserve_slot_names: true
 
   classes:
     modifier_to_abstract:
