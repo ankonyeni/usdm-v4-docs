@@ -92,10 +92,8 @@ defaults:
   cardinality_map:
     "1":
       required: true
-      multivalued: false
     "0..1":
       required: false
-      multivalued: false
     "0..2":
       required: false
       multivalued: true

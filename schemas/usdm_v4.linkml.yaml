@@ -28,7 +28,6 @@ classes:
       id:
         range: string
         required: true
-        multivalued: false
         identifier: true
       abbreviatedText:
         title: Text Abbreviation Value
@@ -36,7 +35,6 @@ classes:
           used as the abbreviation.
         range: string
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C215487
       expandedText:
@@ -44,7 +42,6 @@ classes:
         description: The full literal representation of the abbreviation.
         range: string
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C215569
       notes:
@@ -73,7 +70,6 @@ classes:
       id:
         range: string
         required: true
-        multivalued: false
         identifier: true
       name:
         title: Study Activity Name
@@ -81,7 +77,6 @@ classes:
           study activity.
         range: string
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C188842
       label:
@@ -89,7 +84,6 @@ classes:
         description: The short descriptive designation for the study activity.
         range: string
         required: false
-        multivalued: false
         exact_mappings:
         - ncit:C207458
       description:
@@ -97,7 +91,6 @@ classes:
         description: A narrative representation of the study activity.
         range: string
         required: false
-        multivalued: false
         exact_mappings:
         - ncit:C70960
       notes:
@@ -129,7 +122,6 @@ classes:
           the activity that follows the current activity in the display order.
         range: Activity
         required: false
-        multivalued: false
         inlined: false
       timelineId:
         description: A USDM relationship between the Activity and ScheduleTimeline
@@ -137,7 +129,6 @@ classes:
           timeline related to the activity.
         range: ScheduleTimeline
         required: false
-        multivalued: false
         inlined: false
       childIds:
         description: A USDM relationship within the Activity class which identifies
@@ -151,7 +142,6 @@ classes:
           the activity that precedes the current activity in the display order.
         range: Activity
         required: false
-        multivalued: false
         inlined: false
       bcSurrogateIds:
         description: A USDM relationship between the Activity and BiomedicalConceptSurrogate
@@ -185,7 +175,6 @@ classes:
       id:
         range: string
         required: true
-        multivalued: false
         identifier: true
       text:
         title: Address Full Text
@@ -193,7 +182,6 @@ classes:
           denoting the physical address of the person, business, building, or organization.
         range: string
         required: false
-        multivalued: false
         exact_mappings:
         - ncit:C201311
       lines:
@@ -211,7 +199,6 @@ classes:
           parish, state, country, or other locality based on a shared characteristic.
         range: string
         required: false
-        multivalued: false
         exact_mappings:
         - ncit:C176229
       city:
@@ -221,7 +208,6 @@ classes:
           of a postal address.
         range: string
         required: false
-        multivalued: false
         exact_mappings:
         - ncit:C25160
       postalCode:
@@ -229,7 +215,6 @@ classes:
         description: An alphanumeric code assigned to a mail delivery area.
         range: string
         required: false
-        multivalued: false
         exact_mappings:
         - ncit:C25621
       state:
@@ -239,7 +224,6 @@ classes:
           have different laws from the central government.
         range: string
         required: false
-        multivalued: false
         exact_mappings:
         - ncit:C87194
       country:
@@ -248,7 +232,6 @@ classes:
           an autonomous government.
         range: Code
         required: false
-        multivalued: false
         inlined: true
         exact_mappings:
         - ncit:C25464
@@ -268,7 +251,6 @@ classes:
       id:
         range: string
         required: true
-        multivalued: false
         identifier: true
       name:
         title: Administrable Product Definition Name
@@ -276,7 +258,6 @@ classes:
           administrable product.
         range: string
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C215573
       label:
@@ -284,7 +265,6 @@ classes:
         description: The short descriptive designation for the administrable product.
         range: string
         required: false
-        multivalued: false
         exact_mappings:
         - ncit:C215575
       description:
@@ -292,7 +272,6 @@ classes:
         description: A narrative representation of the administrable product.
         range: string
         required: false
-        multivalued: false
         exact_mappings:
         - ncit:C215574
       administrableDoseForm:
@@ -301,7 +280,6 @@ classes:
           in the administrable product.
         range: AliasCode
         required: true
-        multivalued: false
         inlined: true
         exact_mappings:
         - ncit:C215576
@@ -311,7 +289,6 @@ classes:
           from a local or central source.
         range: Code
         required: false
-        multivalued: false
         inlined: true
         exact_mappings:
         - ncit:C215578
@@ -321,7 +298,6 @@ classes:
           medicinal product or an auxiliary medicinal product.
         range: Code
         required: true
-        multivalued: false
         inlined: true
         exact_mappings:
         - ncit:C215579
@@ -330,7 +306,6 @@ classes:
         description: The pharmacological class of the administrable product.
         range: Code
         required: false
-        multivalued: false
         inlined: true
         exact_mappings:
         - ncit:C215577
@@ -397,7 +372,6 @@ classes:
       id:
         range: string
         required: true
-        multivalued: false
         identifier: true
       name:
         title: Administrable Product Property Name
@@ -405,7 +379,6 @@ classes:
           administrable product property.
         range: string
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C215582
       type:
@@ -414,7 +387,6 @@ classes:
           property.
         range: Code
         required: true
-        multivalued: false
         inlined: true
         exact_mappings:
         - ncit:C215585
@@ -424,7 +396,6 @@ classes:
           product property.
         range: string
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C215583
       quantity:
@@ -432,7 +403,6 @@ classes:
         description: The numeric value associated with an administrable product property.
         range: Quantity
         required: false
-        multivalued: false
         inlined: true
         exact_mappings:
         - ncit:C215584
@@ -452,7 +422,6 @@ classes:
       id:
         range: string
         required: true
-        multivalued: false
         identifier: true
       name:
         title: Administration Name
@@ -460,7 +429,6 @@ classes:
           administration of a product, agent, or therapy.
         range: string
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C207465
       label:
@@ -469,7 +437,6 @@ classes:
           product, agent, or therapy.
         range: string
         required: false
-        multivalued: false
         exact_mappings:
         - ncit:C207464
       description:
@@ -478,7 +445,6 @@ classes:
           agent, or therapy.
         range: string
         required: false
-        multivalued: false
         exact_mappings:
         - ncit:C207463
       dose:
@@ -487,7 +453,6 @@ classes:
           at one time.
         range: Quantity
         required: false
-        multivalued: false
         inlined: true
         exact_mappings:
         - ncit:C167190
@@ -496,7 +461,6 @@ classes:
         description: The number of doses administered per a specific interval.
         range: AliasCode
         required: false
-        multivalued: false
         inlined: true
         exact_mappings:
         - ncit:C89081
@@ -506,7 +470,6 @@ classes:
           reach the site of action in the body.
         range: AliasCode
         required: false
-        multivalued: false
         inlined: true
         exact_mappings:
         - ncit:C38114
@@ -515,7 +478,6 @@ classes:
         description: The amount of time elapsed during the administration of an agent.
         range: Duration
         required: true
-        multivalued: false
         inlined: true
         exact_mappings:
         - ncit:C69282
@@ -535,7 +497,6 @@ classes:
           of the product, agent, or therapy.
         range: AdministrableProduct
         required: false
-        multivalued: false
         inlined: false
       medicalDeviceId:
         description: A USDM relationship between the Administration and MedicalDevice
@@ -543,7 +504,6 @@ classes:
           of product, agent, or therapy administration.
         range: MedicalDevice
         required: false
-        multivalued: false
         inlined: false
       extensionAttributes:
         range: ExtensionAttribute
@@ -561,7 +521,6 @@ classes:
       id:
         range: string
         required: true
-        multivalued: false
         identifier: true
       standardCode:
         title: Standard Code
@@ -569,7 +528,6 @@ classes:
           code.
         range: Code
         required: true
-        multivalued: false
         inlined: true
         exact_mappings:
         - ncit:C215528
@@ -602,7 +560,6 @@ classes:
       id:
         range: string
         required: true
-        multivalued: false
         identifier: true
       text:
         title: Analysis Population Text
@@ -610,7 +567,6 @@ classes:
           population.
         range: string
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C207468
       name:
@@ -619,7 +575,6 @@ classes:
           analysis population.
         range: string
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C207467
       label:
@@ -627,7 +582,6 @@ classes:
         description: The short descriptive designation for the analysis population.
         range: string
         required: false
-        multivalued: false
         exact_mappings:
         - ncit:C207466
       description:
@@ -635,7 +589,6 @@ classes:
         description: A narrative representation of the analysis population.
         range: string
         required: false
-        multivalued: false
         exact_mappings:
         - ncit:C188854
       notes:
@@ -671,7 +624,6 @@ classes:
       id:
         range: string
         required: true
-        multivalued: false
         identifier: true
       name:
         title: Assigned Person Name
@@ -679,7 +631,6 @@ classes:
           assigned person.
         range: string
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C215596
       label:
@@ -687,7 +638,6 @@ classes:
         description: The short descriptive designation for the assigned person.
         range: string
         required: false
-        multivalued: false
         exact_mappings:
         - ncit:C215598
       description:
@@ -695,7 +645,6 @@ classes:
         description: A narrative representation of the assigned person.
         range: string
         required: false
-        multivalued: false
         exact_mappings:
         - ncit:C215597
       personName:
@@ -706,7 +655,6 @@ classes:
           name comes first.
         range: PersonName
         required: true
-        multivalued: false
         inlined: true
         exact_mappings:
         - ncit:C216993
@@ -715,7 +663,6 @@ classes:
         description: An identifying designation related to the assigned person's occupation.
         range: string
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C215599
       organizationId:
@@ -723,7 +670,6 @@ classes:
           classes that identifies that organization to which the assigned person belongs.
         range: Organization
         required: false
-        multivalued: false
         inlined: false
       extensionAttributes:
         range: ExtensionAttribute
@@ -743,7 +689,6 @@ classes:
       id:
         range: string
         required: true
-        multivalued: false
         identifier: true
       name:
         title: Biomedical Concept Name
@@ -751,7 +696,6 @@ classes:
           biomedical concept.
         range: string
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C201312
       label:
@@ -759,7 +703,6 @@ classes:
         description: The short descriptive designation for the biomedical concept.
         range: string
         required: false
-        multivalued: false
         exact_mappings:
         - ncit:C207470
       synonyms:
@@ -776,7 +719,6 @@ classes:
         description: A citation to an authoritative source for a biomedical concept.
         range: string
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C201313
       code:
@@ -785,7 +727,6 @@ classes:
           that points to the meaning of that biomedical concept.
         range: AliasCode
         required: true
-        multivalued: false
         inlined: true
         exact_mappings:
         - ncit:C207469
@@ -822,7 +763,6 @@ classes:
       id:
         range: string
         required: true
-        multivalued: false
         identifier: true
       name:
         title: Biomedical Concept Category Name
@@ -830,7 +770,6 @@ classes:
           biomedical concept category.
         range: string
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C201317
       label:
@@ -839,7 +778,6 @@ classes:
           category.
         range: string
         required: false
-        multivalued: false
         exact_mappings:
         - ncit:C207471
       description:
@@ -847,7 +785,6 @@ classes:
         description: A narrative representation of the biomedical concept category.
         range: string
         required: false
-        multivalued: false
         exact_mappings:
         - ncit:C201316
       code:
@@ -856,7 +793,6 @@ classes:
           concept category.
         range: AliasCode
         required: false
-        multivalued: false
         inlined: true
         exact_mappings:
         - ncit:C201315
@@ -900,7 +836,6 @@ classes:
       id:
         range: string
         required: true
-        multivalued: false
         identifier: true
       name:
         title: Biomedical Concept Property Name
@@ -908,7 +843,6 @@ classes:
           biomedical concept property.
         range: string
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C202494
       label:
@@ -917,7 +851,6 @@ classes:
           property.
         range: string
         required: false
-        multivalued: false
         exact_mappings:
         - ncit:C207472
       isRequired:
@@ -926,7 +859,6 @@ classes:
           required.
         range: boolean
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C202495
       isEnabled:
@@ -935,7 +867,6 @@ classes:
           activated for use within a given usage context for a biomedical concept.
         range: boolean
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C202496
       datatype:
@@ -945,7 +876,6 @@ classes:
           allowable values the attribute may assume. (After HL7)
         range: string
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C201319
       code:
@@ -954,7 +884,6 @@ classes:
           property that points to the meaning of that biomedical concept property.
         range: AliasCode
         required: true
-        multivalued: false
         inlined: true
         exact_mappings:
         - ncit:C201318
@@ -991,7 +920,6 @@ classes:
       id:
         range: string
         required: true
-        multivalued: false
         identifier: true
       name:
         title: Biomedical Concept Surrogate Name
@@ -999,7 +927,6 @@ classes:
           biomedical concept surrogate.
         range: string
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C207474
       label:
@@ -1008,7 +935,6 @@ classes:
           surrogate.
         range: string
         required: false
-        multivalued: false
         exact_mappings:
         - ncit:C207473
       description:
@@ -1016,7 +942,6 @@ classes:
         description: A narrative representation of the biomedical concept surrogate.
         range: string
         required: false
-        multivalued: false
         exact_mappings:
         - ncit:C201320
       reference:
@@ -1025,7 +950,6 @@ classes:
           surrogate.
         range: string
         required: false
-        multivalued: false
         exact_mappings:
         - ncit:C201321
       notes:
@@ -1053,7 +977,6 @@ classes:
       id:
         range: string
         required: true
-        multivalued: false
         identifier: true
       name:
         title: Biospecimen Retention Name
@@ -1061,7 +984,6 @@ classes:
           biospecimen retention.
         range: string
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C215645
       label:
@@ -1069,7 +991,6 @@ classes:
         description: The short descriptive designation for the biospecimen retention.
         range: string
         required: false
-        multivalued: false
         exact_mappings:
         - ncit:C215646
       description:
@@ -1077,7 +998,6 @@ classes:
         description: A narrative representation of the biospecimen retention.
         range: string
         required: false
-        multivalued: false
         exact_mappings:
         - ncit:C181231
       isRetained:
@@ -1085,7 +1005,6 @@ classes:
         description: An indication as to whether biospecimens were retained.
         range: boolean
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C164620
       includesDNA:
@@ -1093,7 +1012,6 @@ classes:
         description: An indication as to whether retained biospecimens contain DNA.
         range: boolean
         required: false
-        multivalued: false
         exact_mappings:
         - ncit:C127777
       extensionAttributes:
@@ -1125,14 +1043,12 @@ classes:
       id:
         range: string
         required: true
-        multivalued: false
         identifier: true
       code:
         title: Code Value
         description: The literal value of a code.
         range: string
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C188858
       codeSystem:
@@ -1141,7 +1057,6 @@ classes:
           system used to assign and/or manage codes.
         range: string
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C188859
       codeSystemVersion:
@@ -1149,7 +1064,6 @@ classes:
         description: The version of the code system.
         range: string
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C188868
       decode:
@@ -1158,7 +1072,6 @@ classes:
           with a code.
         range: string
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C188861
       extensionAttributes:
@@ -1178,7 +1091,6 @@ classes:
       id:
         range: string
         required: true
-        multivalued: false
         identifier: true
       text:
         title: Comment Annotation Text
@@ -1186,7 +1098,6 @@ classes:
           annotation.
         range: string
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C215555
       codes:
@@ -1252,7 +1163,6 @@ classes:
       id:
         range: string
         required: true
-        multivalued: false
         identifier: true
       condition:
         title: Logical Condition
@@ -1260,7 +1170,6 @@ classes:
           else.
         range: string
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C47953
       conditionTargetId:
@@ -1269,7 +1178,6 @@ classes:
           assignment.
         range: ScheduledInstance
         required: true
-        multivalued: false
         inlined: false
       extensionAttributes:
         range: ExtensionAttribute
@@ -1287,7 +1195,6 @@ classes:
       id:
         range: string
         required: true
-        multivalued: false
         identifier: true
       sectionNumber:
         title: Document Content Reference Section Number
@@ -1295,7 +1202,6 @@ classes:
           content reference.
         range: string
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C215609
       sectionTitle:
@@ -1304,7 +1210,6 @@ classes:
           content reference.
         range: string
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C215610
       appliesToId:
@@ -1313,7 +1218,6 @@ classes:
           to which the document content reference applies.
         range: StudyDefinitionDocument
         required: true
-        multivalued: false
         inlined: false
       extensionAttributes:
         range: ExtensionAttribute
@@ -1330,14 +1234,12 @@ classes:
       id:
         range: string
         required: true
-        multivalued: false
         identifier: true
       text:
         title: Duration Text
         description: An instance of unstructured text that represents the event duration.
         range: string
         required: false
-        multivalued: false
         exact_mappings:
         - ncit:C217008
       quantity:
@@ -1346,7 +1248,6 @@ classes:
           occurs.
         range: QuantityRange
         required: false
-        multivalued: false
         inlined: true
         exact_mappings:
         - ncit:C217011
@@ -1356,7 +1257,6 @@ classes:
           vary within and/or across subjects.
         range: boolean
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C217009
       reasonDurationWillVary:
@@ -1365,7 +1265,6 @@ classes:
           across subjects.
         range: string
         required: false
-        multivalued: false
         exact_mappings:
         - ncit:C217010
       extensionAttributes:
@@ -1385,7 +1284,6 @@ classes:
       id:
         range: string
         required: true
-        multivalued: false
         identifier: true
       name:
         title: Study Eligibility Criterion Name
@@ -1393,7 +1291,6 @@ classes:
           study eligibility criterion.
         range: string
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C207488
       label:
@@ -1401,7 +1298,6 @@ classes:
         description: The short descriptive designation for the study eligibility criterion.
         range: string
         required: false
-        multivalued: false
         exact_mappings:
         - ncit:C207487
       description:
@@ -1409,7 +1305,6 @@ classes:
         description: A narrative representation of the study eligibility criterion.
         range: string
         required: false
-        multivalued: false
         exact_mappings:
         - ncit:C207486
       identifier:
@@ -1418,7 +1313,6 @@ classes:
           the inclusion or exclusion criterion.
         range: string
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C207489
       category:
@@ -1426,7 +1320,6 @@ classes:
         description: A classification of the inclusion exclusion criterion.
         range: Code
         required: true
-        multivalued: false
         inlined: true
         exact_mappings:
         - ncit:C83016
@@ -1444,7 +1337,6 @@ classes:
           classes which identifies the item belonging to the eligibility criterion.
         range: EligibilityCriterionItem
         required: true
-        multivalued: false
         inlined: false
       nextId:
         description: A USDM relationship within the EligibilityCriterion class which
@@ -1452,7 +1344,6 @@ classes:
           criterion in the display order.
         range: EligibilityCriterion
         required: false
-        multivalued: false
         inlined: false
       previousId:
         description: A USDM relationship within the EligibilityCriterion class which
@@ -1460,7 +1351,6 @@ classes:
           criterion in the display order.
         range: EligibilityCriterion
         required: false
-        multivalued: false
         inlined: false
       extensionAttributes:
         range: ExtensionAttribute
@@ -1492,7 +1382,6 @@ classes:
       id:
         range: string
         required: true
-        multivalued: false
         identifier: true
       name:
         title: Study Encounter Name
@@ -1500,7 +1389,6 @@ classes:
           protocol-defined study encounter.
         range: string
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C171010
       label:
@@ -1508,7 +1396,6 @@ classes:
         description: The short descriptive designation for the study encounter.
         range: string
         required: false
-        multivalued: false
         exact_mappings:
         - ncit:C207490
       description:
@@ -1516,7 +1403,6 @@ classes:
         description: A narrative representation of the protocol-defined study encounter.
         range: string
         required: false
-        multivalued: false
         exact_mappings:
         - ncit:C188836
       type:
@@ -1524,7 +1410,6 @@ classes:
         description: A characterization or classification of the study encounter.
         range: Code
         required: true
-        multivalued: false
         inlined: true
         exact_mappings:
         - ncit:C188839
@@ -1563,14 +1448,12 @@ classes:
           to trigger the end of an encounter.
         range: TransitionRule
         required: false
-        multivalued: false
         inlined: true
       nextId:
         description: A USDM relationship within the Encounter class which identifies
           the encounter that chronologically follows the current encounter.
         range: Encounter
         required: false
-        multivalued: false
         inlined: false
       transitionStartRule:
         description: A USDM relationship between the Encounter and TransitionRule
@@ -1578,21 +1461,18 @@ classes:
           to trigger the start of an encounter.
         range: TransitionRule
         required: false
-        multivalued: false
         inlined: true
       scheduledAtId:
         description: A USDM relationship between the Encounter and Timing classes
           which provides information related to the scheduled timing of an encounter.
         range: Timing
         required: false
-        multivalued: false
         inlined: false
       previousId:
         description: A USDM relationship within the Encounter class which identifies
           the encounter that chronologically precedes the current encounter.
         range: Encounter
         required: false
-        multivalued: false
         inlined: false
       extensionAttributes:
         range: ExtensionAttribute
@@ -1618,7 +1498,6 @@ classes:
           determines its category of importance relative to other study endpoints.
         range: Code
         required: true
-        multivalued: false
         inlined: true
         exact_mappings:
         - ncit:C188826
@@ -1627,7 +1506,6 @@ classes:
         description: The textual representation of the study endpoint purpose.
         range: string
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C188825
       extensionAttributes:
@@ -1648,7 +1526,6 @@ classes:
       id:
         range: string
         required: true
-        multivalued: false
         identifier: true
       populationSummary:
         title: Population-Level Summary
@@ -1656,7 +1533,6 @@ classes:
           target study population.
         range: string
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C188853
       name:
@@ -1665,7 +1541,6 @@ classes:
           estimand.
         range: string
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C215522
       label:
@@ -1673,7 +1548,6 @@ classes:
         description: The short descriptive designation for the estimand.
         range: string
         required: false
-        multivalued: false
         exact_mappings:
         - ncit:C215524
       description:
@@ -1681,7 +1555,6 @@ classes:
         description: A narrative representation of the estimand.
         range: string
         required: false
-        multivalued: false
         exact_mappings:
         - ncit:C215523
       notes:
@@ -1699,7 +1572,6 @@ classes:
           population used to partially define a study estimand.
         range: AnalysisPopulation
         required: true
-        multivalued: false
         inlined: false
       variableOfInterestId:
         description: A USDM relationship between the Estimand and Endpoint classes
@@ -1707,7 +1579,6 @@ classes:
           interest within a study endpoint used to partially define a study estimand.
         range: Endpoint
         required: true
-        multivalued: false
         inlined: false
       intercurrentEvents:
         description: A USDM relationship between the Estimand and IntercurrentEvent
@@ -1736,52 +1607,41 @@ classes:
       id:
         range: string
         required: true
-        multivalued: false
         identifier: true
       url:
         range: string
         required: true
-        multivalued: false
       valueString:
         range: string
         required: false
-        multivalued: false
       valueBoolean:
         range: boolean
         required: false
-        multivalued: false
       valueInteger:
         range: integer
         required: false
-        multivalued: false
       valueId:
         range: string
         required: false
-        multivalued: false
       valueQuantity:
         range: Quantity
         required: false
-        multivalued: false
         inlined: true
       valueRange:
         range: Range
         required: false
-        multivalued: false
         inlined: true
       valueCode:
         range: Code
         required: false
-        multivalued: false
         inlined: true
       valueAliasCode:
         range: AliasCode
         required: false
-        multivalued: false
         inlined: true
       valueExtensionClass:
         range: ExtensionClass
         required: false
-        multivalued: false
         inlined: true
       extensionAttributes:
         range: ExtensionAttribute
@@ -1794,12 +1654,10 @@ classes:
       id:
         range: string
         required: true
-        multivalued: false
         identifier: true
       url:
         range: string
         required: true
-        multivalued: false
       extensionAttributes:
         range: ExtensionAttribute
         required: true
@@ -1815,14 +1673,12 @@ classes:
       id:
         range: string
         required: true
-        multivalued: false
         identifier: true
       type:
         title: Geographic Scope Type
         description: A characterization or classification of the geographic scope.
         range: Code
         required: true
-        multivalued: false
         inlined: true
         exact_mappings:
         - ncit:C207495
@@ -1832,7 +1688,6 @@ classes:
           scope.
         range: AliasCode
         required: false
-        multivalued: false
         inlined: true
         exact_mappings:
         - ncit:C207494
@@ -1852,7 +1707,6 @@ classes:
       id:
         range: string
         required: true
-        multivalued: false
         identifier: true
       name:
         title: Study Governance Date Name
@@ -1860,7 +1714,6 @@ classes:
           study governance date
         range: string
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C207499
       label:
@@ -1868,7 +1721,6 @@ classes:
         description: The short descriptive designation for the study governance date.
         range: string
         required: false
-        multivalued: false
         exact_mappings:
         - ncit:C207498
       description:
@@ -1876,7 +1728,6 @@ classes:
         description: A narrative representation of the study governance date.
         range: string
         required: false
-        multivalued: false
         exact_mappings:
         - ncit:C207497
       type:
@@ -1885,7 +1736,6 @@ classes:
           date.
         range: Code
         required: true
-        multivalued: false
         inlined: true
         exact_mappings:
         - ncit:C207496
@@ -1894,7 +1744,6 @@ classes:
         description: The information contained in the date field.
         range: date
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C207500
       geographicScopes:
@@ -1922,7 +1771,6 @@ classes:
       id:
         range: string
         required: true
-        multivalued: false
         identifier: true
       text:
         title: Administrable Product Identifier Text
@@ -1930,7 +1778,6 @@ classes:
           product.
         range: string
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C215581
       scopeId:
@@ -1940,7 +1787,6 @@ classes:
           the administrable product identifier.
         range: Organization
         required: true
-        multivalued: false
         inlined: false
   Indication:
     title: Disease/Condition Indication
@@ -1953,7 +1799,6 @@ classes:
       id:
         range: string
         required: true
-        multivalued: false
         identifier: true
       name:
         title: Disease/Condition Indication Name
@@ -1961,7 +1806,6 @@ classes:
           disease/condition indication.
         range: string
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C207503
       label:
@@ -1969,7 +1813,6 @@ classes:
         description: The short descriptive designation for the disease/condition indication.
         range: string
         required: false
-        multivalued: false
         exact_mappings:
         - ncit:C207502
       description:
@@ -1978,7 +1821,6 @@ classes:
           that the clinical trial is intended to investigate or address.
         range: string
         required: false
-        multivalued: false
         exact_mappings:
         - ncit:C112038
       isRareDisease:
@@ -1987,7 +1829,6 @@ classes:
           under study is considered a rare disease.
         range: boolean
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C207501
       codes:
@@ -2025,7 +1866,6 @@ classes:
       id:
         range: string
         required: true
-        multivalued: false
         identifier: true
       role:
         title: Ingredient Role
@@ -2033,7 +1873,6 @@ classes:
           compounded substance or mixture.
         range: Code
         required: true
-        multivalued: false
         inlined: true
         exact_mappings:
         - ncit:C215595
@@ -2042,7 +1881,6 @@ classes:
           that identifies the substance associated with the ingredient.
         range: Substance
         required: true
-        multivalued: false
         inlined: true
       extensionAttributes:
         range: ExtensionAttribute
@@ -2065,7 +1903,6 @@ classes:
           mitigate intercurrent events.
         range: string
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C188857
       extensionAttributes:
@@ -2089,7 +1926,6 @@ classes:
           to subjects in a clinical study. (clinicaltrials.gov)
         range: Code
         required: true
-        multivalued: false
         inlined: true
         exact_mappings:
         - ncit:C98746
@@ -2111,7 +1947,6 @@ classes:
           administered.
         range: AliasCode
         required: false
-        multivalued: false
         inlined: true
         exact_mappings:
         - ncit:C49658
@@ -2147,7 +1982,6 @@ classes:
       id:
         range: string
         required: true
-        multivalued: false
         identifier: true
       text:
         title: Masking Text
@@ -2155,7 +1989,6 @@ classes:
           is performed and maintained.
         range: string
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C215553
       isMasked:
@@ -2163,7 +1996,6 @@ classes:
         description: An indication as to whether the study role is masked.
         range: boolean
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C215554
       extensionAttributes:
@@ -2185,7 +2017,6 @@ classes:
       id:
         range: string
         required: true
-        multivalued: false
         identifier: true
       name:
         title: Medical Device Name
@@ -2193,7 +2024,6 @@ classes:
           medical device.
         range: string
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C215614
       label:
@@ -2201,7 +2031,6 @@ classes:
         description: The short descriptive designation for the medical device.
         range: string
         required: false
-        multivalued: false
         exact_mappings:
         - ncit:C215616
       description:
@@ -2209,7 +2038,6 @@ classes:
         description: A narrative representation of the medical device.
         range: string
         required: false
-        multivalued: false
         exact_mappings:
         - ncit:C215615
       hardwareVersion:
@@ -2219,7 +2047,6 @@ classes:
           new modifications.
         range: string
         required: false
-        multivalued: false
         exact_mappings:
         - ncit:C215617
       softwareVersion:
@@ -2228,7 +2055,6 @@ classes:
           a software program, each incorporating new modifications. (NCI)
         range: string
         required: false
-        multivalued: false
         exact_mappings:
         - ncit:C111093
       sourcing:
@@ -2237,7 +2063,6 @@ classes:
           a local or central source.
         range: Code
         required: false
-        multivalued: false
         inlined: true
         exact_mappings:
         - ncit:C215619
@@ -2256,7 +2081,6 @@ classes:
           of the medical device.
         range: AdministrableProduct
         required: false
-        multivalued: false
         inlined: false
       identifiers:
         description: A USDM relationship between the MedicalDevice and MedicalDeviceIdentifier
@@ -2284,7 +2108,6 @@ classes:
         description: A characterization or classification of the medical device identifier.
         range: Code
         required: true
-        multivalued: false
         inlined: true
         exact_mappings:
         - ncit:C215621
@@ -2304,7 +2127,6 @@ classes:
       id:
         range: string
         required: true
-        multivalued: false
         identifier: true
       name:
         title: Narrative Content Name
@@ -2312,7 +2134,6 @@ classes:
           narrative content.
         range: string
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C207507
       sectionNumber:
@@ -2321,7 +2142,6 @@ classes:
           containing narrative content.
         range: string
         required: false
-        multivalued: false
         exact_mappings:
         - ncit:C207509
       sectionTitle:
@@ -2330,7 +2150,6 @@ classes:
           narrative content.
         range: string
         required: false
-        multivalued: false
         exact_mappings:
         - ncit:C207510
       displaySectionTitle:
@@ -2339,7 +2158,6 @@ classes:
           in the document containing narrative content.
         range: boolean
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C215534
       displaySectionNumber:
@@ -2348,7 +2166,6 @@ classes:
           in the document containing narrative content.
         range: boolean
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C215535
       contentItemId:
@@ -2357,7 +2174,6 @@ classes:
           content.
         range: NarrativeContentItem
         required: false
-        multivalued: false
         inlined: false
       previousId:
         description: A USDM relationship within the NarrativeContent class which identifies
@@ -2365,7 +2181,6 @@ classes:
           display order.
         range: NarrativeContent
         required: false
-        multivalued: false
         inlined: false
       nextId:
         description: A USDM relationship within the NarrativeContent class which identifies
@@ -2373,7 +2188,6 @@ classes:
           display order.
         range: NarrativeContent
         required: false
-        multivalued: false
         inlined: false
       childIds:
         description: A USDM relationship within the NarrativeContent class which identifies
@@ -2399,7 +2213,6 @@ classes:
       id:
         range: string
         required: true
-        multivalued: false
         identifier: true
       name:
         title: Narrative Content Item Name
@@ -2407,7 +2220,6 @@ classes:
           narrative content item.
         range: string
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C215557
       text:
@@ -2416,7 +2228,6 @@ classes:
           content item.
         range: string
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C215558
       extensionAttributes:
@@ -2439,7 +2250,6 @@ classes:
           determines its category of importance relative to other study objectives.
         range: Code
         required: true
-        multivalued: false
         inlined: true
         exact_mappings:
         - ncit:C188823
@@ -2471,7 +2281,6 @@ classes:
           up with participants during observational studies. (clinicaltrials.gov)
         range: Code
         required: true
-        multivalued: false
         inlined: true
         exact_mappings:
         - ncit:C147138
@@ -2491,7 +2300,6 @@ classes:
           time of subject enrollment. (ClinicalTrials.gov)
         range: Code
         required: true
-        multivalued: false
         inlined: true
         exact_mappings:
         - ncit:C126065
@@ -2501,7 +2309,6 @@ classes:
           or cohorts within an observational study.
         range: Code
         required: false
-        multivalued: false
         inlined: true
         exact_mappings:
         - ncit:C126067
@@ -2527,7 +2334,6 @@ classes:
       id:
         range: string
         required: true
-        multivalued: false
         identifier: true
       name:
         title: Organization Name
@@ -2535,7 +2341,6 @@ classes:
           organization.
         range: string
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C93874
       label:
@@ -2543,7 +2348,6 @@ classes:
         description: The short descriptive designation for the organization.
         range: string
         required: false
-        multivalued: false
         exact_mappings:
         - ncit:C207514
       identifier:
@@ -2552,7 +2356,6 @@ classes:
           (BRIDG)
         range: string
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C93401
       identifierScheme:
@@ -2561,7 +2364,6 @@ classes:
           the entity.
         range: string
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C188819
       type:
@@ -2572,7 +2374,6 @@ classes:
           out that purpose.
         range: Code
         required: true
-        multivalued: false
         inlined: true
         exact_mappings:
         - ncit:C188820
@@ -2581,7 +2382,6 @@ classes:
           which provides the legal address for an organization.
         range: Address
         required: false
-        multivalued: false
         inlined: true
       managedSites:
         description: A USDM relationship between the Organization and StudySite classes
@@ -2605,7 +2405,6 @@ classes:
       id:
         range: string
         required: true
-        multivalued: false
         identifier: true
       tag:
         title: Programming Tag
@@ -2613,7 +2412,6 @@ classes:
           for programming language elements.
         range: string
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C207515
       reference:
@@ -2622,7 +2420,6 @@ classes:
           a markup language (e.g., HTML, XML), to store attributes and elements.
         range: string
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C207516
       extensionAttributes:
@@ -2642,7 +2439,6 @@ classes:
       id:
         range: string
         required: true
-        multivalued: false
         identifier: true
       text:
         title: Person Name Text
@@ -2650,7 +2446,6 @@ classes:
           name.
         range: string
         required: false
-        multivalued: false
         exact_mappings:
         - ncit:C217001
       familyName:
@@ -2659,7 +2454,6 @@ classes:
           name.
         range: string
         required: false
-        multivalued: false
         exact_mappings:
         - ncit:C40975
       givenNames:
@@ -2705,7 +2499,6 @@ classes:
       id:
         range: string
         required: true
-        multivalued: false
         identifier: true
       name:
         title: Study Cohort Name
@@ -2713,7 +2506,6 @@ classes:
           study cohort.
         range: string
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C207544
       label:
@@ -2721,7 +2513,6 @@ classes:
         description: The short descriptive designation for the study cohort.
         range: string
         required: false
-        multivalued: false
         exact_mappings:
         - ncit:C207543
       description:
@@ -2729,7 +2520,6 @@ classes:
         description: A narrative representation of the study cohort.
         range: string
         required: false
-        multivalued: false
         exact_mappings:
         - ncit:C207542
       plannedSex:
@@ -2748,7 +2538,6 @@ classes:
           subjects, that is, subjects without the disease or condition under study.
         range: boolean
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C207480
       plannedAge:
@@ -2756,7 +2545,6 @@ classes:
         description: The anticipated age of subjects within the study cohort.
         range: Range
         required: false
-        multivalued: false
         inlined: true
         exact_mappings:
         - ncit:C207545
@@ -2767,7 +2555,6 @@ classes:
           study, within the study cohort.
         range: QuantityRange
         required: false
-        multivalued: false
         inlined: true
         exact_mappings:
         - ncit:C207546
@@ -2777,7 +2564,6 @@ classes:
           in a clinical trial, within the study cohort.
         range: QuantityRange
         required: false
-        multivalued: false
         inlined: true
         exact_mappings:
         - ncit:C207702
@@ -2809,7 +2595,6 @@ classes:
       id:
         range: string
         required: true
-        multivalued: false
         identifier: true
       name:
         title: Procedure Name
@@ -2817,7 +2602,6 @@ classes:
           procedure.
         range: string
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C201325
       label:
@@ -2825,7 +2609,6 @@ classes:
         description: The short descriptive designation for the procedure.
         range: string
         required: false
-        multivalued: false
         exact_mappings:
         - ncit:C207524
       description:
@@ -2833,7 +2616,6 @@ classes:
         description: A narrative representation of the procedure.
         range: string
         required: false
-        multivalued: false
         exact_mappings:
         - ncit:C201324
       procedureType:
@@ -2841,7 +2623,6 @@ classes:
         description: A characterization or classification of the study procedure.
         range: string
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C188848
       code:
@@ -2850,7 +2631,6 @@ classes:
           procedure.
         range: Code
         required: true
-        multivalued: false
         inlined: true
         exact_mappings:
         - ncit:C154626
@@ -2869,7 +2649,6 @@ classes:
           performed during the conduct of a procedure.
         range: StudyIntervention
         required: false
-        multivalued: false
         inlined: false
       extensionAttributes:
         range: ExtensionAttribute
@@ -2887,7 +2666,6 @@ classes:
       id:
         range: string
         required: true
-        multivalued: false
         identifier: true
       name:
         title: Product Organization Role Name
@@ -2895,7 +2673,6 @@ classes:
           product organization role.
         range: string
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C215622
       label:
@@ -2904,7 +2681,6 @@ classes:
           role.
         range: string
         required: false
-        multivalued: false
         exact_mappings:
         - ncit:C215624
       description:
@@ -2912,7 +2688,6 @@ classes:
         description: A narrative representation of the product organization role.
         range: string
         required: false
-        multivalued: false
         exact_mappings:
         - ncit:C215623
       code:
@@ -2921,7 +2696,6 @@ classes:
           organization role.
         range: Code
         required: true
-        multivalued: false
         inlined: true
         exact_mappings:
         - ncit:C215625
@@ -2941,7 +2715,6 @@ classes:
           role.
         range: Organization
         required: true
-        multivalued: false
         inlined: false
       extensionAttributes:
         range: ExtensionAttribute
@@ -2962,7 +2735,6 @@ classes:
         description: A numerical quantity measured or assigned or computed.
         range: float
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C25712
       unit:
@@ -2970,7 +2742,6 @@ classes:
         description: The type of unit of measure being used to express a quantity.
         range: AliasCode
         required: false
-        multivalued: false
         inlined: true
         exact_mappings:
         - ncit:C44258
@@ -2991,7 +2762,6 @@ classes:
       id:
         range: string
         required: true
-        multivalued: false
         identifier: true
   Range:
     title: Range
@@ -3006,7 +2776,6 @@ classes:
         description: The smallest value in quantity or degree in a set of values.
         range: Quantity
         required: true
-        multivalued: false
         inlined: true
         exact_mappings:
         - ncit:C25570
@@ -3015,7 +2784,6 @@ classes:
         description: The largest value in quantity or degree in a set of values.
         range: Quantity
         required: true
-        multivalued: false
         inlined: true
         exact_mappings:
         - ncit:C25564
@@ -3025,7 +2793,6 @@ classes:
           quite, exact.
         range: boolean
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C207525
       extensionAttributes:
@@ -3047,7 +2814,6 @@ classes:
         description: A characterization or classification of the reference identifier.
         range: Code
         required: true
-        multivalued: false
         inlined: true
         exact_mappings:
         - ncit:C215571
@@ -3067,7 +2833,6 @@ classes:
       id:
         range: string
         required: true
-        multivalued: false
         identifier: true
       name:
         title: Response Code Name
@@ -3075,7 +2840,6 @@ classes:
           response code.
         range: string
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C216998
       label:
@@ -3083,7 +2847,6 @@ classes:
         description: The short descriptive designation for the response code.
         range: string
         required: false
-        multivalued: false
         exact_mappings:
         - ncit:C216999
       isEnabled:
@@ -3092,7 +2855,6 @@ classes:
           use within a given usage context.
         range: boolean
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C201330
       code:
@@ -3100,7 +2862,6 @@ classes:
         description: The literal value of a response code.
         range: Code
         required: true
-        multivalued: false
         inlined: true
         exact_mappings:
         - ncit:C217013
@@ -3119,7 +2880,6 @@ classes:
       id:
         range: string
         required: true
-        multivalued: false
         identifier: true
       name:
         title: Schedule Timeline Name
@@ -3127,7 +2887,6 @@ classes:
           schedule timeline.
         range: string
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C201334
       label:
@@ -3135,7 +2894,6 @@ classes:
         description: The short descriptive designation for the schedule timeline.
         range: string
         required: false
-        multivalued: false
         exact_mappings:
         - ncit:C207530
       description:
@@ -3143,7 +2901,6 @@ classes:
         description: A narrative representation of the schedule timeline.
         range: string
         required: false
-        multivalued: false
         exact_mappings:
         - ncit:C201332
       entryCondition:
@@ -3152,7 +2909,6 @@ classes:
           a schedule timeline.
         range: string
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C201333
       mainTimeline:
@@ -3161,7 +2917,6 @@ classes:
           is part of the central or principal timeline.
         range: boolean
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C201331
       plannedDuration:
@@ -3170,7 +2925,6 @@ classes:
           to take place.
         range: Duration
         required: false
-        multivalued: false
         inlined: true
         exact_mappings:
         - ncit:C217012
@@ -3189,7 +2943,6 @@ classes:
           activity instances or scheduled decision instances) for a timeline.
         range: ScheduledInstance
         required: true
-        multivalued: false
         inlined: false
       exits:
         description: A USDM relationship between the ScheduleTimeline and ScheduleTimelineExit
@@ -3220,7 +2973,6 @@ classes:
       id:
         range: string
         required: true
-        multivalued: false
         identifier: true
       extensionAttributes:
         range: ExtensionAttribute
@@ -3249,7 +3001,6 @@ classes:
           ScheduleActivityInstance.
         range: Encounter
         required: false
-        multivalued: false
         inlined: false
       timelineId:
         description: A USDM relationship between the ScheduledActivityInstance and
@@ -3257,7 +3008,6 @@ classes:
           of a scheduled timeline related to a scheduled activity instance.
         range: ScheduleTimeline
         required: false
-        multivalued: false
         inlined: false
       timelineExitId:
         description: A USDM relationship between the ScheduledActivityInstance and
@@ -3265,7 +3015,6 @@ classes:
           the exit from a timeline related to a scheduled activity instance.
         range: ScheduleTimelineExit
         required: false
-        multivalued: false
         inlined: false
       extensionAttributes:
         range: ExtensionAttribute
@@ -3304,7 +3053,6 @@ classes:
       id:
         range: string
         required: true
-        multivalued: false
         identifier: true
       name:
         title: Scheduled Activity Instance Name
@@ -3312,7 +3060,6 @@ classes:
           scheduled activity instance.
         range: string
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C207533
       label:
@@ -3321,7 +3068,6 @@ classes:
           instance.
         range: string
         required: false
-        multivalued: false
         exact_mappings:
         - ncit:C207532
       description:
@@ -3329,7 +3075,6 @@ classes:
         description: A narrative representation of the scheduled activity instance.
         range: string
         required: false
-        multivalued: false
         exact_mappings:
         - ncit:C207531
       defaultConditionId:
@@ -3337,7 +3082,6 @@ classes:
           which identifies the default condition within a scheduled activity instance.
         range: ScheduledInstance
         required: false
-        multivalued: false
         inlined: false
       epochId:
         description: A USDM relationship between the ScheduledActivityInstance and
@@ -3345,7 +3089,6 @@ classes:
           activity instance.
         range: StudyEpoch
         required: false
-        multivalued: false
         inlined: false
   Strength:
     title: Substance Strength
@@ -3359,7 +3102,6 @@ classes:
       id:
         range: string
         required: true
-        multivalued: false
         identifier: true
       name:
         title: Substance Strength Name
@@ -3367,7 +3109,6 @@ classes:
           substance strength.
         range: string
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C215590
       label:
@@ -3375,7 +3116,6 @@ classes:
         description: The short descriptive designation for the substance strength.
         range: string
         required: false
-        multivalued: false
         exact_mappings:
         - ncit:C215592
       description:
@@ -3383,7 +3123,6 @@ classes:
         description: A narrative representation of the substance strength.
         range: string
         required: false
-        multivalued: false
         exact_mappings:
         - ncit:C215591
       numerator:
@@ -3391,7 +3130,6 @@ classes:
         description: The dividend of a fraction.
         range: QuantityRange
         required: true
-        multivalued: false
         inlined: true
         exact_mappings:
         - ncit:C80490
@@ -3400,7 +3138,6 @@ classes:
         description: The divisor of a fraction.
         range: Quantity
         required: false
-        multivalued: false
         inlined: true
         exact_mappings:
         - ncit:C80489
@@ -3423,7 +3160,6 @@ classes:
       id:
         range: string
         required: true
-        multivalued: false
         identifier: true
       name:
         title: Clinical Study Name
@@ -3431,7 +3167,6 @@ classes:
           clinical study.
         range: string
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C68631
       label:
@@ -3439,7 +3174,6 @@ classes:
         description: The short descriptive designation for the clinical study.
         range: string
         required: false
-        multivalued: false
         exact_mappings:
         - ncit:C207479
       description:
@@ -3447,7 +3181,6 @@ classes:
         description: A narrative representation of the clinical study.
         range: string
         required: false
-        multivalued: false
         exact_mappings:
         - ncit:C142704
       versions:
@@ -3480,7 +3213,6 @@ classes:
       id:
         range: string
         required: true
-        multivalued: false
         identifier: true
       name:
         title: Study Amendment Name
@@ -3488,7 +3220,6 @@ classes:
           study amendment.
         range: string
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C216995
       label:
@@ -3496,7 +3227,6 @@ classes:
         description: The short descriptive designation for the study amendment.
         range: string
         required: false
-        multivalued: false
         exact_mappings:
         - ncit:C216997
       description:
@@ -3504,7 +3234,6 @@ classes:
         description: A narrative representation of the study amendment.
         range: string
         required: false
-        multivalued: false
         exact_mappings:
         - ncit:C216996
       number:
@@ -3512,7 +3241,6 @@ classes:
         description: A string of numerals that uniquely identifies a protocol amendment.
         range: string
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C207537
       notes:
@@ -3530,7 +3258,6 @@ classes:
           in the current version of the protocol.
         range: string
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C115627
       geographicScopes:
@@ -3585,14 +3312,12 @@ classes:
           the study amendment that chronologically precedes the current study amendment.
         range: StudyAmendment
         required: false
-        multivalued: false
         inlined: false
       primaryReason:
         description: A USDM relationship between the StudyAmendment and StudyAmendmentReason
           classes which identifies the primary reason for issuing the study amendment.
         range: StudyAmendmentReason
         required: true
-        multivalued: false
         inlined: true
       extensionAttributes:
         range: ExtensionAttribute
@@ -3609,7 +3334,6 @@ classes:
       id:
         range: string
         required: true
-        multivalued: false
         identifier: true
       text:
         title: Study Amendment Impact Text
@@ -3617,7 +3341,6 @@ classes:
           impact.
         range: string
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C215611
       isSubstantial:
@@ -3626,7 +3349,6 @@ classes:
           study is substantial.
         range: boolean
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C207538
       type:
@@ -3634,7 +3356,6 @@ classes:
         description: A characterization or classification of the study amendment impact.
         range: Code
         required: true
-        multivalued: false
         inlined: true
         exact_mappings:
         - ncit:C215612
@@ -3663,7 +3384,6 @@ classes:
       id:
         range: string
         required: true
-        multivalued: false
         identifier: true
       otherReason:
         title: Other Reason for Study Amendment
@@ -3671,7 +3391,6 @@ classes:
           a protocol that is not otherwise specified.
         range: string
         required: false
-        multivalued: false
         exact_mappings:
         - ncit:C207539
       code:
@@ -3680,7 +3399,6 @@ classes:
           amendment reason.
         range: Code
         required: true
-        multivalued: false
         inlined: true
         exact_mappings:
         - ncit:C207540
@@ -3701,7 +3419,6 @@ classes:
       id:
         range: string
         required: true
-        multivalued: false
         identifier: true
       name:
         title: Study Arm Name
@@ -3709,7 +3426,6 @@ classes:
           study arm.
         range: string
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C170984
       label:
@@ -3717,7 +3433,6 @@ classes:
         description: The short descriptive designation for the study arm.
         range: string
         required: false
-        multivalued: false
         exact_mappings:
         - ncit:C172456
       description:
@@ -3725,7 +3440,6 @@ classes:
         description: A narrative representation of the study arm.
         range: string
         required: false
-        multivalued: false
         exact_mappings:
         - ncit:C93728
       type:
@@ -3733,7 +3447,6 @@ classes:
         description: A characterization or classification of the study arm.
         range: Code
         required: true
-        multivalued: false
         inlined: true
         exact_mappings:
         - ncit:C172457
@@ -3743,7 +3456,6 @@ classes:
           to where the study arm data originates.
         range: Code
         required: true
-        multivalued: false
         inlined: true
         exact_mappings:
         - ncit:C188829
@@ -3752,7 +3464,6 @@ classes:
         description: The textual representation of the study arm data origin.
         range: string
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C188828
       notes:
@@ -3788,21 +3499,18 @@ classes:
       id:
         range: string
         required: true
-        multivalued: false
         identifier: true
       armId:
         description: A USDM relationship between the StudyCell and StudyArm classes
           which identifies the study arm associated with a study cell.
         range: StudyArm
         required: true
-        multivalued: false
         inlined: false
       epochId:
         description: A USDM relationship between the StudyCell and StudyEpoch classes
           which identifies the study epoch associated with a study cell.
         range: StudyEpoch
         required: true
-        multivalued: false
         inlined: false
       elementIds:
         description: A USDM relationship between the StudyCell and StudyElement classes
@@ -3826,7 +3534,6 @@ classes:
       id:
         range: string
         required: true
-        multivalued: false
         identifier: true
       name:
         title: Study Change Name
@@ -3834,7 +3541,6 @@ classes:
           study change.
         range: string
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C215604
       label:
@@ -3842,7 +3548,6 @@ classes:
         description: The short descriptive designation for the study change.
         range: string
         required: false
-        multivalued: false
         exact_mappings:
         - ncit:C215606
       description:
@@ -3850,7 +3555,6 @@ classes:
         description: A narrative representation of the study change.
         range: string
         required: false
-        multivalued: false
         exact_mappings:
         - ncit:C215605
       rationale:
@@ -3859,7 +3563,6 @@ classes:
           has occurred.
         range: string
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C215608
       summary:
@@ -3868,7 +3571,6 @@ classes:
           in the current version of the study.
         range: string
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C215607
       changedSections:
@@ -3925,7 +3627,6 @@ classes:
       id:
         range: string
         required: true
-        multivalued: false
         identifier: true
       name:
         title: Study Definition Document Name
@@ -3933,7 +3634,6 @@ classes:
           study definition document.
         range: string
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C215559
       label:
@@ -3941,7 +3641,6 @@ classes:
         description: The short descriptive designation for the study definition document.
         range: string
         required: false
-        multivalued: false
         exact_mappings:
         - ncit:C215561
       description:
@@ -3949,7 +3648,6 @@ classes:
         description: A narrative representation of the study definition document.
         range: string
         required: false
-        multivalued: false
         exact_mappings:
         - ncit:C215560
       type:
@@ -3958,7 +3656,6 @@ classes:
           document.
         range: Code
         required: true
-        multivalued: false
         inlined: true
         exact_mappings:
         - ncit:C215564
@@ -3968,7 +3665,6 @@ classes:
           study definition document template.
         range: string
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C215562
       language:
@@ -3976,7 +3672,6 @@ classes:
         description: The language in which the study definition document is written.
         range: Code
         required: true
-        multivalued: false
         inlined: true
         exact_mappings:
         - ncit:C215563
@@ -4020,7 +3715,6 @@ classes:
       id:
         range: string
         required: true
-        multivalued: false
         identifier: true
       status:
         title: Study Definition Document Status
@@ -4028,7 +3722,6 @@ classes:
           with respect to its state of readiness for implementation.
         range: Code
         required: true
-        multivalued: false
         inlined: true
         exact_mappings:
         - ncit:C215567
@@ -4038,7 +3731,6 @@ classes:
           study definition document.
         range: string
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C215566
       notes:
@@ -4085,7 +3777,6 @@ classes:
       id:
         range: string
         required: true
-        multivalued: false
         identifier: true
       name:
         title: Interventional Study Design Name
@@ -4093,7 +3784,6 @@ classes:
           interventional study design.
         range: string
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C215626
       label:
@@ -4102,7 +3792,6 @@ classes:
           design.
         range: string
         required: false
-        multivalued: false
         exact_mappings:
         - ncit:C215628
       description:
@@ -4110,7 +3799,6 @@ classes:
         description: A narrative representation of the interventional study design.
         range: string
         required: false
-        multivalued: false
         exact_mappings:
         - ncit:C215627
       rationale:
@@ -4120,7 +3808,6 @@ classes:
           the scientific rationale for the study design.
         range: string
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C215629
       therapeuticAreas:
@@ -4141,7 +3828,6 @@ classes:
         description: The study type associated with the interventional study design.
         range: Code
         required: false
-        multivalued: false
         inlined: true
         exact_mappings:
         - ncit:C215631
@@ -4160,7 +3846,6 @@ classes:
         description: The study phase associated with the interventional study design.
         range: AliasCode
         required: false
-        multivalued: false
         inlined: true
         exact_mappings:
         - ncit:C215630
@@ -4291,7 +3976,6 @@ classes:
           with the interventional study design.
         range: StudyDesignPopulation
         required: true
-        multivalued: false
         inlined: true
       analysisPopulations:
         range: AnalysisPopulation
@@ -4333,7 +4017,6 @@ classes:
       id:
         range: string
         required: true
-        multivalued: false
         identifier: true
       name:
         title: Study Design Element Name
@@ -4341,7 +4024,6 @@ classes:
           study design element.
         range: string
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C188833
       label:
@@ -4349,7 +4031,6 @@ classes:
         description: The short descriptive designation for the study design element.
         range: string
         required: false
-        multivalued: false
         exact_mappings:
         - ncit:C207554
       description:
@@ -4357,7 +4038,6 @@ classes:
         description: A narrative representation of the study design element.
         range: string
         required: false
-        multivalued: false
         exact_mappings:
         - ncit:C188834
       notes:
@@ -4375,7 +4055,6 @@ classes:
           to trigger the end of a study element.
         range: TransitionRule
         required: false
-        multivalued: false
         inlined: true
       studyInterventionIds:
         description: A USDM relationship between the StudyElement and StudyIntervention
@@ -4391,7 +4070,6 @@ classes:
           to trigger the start of a study element.
         range: TransitionRule
         required: false
-        multivalued: false
         inlined: true
       extensionAttributes:
         range: ExtensionAttribute
@@ -4410,7 +4088,6 @@ classes:
       id:
         range: string
         required: true
-        multivalued: false
         identifier: true
       name:
         title: Study Epoch Name
@@ -4420,7 +4097,6 @@ classes:
           support a study-specific purpose.
         range: string
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C93825
       label:
@@ -4428,7 +4104,6 @@ classes:
         description: The short descriptive designation for the study epoch.
         range: string
         required: false
-        multivalued: false
         exact_mappings:
         - ncit:C207555
       description:
@@ -4436,7 +4111,6 @@ classes:
         description: A narrative representation of the study epoch.
         range: string
         required: false
-        multivalued: false
         exact_mappings:
         - ncit:C93824
       type:
@@ -4447,7 +4121,6 @@ classes:
           purpose.
         range: Code
         required: true
-        multivalued: false
         inlined: true
         exact_mappings:
         - ncit:C188830
@@ -4465,14 +4138,12 @@ classes:
           the study epoch that chronologically precedes the current study epoch.
         range: StudyEpoch
         required: false
-        multivalued: false
         inlined: false
       nextId:
         description: A USDM relationship within the StudyEpoch class which identifies
           the study epoch that chronologically follows the current study epoch.
         range: StudyEpoch
         required: false
-        multivalued: false
         inlined: false
       extensionAttributes:
         range: ExtensionAttribute
@@ -4504,7 +4175,6 @@ classes:
       id:
         range: string
         required: true
-        multivalued: false
         identifier: true
       name:
         title: Study Intervention Name
@@ -4512,7 +4182,6 @@ classes:
           study intervention.
         range: string
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C207558
       label:
@@ -4520,7 +4189,6 @@ classes:
         description: The short descriptive designation for the study intervention.
         range: string
         required: false
-        multivalued: false
         exact_mappings:
         - ncit:C207556
       description:
@@ -4528,7 +4196,6 @@ classes:
         description: A narrative representation of the study intervention.
         range: string
         required: false
-        multivalued: false
         exact_mappings:
         - ncit:C207647
       role:
@@ -4537,7 +4204,6 @@ classes:
           of the study design.
         range: Code
         required: true
-        multivalued: false
         inlined: true
         exact_mappings:
         - ncit:C207560
@@ -4546,7 +4212,6 @@ classes:
         description: The kind of product or procedure studied in a trial.
         range: Code
         required: true
-        multivalued: false
         inlined: true
         exact_mappings:
         - ncit:C98747
@@ -4566,7 +4231,6 @@ classes:
           meet the criteria for response to study intervention.
         range: Quantity
         required: false
-        multivalued: false
         inlined: true
         exact_mappings:
         - ncit:C207557
@@ -4603,7 +4267,6 @@ classes:
       id:
         range: string
         required: true
-        multivalued: false
         identifier: true
       name:
         title: Study Role Name
@@ -4611,7 +4274,6 @@ classes:
           study role.
         range: string
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C215600
       label:
@@ -4619,7 +4281,6 @@ classes:
         description: The short descriptive designation for the study role.
         range: string
         required: false
-        multivalued: false
         exact_mappings:
         - ncit:C215602
       description:
@@ -4627,7 +4288,6 @@ classes:
         description: A narrative representation of the study role.
         range: string
         required: false
-        multivalued: false
         exact_mappings:
         - ncit:C215601
       code:
@@ -4636,7 +4296,6 @@ classes:
           role.
         range: Code
         required: true
-        multivalued: false
         inlined: true
         exact_mappings:
         - ncit:C215603
@@ -4662,7 +4321,6 @@ classes:
           which describes the masking associated with the study role.
         range: Masking
         required: false
-        multivalued: false
         inlined: true
       organizationIds:
         description: A USDM relationship between the StudyRole and Organization classes
@@ -4696,7 +4354,6 @@ classes:
       id:
         range: string
         required: true
-        multivalued: false
         identifier: true
       name:
         title: Study Site Name
@@ -4704,7 +4361,6 @@ classes:
           study site.
         range: string
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C207566
       label:
@@ -4712,7 +4368,6 @@ classes:
         description: The short descriptive designation for the study site.
         range: string
         required: false
-        multivalued: false
         exact_mappings:
         - ncit:C207565
       description:
@@ -4720,7 +4375,6 @@ classes:
         description: A narrative representation of the study site.
         range: string
         required: false
-        multivalued: false
         exact_mappings:
         - ncit:C207564
       country:
@@ -4728,7 +4382,6 @@ classes:
         description: The country in which the study site is located.
         range: Code
         required: true
-        multivalued: false
         inlined: true
         exact_mappings:
         - ncit:C170990
@@ -4747,14 +4400,12 @@ classes:
       id:
         range: string
         required: true
-        multivalued: false
         identifier: true
       type:
         title: Study Title Type
         description: A characterization or classification of the study title.
         range: Code
         required: true
-        multivalued: false
         inlined: true
         exact_mappings:
         - ncit:C207568
@@ -4763,7 +4414,6 @@ classes:
         description: An instance of unstructured text that represents the study title.
         range: string
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C207567
       extensionAttributes:
@@ -4781,7 +4431,6 @@ classes:
       id:
         range: string
         required: true
-        multivalued: false
         identifier: true
       versionIdentifier:
         title: Study Version Identifier
@@ -4789,7 +4438,6 @@ classes:
           the study version.
         range: string
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C207570
       businessTherapeuticAreas:
@@ -4809,7 +4457,6 @@ classes:
           what knowledge is being contributed from the conduct of this study.
         range: string
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C94122
       notes:
@@ -4966,7 +4613,6 @@ classes:
       id:
         range: string
         required: true
-        multivalued: false
         identifier: true
       name:
         title: Subject Enrollment Name
@@ -4974,7 +4620,6 @@ classes:
           subject enrollment.
         range: string
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C215540
       label:
@@ -4982,7 +4627,6 @@ classes:
         description: The short descriptive designation for the subject enrollment..
         range: string
         required: false
-        multivalued: false
         exact_mappings:
         - ncit:C215542
       description:
@@ -4990,7 +4634,6 @@ classes:
         description: A narrative representation of the subject enrollment.
         range: string
         required: false
-        multivalued: false
         exact_mappings:
         - ncit:C215541
       quantity:
@@ -4999,7 +4642,6 @@ classes:
           a study.
         range: Quantity
         required: true
-        multivalued: false
         inlined: true
         exact_mappings:
         - ncit:C207573
@@ -5009,7 +4651,6 @@ classes:
           applies.
         range: GeographicScope
         required: false
-        multivalued: false
         inlined: true
       forStudyCohortId:
         description: A USDM relationship between the SubjectEnrollment and StudyCohort
@@ -5017,7 +4658,6 @@ classes:
           applies.
         range: StudyCohort
         required: false
-        multivalued: false
         inlined: false
       forStudySiteId:
         description: A USDM relationship between the SubjectEnrollment and StudySite
@@ -5025,7 +4665,6 @@ classes:
           applies.
         range: StudySite
         required: false
-        multivalued: false
         inlined: false
       extensionAttributes:
         range: ExtensionAttribute
@@ -5043,7 +4682,6 @@ classes:
       id:
         range: string
         required: true
-        multivalued: false
         identifier: true
       name:
         title: Substance Name
@@ -5051,7 +4689,6 @@ classes:
           substance.
         range: string
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C215586
       label:
@@ -5059,7 +4696,6 @@ classes:
         description: The short descriptive designation for the substance.
         range: string
         required: false
-        multivalued: false
         exact_mappings:
         - ncit:C215588
       description:
@@ -5067,7 +4703,6 @@ classes:
         description: A narrative representation of the substance.
         range: string
         required: false
-        multivalued: false
         exact_mappings:
         - ncit:C215587
       codes:
@@ -5092,7 +4727,6 @@ classes:
           for the other.
         range: Substance
         required: false
-        multivalued: false
         inlined: true
       extensionAttributes:
         range: ExtensionAttribute
@@ -5111,7 +4745,6 @@ classes:
       id:
         range: string
         required: true
-        multivalued: false
         identifier: true
       name:
         title: Characteristic Name
@@ -5119,7 +4752,6 @@ classes:
           characteristic.
         range: string
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C207477
       label:
@@ -5127,7 +4759,6 @@ classes:
         description: The short descriptive designation for the characteristic.
         range: string
         required: false
-        multivalued: false
         exact_mappings:
         - ncit:C207476
       description:
@@ -5135,7 +4766,6 @@ classes:
         description: A narrative representation of the characteristic.
         range: string
         required: false
-        multivalued: false
         exact_mappings:
         - ncit:C207475
       text:
@@ -5143,7 +4773,6 @@ classes:
         description: An instance of structured text that represents the characteristic.
         range: string
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C207478
       notes:
@@ -5160,7 +4789,6 @@ classes:
           classes which provides the set of dictionary entries related to characteristics.
         range: SyntaxTemplateDictionary
         required: false
-        multivalued: false
         inlined: false
   SyntaxTemplateDictionary:
     title: Syntax Template Dictionary
@@ -5173,7 +4801,6 @@ classes:
       id:
         range: string
         required: true
-        multivalued: false
         identifier: true
       name:
         title: Syntax Template Dictionary Name
@@ -5181,7 +4808,6 @@ classes:
           syntax template dictionary.
         range: string
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C207581
       label:
@@ -5189,7 +4815,6 @@ classes:
         description: The short descriptive designation for the syntax template dictionary.
         range: string
         required: false
-        multivalued: false
         exact_mappings:
         - ncit:C207580
       description:
@@ -5197,7 +4822,6 @@ classes:
         description: A narrative representation of the syntax template dictionary.
         range: string
         required: false
-        multivalued: false
         exact_mappings:
         - ncit:C207579
       parameterMaps:
@@ -5223,7 +4847,6 @@ classes:
       id:
         range: string
         required: true
-        multivalued: false
         identifier: true
       name:
         title: Timing Name
@@ -5231,7 +4854,6 @@ classes:
           timing.
         range: string
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C207584
       label:
@@ -5239,7 +4861,6 @@ classes:
         description: The short descriptive designation for the timing.
         range: string
         required: false
-        multivalued: false
         exact_mappings:
         - ncit:C207583
       description:
@@ -5248,7 +4869,6 @@ classes:
           between temporal events.
         range: string
         required: false
-        multivalued: false
         exact_mappings:
         - ncit:C164648
       type:
@@ -5257,7 +4877,6 @@ classes:
           between temporal events.
         range: Code
         required: true
-        multivalued: false
         inlined: true
         exact_mappings:
         - ncit:C201298
@@ -5267,7 +4886,6 @@ classes:
           with another event.
         range: Code
         required: true
-        multivalued: false
         inlined: true
         exact_mappings:
         - ncit:C201297
@@ -5277,7 +4895,6 @@ classes:
           temporal events.
         range: string
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C201341
       valueLabel:
@@ -5285,7 +4902,6 @@ classes:
         description: The short descriptive designation for the timing value.
         range: string
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C207585
       windowLabel:
@@ -5295,7 +4911,6 @@ classes:
           or observed.
         range: string
         required: false
-        multivalued: false
         exact_mappings:
         - ncit:C207586
       windowLower:
@@ -5304,7 +4919,6 @@ classes:
           during which a temporal event takes place.
         range: string
         required: false
-        multivalued: false
         exact_mappings:
         - ncit:C201342
       windowUpper:
@@ -5313,7 +4927,6 @@ classes:
           during which a temporal event takes place.
         range: string
         required: false
-        multivalued: false
         exact_mappings:
         - ncit:C201343
       relativeToScheduledInstanceId:
@@ -5323,7 +4936,6 @@ classes:
           to.
         range: ScheduledInstance
         required: false
-        multivalued: false
         inlined: false
       relativeFromScheduledInstanceId:
         description: A USDM relationship between the Timing and ScheduledInstance
@@ -5331,7 +4943,6 @@ classes:
           instances or scheduled decision instances) to which the timing applies.
         range: ScheduledInstance
         required: true
-        multivalued: false
         inlined: false
       extensionAttributes:
         range: ExtensionAttribute
@@ -5350,7 +4961,6 @@ classes:
       id:
         range: string
         required: true
-        multivalued: false
         identifier: true
       name:
         title: Transition Rule Name
@@ -5358,7 +4968,6 @@ classes:
           transition rule.
         range: string
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C207588
       label:
@@ -5366,7 +4975,6 @@ classes:
         description: The short descriptive designation for the transition rule.
         range: string
         required: false
-        multivalued: false
         exact_mappings:
         - ncit:C207587
       description:
@@ -5374,7 +4982,6 @@ classes:
         description: A narrative representation of the transition rule.
         range: string
         required: false
-        multivalued: false
         exact_mappings:
         - ncit:C188835
       text:
@@ -5383,7 +4990,6 @@ classes:
           rule.
         range: string
         required: true
-        multivalued: false
         exact_mappings:
         - ncit:C207589
       extensionAttributes:

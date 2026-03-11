@@ -270,10 +270,9 @@ class DdfRaToLinkmlImporter:
 
         lower = int(match.group(1))
         upper = match.group(2)
-        resolved: dict[str, Any] = {
-            "required": lower > 0,
-            "multivalued": upper != "1",
-        }
+        resolved: dict[str, Any] = {"required": lower > 0}
+        if upper != "1":
+            resolved["multivalued"] = True
         if lower not in (0, 1):
             resolved["minimum_cardinality"] = lower
         if upper not in ("*", "1"):
