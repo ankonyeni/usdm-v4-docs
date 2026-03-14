@@ -2,7 +2,7 @@ id: Activity_011
 name: VITAL_SIGNS
 label: Vital Signs
 description: Vital Signs assessment including blood pressure, pulse, respiratory rate, and body temperature.
-biomedicalConcepts:
+biomedicalConceptIds:
   - BiomedicalConcept_7
   - BiomedicalConcept_8
   - BiomedicalConcept_9

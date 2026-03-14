@@ -3,9 +3,23 @@ text: "14 to 21 days"
 quantity:
   minValue:
     value: 14
-    unit: d
+    unit:
+      id: Alias_day
+      standardCode:
+        id: Code_day
+        code: C71620
+        codeSystem: ncit
+        codeSystemVersion: 24.04e
+        decode: Day
   maxValue:
     value: 21
-    unit: d
+    unit:
+      id: Alias_day
+      standardCode:
+        id: Code_day
+        code: C71620
+        codeSystem: ncit
+        codeSystemVersion: 24.04e
+        decode: Day
 durationWillVary: false
 

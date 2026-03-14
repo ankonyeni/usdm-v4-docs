@@ -1,8 +1,14 @@
 id: Duration_001
 text: "25 days"
 quantity:
-  value:
-    value: 28
-    unit: d
+  value: 28
+  unit:
+    id: Alias_day
+    standardCode:
+      id: Code_day
+      code: C71620
+      codeSystem: ncit
+      codeSystemVersion: 24.04e
+      decode: Day
 durationWillVary: false
 

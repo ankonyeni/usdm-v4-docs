@@ -3,7 +3,7 @@ name: Intravenous Infusion Administration
 label: IV Infusion
 description: A 60-minute intravenous infusion of the investigational medicinal product administered at a constant rate.
 administrableProduct: AdminProd_Det_77
-medicalDevice: Device_Infusion_Pump_01
+medicalDeviceId: Device_Infusion_Pump_01
 route:
   id: AliasCode_IV
   standardCode:
@@ -33,15 +33,17 @@ frequency:
     decode: Every Three Weeks
 duration:
   id: Dur_60min
-  value: 60
-  unit:
-    id: Alias_min
-    standardCode:
-      id: Code_min
-      code: min
-      codeSystem: UCUM
-      codeSystemVersion: 2.2
-      decode: minute
+  text: "60 minutes"
+  quantity:
+    value: 60
+    unit:
+      id: Alias_min
+      standardCode:
+        id: Code_min
+        code: min
+        codeSystem: UCUM
+        codeSystemVersion: 2.2
+        decode: minute
 notes:
   - id: Comment_Admin_002
     text: Infusion site must be monitored for signs of extravasation every 15 minutes.

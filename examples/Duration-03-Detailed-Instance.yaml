@@ -3,9 +3,24 @@ text: "Observation period"
 quantity:
   minValue:
     value: 12
-    unit: h
+    unit: 
+      id: Alias_hour
+      standardCode:
+        id: Code_hour
+        code: C25529
+        codeSystem: ncit
+        codeSystemVersion: 24.04e
+        decode: Hour
   maxValue:
     value: 48
-    unit: h
+    unit: 
+      id: Alias_hour
+      standardCode:
+        id: Code_hour
+        code: C25529
+        codeSystem: ncit
+        codeSystemVersion: 24.04e
+        decode: Hour
+  isApproximate: true
 durationWillVary: true
 reasonDurationWillVary: "Observation time depends on clinical response"
