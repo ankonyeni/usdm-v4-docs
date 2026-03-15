@@ -88,6 +88,10 @@ defaults:
         Ref: false
       on_missing: omit
       on_unknown_value: error
+    inlined_multivalued_as_list:
+      enabled: true
+      destination_field: inlined_as_list
+      value: true
 
   cardinality_map:
     "1":

@@ -176,6 +176,11 @@ class DdfRaToLinkmlImporter:
         inlined = self._resolve_inlined(slot_definition, type_information["kinds"])
         if inlined is not None:
             linkml_slot["inlined"] = inlined
+        inlined_as_list = self._resolve_inlined_as_list(slot_defaults, linkml_slot)
+        if inlined_as_list is not None:
+            config = slot_defaults["inlined_multivalued_as_list"]
+            destination_field = config.get("destination_field", "inlined_as_list")
+            linkml_slot[destination_field] = inlined_as_list
 
         exact_mappings = self._resolve_exact_mappings(slot_definition)
         if exact_mappings:
@@ -415,6 +420,17 @@ class DdfRaToLinkmlImporter:
                 raise ImporterError(f"Unknown Relationship Type '{relationship_value}'.")
             return None
         return inline_map[relationship_value]
+
+    @staticmethod
+    def _resolve_inlined_as_list(
+        slot_defaults: dict[str, Any], linkml_slot: dict[str, Any]
+    ) -> bool | None:
+        config = slot_defaults.get("inlined_multivalued_as_list")
+        if not isinstance(config, dict) or not config.get("enabled", False):
+            return None
+        if linkml_slot.get("multivalued") is not True or linkml_slot.get("inlined") is not True:
+            return None
+        return bool(config.get("value", True))
 
     def _resolve_exact_mappings(self, source_definition: dict[str, Any]) -> list[str]:
         config = self.defaults["exact_mappings"]
