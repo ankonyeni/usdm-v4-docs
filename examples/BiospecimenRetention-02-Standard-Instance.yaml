@@ -1,0 +1,6 @@
+id: retention-med-002
+name: Pharmacogenomic Storage
+label: PGx Retention
+description: Long-term storage of whole blood samples for future genomic research as specified in the informed consent.
+isRetained: true
+includesDNA: true

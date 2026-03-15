@@ -1,0 +1,12 @@
+id: estimand-001
+name: Primary Efficacy - ITT Analysis
+populationSummary: Difference in mean change from baseline in HbA1c at Week 52
+analysisPopulationId: pop-all-randomized
+variableOfInterestId: endpoint-hba1c-52wk
+intercurrentEvents:
+  - id: ice-001
+    text: Discontinuation of investigational medicinal product for any reason.
+    strategy: Treatment policy regardless of whether study drug was discontinued
+interventionIds:
+  - trt-active-drug
+  - trt-placebo

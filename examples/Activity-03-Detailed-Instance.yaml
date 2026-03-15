@@ -9,8 +9,8 @@ biomedicalConceptIds:
   - BiomedicalConcept_10
 definedProcedures:
   - id: Procedure_010
-    name: PHYSICAL_EXAM
-    label: Physical Examination
+    name: VITAL_SIGNS_ASSESSMENT
+    label: Vital Signs assessment
     description: blood pressure, pulse, and body temperature
     procedureType: "Assessment"
     code:

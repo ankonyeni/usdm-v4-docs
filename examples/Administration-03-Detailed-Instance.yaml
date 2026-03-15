@@ -42,10 +42,10 @@ duration:
       id: Alias_min
       standardCode:
         id: Code_min
-        code: min
-        codeSystem: UCUM
-        codeSystemVersion: "2.2"
-        decode: minute
+        code: C48154 
+        codeSystem: ncit
+        codeSystemVersion: 24.04e
+        decode: min
 notes:
   - id: Comment_Admin_002
     text: Infusion site must be monitored for signs of extravasation every 15 minutes.

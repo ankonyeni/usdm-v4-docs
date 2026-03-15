@@ -1,0 +1,13 @@
+id: alias-detailed-002
+standardCode:
+  id: code-ref-005
+  code: C64502
+  codeSystem: ncit
+  codeSystemVersion: 24.04e
+  decode: Q12H
+standardCodeAliases:
+  - id: code-ref-007
+    code: 12H
+    codeSystem: HOSPITAL_LOCAL
+    codeSystemVersion: "2.1"
+    decode: Every 12 Hours

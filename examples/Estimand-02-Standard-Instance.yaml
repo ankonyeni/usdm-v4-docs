@@ -1,0 +1,14 @@
+id: estimand-002
+name: Composite Estimand for Heart Failure
+label: Composite Efficacy Estimand
+description: Evaluation of treatment effect considering death as a component of the outcome.
+populationSummary: Proportion of subjects alive and without heart failure hospitalization at Month 12.
+analysisPopulationId: pop-target-cv-risk
+variableOfInterestId: endpoint-composite-outcome
+intercurrentEvents:
+  - id: ice-002
+    text: Death due to any cause prior to the Month 12 assessment.
+    strategy: Composite strategy where death is treated as a failure
+interventionIds:
+  - drug-a-10mg
+  - drug-b-standard-care
