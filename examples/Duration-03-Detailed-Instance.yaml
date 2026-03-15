@@ -1,7 +1,10 @@
 id: Duration_003
-text: "Observation period"
+text: 12 to 48 hours Observation period
 quantity:
+  id: Quant_Duration_003
+  isApproximate: true
   minValue:
+    id: Quant_Duration_003_Min
     value: 12
     unit: 
       id: Alias_hour
@@ -12,6 +15,7 @@ quantity:
         codeSystemVersion: 24.04e
         decode: Hour
   maxValue:
+    id: Quant_Duration_003_Max
     value: 48
     unit: 
       id: Alias_hour
@@ -21,6 +25,5 @@ quantity:
         codeSystem: ncit
         codeSystemVersion: 24.04e
         decode: Hour
-  isApproximate: true
 durationWillVary: true
-reasonDurationWillVary: "Observation time depends on clinical response"
+reasonDurationWillVary: Observation time depends on clinical response

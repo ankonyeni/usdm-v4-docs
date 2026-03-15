@@ -6,6 +6,6 @@ description: This population will be used as the primary set for all efficacy an
 notes:
   - id: Comment_AP_01
     text: Consistent with ICH E9 guidelines for statistical principles in clinical trials.
-subsetOf:
+subsetOfIds:
   - PopulationDefinition_Randomized_01
 

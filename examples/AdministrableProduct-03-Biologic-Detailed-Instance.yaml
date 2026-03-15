@@ -31,8 +31,9 @@ properties:
       codeSystem: ncit
       codeSystemVersion: 24.04e
       decode: Chemical Property
-    text: 5.5
+    text: "5.5"
     quantity:
+      id: Quant_PH_01
       value: 5.5
   - id: AdminProductProp_Osmolality_01
     name: Osmolality
@@ -44,6 +45,7 @@ properties:
       decode: Physical Property
     text: 270 mOsm/kg
     quantity:
+      id: Quant_Osm_01
       value: 270
       unit:
         id: Alias_mOsm_kg
@@ -51,7 +53,7 @@ properties:
           id: Code_mOsm_kg
           code: mOsm/kg
           codeSystem: UCUM
-          codeSystemVersion: 2.2
+          codeSystemVersion: "2.2"
           decode: milliosmole per kilogram
 notes:
   - id: Comment_Storage_01
@@ -59,17 +61,8 @@ notes:
 identifiers:
   - id: AdminProdID_UNII_02
     text: DPT0O3T46P
-    scope:
-      id: Org_FDA
-      name: Food and Drug Administration
-      identifier: FDA
-      identifierScheme: UNII
-      type:
-        id: Code_Regulatory
-        code: C88081
-        codeSystem: ncit
-        codeSystemVersion: 24.04e
-        decode: Regulatory Authority
+    scopeId: Org_FDA
+      
 ingredients:
   - id: Ingredient_Pembrolizumab
     role:
@@ -85,23 +78,25 @@ ingredients:
         - id: Strength_25mg_mL
           name: 25 mg/mL
           numerator:
+            id: Quant_Strength_25mg_mL
             value: 25
             unit:
               id: Alias_mg
               standardCode:
                 id: Code_mg
-                code: mg
-                codeSystem: UCUM
-                codeSystemVersion: 2.2
-                decode: milligram
+                code: C28253
+                codeSystem: ncit
+                codeSystemVersion: 24.04e
+                decode: mg
           denominator:
+            id: Quant_Volume_1mL
             value: 1
             unit:
               id: Alias_mL
               standardCode:
                 id: Code_mL
-                code: mL
-                codeSystem: UCUM
-                codeSystemVersion: 2.2
-                decode: milliliter
+                code: C28254 
+                codeSystem: ncit
+                codeSystemVersion: 24.04e
+                decode: mL
 

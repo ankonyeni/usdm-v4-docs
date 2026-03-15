@@ -2,6 +2,10 @@ id: Admin_Std_002
 name: Oral Dose Administration
 label: Morning Dose
 description: The process of administering the study drug orally with water.
+duration:
+  id: Dur_Instantaneous
+  text: instantaneous
+  durationWillVary: false
 notes:
   - id: Comment_Admin_001
     text: To be administered in a fasted state, at least 1 hour before breakfast.

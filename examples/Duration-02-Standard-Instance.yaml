@@ -1,7 +1,10 @@
 id: Duration_002
 text: "14 to 21 days"
 quantity:
+  id: Quant_Duration_002
+  isApproximate: false
   minValue:
+    id: Quant_Duration_002_Min
     value: 14
     unit:
       id: Alias_day
@@ -12,6 +15,7 @@ quantity:
         codeSystemVersion: 24.04e
         decode: Day
   maxValue:
+    id: Quant_Duration_002_Max
     value: 21
     unit:
       id: Alias_day

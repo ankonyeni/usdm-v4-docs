@@ -7,11 +7,11 @@ lines:
 city: Cambridge
 state: MA
 district: Middlesex County
-postalCode: 02138
+postalCode: "02138"
 country:
   id: Code_US
   code: USA
   codeSystem: ISO 3166-1 alpha-3
-  codeSystemVersion: 2020
+  codeSystemVersion: "2020"
   decode: United States
 

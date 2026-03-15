@@ -14,8 +14,8 @@ quantity:
     id: Alias_mPas
     standardCode:
       id: Code_mPas
-      code: mPa.s
-      codeSystem: UCUM
-      codeSystemVersion: 2.2
-      decode: millipascal second
+      code: C204708
+      codeSystem: ncit
+      codeSystemVersion: 24.04e
+      decode: mPa/s
 

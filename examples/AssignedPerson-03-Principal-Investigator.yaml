@@ -14,5 +14,5 @@ personName:
     - "MD"
     - "PhD"
   text: Dr. Jane Smith, MD, PhD
-organization: Organization_Site_A
+organizationId: Organization_Site_A
 

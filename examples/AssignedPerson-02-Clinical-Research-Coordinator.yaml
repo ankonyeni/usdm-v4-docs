@@ -9,5 +9,5 @@ personName:
     - Robert
   familyName: Johnson
   text: Robert Johnson
-organization: Organization_Sponsor_Corp
+organizationId: Organization_Sponsor_Corp
 

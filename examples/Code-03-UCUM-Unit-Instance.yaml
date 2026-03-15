@@ -1,9 +1,6 @@
 id: Code_LOINC_BP_003
 code: 35094-2
 codeSystem: LOINC
-codeSystemVersion: 2.82
+codeSystemVersion: "2.82"
 decode: Blood pressure panel
-Notes:
-  - id: Note_LOINC_BP_01
-    text: Panel of blood pressure measurements, including systolic and diastolic blood pressure.
 

@@ -1,30 +1,9 @@
-id: Activity_Det_VitalSigns_01
-name: Vital Signs Collection
-label: Standard Vital Signs
-description: Assessment of the participant's basic body functions to monitor general physical health.
-previousActivityId: Activity_Min_001
-nextActivityId: Activity_ECG_01
-medicalDevices:
-  - Device_Sphygmomanometer_01
-  - Device_Thermometer_01
-timelineId: Timeline_Main_Protocol
-notes:
-  - id: Comment_Vital_01
-    text: Participant should be in a seated position for at least 5 minutes prior to measurements.
-definedProcedures:
-  - id: Proc_BP_01
-    name: Blood Pressure Measurement
-    label: Blood Pressure
-    description: Measurement of systolic and diastolic blood pressure using an automated cuff.
-  - id: Proc_HR_01
-    name: Heart Rate Measurement
-    label: Heart Rate
-    description: Pulse rate measurement typically performed via radial artery palpation or automated device.
-  - id: Proc_Temp_01
-    name: Body Temperature Measurement
-    label: Temperature
-    description: Measurement of core body temperature using an oral or tympanic thermometer.
-  - id: Proc_RR_01
-    name: Respiratory Rate Measurement
-    label: Respiratory Rate
-    description: Counting the number of breaths taken per minute by observing chest rise and fall.
+id: Activity_009
+name: SCREENING_ASSESSMENTS
+label: Screening Assessments
+description: Group of screening-related activities
+childIds:
+  - Activity_010
+  - Activity_011
+  - Activity_012
+

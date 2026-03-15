@@ -1,6 +1,7 @@
 id: Duration_001
 text: "25 days"
 quantity:
+  id: Quant_Duration_001
   value: 28
   unit:
     id: Alias_day

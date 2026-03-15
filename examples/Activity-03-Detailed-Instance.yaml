@@ -12,11 +12,11 @@ definedProcedures:
     name: PHYSICAL_EXAM
     label: Physical Examination
     description: blood pressure, pulse, and body temperature
-    procedureType: ""
+    procedureType: "Assessment"
     code:
       id: Code_010
-      code: 410188000
+      code: "410188000"
       codeSystem: SNOMED
-      codeSystemVersion: 2026-03-01
+      codeSystemVersion: "2026-03-01"
       decode: Taking patient vital signs assessment
-
+ 

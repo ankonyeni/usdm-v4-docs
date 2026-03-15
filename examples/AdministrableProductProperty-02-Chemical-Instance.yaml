@@ -6,7 +6,7 @@ type:
   codeSystem: ncit
   codeSystemVersion: 24.04e
   decode: Chemical Property
-text: 6.5
+text: "6.5"
 quantity:
   id: Quant_pH_01
   value: 6.5
