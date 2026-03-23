@@ -5,6 +5,7 @@ analysisPopulationId: pop-all-randomized
 variableOfInterestId: endpoint-hba1c-52wk
 intercurrentEvents:
   - id: ice-001
+    name: Treatment Discontinuation
     text: Discontinuation of investigational medicinal product for any reason.
     strategy: Treatment policy regardless of whether study drug was discontinued
 interventionIds:

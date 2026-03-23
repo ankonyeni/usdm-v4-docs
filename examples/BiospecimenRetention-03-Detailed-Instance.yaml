@@ -4,9 +4,6 @@ label: Optional Longitudinal Storage
 description: Retention of residual tissue samples for exploratory biomarker analysis.
 isRetained: true
 includesDNA: true
-notes:
-  - id: note-retention-001
-    text: Samples are stored at -80 degrees Celsius at the central repository.
 extensionAttributes:
   - id: ext-retention-01
     url: https://example.org/usdm/ext/storage-facility-id

@@ -3,9 +3,7 @@ name: Principal Investigator
 label: PI
 code:
   id: code-role-01
-  standardCode:
-    id: std-code-role-01
-    code: C19924
-    codeSystem: ncit
-    codeSystemVersion: 24.04e
-    decode: Principal Investigator
+  code: C19924
+  codeSystem: ncit
+  codeSystemVersion: 24.04e
+  decode: Principal Investigator
