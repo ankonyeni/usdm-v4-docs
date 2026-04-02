@@ -16,3 +16,6 @@ docs/schemas/
 docs/enums/
 docs/subsets/
 schemas/generated/
+scripts/check_example_coverage.py
+scripts/create_examples.py
+scripts/validate_examples.py
