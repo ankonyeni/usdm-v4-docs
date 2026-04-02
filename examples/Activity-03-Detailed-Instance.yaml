@@ -12,7 +12,7 @@ definedProcedures:
     name: VITAL_SIGNS_ASSESSMENT
     label: Vital Signs assessment
     description: blood pressure, pulse, and body temperature
-    procedureType: "Assessment"
+    procedureType: Assessment
     code:
       id: Code_010
       code: "410188000"
@@ -20,3 +20,4 @@ definedProcedures:
       codeSystemVersion: "2026-03-01"
       decode: Taking patient vital signs assessment
  
+

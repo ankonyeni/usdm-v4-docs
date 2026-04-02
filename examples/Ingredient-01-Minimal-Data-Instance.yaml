@@ -1,0 +1,25 @@
+id: ING-1
+role:
+  id: ING-ROLE-1
+  code: C48154
+  codeSystem: ncit
+  codeSystemVersion: 24.04e
+  decode: Active
+substance:
+  id: SUB-1
+  name: Aspirin
+  strengths:
+    - id: STR-1
+      name: 500mg
+      numerator:
+        id: QUANT-1
+        value: 500
+        unit:
+          id: ALIAS-CODE-MG-1
+          standardCode:
+            id: CODE-MG-1
+            code: C48150
+            codeSystem: ncit
+            codeSystemVersion: 24.04e
+            decode: milligram
+

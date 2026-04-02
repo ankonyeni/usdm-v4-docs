@@ -1,5 +1,5 @@
 id: Duration_001
-text: "25 days"
+text: 25 days
 quantity:
   id: Quant_Duration_001
   value: 28
@@ -12,4 +12,5 @@ quantity:
       codeSystemVersion: 24.04e
       decode: Day
 durationWillVary: false
+
 

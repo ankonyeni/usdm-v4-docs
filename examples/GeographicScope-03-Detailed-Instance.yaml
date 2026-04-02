@@ -1,0 +1,20 @@
+id: GEO-3
+type:
+  id: GEO-TYPE-3
+  code: C170992
+  codeSystem: ncit
+  codeSystemVersion: 24.04e
+  decode: Site
+code:
+  id: GEO-CODE-2
+  standardCode:
+    id: CODE-GEO-2
+    code: "12345"
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: University Hospital
+extensionAttributes:
+  - id: EXT-GEO-1
+    url: https://example.com/extensions/site-status
+    valueString: Active and recruiting
+

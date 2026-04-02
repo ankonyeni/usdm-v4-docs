@@ -1,0 +1,18 @@
+id: Timing_1
+name: TIM1
+type:
+  id: Code_31
+  code: C201357
+  codeSystem: ncit
+  codeSystemVersion: 24.04e
+  decode: Before
+relativeToFrom:
+  id: Code_32
+  code: C201355
+  codeSystem: ncit
+  codeSystemVersion: 24.04e
+  decode: Start to Start
+value: P2D
+valueLabel: 2 days
+relativeFromScheduledInstanceId: ScheduledActivityInstance_1
+

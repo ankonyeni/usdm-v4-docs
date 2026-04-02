@@ -33,7 +33,7 @@ frequency:
     decode: Every Three Weeks
 duration:
   id: Dur_60min
-  text: "60 minutes"
+  text: 60 minutes
   durationWillVary: false
   quantity:
     id: Quant_Dur_60min
@@ -51,4 +51,5 @@ notes:
     text: Infusion site must be monitored for signs of extravasation every 15 minutes.
   - id: Comment_Admin_003
     text: Use a dedicated infusion line with an in-line filter.
+
 

@@ -1,0 +1,70 @@
+id: ING-3
+role:
+  id: ING-ROLE-3
+  code: C48154
+  codeSystem: ncit
+  codeSystemVersion: 24.04e
+  decode: Active
+substance:
+  id: SUB-3
+  name: Acetaminophen
+  label: APAP
+  description: A pain reliever and a fever reducer.
+  codes:
+    - id: CODE-SUB-1
+      code: C363
+      codeSystem: ncit
+      codeSystemVersion: 24.04e
+      decode: Acetaminophen
+  strengths:
+    - id: STR-3
+      name: 10-20mg
+      label: 10-20mg
+      description: A range of 10 to 20 milligrams
+      numerator:
+        id: RANGE-1
+        minValue:
+          id: QUANT-4
+          value: 10
+          unit:
+            id: ALIAS-CODE-MG-3
+            standardCode:
+              id: CODE-MG-3
+              code: C48150
+              codeSystem: ncit
+              codeSystemVersion: 24.04e
+              decode: milligram
+        maxValue:
+          id: QUANT-5
+          value: 20
+          unit:
+            id: ALIAS-CODE-MG-4
+            standardCode:
+              id: CODE-MG-4
+              code: C48150
+              codeSystem: ncit
+              codeSystemVersion: 24.04e
+              decode: milligram
+        isApproximate: false
+  referenceSubstance:
+    id: SUB-1
+    name: Aspirin
+    strengths:
+      - id: STR-1
+        name: 500mg
+        numerator:
+          id: QUANT-1
+          value: 500
+          unit:
+            id: ALIAS-CODE-MG-1
+            standardCode:
+              id: CODE-MG-1
+              code: C48150
+              codeSystem: ncit
+              codeSystemVersion: 24.04e
+              decode: milligram
+extensionAttributes:
+  - id: EXT-ING-1
+    url: https://example.com/extensions/ingredient-grade
+    valueString: Pharmaceutical Grade
+

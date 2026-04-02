@@ -1,0 +1,13 @@
+id: StudyTitle_3
+type:
+  id: Code_16
+  code: C99905x2
+  codeSystem: ncit
+  codeSystemVersion: 24.04e
+  decode: Official Study Title
+text: Something Very Official
+extensionAttributes:
+- id: ext-study-title-audience
+  url: https://example.org/usdm/extensions/title-audience
+  valueString: Regulatory submission
+

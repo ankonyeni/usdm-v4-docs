@@ -1,0 +1,18 @@
+id: SA-2
+name: Placebo Arm
+label: Placebo
+description: The placebo control arm.
+type:
+  id: SA-TYPE-2
+  code: C172458
+  codeSystem: ncit
+  codeSystemVersion: 24.04e
+  decode: Placebo Arm
+dataOriginType:
+  id: SA-ORIGIN-2
+  code: C188829
+  codeSystem: ncit
+  codeSystemVersion: 24.04e
+  decode: Protocol
+dataOriginDescription: Data for this arm is collected as per protocol.
+

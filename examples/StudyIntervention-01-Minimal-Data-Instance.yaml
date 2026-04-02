@@ -1,0 +1,15 @@
+id: StudyIntervention_1
+name: LY
+role:
+  id: Code_510
+  code: C41161
+  codeSystem: ncit
+  codeSystemVersion: 24.04e
+  decode: Experimental Intervention
+type:
+  id: Code_511
+  code: C1909
+  codeSystem: ncit
+  codeSystemVersion: 24.04e
+  decode: Pharmacologic Substance
+

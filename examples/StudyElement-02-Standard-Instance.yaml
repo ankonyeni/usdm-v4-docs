@@ -1,0 +1,4 @@
+id: SELM-2
+name: Treatment Period
+label: Treatment
+description: The period during which the study treatment is administered.

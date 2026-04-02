@@ -1,0 +1,11 @@
+id: Procedure_2
+name: MRI Brain
+label: MRI Brain
+description: Magnetic Resonance Imaging of the brain
+procedureType: Imaging
+code:
+  id: Code_73
+  code: C16834
+  codeSystem: ncit
+  codeSystemVersion: 24.04e
+  decode: Magnetic Resonance Imaging

@@ -1,0 +1,11 @@
+id: SELM-3
+name: Follow-up Period
+label: Follow-up
+description: The period after the treatment period during which subjects are followed for safety and efficacy.
+notes:
+  - id: NOTE-SELM-1
+    text: Follow-up visits are scheduled every 3 months.
+extensionAttributes:
+  - id: EXT-SELM-1
+    url: https://example.com/extensions/element-duration
+    valueString: 12 months

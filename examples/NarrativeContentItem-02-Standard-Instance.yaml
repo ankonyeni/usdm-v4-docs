@@ -1,0 +1,9 @@
+id: NarrativeContentItem_3
+name: NCI_3
+text: '<div xmlns="http://www.w3.org/1999/xhtml"><p>Patients may be included in the
+  study only if they meet <strong>all</strong> the following criteria:</p><table><tr><td
+  style="vertical-align: top; text-align: left"><p>1</p></td><td style="vertical-align:
+  top; text-align: left"><p><usdm:ref attribute="text" id="EligibilityCriterionItem_1"
+  klass="EligibilityCriterionItem"></usdm:ref></p></td></tr><tr><td style="vertical-align:
+  top; text-align: left"><p>2</p></td><td style="vertical-align: top; text-align:
+  left"><p><usdm:ref attribute="text" id="EligibilityCriterionItem_2" klass="EligibilityCriterionItem"></usdm:ref></p></td></tr></table></div>'

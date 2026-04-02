@@ -1,0 +1,157 @@
+id: SV-02
+versionIdentifier: "2.0"
+businessTherapeuticAreas:
+  - id: Code-TA-01
+    code: C2985
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Diabetes Mellitus
+rationale: Detailed study version showing how protocol metadata, regulatory references, intervention links, and external dictionaries can be attached to a single approved version.
+notes:
+  - id: note-study-version-01
+    text: This study version shows how identifiers, titles, design metadata, and dictionaries can be combined in one protocol snapshot.
+dateValues:
+  - id: GovernanceDate_1
+    name: Design Approval
+    label: Design Approval
+    description: Design approval date
+    type:
+      id: Code_20
+      code: C132352
+      codeSystem: ncit
+      codeSystemVersion: 24.04e
+      decode: Sponsor Approval Date
+    dateValue: "2022-12-16"
+    geographicScopes:
+      - id: GeographicScope_1
+        type:
+          id: Code_22
+          code: C25464
+          codeSystem: ncit
+          codeSystemVersion: 24.04e
+          decode: Country
+referenceIdentifiers:
+  - id: ReferenceIdentifier_1
+    text: PIP1234
+    scopeId: Organization_3
+    type:
+      id: Code_71
+      code: C99910x1
+      codeSystem: ncit
+      codeSystemVersion: 24.04e
+      decode: Pediatric Investigation Plan
+documentVersionIds:
+  - StudyDefinitionDocumentVersion_1
+studyDesigns:
+  - model:
+      id: Code_106
+      code: C82639
+      codeSystem: ncit
+      codeSystemVersion: 24.04e
+      decode: Parallel Study
+    timePerspective:
+      id: Code_111
+      code: C53310
+      codeSystem: ncit
+      codeSystemVersion: 24.04e
+      decode: Cross-Sectional Study
+    id: ObservationalStudyDesign_1
+    name: Study Design 1
+    rationale: Basic study
+    eligibilityCriteria:
+      - id: EligibilityCriterion_1
+        name: Age Criteria
+        identifier: "1"
+        category:
+          id: Code_211
+          code: C25532
+          codeSystem: ncit
+          codeSystemVersion: 24.04e
+          decode: Inclusion Criteria
+        criterionItemId: EligibilityCriterionItem_1
+    arms:
+      - id: StudyArm_1
+        name: Active
+        type:
+          id: Code_92
+          code: C174267
+          codeSystem: ncit
+          codeSystemVersion: 24.04e
+          decode: Active Comparator Arm
+        dataOriginType:
+          id: Code_93
+          code: C188866
+          codeSystem: ncit
+          codeSystemVersion: 24.04e
+          decode: Data Generated Within Study
+        dataOriginDescription: Data collected from subjects
+    studyCells:
+      - id: StudyCell_1
+        armId: StudyArm_1
+        epochId: StudyEpoch_1
+        elementIds:
+          - StudyElement_1
+    epochs:
+      - id: StudyEpoch_1
+        name: Screening
+        type:
+          id: Code_96
+          code: C202487
+          codeSystem: ncit
+          codeSystemVersion: 24.04e
+          decode: Screening Epoch
+    population:
+      id: StudyDesignPopulation_1
+      name: POP1
+      includesHealthySubjects: true
+studyIdentifiers:
+  - id: SID-02
+    text: NCT67890
+    scopeId: ORG-02
+titles:
+  - id: ST-02
+    text: A Detailed Study Title
+    type:
+      id: CODE-ST-TYPE-02
+      code: SCIENTIFIC
+      codeSystem: ncit
+      codeSystemVersion: 24.04e
+      decode: Scientific
+organizations:
+  - id: ORG-02
+    name: A Detailed Organization
+    identifier: "67890"
+    identifierScheme: DUNS
+    type:
+      id: CODE-ORG-TYPE-02
+      code: CRO
+      codeSystem: ncit
+      codeSystemVersion: 24.04e
+      decode: Contract Research Organization
+studyInterventions:
+  - id: StudyIntervention_1
+    name: LY
+    role:
+      id: Code_510
+      code: C41161
+      codeSystem: ncit
+      codeSystemVersion: 24.04e
+      decode: Experimental Intervention
+    type:
+      id: Code_511
+      code: C1909
+      codeSystem: ncit
+      codeSystemVersion: 24.04e
+      decode: Pharmacologic Substance
+dictionaries:
+  - id: SyntaxTemplateDictionary_1
+    name: IE_Dict
+    parameterMaps:
+      - id: ParameterMap_1
+        tag: min_age
+        reference: <usdm:ref klass="StudyDesignPopulation" id="StudyDesignPopulation_1" attribute="plannedAge"></usdm:ref>
+conditions:
+  - id: Condition-1
+    name: Allergy Condition
+    text: Subject has a known allergy to penicillin.
+

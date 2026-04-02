@@ -1,0 +1,9 @@
+id: SE-1
+name: Screening
+type:
+  id: SE-TYPE-1
+  code: C188830
+  codeSystem: ncit
+  codeSystemVersion: 24.04e
+  decode: Screening
+

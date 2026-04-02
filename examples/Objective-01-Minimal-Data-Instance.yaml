@@ -1,0 +1,12 @@
+level:
+  id: Code_207
+  code: C85826
+  codeSystem: ncit
+  codeSystemVersion: 24.04e
+  decode: Primary Objective
+id: Objective_1
+name: OBJ1
+text: The primary efficacy objective for this study is to evaluate the efficacy of
+  TCZ compared with placebo in combination with SOC for the treatment of severe COVID-19
+  pneumonia
+

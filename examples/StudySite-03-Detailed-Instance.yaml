@@ -1,0 +1,15 @@
+id: StudySite_3
+name: SITE_3
+label: Only site
+description: Only Site
+country:
+  id: Code_218
+  code: DNK
+  codeSystem: ncit
+  codeSystemVersion: 24.04e
+  decode: Denmark
+extensionAttributes:
+- id: ext-study-site-region
+  url: https://example.org/usdm/extensions/operational-region
+  valueString: Single-site pilot deployment
+

@@ -7,11 +7,12 @@ administrableDoseForm:
     code: C42946
     codeSystem: ncit
     codeSystemVersion: 24.04e
-    decode: Injection
+    decode: INJECTION
 productDesignation:
   id: Code_IMP
   code: C202579
   codeSystem: ncit
   codeSystemVersion: 24.04e
-  decode: Investigational Medicinal Product
+  decode: IMP
+
 

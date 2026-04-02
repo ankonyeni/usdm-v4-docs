@@ -1,0 +1,9 @@
+id: StudySite_1
+name: SITE_1
+country:
+  id: Code_216
+  code: DNK
+  codeSystem: ncit
+  codeSystemVersion: 24.04e
+  decode: Denmark
+

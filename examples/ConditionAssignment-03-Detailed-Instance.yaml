@@ -1,0 +1,7 @@
+id: CA-3
+condition: Subject is randomized to treatment arm A
+conditionTargetId: SAI-3
+extensionAttributes:
+  - id: ext-ca-01
+    url: https://example.org/usdm/extension/randomization-date
+    valueString: "2024-01-01"

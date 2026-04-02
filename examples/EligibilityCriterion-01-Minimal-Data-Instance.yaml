@@ -1,0 +1,11 @@
+id: EC-1
+name: Inclusion Criterion 1
+identifier: IC-01
+category:
+  id: CAT-CODE-1
+  code: C25532
+  codeSystem: ncit
+  codeSystemVersion: 24.04e
+  decode: Inclusion Criterion
+criterionItemId: ECI-1
+

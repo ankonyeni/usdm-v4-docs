@@ -1,0 +1,8 @@
+id: GEO-1
+type:
+  id: GEO-TYPE-1
+  code: C170990
+  codeSystem: ncit
+  codeSystemVersion: 24.04e
+  decode: Country
+

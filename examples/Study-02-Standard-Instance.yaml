@@ -1,0 +1,33 @@
+id: STUDY-02
+name: A standard study
+label: STD-STUDY-02
+description: A standard study with one version.
+versions:
+  - id: SV-01
+    versionIdentifier: "1.0"
+    rationale: This is a standard study to test the new drug.
+    studyIdentifiers:
+      - id: SID-01
+        text: NCT12345
+        scopeId: "ORG-01"
+    titles:
+      - id: ST-01
+        text: A Standard Study Title
+        type:
+          id: CODE-ST-TYPE-01
+          code: OFFICIAL
+          codeSystem: ncit
+          codeSystemVersion: 24.04e
+          decode: Official
+    organizations:
+      - id: ORG-01
+        name: A Standard Organization
+        identifier: "12345"
+        identifierScheme: DUNS
+        type:
+          id: CODE-ORG-TYPE-01
+          code: SPONSOR
+          codeSystem: ncit
+          codeSystemVersion: 24.04e
+          decode: Sponsor
+

@@ -1,0 +1,18 @@
+id: BCP-003
+name: Temperature
+label: Temperature
+isRequired: true
+isEnabled: true
+datatype: float
+code:
+  id: alias-code-temp-prop-001
+  standardCode:
+    id: code-temp-prop-001
+    code: C174446
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Temperature
+notes:
+  - id: CommentAnnot_Temp_Prop_001
+    text: Temperature can be measured in Celsius or Fahrenheit.
+

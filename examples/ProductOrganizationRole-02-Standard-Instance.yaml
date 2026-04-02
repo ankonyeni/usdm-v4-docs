@@ -1,0 +1,14 @@
+id: por-std-002
+name: Primary Study Sponsor Role
+label: Sponsor Role
+description: Identifies the lead sponsor organization responsible for the investigational
+  product.
+code:
+  id: code-por-sponsor-02
+  code: C70793
+  codeSystem: ncit
+  codeSystemVersion: 24.04e
+  decode: Clinical Study Sponsor
+appliesToIds:
+- AdminProd_Det_77
+organizationId: org-std-002

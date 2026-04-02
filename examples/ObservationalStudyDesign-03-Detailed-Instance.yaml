@@ -1,0 +1,1013 @@
+model:
+  id: Code_106
+  code: C82639
+  codeSystem: ncit
+  codeSystemVersion: 24.04e
+  decode: Parallel Study
+subTypes:
+- id: Code_105
+  code: C49666
+  codeSystem: ncit
+  codeSystemVersion: 24.04e
+  decode: Efficacy Study
+timePerspective:
+  id: Code_111
+  code: C53310
+  codeSystem: ncit
+  codeSystemVersion: 24.04e
+  decode: Cross-Sectional Study
+samplingMethod:
+  id: Code_112
+  code: C71517
+  codeSystem: ncit
+  codeSystemVersion: 24.04e
+  decode: Equal Probability Sampling Method
+analysisPopulations:
+- id: AnalysisPopulation_1
+  text: ITT
+  name: AP_1
+  subsetOfIds:
+  - StudyCohort_1
+- id: AnalysisPopulation_2
+  text: ITT
+  name: AP_4
+  subsetOfIds:
+  - StudyCohort_2
+id: ObservationalStudyDesign_1
+name: Study Design 1
+label: USDM Example Study Design
+description: The main design for the study
+rationale: Basic study
+therapeuticAreas:
+- id: Code_100
+  code: T2_DIABETES
+  codeSystem: ncit
+  codeSystemVersion: 24.04e
+  decode: Type 2 diabetes
+- id: Code_101
+  code: '73211009'
+  codeSystem: ncit
+  codeSystemVersion: 24.04e
+  decode: Diabetes mellitus (disorder)
+studyType:
+  id: Code_109
+  code: C16084
+  codeSystem: ncit
+  codeSystemVersion: 24.04e
+  decode: Observational Study
+characteristics:
+- id: Code_107
+  code: C99907x1
+  codeSystem: ncit
+  codeSystemVersion: 24.04e
+  decode: EXTENSION
+- id: Code_108
+  code: C98704
+  codeSystem: ncit
+  codeSystemVersion: 24.04e
+  decode: ADAPTIVE
+studyPhase:
+  id: AliasCode_20
+  standardCode:
+    id: Code_110
+    code: C15602
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Phase III Trial
+activities:
+- id: Activity_1
+  name: Demographics
+  label: Demographics
+  description: Basic Demog
+  biomedicalConceptIds:
+  - BiomedicalConcept_1
+  - BiomedicalConcept_2
+  - BiomedicalConcept_3
+  - BiomedicalConcept_4
+  nextId: Activity_2
+- id: Activity_2
+  name: Procedures
+  label: Procedures
+  description: Perform the procedures
+  definedProcedures:
+  - id: Procedure_1
+    name: PR1
+    label: Stress procedure
+    description: Stress procedure
+    procedureType: Stress
+    code:
+      id: Code_72
+      code: '12345678'
+      codeSystem: ncit
+      codeSystemVersion: 24.04e
+      decode: Test
+    studyInterventionId: StudyIntervention_1
+    notes:
+    - id: note-procedure-01
+      text: This procedure is performed before dosing decisions are finalized.
+  - id: Procedure_2
+    name: PR2
+    label: 6MWT
+    description: 6min Walk Test conducted after the stress test
+    procedureType: Stress
+    code:
+      id: Code_73
+      code: '12345679'
+      codeSystem: ncit
+      codeSystemVersion: 24.04e
+      decode: Test
+    studyInterventionId: StudyIntervention_1
+    notes:
+    - id: note-procedure-01
+      text: This procedure is performed before dosing decisions are finalized.
+  nextId: Activity_3
+  previousId: Activity_1
+- id: Activity_3
+  name: Optional Weight
+  label: Weight optional
+  description: Perform the optional weight data collection
+  biomedicalConceptIds:
+  - BiomedicalConcept_5
+  nextId: Activity_4
+  previousId: Activity_2
+- id: Activity_4
+  name: Optional
+  label: Optional activity
+  description: Optional safety activity
+  biomedicalConceptIds:
+  - BiomedicalConcept_6
+  - BiomedicalConcept_7
+  previousId: Activity_3
+eligibilityCriteria:
+- id: EligibilityCriterion_1
+  name: Age Criteria
+  description: The study age criterion
+  identifier: '1'
+  category:
+    id: Code_211
+    code: C25532
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Inclusion Criteria
+  criterionItemId: EligibilityCriterionItem_1
+- id: EligibilityCriterion_2
+  name: Age Criteria Error
+  description: The study age criterion with error
+  identifier: '2'
+  category:
+    id: Code_212
+    code: C25532
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Inclusion Criteria
+  criterionItemId: EligibilityCriterionItem_2
+- id: EligibilityCriterion_3
+  name: Drug A
+  description: Ever taken drug A
+  identifier: '1'
+  category:
+    id: Code_213
+    code: C25370
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Exclusion Criteria
+  criterionItemId: EligibilityCriterionItem_3
+- id: EligibilityCriterion_4
+  name: Missing Tag
+  description: Test for missing tag
+  identifier: '2'
+  category:
+    id: Code_214
+    code: C25370
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Exclusion Criteria
+  criterionItemId: EligibilityCriterionItem_4
+- id: EligibilityCriterion_5
+  name: Value Example
+  description: Test for value dict key
+  identifier: '3'
+  category:
+    id: Code_215
+    code: C25370
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Exclusion Criteria
+  criterionItemId: EligibilityCriterionItem_5
+encounters:
+- id: Encounter_1
+  name: E1
+  label: Screening
+  description: Screening encounter
+  type:
+    id: Code_74
+    code: C25716
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Visit
+  environmentalSettings:
+  - id: Code_75
+    code: C51282
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Clinic
+  contactModes:
+  - id: Code_76
+    code: C175574
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: In Person
+  transitionEndRule:
+    id: TransitionRule_2
+    name: ENCOUNTER_START_RULE_1
+    text: IEs passed
+    extensionAttributes:
+    - id: ext-transition-rule-kind
+      url: https://example.org/usdm/extensions/rule-kind
+      valueString: Operational workflow rule
+  nextId: Encounter_2
+  transitionStartRule:
+    id: TransitionRule_1
+    name: ENCOUNTER_START_RULE_1
+    text: Subject identified
+    extensionAttributes:
+    - id: ext-transition-rule-kind
+      url: https://example.org/usdm/extensions/rule-kind
+      valueString: Operational workflow rule
+  scheduledAtId: Timing_1
+- id: Encounter_2
+  name: E2
+  label: Baseline
+  description: Baseline encounter
+  type:
+    id: Code_77
+    code: C25716
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Visit
+  environmentalSettings:
+  - id: Code_78
+    code: C51282
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Clinic
+  contactModes:
+  - id: Code_79
+    code: C175574
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: In Person
+  nextId: Encounter_3
+  scheduledAtId: Timing_2
+  previousId: Encounter_1
+- id: Encounter_3
+  name: E3
+  label: 15 min
+  description: First dose
+  type:
+    id: Code_80
+    code: C25716
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Visit
+  environmentalSettings:
+  - id: Code_81
+    code: C51282
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Clinic
+  contactModes:
+  - id: Code_82
+    code: C175574
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: In Person
+  nextId: Encounter_4
+  transitionStartRule:
+    id: TransitionRule_3
+    name: ENCOUNTER_START_RULE_3
+    text: Radomized
+    extensionAttributes:
+    - id: ext-transition-rule-kind
+      url: https://example.org/usdm/extensions/rule-kind
+      valueString: Operational workflow rule
+  previousId: Encounter_2
+- id: Encounter_4
+  name: E4
+  label: Day 14
+  description: 2 week visit
+  type:
+    id: Code_83
+    code: C25716
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Visit
+  environmentalSettings:
+  - id: Code_84
+    code: C51282
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Clinic
+  contactModes:
+  - id: Code_85
+    code: C175574
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: In Person
+  nextId: Encounter_5
+  scheduledAtId: Timing_4
+  previousId: Encounter_3
+- id: Encounter_5
+  name: E5
+  label: Day 28
+  description: 4 week visit
+  type:
+    id: Code_86
+    code: C25716
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Visit
+  environmentalSettings:
+  - id: Code_87
+    code: C51282
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Clinic
+  contactModes:
+  - id: Code_88
+    code: C175574
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: In Person
+  nextId: Encounter_6
+  scheduledAtId: Timing_5
+  previousId: Encounter_4
+- id: Encounter_6
+  name: E6
+  label: Day 42
+  description: 6 week visit
+  type:
+    id: Code_89
+    code: C25716
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Visit
+  environmentalSettings:
+  - id: Code_90
+    code: C18002
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Home
+  contactModes:
+  - id: Code_91
+    code: C171537
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Telephone Call
+  scheduledAtId: Timing_6
+  previousId: Encounter_5
+estimands:
+- id: Estimand_1
+  populationSummary: Survival of all patients
+  name: EST1
+  label: EST1
+  analysisPopulationId: AnalysisPopulation_1
+  variableOfInterestId: Endpoint_1
+  intercurrentEvents:
+  - strategy: Patients with out of range lab values before dosing will be excluded
+    id: IntercurrentEvent_1
+    name: termination
+    description: IC Event Description
+    text: ICE Text
+  - strategy: A second bad event
+    id: IntercurrentEvent_2
+    name: termination
+    description: IC Event Description
+    text: ICE Text
+  - strategy: A third bad thing
+    id: IntercurrentEvent_3
+    name: termination
+    description: IC Event Description
+    text: ICE Text
+  interventionIds:
+  - StudyIntervention_1
+- id: Estimand_2
+  populationSummary: Something else
+  name: EST2
+  label: EST2
+  analysisPopulationId: AnalysisPopulation_2
+  variableOfInterestId: Endpoint_2
+  intercurrentEvents:
+  - strategy: Something else bad
+    id: IntercurrentEvent_4
+    name: Something  Else
+    description: IC Event Description Number 2
+    text: ICE Text
+  interventionIds:
+  - StudyIntervention_2
+indications:
+- id: Indication_1
+  name: IND1
+  label: Indication 1
+  description: Indication One
+  isRareDisease: true
+  codes:
+  - id: Code_183
+    code: '12345'
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Indication1
+- id: Indication_2
+  name: IND2
+  label: Indication 2
+  description: Indication Two
+  isRareDisease: true
+  codes:
+  - id: Code_184
+    code: '345678'
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Indication2
+objectives:
+- level:
+    id: Code_207
+    code: C85826
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Primary Objective
+  endpoints:
+  - level:
+      id: Code_206
+      code: C94496
+      codeSystem: ncit
+      codeSystemVersion: 24.04e
+      decode: Primary Endpoint
+    id: Endpoint_1
+    name: END1
+    description: Day 28, 7 category scale
+    text: Clinical status assessed using a 7-category ordinal scale at Day 28
+    purpose: Illustrates the endpoint measured for the objective.
+  id: Objective_1
+  name: OBJ1
+  description: Primary
+  text: The primary efficacy objective for this study is to evaluate the efficacy
+    of TCZ compared with placebo in combination with SOC for the treatment of severe
+    COVID-19 pneumonia
+- level:
+    id: Code_209
+    code: C85827
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Secondary Objective
+  endpoints:
+  - level:
+      id: Code_208
+      code: C139173
+      codeSystem: ncit
+      codeSystemVersion: 24.04e
+      decode: Secondary Endpoint
+    id: Endpoint_2
+    name: END2
+    description: TTCI
+    text: Time to clinical improvement (TTCI) defined as a National Early Warning
+      Score 2 (NEWS2) of <=2 maintained for 24 hours
+    purpose: Illustrates the endpoint measured for the objective.
+  - level:
+      id: Code_210
+      code: C139173
+      codeSystem: ncit
+      codeSystemVersion: 24.04e
+      decode: Secondary Endpoint
+    id: Endpoint_3
+    name: END3
+    description: Time to Imporvement
+    text: Time to improvement of at least 2 categories relative to baseline on a 7-category
+      ordinal scale of clinical status
+    purpose: Illustrates the endpoint measured for the objective.
+  id: Objective_2
+  name: OBJ2
+  description: Secondary
+  text: The secondary efficacy objective for this study is to evaluate the efficacy
+    of TCZ compared with placebo in combination with SOC for the treatment of severe
+    COVID-19 pneumonia over the age of <usdm:tag name="min_age"/>
+  dictionaryId: SyntaxTemplateDictionary_2
+scheduleTimelines:
+- id: ScheduleTimeline_1
+  name: Main Timeline
+  label: Main Timeline
+  description: This is the main timeline for the study design.
+  entryCondition: Potential subject identified
+  mainTimeline: true
+  instances:
+  - id: ScheduledActivityInstance_1
+    name: SCREEN
+    label: Screen
+    description: Screening
+    defaultConditionId: ScheduledActivityInstance_2
+    epochId: StudyEpoch_1
+    activityIds:
+    - Activity_1
+    - Activity_2
+    - Activity_3
+    encounterId: Encounter_1
+  - id: ScheduledActivityInstance_2
+    name: PRE DOSE
+    label: Baseline
+    description: Pre Dose
+    defaultConditionId: ScheduledActivityInstance_3
+    epochId: StudyEpoch_2
+    activityIds:
+    - Activity_2
+    encounterId: Encounter_2
+  - id: ScheduledActivityInstance_3
+    name: DOSE
+    label: Treatment
+    description: Dosing
+    defaultConditionId: ScheduledActivityInstance_4
+    epochId: StudyEpoch_3
+    activityIds:
+    - Activity_2
+    encounterId: Encounter_3
+  - id: ScheduledActivityInstance_4
+    name: D14
+    label: Day 14
+    description: Day 14
+    defaultConditionId: ScheduledDecisionInstance_1
+    epochId: StudyEpoch_3
+    activityIds:
+    - Activity_2
+    - Activity_3
+    encounterId: Encounter_4
+  - id: ScheduledDecisionInstance_1
+    name: PROG
+    label: Check opt In by subject
+    description: Check Opt In
+    defaultConditionId: ScheduledActivityInstance_5
+    conditionAssignments:
+    - id: ConditionAssignment_1
+      condition: if opted out
+      conditionTargetId: ScheduledActivityInstance_6
+  - id: ScheduledActivityInstance_5
+    name: D28
+    label: Day 28
+    description: Day 28 Optional
+    defaultConditionId: ScheduledActivityInstance_6
+    epochId: StudyEpoch_3
+    activityIds:
+    - Activity_4
+    encounterId: Encounter_5
+  - id: ScheduledActivityInstance_6
+    name: FU
+    label: Follow Up
+    description: Follow Up
+    epochId: StudyEpoch_4
+    timelineExitId: ScheduleTimelineExit_1
+    activityIds:
+    - Activity_2
+    encounterId: Encounter_6
+  entryId: ScheduledActivityInstance_1
+  exits:
+  - id: ScheduleTimelineExit_1
+    extensionAttributes:
+    - id: ext-schedule-exit-detailed
+      url: https://example.org/usdm/extensions/exit-condition
+      valueString: Timeline exits when the final scheduled assessment is complete.
+  timings:
+  - id: Timing_1
+    name: TIM1
+    label: Screening
+    description: Screening timing
+    type:
+      id: Code_31
+      code: C201357
+      codeSystem: ncit
+      codeSystemVersion: 24.04e
+      decode: Before
+    relativeToFrom:
+      id: Code_32
+      code: C201355
+      codeSystem: ncit
+      codeSystemVersion: 24.04e
+      decode: Start to Start
+    value: P2D
+    valueLabel: 2 days
+    relativeToScheduledInstanceId: ScheduledActivityInstance_2
+    relativeFromScheduledInstanceId: ScheduledActivityInstance_1
+    windowLabel: Assessment window
+  - id: Timing_2
+    name: TIM2
+    label: Pre dose
+    description: Pre dose timing
+    type:
+      id: Code_33
+      code: C201357
+      codeSystem: ncit
+      codeSystemVersion: 24.04e
+      decode: Before
+    relativeToFrom:
+      id: Code_34
+      code: C201355
+      codeSystem: ncit
+      codeSystemVersion: 24.04e
+      decode: Start to Start
+    value: PT15M
+    valueLabel: 15 min
+    windowLabel: -4..0 hours
+    windowLower: PT4H
+    windowUpper: PT0H
+    relativeToScheduledInstanceId: ScheduledActivityInstance_3
+    relativeFromScheduledInstanceId: ScheduledActivityInstance_2
+  - id: Timing_3
+    name: TIM3
+    label: Dosing
+    description: Dosing anchor
+    type:
+      id: Code_37
+      code: C201358
+      codeSystem: ncit
+      codeSystemVersion: 24.04e
+      decode: Fixed Reference
+    relativeToFrom:
+      id: Code_38
+      code: C201355
+      codeSystem: ncit
+      codeSystemVersion: 24.04e
+      decode: Start to Start
+    value: P1D
+    valueLabel: 1 Day
+    relativeToScheduledInstanceId: ScheduledActivityInstance_3
+    relativeFromScheduledInstanceId: ScheduledActivityInstance_3
+    windowLabel: Assessment window
+  - id: Timing_4
+    name: TIM4
+    label: Day 14
+    description: Day 14 timing
+    type:
+      id: Code_39
+      code: C201356
+      codeSystem: ncit
+      codeSystemVersion: 24.04e
+      decode: After
+    relativeToFrom:
+      id: Code_40
+      code: C201355
+      codeSystem: ncit
+      codeSystemVersion: 24.04e
+      decode: Start to Start
+    value: P14D
+    valueLabel: 14 days
+    windowLabel: -1..1 days
+    windowLower: P1D
+    windowUpper: P1D
+    relativeToScheduledInstanceId: ScheduledActivityInstance_3
+    relativeFromScheduledInstanceId: ScheduledActivityInstance_4
+  - id: Timing_5
+    name: TIM5
+    label: Day 28
+    description: Day 28 timing
+    type:
+      id: Code_43
+      code: C201356
+      codeSystem: ncit
+      codeSystemVersion: 24.04e
+      decode: After
+    relativeToFrom:
+      id: Code_44
+      code: C201355
+      codeSystem: ncit
+      codeSystemVersion: 24.04e
+      decode: Start to Start
+    value: P28D
+    valueLabel: 28 Days
+    windowLabel: -1..1 days
+    windowLower: P1D
+    windowUpper: P1D
+    relativeToScheduledInstanceId: ScheduledActivityInstance_3
+    relativeFromScheduledInstanceId: ScheduledActivityInstance_5
+  - id: Timing_6
+    name: TIM6
+    label: Follow Up
+    description: Follow up timing
+    type:
+      id: Code_47
+      code: C201356
+      codeSystem: ncit
+      codeSystemVersion: 24.04e
+      decode: After
+    relativeToFrom:
+      id: Code_48
+      code: C201355
+      codeSystem: ncit
+      codeSystemVersion: 24.04e
+      decode: Start to Start
+    value: P42D
+    valueLabel: 42 Days
+    windowLabel: -3..3 days
+    windowLower: P3D
+    windowUpper: P3D
+    relativeToScheduledInstanceId: ScheduledActivityInstance_3
+    relativeFromScheduledInstanceId: ScheduledActivityInstance_6
+arms:
+- id: StudyArm_1
+  name: Active
+  label: Active Substance
+  description: Active Substance
+  type:
+    id: Code_92
+    code: C174267
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Active Comparator Arm
+  dataOriginType:
+    id: Code_93
+    code: C188866
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Data Generated Within Study
+  dataOriginDescription: Data collected from subjects
+- id: StudyArm_2
+  name: Placebo
+  label: Placebo
+  description: Placebo
+  type:
+    id: Code_94
+    code: C174268
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Placebo Control Arm
+  dataOriginType:
+    id: Code_95
+    code: C188866
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Data Generated Within Study
+  dataOriginDescription: Data collected from subjects
+studyCells:
+- id: StudyCell_1
+  armId: StudyArm_1
+  epochId: StudyEpoch_1
+  elementIds:
+  - StudyElement_1
+- id: StudyCell_2
+  armId: StudyArm_1
+  epochId: StudyEpoch_2
+  elementIds:
+  - StudyElement_2
+- id: StudyCell_3
+  armId: StudyArm_1
+  epochId: StudyEpoch_3
+  elementIds:
+  - StudyElement_3
+  - StudyElement_5
+- id: StudyCell_4
+  armId: StudyArm_1
+  epochId: StudyEpoch_4
+  elementIds:
+  - StudyElement_4
+- id: StudyCell_5
+  armId: StudyArm_2
+  epochId: StudyEpoch_1
+  elementIds:
+  - StudyElement_1
+- id: StudyCell_6
+  armId: StudyArm_2
+  epochId: StudyEpoch_2
+  elementIds:
+  - StudyElement_2
+- id: StudyCell_7
+  armId: StudyArm_2
+  epochId: StudyEpoch_3
+  elementIds:
+  - StudyElement_5
+  - StudyElement_3
+- id: StudyCell_8
+  armId: StudyArm_2
+  epochId: StudyEpoch_4
+  elementIds:
+  - StudyElement_4
+elements:
+- id: StudyElement_1
+  name: EL1
+  description: Screening Element
+  transitionEndRule:
+    id: TransitionRule_5
+    name: ELEMENT_END_RULE_1
+    text: Screened
+    extensionAttributes:
+    - id: ext-transition-rule-kind
+      url: https://example.org/usdm/extensions/rule-kind
+      valueString: Operational workflow rule
+  transitionStartRule:
+    id: TransitionRule_4
+    name: ELEMENT_START_RULE_1
+    text: Study Start
+    extensionAttributes:
+    - id: ext-transition-rule-kind
+      url: https://example.org/usdm/extensions/rule-kind
+      valueString: Operational workflow rule
+- id: StudyElement_2
+  name: EL2
+  description: Baseline Element
+  transitionEndRule:
+    id: TransitionRule_7
+    name: ELEMENT_END_RULE_2
+    text: Radomized
+    extensionAttributes:
+    - id: ext-transition-rule-kind
+      url: https://example.org/usdm/extensions/rule-kind
+      valueString: Operational workflow rule
+  transitionStartRule:
+    id: TransitionRule_6
+    name: ELEMENT_START_RULE_2
+    text: Screened
+    extensionAttributes:
+    - id: ext-transition-rule-kind
+      url: https://example.org/usdm/extensions/rule-kind
+      valueString: Operational workflow rule
+- id: StudyElement_3
+  name: EL3
+  description: Treatment Element 1
+  transitionEndRule:
+    id: TransitionRule_9
+    name: ELEMENT_END_RULE_3
+    text: Completed treatment 1
+    extensionAttributes:
+    - id: ext-transition-rule-kind
+      url: https://example.org/usdm/extensions/rule-kind
+      valueString: Operational workflow rule
+  transitionStartRule:
+    id: TransitionRule_8
+    name: ELEMENT_START_RULE_3
+    text: Radomized
+    extensionAttributes:
+    - id: ext-transition-rule-kind
+      url: https://example.org/usdm/extensions/rule-kind
+      valueString: Operational workflow rule
+- id: StudyElement_5
+  name: EL5
+  description: Treatment Element 2
+  transitionEndRule:
+    id: TransitionRule_13
+    name: ELEMENT_END_RULE_5
+    text: Completed treatment 2
+    extensionAttributes:
+    - id: ext-transition-rule-kind
+      url: https://example.org/usdm/extensions/rule-kind
+      valueString: Operational workflow rule
+  transitionStartRule:
+    id: TransitionRule_12
+    name: ELEMENT_START_RULE_5
+    text: Radomized
+    extensionAttributes:
+    - id: ext-transition-rule-kind
+      url: https://example.org/usdm/extensions/rule-kind
+      valueString: Operational workflow rule
+- id: StudyElement_4
+  name: EL4
+  description: Follow Up Element
+  transitionEndRule:
+    id: TransitionRule_11
+    name: ELEMENT_END_RULE_4
+    text: Leave Study
+    extensionAttributes:
+    - id: ext-transition-rule-kind
+      url: https://example.org/usdm/extensions/rule-kind
+      valueString: Operational workflow rule
+  transitionStartRule:
+    id: TransitionRule_10
+    name: ELEMENT_START_RULE_4
+    text: Treated
+    extensionAttributes:
+    - id: ext-transition-rule-kind
+      url: https://example.org/usdm/extensions/rule-kind
+      valueString: Operational workflow rule
+studyInterventionIds:
+- StudyIntervention_1
+- StudyIntervention_2
+epochs:
+- id: StudyEpoch_1
+  name: Screening
+  label: Screening
+  description: Screening Epoch
+  type:
+    id: Code_96
+    code: C202487
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Screening Epoch
+  nextId: StudyEpoch_2
+- id: StudyEpoch_2
+  name: Baseline
+  label: Baseline
+  description: Baseline Epoch
+  type:
+    id: Code_97
+    code: C125938
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Baseline Epoch
+  previousId: StudyEpoch_1
+  nextId: StudyEpoch_3
+- id: StudyEpoch_3
+  name: Treatment
+  label: Treatment
+  description: Treatment Epoch
+  type:
+    id: Code_98
+    code: C101526
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Treatment Epoch
+  previousId: StudyEpoch_2
+  nextId: StudyEpoch_4
+- id: StudyEpoch_4
+  name: Follow-Up
+  label: Follow-Up
+  description: Follow-up Epoch
+  type:
+    id: Code_99
+    code: C202578
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Follow-Up Epoch
+  previousId: StudyEpoch_3
+population:
+  cohorts:
+  - id: StudyCohort_1
+    name: COHORT1
+    includesHealthySubjects: true
+    plannedAge:
+      minValue:
+        value: 18.0
+        unit:
+          id: AliasCode_67
+          standardCode:
+            id: Code_202
+            code: C29848
+            codeSystem: ncit
+            codeSystemVersion: 24.04e
+            decode: Year
+        id: Quantity_14
+      maxValue:
+        value: 30.0
+        unit:
+          id: AliasCode_68
+          standardCode:
+            id: Code_203
+            code: C29848
+            codeSystem: ncit
+            codeSystemVersion: 24.04e
+            decode: Year
+        id: Quantity_15
+      isApproximate: false
+      id: Range_1
+  - id: StudyCohort_2
+    name: COHORT2
+    includesHealthySubjects: true
+    plannedAge:
+      minValue:
+        value: 31.0
+        unit:
+          id: AliasCode_69
+          standardCode:
+            id: Code_204
+            code: C29848
+            codeSystem: ncit
+            codeSystemVersion: 24.04e
+            decode: Year
+        id: Quantity_16
+      maxValue:
+        value: 70.0
+        unit:
+          id: AliasCode_70
+          standardCode:
+            id: Code_205
+            code: C29848
+            codeSystem: ncit
+            codeSystemVersion: 24.04e
+            decode: Year
+        id: Quantity_17
+      isApproximate: false
+      id: Range_2
+  id: StudyDesignPopulation_1
+  name: POP1
+  plannedSex:
+  - id: Code_201
+    code: C49636
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Both
+  includesHealthySubjects: true
+  plannedCompletionNumber:
+    id: Quantity_12
+    value: 100.0
+  plannedEnrollmentNumber:
+    id: Quantity_13
+    value: 120.0
+  criterionIds:
+  - EligibilityCriterion_1
+  - EligibilityCriterion_2
+  - EligibilityCriterion_3
+  - EligibilityCriterion_4
+  - EligibilityCriterion_5
+

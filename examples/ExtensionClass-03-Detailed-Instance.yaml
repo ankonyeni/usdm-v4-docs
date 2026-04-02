@@ -1,0 +1,29 @@
+id: EXT-CLASS-3
+url: https://example.com/extensions/complex-class
+extensionAttributes:
+  - id: EXT-ATTR-3
+    url: https://example.com/extensions/complex-extension
+    valueQuantity:
+      id: QUANTITY-EXT-ATTR-1
+      value: 10.5
+      unit:
+        id: ALIAS-CODE-EXT-ATTR-1
+        standardCode:
+          id: CODE-EXT-ATTR-1
+          code: C48150
+          codeSystem: ncit
+          codeSystemVersion: 24.04e
+          decode: milligram
+    extensionAttributes:
+      - id: EXT-ATTR-4
+        url: https://example.com/extensions/nested-extension
+        valueString: nested-value
+  - id: EXT-ATTR-6
+    url: https://example.com/extensions/another-complex-extension
+    valueCode:
+      id: CODE-EXT-ATTR-2
+      code: C25215
+      codeSystem: ncit
+      codeSystemVersion: 24.04e
+      decode: In-person
+

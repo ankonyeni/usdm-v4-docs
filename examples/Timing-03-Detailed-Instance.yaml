@@ -1,0 +1,28 @@
+id: Timing_4
+name: TIM4
+label: Day 14
+description: Day 14 timing
+type:
+  id: Code_39
+  code: C201356
+  codeSystem: ncit
+  codeSystemVersion: 24.04e
+  decode: After
+relativeToFrom:
+  id: Code_40
+  code: C201355
+  codeSystem: ncit
+  codeSystemVersion: 24.04e
+  decode: Start to Start
+value: P14D
+valueLabel: 14 days
+windowLabel: -1..1 days
+windowLower: P1D
+windowUpper: P1D
+relativeToScheduledInstanceId: ScheduledActivityInstance_3
+relativeFromScheduledInstanceId: ScheduledActivityInstance_4
+extensionAttributes:
+  - id: ext-timing-anchor
+    url: https://example.org/usdm/extensions/timing-anchor
+    valueString: Visit window anchored to the treatment start
+

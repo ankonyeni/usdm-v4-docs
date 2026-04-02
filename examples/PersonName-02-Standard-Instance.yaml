@@ -1,0 +1,5 @@
+id: person-name-002
+text: John Doe
+familyName: Doe
+givenNames:
+  - John

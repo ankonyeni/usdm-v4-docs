@@ -1,0 +1,14 @@
+id: STR-1
+name: 500mg
+numerator:
+  id: QUANT-1
+  value: 500
+  unit:
+    id: ALIAS-CODE-MG-1
+    standardCode:
+      id: CODE-MG-1
+      code: C48150
+      codeSystem: ncit
+      codeSystemVersion: 24.04e
+      decode: milligram
+

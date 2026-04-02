@@ -1,0 +1,13 @@
+id: EC-2
+name: Exclusion Criterion 1
+label: Exclusion
+description: An exclusion criterion for the study.
+identifier: EC-01
+category:
+  id: CAT-CODE-2
+  code: C83017
+  codeSystem: ncit
+  codeSystemVersion: 24.04e
+  decode: Exclusion Criterion
+criterionItemId: ECI-2
+

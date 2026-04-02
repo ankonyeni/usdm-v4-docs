@@ -1,0 +1,9 @@
+id: NarrativeContent_2
+name: SECTION 1
+sectionNumber: '1'
+sectionTitle: PROTOCOL SUMMARY
+displaySectionTitle: true
+displaySectionNumber: true
+contentItemId: NarrativeContentItem_6
+previousId: NarrativeContent_1
+nextId: NarrativeContent_3

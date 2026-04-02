@@ -1,0 +1,11 @@
+id: SE-2
+name: Treatment
+label: Treatment
+description: The treatment phase of the study.
+type:
+  id: SE-TYPE-2
+  code: C188831
+  codeSystem: ncit
+  codeSystemVersion: 24.04e
+  decode: Treatment
+

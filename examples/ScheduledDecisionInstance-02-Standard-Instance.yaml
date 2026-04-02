@@ -1,0 +1,9 @@
+conditionAssignments:
+- id: ConditionAssignment_1
+  condition: if opted out
+  conditionTargetId: ScheduledActivityInstance_6
+id: ScheduledDecisionInstance_1
+name: PROG
+label: Check opt In by subject
+description: Check Opt In
+defaultConditionId: ScheduledActivityInstance_5

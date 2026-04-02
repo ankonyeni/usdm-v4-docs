@@ -1,0 +1,15 @@
+id: ResponseCode_3
+name: RC_C48531
+isEnabled: true
+code:
+  id: Code_127
+  code: C48531
+  codeSystem: ncit
+  codeSystemVersion: 24.04e
+  decode: Pound
+label: Pound
+extensionAttributes:
+- id: ext-response-display-order
+  url: https://example.org/usdm/extensions/display-order
+  valueInteger: 1
+

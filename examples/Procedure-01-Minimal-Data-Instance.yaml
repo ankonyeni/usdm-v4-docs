@@ -1,0 +1,9 @@
+id: Procedure_1
+name: Physical Examination
+procedureType: Physical Examination
+code:
+  id: Code_72
+  code: C25218
+  codeSystem: ncit
+  codeSystemVersion: 24.04e
+  decode: Physical Examination

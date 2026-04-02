@@ -1,0 +1,11 @@
+id: StudySite_2
+name: SITE_2
+label: Site Two
+description: Secondary Site
+country:
+  id: Code_217
+  code: DNK
+  codeSystem: ncit
+  codeSystemVersion: 24.04e
+  decode: Denmark
+

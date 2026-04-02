@@ -1,0 +1,8 @@
+id: range-001
+isApproximate: false
+minValue:
+  id: quant-low-01
+  value: 10.0
+maxValue:
+  id: quant-high-01
+  value: 20.0

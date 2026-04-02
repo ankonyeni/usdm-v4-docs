@@ -1,0 +1,10 @@
+type:
+  id: Code_71
+  code: C99910x1
+  codeSystem: ncit
+  codeSystemVersion: 24.04e
+  decode: Pediatric Investigation Plan
+id: ReferenceIdentifier_1
+text: PIP1234
+scopeId: Organization_3
+

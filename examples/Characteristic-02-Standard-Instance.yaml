@@ -1,0 +1,5 @@
+id: Characteristic-2
+name: Sex Characteristic
+label: Sex
+description: The biological sex of the subject.
+text: Sex

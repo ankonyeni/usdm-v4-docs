@@ -1,0 +1,11 @@
+id: EP-1
+name: Primary Endpoint
+text: Overall Survival
+level:
+  id: EP-LEVEL-1
+  code: C188826
+  codeSystem: ncit
+  codeSystemVersion: 24.04e
+  decode: Primary
+purpose: To assess the efficacy of the new drug.
+

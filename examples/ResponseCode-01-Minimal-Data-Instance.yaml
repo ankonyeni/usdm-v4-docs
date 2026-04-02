@@ -1,0 +1,11 @@
+id: ResponseCode_1
+name: RC_C20197
+isEnabled: true
+code:
+  id: Code_117
+  code: C20197
+  codeSystem: ncit
+  codeSystemVersion: 24.04e
+  decode: Male
+label: Male
+

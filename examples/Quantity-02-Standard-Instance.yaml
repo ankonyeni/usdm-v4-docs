@@ -1,0 +1,10 @@
+id: quant-std-002
+value: 250.0
+unit:
+  id: alias-mg-01
+  standardCode:
+    id: code-mg-01
+    code: C28253
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: mg

@@ -1,0 +1,19 @@
+id: StudyChange_1
+name: AMEND_CHG_1
+rationale: Data collected for analysis of patient population and study intervention
+  compliance, and to compare endpoints with other ALXN1840 studies.
+summary: Procedures updated include Wilson disease history and treatment; study intervention
+  compliance during outpatient period captured with study dosing diary; light exercise.
+changedSections:
+- id: DocumentContentReference_1
+  sectionNumber: '1.3'
+  sectionTitle: Schedule of Activities
+  appliesToId: StudyDefinitionDocument_1
+- id: DocumentContentReference_2
+  sectionNumber: '4.1'
+  sectionTitle: Overall Design
+  appliesToId: StudyDefinitionDocument_1
+- id: DocumentContentReference_3
+  sectionNumber: '6.4'
+  sectionTitle: Study Intervention Compliance
+  appliesToId: StudyDefinitionDocument_1

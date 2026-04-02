@@ -1,0 +1,32 @@
+id: ENC-3
+name: Treatment Visit
+label: Treatment
+description: A visit during the treatment phase of the study.
+type:
+  id: ENC-TYPE-3
+  code: C171012
+  codeSystem: ncit
+  codeSystemVersion: 24.04e
+  decode: Treatment Visit
+environmentalSettings:
+  - id: ENV-SET-1
+    code: C25480
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Clinical Research Center
+contactModes:
+  - id: CONTACT-MODE-1
+    code: C25215
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: In-person
+notes:
+  - id: Comment-6
+    text: Subject reported a mild headache.
+previousId: ENC-2
+nextId: ENC-4
+extensionAttributes:
+  - id: ext-enc-01
+    url: https://example.org/usdm/extension/visit-duration
+    valueString: 2 hours
+

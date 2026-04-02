@@ -1,0 +1,36 @@
+id: SubjectEnrollment_3
+name: United States of America enrollment target
+label: US Enrollment
+description: Enrollment target captured for a country-specific allocation scenario.
+quantity:
+  id: Quantity_3
+  value: 20.0
+  unit:
+    id: AliasCode_15
+    standardCode:
+      id: Code_58
+      code: C25613
+      codeSystem: ncit
+      codeSystemVersion: 24.04e
+      decode: Percentage
+forGeographicScope:
+  id: GeographicScope_9
+  type:
+    id: Code_60
+    code: C25464
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Country
+  code:
+    id: AliasCode_16
+    standardCode:
+      id: Code_59
+      code: USA
+      codeSystem: ncit
+      codeSystemVersion: 24.04e
+      decode: United States of America
+extensionAttributes:
+  - id: ext-subject-enrollment-source
+    url: https://example.org/usdm/extensions/allocation-source
+    valueString: Country-specific amendment allocation
+

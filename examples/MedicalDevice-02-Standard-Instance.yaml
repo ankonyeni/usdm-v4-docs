@@ -1,0 +1,12 @@
+id: dev-std-002
+name: Pulse Oximeter X200
+label: Oxygen Saturation Monitor
+sourcing:
+  id: code-source-01
+  code: C215659 
+  codeSystem: ncit
+  codeSystemVersion: 24.04e
+  decode: Centrally Sourced
+notes:
+  - id: note-dev-01
+    text: Calibrated for pediatric use.

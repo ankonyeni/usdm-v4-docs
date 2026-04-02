@@ -1,0 +1,8 @@
+id: StudyAmendmentReason_2
+code:
+  id: Code_55
+  code: C99904x4
+  codeSystem: ncit
+  codeSystemVersion: 24.04e
+  decode: New Safety Information Available
+

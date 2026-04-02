@@ -1,0 +1,49 @@
+id: STUDY-03
+name: A detailed study
+label: DET-STUDY-03
+description: A detailed study with one version and one document.
+versions:
+  - id: SV-02
+    versionIdentifier: "2.0"
+    rationale: This is a detailed study to test the new drug in a specific population.
+    studyIdentifiers:
+      - id: SID-02
+        text: NCT67890
+        scopeId: "ORG-02"
+    titles:
+      - id: ST-02
+        text: A Detailed Study Title
+        type:
+          id: CODE-ST-TYPE-02
+          code: SCIENTIFIC
+          codeSystem: ncit
+          codeSystemVersion: 24.04e
+          decode: Scientific
+    organizations:
+      - id: ORG-02
+        name: A Detailed Organization
+        identifier: "67890"
+        identifierScheme: DUNS
+        type:
+          id: CODE-ORG-TYPE-02
+          code: CRO
+          codeSystem: ncit
+          codeSystemVersion: 24.04e
+          decode: Contract Research Organization
+documentedBy:
+  - id: SDD-01
+    name: Protocol
+    type:
+      id: CODE-SDD-TYPE-01
+      code: PROTOCOL
+      codeSystem: ncit
+      codeSystemVersion: 24.04e
+      decode: Protocol
+    templateName: CDISC Protocol Template
+    language:
+      id: CODE-LANG-01
+      code: ENG
+      codeSystem: ncit
+      codeSystemVersion: 24.04e
+      decode: English
+

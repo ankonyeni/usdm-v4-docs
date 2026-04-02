@@ -1,0 +1,18 @@
+id: GOV-DATE-1
+name: Protocol Approval Date
+type:
+  id: GOV-DATE-TYPE-1
+  code: C171000
+  codeSystem: ncit
+  codeSystemVersion: 24.04e
+  decode: Protocol Approval Date
+dateValue: "2024-01-15"
+geographicScopes:
+  - id: GEO-1
+    type:
+      id: GEO-TYPE-1
+      code: C170990
+      codeSystem: ncit
+      codeSystemVersion: 24.04e
+      decode: Country
+

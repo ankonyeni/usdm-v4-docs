@@ -1,0 +1,16 @@
+id: SA-1
+name: Treatment Arm A
+type:
+  id: SA-TYPE-1
+  code: C172457
+  codeSystem: ncit
+  codeSystemVersion: 24.04e
+  decode: Treatment Arm
+dataOriginType:
+  id: SA-ORIGIN-1
+  code: C188829
+  codeSystem: ncit
+  codeSystemVersion: 24.04e
+  decode: Protocol
+dataOriginDescription: Data for this arm is collected as per protocol.
+

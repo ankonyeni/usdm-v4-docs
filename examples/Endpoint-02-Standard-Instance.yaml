@@ -1,0 +1,13 @@
+id: EP-2
+name: Secondary Endpoint
+label: Secondary
+description: A secondary endpoint for the study.
+text: Progression-Free Survival
+level:
+  id: EP-LEVEL-2
+  code: C188827
+  codeSystem: ncit
+  codeSystemVersion: 24.04e
+  decode: Secondary
+purpose: To assess the durability of response.
+

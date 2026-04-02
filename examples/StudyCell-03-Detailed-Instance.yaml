@@ -1,0 +1,9 @@
+id: SCELL-3
+armId: "SA-3"
+epochId: "SE-3"
+elementIds:
+  - "SELM-3"
+extensionAttributes:
+  - id: EXT-SCELL-1
+    url: https://example.com/extensions/cell-duration
+    valueString: 12 months

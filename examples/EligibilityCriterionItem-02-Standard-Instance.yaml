@@ -1,0 +1,5 @@
+id: ECI-2
+name: Diagnosis
+label: Diagnosis of Condition
+description: Subject must have a confirmed diagnosis of the condition under study.
+text: Diagnosis of Type 2 Diabetes.

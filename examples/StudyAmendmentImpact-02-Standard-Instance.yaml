@@ -1,0 +1,10 @@
+id: StudyAmendmentImpact_2
+text: Amendment 2
+isSubstantial: true
+type:
+  id: Code_192
+  code: C99912x2
+  codeSystem: ncit
+  codeSystemVersion: 24.04e
+  decode: Study Subject Rights
+

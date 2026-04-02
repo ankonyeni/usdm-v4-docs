@@ -1,0 +1,10 @@
+id: StudyAmendmentImpact_1
+text: Amendment 1
+isSubstantial: true
+type:
+  id: Code_191
+  code: C99912x4
+  codeSystem: ncit
+  codeSystemVersion: 24.04e
+  decode: Study Data Robustness
+

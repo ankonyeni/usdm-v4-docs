@@ -1,0 +1,9 @@
+id: StudyTitle_2
+type:
+  id: Code_15
+  code: C99905x1
+  codeSystem: ncit
+  codeSystemVersion: 24.04e
+  decode: Brief Study Title
+text: Something Brief
+

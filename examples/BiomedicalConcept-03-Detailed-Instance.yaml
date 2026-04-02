@@ -1,0 +1,18 @@
+id: BC-003
+name: Temperature
+label: Temperature
+reference: /mdr/specializations/sdtm/packages/2023-12-12/datasetspecializations/TEMP
+synonyms:
+  - Body Temperature
+code:
+  id: alias-code-temp-001
+  standardCode:
+    id: code-temp-001
+    code: C174446
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Temperature
+notes:
+  - id: CommentAnnot_Temp_001
+    text: Temperature can be measured in Celsius or Fahrenheit.
+

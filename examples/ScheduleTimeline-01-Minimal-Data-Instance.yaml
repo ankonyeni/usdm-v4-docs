@@ -1,0 +1,5 @@
+id: ScheduleTimeline_1
+name: Main Timeline
+entryCondition: Potential subject identified
+mainTimeline: true
+entryId: ScheduledActivityInstance_1

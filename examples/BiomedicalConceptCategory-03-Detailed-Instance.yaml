@@ -1,0 +1,22 @@
+id: BCC-003
+name: Subject Characteristics
+label: Subject Characteristics
+description: A category for biomedical concepts related to subject characteristics.
+code:
+  id: alias-code-sc-001
+  standardCode:
+    id: code-sc-001
+    code: C25208
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Subject Characteristics
+notes:
+  - id: CommentAnnot_SC_001
+    text: This category includes demographics and baseline characteristics.
+memberIds:
+  - BC-001
+  - BC-002
+childIds:
+  - BCC-001
+  - BCC-002
+

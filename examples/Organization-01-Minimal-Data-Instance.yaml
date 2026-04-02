@@ -1,0 +1,10 @@
+id: org-min-001
+name: Global Clinical Institute
+identifier: GCS-998877
+identifierScheme: Legal Entity Identifier India
+type:
+  id: code-org-type-01
+  code: C41206
+  codeSystem: ncit
+  codeSystemVersion: 24.04e
+  decode: Institution

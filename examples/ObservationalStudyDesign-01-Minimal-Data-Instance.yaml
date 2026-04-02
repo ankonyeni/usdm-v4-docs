@@ -1,0 +1,62 @@
+model:
+  id: Code_106
+  code: C82639
+  codeSystem: ncit
+  codeSystemVersion: 24.04e
+  decode: Parallel Study
+timePerspective:
+  id: Code_111
+  code: C53310
+  codeSystem: ncit
+  codeSystemVersion: 24.04e
+  decode: Cross-Sectional Study
+id: ObservationalStudyDesign_1
+name: Study Design 1
+rationale: Basic study
+eligibilityCriteria:
+- id: EligibilityCriterion_1
+  name: Age Criteria
+  identifier: '1'
+  category:
+    id: Code_211
+    code: C25532
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Inclusion Criteria
+  criterionItemId: EligibilityCriterionItem_1
+arms:
+- id: StudyArm_1
+  name: Active
+  type:
+    id: Code_92
+    code: C174267
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Active Comparator Arm
+  dataOriginType:
+    id: Code_93
+    code: C188866
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Data Generated Within Study
+  dataOriginDescription: Data collected from subjects
+studyCells:
+- id: StudyCell_1
+  armId: StudyArm_1
+  epochId: StudyEpoch_1
+  elementIds:
+  - StudyElement_1
+epochs:
+- id: StudyEpoch_1
+  name: Screening
+  type:
+    id: Code_96
+    code: C202487
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Screening Epoch
+population:
+  id: StudyDesignPopulation_1
+  name: POP1
+  includesHealthySubjects: true
+

@@ -1,0 +1,151 @@
+id: ISD-3
+name: A detailed interventional study design
+label: Detailed ISD
+description: A detailed interventional study design with multiple arms and epochs.
+rationale: To test the efficacy and safety of a new drug in a pediatric population.
+therapeuticAreas:
+  - id: TA-1
+    code: C3489
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Cystic Fibrosis
+studyType:
+  id: ST-1
+  code: C15220
+  codeSystem: ncit
+  codeSystemVersion: 24.04e
+  decode: Interventional
+characteristics:
+  - id: CHAR-1
+    code: C98746
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Parallel
+studyPhase:
+  id: SP-1
+  standardCode:
+    id: CODE-SP-1
+    code: C98746
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Phase 3
+notes:
+  - id: NOTE-ISD-1
+    text: This is a global study.
+activities:
+  - id: ACT-1
+    name: Informed Consent
+eligibilityCriteria:
+  - id: EC-3
+    name: Inclusion Criterion 2
+    label: Inclusion
+    description: A detailed inclusion criterion for the study.
+    identifier: IC-02
+    category:
+      id: CAT-CODE-1
+      code: C83016
+      codeSystem: ncit
+      codeSystemVersion: 24.04e
+      decode: Inclusion Criterion
+    criterionItemId: "ECI-3"
+encounters:
+  - id: ENC-1
+    name: Screening Visit
+    type:
+      id: ENC-TYPE-1
+      code: C171010
+      codeSystem: ncit
+      codeSystemVersion: 24.04e
+      decode: Screening Visit
+estimands:
+  - id: EST-1
+    name: Primary Estimand
+    populationSummary: The primary estimand of the study.
+    analysisPopulationId: "AP-1"
+    variableOfInterestId: "EP-1"
+    intercurrentEvents:
+      - id: IE-1
+        name: Use of rescue medication
+        text: Use of rescue medication
+        strategy: The use of rescue medication will be recorded.
+    interventionIds:
+      - "SI-1"
+indications:
+  - id: IND-3
+    name: Cystic Fibrosis
+    label: CF
+    description: A progressive, genetic disease that causes persistent lung infections and limits the ability to breathe over time.
+    isRareDisease: true
+arms:
+  - id: SA-3
+    name: Historical Control Arm
+    label: Historical Control
+    description: A historical control arm using data from a previous study.
+    type:
+      id: SA-TYPE-3
+      code: C172459
+      codeSystem: ncit
+      codeSystemVersion: 24.04e
+      decode: Historical Control Arm
+    dataOriginType:
+      id: SA-ORIGIN-3
+      code: C188830
+      codeSystem: ncit
+      codeSystemVersion: 24.04e
+      decode: Historical
+    dataOriginDescription: Data for this arm is from a previous study.
+studyCells:
+  - id: SCELL-3
+    armId: "SA-3"
+    epochId: "SE-3"
+    elementIds:
+      - "SELM-3"
+elements:
+  - id: SELM-3
+    name: Follow-up Period
+    label: Follow-up
+    description: The period after the treatment period during which subjects are followed for safety and efficacy.
+epochs:
+  - id: SE-3
+    name: Follow-up
+    label: Follow-up
+    description: The follow-up phase of the study.
+    type:
+      id: SE-TYPE-3
+      code: C188832
+      codeSystem: ncit
+      codeSystemVersion: 24.04e
+      decode: Follow-up
+population:
+  id: SDP-3
+  name: Adult and Pediatric Population
+  label: Adult and Pediatric
+  description: A population including both adult and pediatric subjects.
+  includesHealthySubjects: true
+model:
+  id: ISD-MODEL-3
+  code: C98746
+  codeSystem: ncit
+  codeSystemVersion: 24.04e
+  decode: Parallel
+subTypes:
+  - id: SUBT-1
+    code: C49660
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Randomized
+intentTypes:
+  - id: INT-1
+    code: C49652
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Treatment
+analysisPopulations:
+  - id: AP-1
+    name: Intention-to-Treat Population
+    text: All randomized subjects.
+extensionAttributes:
+  - id: EXT-ISD-1
+    url: https://example.com/extensions/isd-sponsor
+    valueString: Some Sponsor
+

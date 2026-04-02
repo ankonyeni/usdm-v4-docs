@@ -1,0 +1,15 @@
+id: BCP-002
+name: Race
+label: Race
+isRequired: true
+isEnabled: true
+datatype: string
+code:
+  id: alias-code-race-prop-001
+  standardCode:
+    id: code-race-prop-001
+    code: C17049
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Race
+

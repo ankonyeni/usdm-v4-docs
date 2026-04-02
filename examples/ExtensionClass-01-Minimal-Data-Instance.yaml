@@ -1,0 +1,6 @@
+id: EXT-CLASS-1
+url: https://example.com/extensions/some-class
+extensionAttributes:
+  - id: EXT-ATTR-1
+    url: https://example.com/extensions/some-extension
+    valueString: some-value

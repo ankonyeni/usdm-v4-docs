@@ -1,0 +1,6 @@
+id: IE-2
+name: Discontinuation of study treatment
+label: Discontinuation
+description: Discontinuation of the study treatment for any reason.
+text: Discontinuation of study treatment
+strategy: The reason for discontinuation will be recorded and analyzed.

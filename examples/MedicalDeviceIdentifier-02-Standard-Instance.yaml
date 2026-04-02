@@ -1,0 +1,9 @@
+id: MDI-02
+text: SN-CGM-2026-00421
+scopeId: org-std-002
+type:
+  id: code-mdi-type-02
+  code: C101671
+  codeSystem: ncit
+  codeSystemVersion: 24.04e
+  decode: Serial Number Production Identifier

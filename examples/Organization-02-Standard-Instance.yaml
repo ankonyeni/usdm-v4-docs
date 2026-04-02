@@ -1,0 +1,23 @@
+id: org-std-002
+name: Nexus BioPharma
+label: Lead Sponsor
+identifier: NEX-4455
+identifierScheme: FDA Facility Establishment Identifier
+type:
+  id: code-org-type-02
+  code: C54149 
+  codeSystem: ncit
+  codeSystemVersion: 24.04e
+  decode: Drug Company
+legalAddress:
+  id: addr-nexus-01
+  text: 450 Research Way, Princeton, NJ, 08540, USA
+  city: Princeton
+  state: New Jersey
+  postalCode: "08540"
+  country:
+    id: code-country-usa
+    code: USA
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: United States

@@ -1,0 +1,32 @@
+id: SUB-2
+name: Ibuprofen
+label: Ibuprofen
+description: A nonsteroidal anti-inflammatory drug (NSAID).
+strengths:
+  - id: STR-2
+    name: 250mg/5ml
+    label: 250mg/5ml
+    description: 250 milligrams per 5 milliliters
+    numerator:
+      id: QUANT-2
+      value: 250
+      unit:
+        id: ALIAS-CODE-MG-2
+        standardCode:
+          id: CODE-MG-2
+          code: C48150
+          codeSystem: ncit
+          codeSystemVersion: 24.04e
+          decode: milligram
+    denominator:
+      id: QUANT-3
+      value: 5
+      unit:
+        id: ALIAS-CODE-ML-1
+        standardCode:
+          id: CODE-ML-1
+          code: C48149
+          codeSystem: ncit
+          codeSystemVersion: 24.04e
+          decode: milliliter
+

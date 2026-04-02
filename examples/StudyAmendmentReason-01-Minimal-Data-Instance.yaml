@@ -1,0 +1,8 @@
+id: StudyAmendmentReason_5
+code:
+  id: Code_67
+  code: C17649
+  codeSystem: ncit
+  codeSystemVersion: 24.04e
+  decode: Other
+

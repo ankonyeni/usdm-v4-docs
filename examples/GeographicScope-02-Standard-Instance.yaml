@@ -1,0 +1,16 @@
+id: GEO-2
+type:
+  id: GEO-TYPE-2
+  code: C170991
+  codeSystem: ncit
+  codeSystemVersion: 24.04e
+  decode: Region
+code:
+  id: GEO-CODE-1
+  standardCode:
+    id: CODE-GEO-1
+    code: EU
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Europe
+

@@ -1,0 +1,32 @@
+id: StudyIntervention_2
+name: IMG
+label: GlucaGen
+description: Glucagon
+role:
+  id: Code_518
+  code: C41161
+  codeSystem: ncit
+  codeSystemVersion: 24.04e
+  decode: Experimental Intervention
+type:
+  id: Code_519
+  code: C1909
+  codeSystem: ncit
+  codeSystemVersion: 24.04e
+  decode: Pharmacologic Substance
+codes:
+- id: Code_517
+  code: A
+  codeSystem: ncit
+  codeSystemVersion: 24.04e
+  decode: B
+minimumResponseDuration:
+  value: 1.0
+  id: Quantity_7
+administrations:
+- id: Administration_2
+  name: IMG_ADMIN
+  duration:
+    id: Duration_2
+    durationWillVary: false
+

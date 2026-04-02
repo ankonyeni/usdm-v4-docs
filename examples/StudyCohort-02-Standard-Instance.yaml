@@ -1,0 +1,5 @@
+id: SC-2
+name: Placebo Arm
+label: Placebo
+description: The placebo control arm.
+includesHealthySubjects: false

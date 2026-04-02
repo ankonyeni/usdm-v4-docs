@@ -1,0 +1,9 @@
+id: por-min-001
+name: Study Product Manufacturer
+code:
+  id: code-por-manufacturer-01
+  code: C25392
+  codeSystem: ncit
+  codeSystemVersion: 24.04e
+  decode: Manufacturer
+organizationId: org-min-001

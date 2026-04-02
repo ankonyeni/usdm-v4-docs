@@ -1,0 +1,16 @@
+id: StudyDefinitionDocument_1
+name: Protocol_Document_SCOPE1
+type:
+  id: code-study-protocol-document
+  code: C93381
+  codeSystem: ncit
+  codeSystemVersion: 24.04e
+  decode: Study Protocol Document
+templateName: SPONSOR
+language:
+  id: Code_219
+  code: en
+  codeSystem: ncit
+  codeSystemVersion: 24.04e
+  decode: English
+

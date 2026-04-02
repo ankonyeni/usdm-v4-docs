@@ -1,0 +1,10 @@
+type:
+  id: Code_82
+  code: C142424
+  codeSystem: ncit
+  codeSystemVersion: 24.04e
+  decode: Clinical Development Plan
+id: ReferenceIdentifier_1
+text: LZZT CD Plan 1
+scopeId: Organization_3
+

@@ -1,0 +1,11 @@
+id: ENC-2
+name: Baseline Visit
+label: Baseline
+description: The first visit after screening where baseline measurements are taken.
+type:
+  id: ENC-TYPE-2
+  code: C171011
+  codeSystem: ncit
+  codeSystemVersion: 24.04e
+  decode: Baseline Visit
+

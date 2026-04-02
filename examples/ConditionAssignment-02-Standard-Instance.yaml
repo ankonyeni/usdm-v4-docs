@@ -1,0 +1,3 @@
+id: CA-2
+condition: Subject has completed screening
+conditionTargetId: SAI-2

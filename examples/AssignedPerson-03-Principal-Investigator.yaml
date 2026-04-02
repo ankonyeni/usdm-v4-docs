@@ -11,8 +11,8 @@ personName:
   prefixes: 
     - Dr.
   suffixes:
-    - "MD"
-    - "PhD"
+    - MD
+    - PhD
   text: Dr. Jane Smith, MD, PhD
 organizationId: Organization_Site_A
 

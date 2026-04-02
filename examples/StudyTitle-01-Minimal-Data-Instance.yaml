@@ -1,0 +1,9 @@
+id: StudyTitle_1
+type:
+  id: Code_12
+  code: C94108
+  codeSystem: ncit
+  codeSystemVersion: 24.04e
+  decode: Study Acronym
+text: SIMPLE
+

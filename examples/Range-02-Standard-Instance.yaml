@@ -1,0 +1,24 @@
+id: range-002
+isApproximate: true
+minValue:
+  id: quant-low-02
+  value: 5.0
+  unit:
+    id: unit-kg-01
+    standardCode:
+      id: code-kg-01
+      code: C28252 
+      codeSystem: ncit
+      codeSystemVersion: 24.04e
+      decode: kg
+maxValue:
+  id: quant-high-02
+  value: 15.0
+  unit:
+    id: unit-kg-01
+    standardCode:
+      id: code-kg-01
+      code: C28252 
+      codeSystem: ncit
+      codeSystemVersion: 24.04e
+      decode: kg

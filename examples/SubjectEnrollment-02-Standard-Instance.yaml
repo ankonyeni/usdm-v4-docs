@@ -1,0 +1,22 @@
+id: SubjectEnrollment_2
+name: Europe enrollment target
+quantity:
+  id: Quantity_2
+  value: 15.0
+forGeographicScope:
+  id: GeographicScope_8
+  type:
+    id: Code_57
+    code: C41129
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Region
+  code:
+    id: AliasCode_14
+    standardCode:
+      id: Code_56
+      code: "150"
+      codeSystem: ncit
+      codeSystemVersion: 24.04e
+      decode: Europe
+

@@ -2,7 +2,7 @@ id: Admin_Min_001
 name: Baseline Dose Administration
 duration:
   id: Dur_10min
-  text: "10 minutes"
+  text: 10 minutes
   durationWillVary: false
   quantity:
     id: Quant_Dur_60min
@@ -15,4 +15,5 @@ duration:
         codeSystem: ncit
         codeSystemVersion: 24.04e
         decode: min
+
 

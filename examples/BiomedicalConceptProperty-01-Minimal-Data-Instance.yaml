@@ -1,0 +1,14 @@
+id: BCP-001
+name: Sex
+isRequired: true
+isEnabled: true
+datatype: string
+code:
+  id: alias-code-sex-prop-001
+  standardCode:
+    id: code-sex-prop-001
+    code: C28421
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Sex
+

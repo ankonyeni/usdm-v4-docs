@@ -1,0 +1,11 @@
+id: ResponseCode_2
+name: RC_C16576
+isEnabled: true
+code:
+  id: Code_118
+  code: C16576
+  codeSystem: ncit
+  codeSystemVersion: 24.04e
+  decode: Female
+label: Female
+

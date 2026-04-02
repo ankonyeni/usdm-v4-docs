@@ -1,0 +1,28 @@
+id: ScheduleTimeline_1
+name: Main Timeline
+label: Main Timeline
+description: This is the main timeline for the study design.
+entryCondition: Potential subject identified
+mainTimeline: true
+entryId: ScheduledActivityInstance_1
+exits:
+- id: ScheduleTimelineExit_1
+timings:
+- id: Timing_1
+  name: TIM1
+  type:
+    id: Code_31
+    code: C201357
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Before
+  relativeToFrom:
+    id: Code_32
+    code: C201355
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Start to Start
+  value: P2D
+  valueLabel: 2 days
+  relativeFromScheduledInstanceId: ScheduledActivityInstance_1
+

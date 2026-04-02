@@ -1,0 +1,9 @@
+id: MDI-01
+text: UDI-123456789
+scopeId: org-min-001
+type:
+  id: code-mdi-type-01
+  code: C155868
+  codeSystem: ncit
+  codeSystemVersion: 24.04e
+  decode: Device Unique Identifier

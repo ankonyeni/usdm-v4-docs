@@ -1,0 +1,5 @@
+id: Condition-2
+name: Hypertension Condition
+label: Hypertension
+description: Subject has a history of hypertension.
+text: Subject's systolic blood pressure is > 140 mmHg.

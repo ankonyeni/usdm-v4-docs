@@ -1,0 +1,5 @@
+id: SDP-2
+name: Healthy Volunteers
+label: Healthy Volunteers
+description: Healthy adult volunteers.
+includesHealthySubjects: true

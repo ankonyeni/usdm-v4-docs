@@ -1,0 +1,20 @@
+id: SE-3
+name: Follow-up
+label: Follow-up
+description: The follow-up phase of the study.
+type:
+  id: SE-TYPE-3
+  code: C188832
+  codeSystem: ncit
+  codeSystemVersion: 24.04e
+  decode: Follow-up
+notes:
+  - id: NOTE-SE-1
+    text: Follow-up visits are scheduled every 3 months.
+previousId: "SE-2"
+nextId: "SE-4"
+extensionAttributes:
+  - id: EXT-SE-1
+    url: https://example.com/extensions/epoch-duration
+    valueString: 12 months
+

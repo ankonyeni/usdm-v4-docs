@@ -1,0 +1,12 @@
+id: BC-001
+name: Sex
+reference: /mdr/bc/packages/2023-03-31/biomedicalconcepts/C28421
+code:
+  id: alias-code-sex-001
+  standardCode:
+    id: code-sex-001
+    code: C28421
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Sex
+
