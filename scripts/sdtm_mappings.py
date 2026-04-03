@@ -12,7 +12,6 @@ except ImportError:  # pragma: no cover - handled with a placeholder page
     load_workbook = None
 
 
-PAGE_FILENAME = "sdtm-mappings.md"
 DOMAIN_PAGES_DIRNAME = "sdtm-mappings"
 CLASS_DOCS_DIRNAME = "classes"
 DETAILS_PAGE_SUFFIX = "-details"
@@ -42,6 +41,7 @@ SECTION_METADATA: dict[str, tuple[str, str]] = {
         "Parameter-style trial summary mappings spanning study design, roles, interventions, population, objectives, endpoints, and related metadata.",
     ),
 }
+SECTION_SUMMARY_EXCLUDES = {"TS Parameters"}
 
 
 @dataclass(frozen=True)
@@ -171,6 +171,8 @@ def _render_section_summary(section_order: list[str], records: list[MappingRecor
     ]
 
     for section_name in section_order:
+        if section_name in SECTION_SUMMARY_EXCLUDES:
+            continue
         title = _section_title(section_name)
         description = _section_description(section_name)
         lines.extend(
@@ -207,6 +209,9 @@ def _table_primary_column_value(record: MappingRecord) -> str:
 
 
 def _detail_page_title(section_name: str, record: MappingRecord) -> str:
+    if section_name == "TS Parameters":
+        parameter_code = record.sdtm_variable or record.parameter_name or "UNKNOWN"
+        return f"TSPARMCD = '{parameter_code}'"
     variable_name = record.sdtm_variable or record.parameter_name or record.usdm_class or "MAPPING"
     return f"{section_name}.{variable_name}"
 
@@ -240,11 +245,11 @@ def _render_clickable_row_open(detail_href: str) -> str:
     )
 
 
-def _render_usdm_class_html(record: MappingRecord, docs_path: Path, href_prefix: str = "../../classes/") -> str:
+def _render_usdm_class_html(record: MappingRecord, docs_path: Path, href_prefix: str = "../../../classes/") -> str:
     class_name = record.usdm_class or ""
     display_text = html.escape(class_name)
     if _class_doc_exists(docs_path, record.usdm_class):
-        return f'<a href="{href_prefix}{record.usdm_class}/index.html">{display_text}</a>'
+        return f'<a href="{href_prefix}{record.usdm_class}/">{display_text}</a>'
     return display_text
 
 
@@ -256,7 +261,7 @@ def _render_usdm_class_table_cell(record: MappingRecord, docs_path: Path, detail
     if _class_doc_exists(docs_path, record.usdm_class):
         return (
             '<td>'
-            f'<a class="sdtm-class-link" href="../../classes/{record.usdm_class}/index.html" '
+            f'<a class="sdtm-class-link" href="../../classes/{record.usdm_class}/" '
             'onclick="event.stopPropagation()">'
             f"{html.escape(record.usdm_class)}"
             "</a>"
@@ -364,13 +369,26 @@ def _render_domain_page(section_name: str, docs_path: Path, records: list[Mappin
         "",
         _section_description(section_name),
         "",
-        "## Variable Map",
-        "",
-        "Open any row to view the full mapping details and notes on its details page.",
-        "",
-        _render_domain_table_html(section_name, docs_path, records),
-        "",
     ]
+
+    if section_name == "TS":
+        lines.extend(
+            [
+                "For parameter-level trial summary mappings, open [Trial Summary Parameters (TS Parameters)](ts-parameters.md).",
+                "",
+            ]
+        )
+
+    lines.extend(
+        [
+            "## Variable Map",
+            "",
+            "Open any row to view the full mapping details and notes on its details page.",
+            "",
+            _render_domain_table_html(section_name, docs_path, records),
+            "",
+        ]
+    )
 
     return "\n".join(lines)
 
@@ -401,53 +419,13 @@ def _write_domain_pages(docs_path: Path, section_order: list[str], records: list
             )
 
 
-def write_sdtm_mapping_page(workbook_path: Path, docs_path: Path) -> list[MappingRecord]:
-    target_path = docs_path / PAGE_FILENAME
-
+def write_sdtm_mapping_docs(workbook_path: Path, docs_path: Path) -> list[MappingRecord]:
     if load_workbook is None:
-        target_path.write_text(
-            "\n".join(
-                [
-                    "# SDTM Trial Domain Mappings",
-                    "",
-                    "The SDTM mapping workbook could not be rendered because `openpyxl` is not installed in this environment.",
-                    "",
-                    "Install the project requirements and rebuild the docs to generate this page.",
-                    "",
-                ]
-            ),
-            encoding="utf-8",
-        )
         return []
 
     if not workbook_path.exists():
-        target_path.write_text(
-            "\n".join(
-                [
-                    "# SDTM Trial Domain Mappings",
-                    "",
-                    "The `sdtm_mapping.xlsx` workbook was not found, so no SDTM mapping view was generated for this build.",
-                    "",
-                ]
-            ),
-            encoding="utf-8",
-        )
         return []
 
     section_order, records = _collect_workbook_metadata(workbook_path)
     _write_domain_pages(docs_path, section_order, records)
-
-    lines = [
-        "# SDTM Trial Domain Mappings",
-        "",
-        "This page turns the SDTM mapping workbook into an SDTM-domain guide instead of a spreadsheet dump. Choose a trial domain below to see its dedicated mapping page.",
-        "",
-        "- Each trial domain has its own page, so the mapping content is not crammed into one long register.",
-        "- TS Parameters list the parameter names directly in the `Parameter` column.",
-        "- Open any mapping row to review the full mapping details on a dedicated details page.",
-        "",
-    ]
-    lines.extend(_render_section_summary(section_order, records))
-
-    target_path.write_text("\n".join(lines).rstrip() + "\n", encoding="utf-8")
     return [record for record in records if record.usdm_class]

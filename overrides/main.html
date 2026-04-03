@@ -1,25 +1,77 @@
 {% extends "base.html" %}
 
 {% block site_nav %}
+  {% macro render_sdtm_dropdown() -%}
+    {%- set sdtm_domain_items = [
+      ("Trial Arms (TA)", "sdtm-mappings/ta/", ["sdtm-mappings/ta/", "sdtm-mappings/ta-details/"]),
+      ("Trial Elements (TE)", "sdtm-mappings/te/", ["sdtm-mappings/te/", "sdtm-mappings/te-details/"]),
+      ("Trial Visits (TV)", "sdtm-mappings/tv/", ["sdtm-mappings/tv/", "sdtm-mappings/tv-details/"]),
+      ("Trial Inclusion/Exclusion (TI)", "sdtm-mappings/ti/", ["sdtm-mappings/ti/", "sdtm-mappings/ti-details/"]),
+      ("Trial Summary (TS)", "sdtm-mappings/ts/", ["sdtm-mappings/ts/", "sdtm-mappings/ts-details/", "sdtm-mappings/ts-parameters/", "sdtm-mappings/ts-parameters-details/"]),
+    ] %}
+    {%- set sdtm_active = page and page.url.startswith("sdtm-mappings/") %}
+    <li class="nav-item dropdown">
+        <a href="#" class="nav-link dropdown-toggle{% if sdtm_active %} active{% endif %}" aria-current="page{% if sdtm_active %}{% endif %}" role="button" data-bs-toggle="dropdown" aria-expanded="false">SDTM Trial Domain Mappings</a>
+        <ul class="dropdown-menu">
+        {%- for item_title, item_url, item_prefixes in sdtm_domain_items %}
+            {%- set state = namespace(item_active=false) %}
+            {%- if page %}
+            {%- for prefix in item_prefixes %}
+            {%- if page.url.startswith(prefix) %}
+            {%- set state.item_active = true %}
+            {%- endif %}
+            {%- endfor %}
+            {%- endif %}
+            <li>
+                <a href="{{ item_url|url }}" class="dropdown-item{% if state.item_active %} active{% endif %}">{{ item_title }}</a>
+            </li>
+        {%- endfor %}
+        </ul>
+    </li>
+  {%- endmacro %}
+  {% macro render_top_nav_item(nav_item) -%}
+    {%- if nav_item.children %}
+        <li class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle{% if nav_item.active %} active" aria-current="page{% endif %}" role="button" data-bs-toggle="dropdown"  aria-expanded="false">{{ nav_item.title }}</a>
+            <ul class="dropdown-menu">
+            {%- for nav_item in nav_item.children %}
+                {% include "nav-sub.html" %}
+            {%- endfor %}
+            </ul>
+        </li>
+    {%- else %}
+        <li class="nav-item">
+            <a href="{{ nav_item.url|url }}" class="nav-link{% if nav_item.active %} active" aria-current="page{% endif %}">{{ nav_item.title }}</a>
+        </li>
+    {%- endif %}
+  {%- endmacro %}
   {%- if nav|length > 1 %}
+      {%- set hidden_titles = ["sdtm mappings", "schemas"] %}
+      {%- set preferred_order = ["classes", "slots", "types", "__sdtm__", "enums", "reference", "subsets"] %}
+      {%- set nav_state = namespace(has_sdtm_nav=false) %}
+      {%- for nav_item in nav %}
+      {%- if nav_item.url != nav.homepage.url and nav_item.title|lower == "sdtm mappings" %}
+      {%- set nav_state.has_sdtm_nav = true %}
+      {%- endif %}
+      {%- endfor %}
       <!-- Main navigation -->
       <ul class="nav navbar-nav">
-      {%- for nav_item in nav %}
-      {%- if nav_item.url != nav.homepage.url %}
-      {%- if nav_item.children %}
-          <li class="nav-item dropdown">
-              <a href="#" class="nav-link dropdown-toggle{% if nav_item.active %} active" aria-current="page{% endif %}" role="button" data-bs-toggle="dropdown"  aria-expanded="false">{{ nav_item.title }}</a>
-              <ul class="dropdown-menu">
-              {%- for nav_item in nav_item.children %}
-                  {% include "nav-sub.html" %}
-              {%- endfor %}
-              </ul>
-          </li>
-      {%- else %}
-          <li class="nav-item">
-              <a href="{{ nav_item.url|url }}" class="nav-link{% if nav_item.active %} active" aria-current="page{% endif %}">{{ nav_item.title }}</a>
-          </li>
+      {%- for title in preferred_order %}
+      {%- if title == "__sdtm__" %}
+      {%- if nav_state.has_sdtm_nav %}
+          {{ render_sdtm_dropdown() }}
       {%- endif %}
+      {%- else %}
+      {%- for nav_item in nav %}
+      {%- if nav_item.url != nav.homepage.url and nav_item.title|lower == title and nav_item.title|lower not in hidden_titles %}
+          {{ render_top_nav_item(nav_item) }}
+      {%- endif %}
+      {%- endfor %}
+      {%- endif %}
+      {%- endfor %}
+      {%- for nav_item in nav %}
+      {%- if nav_item.url != nav.homepage.url and nav_item.title|lower not in hidden_titles and nav_item.title|lower not in preferred_order %}
+          {{ render_top_nav_item(nav_item) }}
       {%- endif %}
       {%- endfor %}
       </ul>

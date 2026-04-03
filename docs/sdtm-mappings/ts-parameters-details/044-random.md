@@ -1,8 +1,8 @@
-# TS Parameters.RANDOM
+# TSPARMCD = 'RANDOM'
 
 <div class="sdtm-detail-card">
   <p class="sdtm-detail-meta"><strong>Label:</strong> Trial is Randomized</p>
-  <p class="sdtm-detail-meta"><strong>USDM Class:</strong> <a href="../../classes/StudyDesign/index.html">StudyDesign</a></p>
+  <p class="sdtm-detail-meta"><strong>USDM Class:</strong> <a href="../../../classes/StudyDesign/">StudyDesign</a></p>
   <p class="sdtm-detail-meta"><strong>USDM Path:</strong> <code>StudyVersion/@studyDesigns/StudyDesign/@characteristics</code></p>
 </div>
 

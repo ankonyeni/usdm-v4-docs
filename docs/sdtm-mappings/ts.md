@@ -2,6 +2,8 @@
 
 Core study-level summary fields and registry-style metadata that feed the TS domain.
 
+For parameter-level trial summary mappings, open [Trial Summary Parameters (TS Parameters)](ts-parameters.md).
+
 ## Variable Map
 
 Open any row to view the full mapping details and notes on its details page.
@@ -19,7 +21,7 @@ Open any row to view the full mapping details and notes on its details page.
 <tr class="sdtm-clickable-row" tabindex="0" role="link" onclick="window.location.href='../ts-details/001-studyid/index.html'" onkeydown="if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); window.location.href='../ts-details/001-studyid/index.html'; }">
 <td><a class="sdtm-row-link" href="../ts-details/001-studyid/index.html"><code>STUDYID</code></a></td>
 <td><a class="sdtm-row-link" href="../ts-details/001-studyid/index.html">Study Identifier</a></td>
-<td><a class="sdtm-class-link" href="../../classes/StudyIdentifier/index.html" onclick="event.stopPropagation()">StudyIdentifier</a></td>
+<td><a class="sdtm-class-link" href="../../classes/StudyIdentifier/" onclick="event.stopPropagation()">StudyIdentifier</a></td>
 <td><a class="sdtm-row-link" href="../ts-details/001-studyid/index.html">StudyVersion/@studyIdentifiers/StudyIdentifier/@text</a></td>
 </tr>
 <tr class="sdtm-clickable-row" tabindex="0" role="link" onclick="window.location.href='../ts-details/002-domain/index.html'" onkeydown="if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); window.location.href='../ts-details/002-domain/index.html'; }">
@@ -73,13 +75,13 @@ Open any row to view the full mapping details and notes on its details page.
 <tr class="sdtm-clickable-row" tabindex="0" role="link" onclick="window.location.href='../ts-details/010-tsvcdref/index.html'" onkeydown="if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); window.location.href='../ts-details/010-tsvcdref/index.html'; }">
 <td><a class="sdtm-row-link" href="../ts-details/010-tsvcdref/index.html"><code>TSVCDREF</code></a></td>
 <td><a class="sdtm-row-link" href="../ts-details/010-tsvcdref/index.html">Name of Reference Terminology</a></td>
-<td><a class="sdtm-class-link" href="../../classes/Code/index.html" onclick="event.stopPropagation()">Code</a></td>
+<td><a class="sdtm-class-link" href="../../classes/Code/" onclick="event.stopPropagation()">Code</a></td>
 <td><a class="sdtm-row-link" href="../ts-details/010-tsvcdref/index.html">code/@codeSystem</a></td>
 </tr>
 <tr class="sdtm-clickable-row" tabindex="0" role="link" onclick="window.location.href='../ts-details/011-tsvcdver/index.html'" onkeydown="if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); window.location.href='../ts-details/011-tsvcdver/index.html'; }">
 <td><a class="sdtm-row-link" href="../ts-details/011-tsvcdver/index.html"><code>TSVCDVER</code></a></td>
 <td><a class="sdtm-row-link" href="../ts-details/011-tsvcdver/index.html">Version of the Reference Terminology</a></td>
-<td><a class="sdtm-class-link" href="../../classes/Code/index.html" onclick="event.stopPropagation()">Code</a></td>
+<td><a class="sdtm-class-link" href="../../classes/Code/" onclick="event.stopPropagation()">Code</a></td>
 <td><a class="sdtm-row-link" href="../ts-details/011-tsvcdver/index.html">code/@codeSystemVersion</a></td>
 </tr>
 </tbody>

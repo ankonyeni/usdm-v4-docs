@@ -1,8 +1,8 @@
-# TS Parameters.OBJPRIM
+# TSPARMCD = 'OBJPRIM'
 
 <div class="sdtm-detail-card">
   <p class="sdtm-detail-meta"><strong>Label:</strong> Study Primary Objective; Trial Primary Objective</p>
-  <p class="sdtm-detail-meta"><strong>USDM Class:</strong> <a href="../../classes/Objective/index.html">Objective</a></p>
+  <p class="sdtm-detail-meta"><strong>USDM Class:</strong> <a href="../../../classes/Objective/">Objective</a></p>
   <p class="sdtm-detail-meta"><strong>USDM Path:</strong> <code>StudyVersion/@studyDesigns/StudyDesign/@objectives/Objective/@text</code></p>
 </div>
 

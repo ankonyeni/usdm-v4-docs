@@ -1,8 +1,8 @@
-# TS Parameters.COMPTRT
+# TSPARMCD = 'COMPTRT'
 
 <div class="sdtm-detail-card">
   <p class="sdtm-detail-meta"><strong>Label:</strong> Comparative Treatment Name</p>
-  <p class="sdtm-detail-meta"><strong>USDM Class:</strong> <a href="../../classes/Substance/index.html">Substance</a></p>
+  <p class="sdtm-detail-meta"><strong>USDM Class:</strong> <a href="../../../classes/Substance/">Substance</a></p>
   <p class="sdtm-detail-meta"><strong>USDM Path:</strong> <code>StudyVersion/@studyDesigns/StudyDesign/@studyInterventions/StudyIntervention/@administrations/Administration/@administrableProduct/AdministrableProduct/@ingredients/Ingredient/@substance/Substance/@label</code></p>
 </div>
 

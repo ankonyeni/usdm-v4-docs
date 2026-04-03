@@ -1,8 +1,8 @@
-# TS Parameters.TINDTP
+# TSPARMCD = 'TINDTP'
 
 <div class="sdtm-detail-card">
   <p class="sdtm-detail-meta"><strong>Label:</strong> Trial Intent Type</p>
-  <p class="sdtm-detail-meta"><strong>USDM Class:</strong> <a href="../../classes/InterventionalStudyDesign/index.html">InterventionalStudyDesign</a></p>
+  <p class="sdtm-detail-meta"><strong>USDM Class:</strong> <a href="../../../classes/InterventionalStudyDesign/">InterventionalStudyDesign</a></p>
   <p class="sdtm-detail-meta"><strong>USDM Path:</strong> <code>StudyVersion/@studyDesigns/InterventionalStudyDesign/@intentTypes/Code/@decode</code></p>
 </div>
 

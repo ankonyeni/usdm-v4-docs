@@ -1,8 +1,8 @@
-# TS Parameters.EXTTIND
+# TSPARMCD = 'EXTTIND'
 
 <div class="sdtm-detail-card">
   <p class="sdtm-detail-meta"><strong>Label:</strong> Extension Trial Indicator</p>
-  <p class="sdtm-detail-meta"><strong>USDM Class:</strong> <a href="../../classes/StudyDesign/index.html">StudyDesign</a></p>
+  <p class="sdtm-detail-meta"><strong>USDM Class:</strong> <a href="../../../classes/StudyDesign/">StudyDesign</a></p>
   <p class="sdtm-detail-meta"><strong>USDM Path:</strong> <code>StudyVersion/@studyDesigns/StudyDesign/@characteristics</code></p>
 </div>
 

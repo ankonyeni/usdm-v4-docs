@@ -2,7 +2,7 @@
 
 <div class="sdtm-detail-card">
   <p class="sdtm-detail-meta"><strong>Label:</strong> Transition Rule</p>
-  <p class="sdtm-detail-meta"><strong>USDM Class:</strong> <a href="../../classes/ConditionAssignment/index.html">ConditionAssignment</a></p>
+  <p class="sdtm-detail-meta"><strong>USDM Class:</strong> <a href="../../../classes/ConditionAssignment/">ConditionAssignment</a></p>
   <p class="sdtm-detail-meta"><strong>USDM Path:</strong> <code>StudyVersion/@studyDesigns/StudyDesign/@scheduleTimelines/ScheduleTimeline/@instances/ScheduledDecisionInstance/@conditionAssignments/ConditionAssignment/@condition</code></p>
 </div>
 

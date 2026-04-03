@@ -1,8 +1,8 @@
-# TS Parameters.NUMSEUST
+# TSPARMCD = 'NUMSEUST'
 
 <div class="sdtm-detail-card">
   <p class="sdtm-detail-meta"><strong>Label:</strong> Number of Trial Sites EU State</p>
-  <p class="sdtm-detail-meta"><strong>USDM Class:</strong> <a href="../../classes/Organization/index.html">Organization</a></p>
+  <p class="sdtm-detail-meta"><strong>USDM Class:</strong> <a href="../../../classes/Organization/">Organization</a></p>
   <p class="sdtm-detail-meta"><strong>USDM Path:</strong> <code>Organization/@managedSites/StudySite/@name</code></p>
 </div>
 

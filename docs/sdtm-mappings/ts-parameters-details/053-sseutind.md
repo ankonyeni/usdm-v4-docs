@@ -1,8 +1,8 @@
-# TS Parameters.SSEUTIND
+# TSPARMCD = 'SSEUTIND'
 
 <div class="sdtm-detail-card">
   <p class="sdtm-detail-meta"><strong>Label:</strong> Single Site EU State Trial Indicator</p>
-  <p class="sdtm-detail-meta"><strong>USDM Class:</strong> <a href="../../classes/Organization/index.html">Organization</a></p>
+  <p class="sdtm-detail-meta"><strong>USDM Class:</strong> <a href="../../../classes/Organization/">Organization</a></p>
   <p class="sdtm-detail-meta"><strong>USDM Path:</strong> <code>Organization/@managedSites/StudySite/@country/Code/@code</code></p>
 </div>
 

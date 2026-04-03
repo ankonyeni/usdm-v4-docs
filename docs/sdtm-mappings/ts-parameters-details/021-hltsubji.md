@@ -1,8 +1,8 @@
-# TS Parameters.HLTSUBJI
+# TSPARMCD = 'HLTSUBJI'
 
 <div class="sdtm-detail-card">
   <p class="sdtm-detail-meta"><strong>Label:</strong> Healthy Subject Indicator</p>
-  <p class="sdtm-detail-meta"><strong>USDM Class:</strong> <a href="../../classes/StudyCohort/index.html">StudyCohort</a></p>
+  <p class="sdtm-detail-meta"><strong>USDM Class:</strong> <a href="../../../classes/StudyCohort/">StudyCohort</a></p>
   <p class="sdtm-detail-meta"><strong>USDM Path:</strong> <code>StudyVersion/@studyDesigns/StudyDesign/@population/StudyDesignPopulation/@cohorts/StudyCohort/@includesHealthySubjects</code></p>
 </div>
 

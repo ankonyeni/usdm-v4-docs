@@ -1,8 +1,8 @@
-# TS Parameters.TCNTRL
+# TSPARMCD = 'TCNTRL'
 
 <div class="sdtm-detail-card">
   <p class="sdtm-detail-meta"><strong>Label:</strong> Control Type</p>
-  <p class="sdtm-detail-meta"><strong>USDM Class:</strong> <a href="../../classes/StudyIntervention/index.html">StudyIntervention</a></p>
+  <p class="sdtm-detail-meta"><strong>USDM Class:</strong> <a href="../../../classes/StudyIntervention/">StudyIntervention</a></p>
   <p class="sdtm-detail-meta"><strong>USDM Path:</strong> <code>StudyVersion/@studyDesigns/StudyDesign/@studyInterventions/StudyIntervention/@role/Code/@decode</code></p>
 </div>
 

@@ -1,8 +1,8 @@
-# TS Parameters.PIPIND
+# TSPARMCD = 'PIPIND'
 
 <div class="sdtm-detail-card">
   <p class="sdtm-detail-meta"><strong>Label:</strong> Pediatric Investigation Plan Indicator</p>
-  <p class="sdtm-detail-meta"><strong>USDM Class:</strong> <a href="../../classes/ReferenceIdentifier/index.html">ReferenceIdentifier</a></p>
+  <p class="sdtm-detail-meta"><strong>USDM Class:</strong> <a href="../../../classes/ReferenceIdentifier/">ReferenceIdentifier</a></p>
   <p class="sdtm-detail-meta"><strong>USDM Path:</strong> <code>StudyVersion/@referenceIdentifiers/ReferenceIdentifier/@type/Code/@decode</code></p>
 </div>
 

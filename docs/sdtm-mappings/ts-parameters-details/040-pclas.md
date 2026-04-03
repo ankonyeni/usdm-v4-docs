@@ -1,8 +1,8 @@
-# TS Parameters.PCLAS
+# TSPARMCD = 'PCLAS'
 
 <div class="sdtm-detail-card">
   <p class="sdtm-detail-meta"><strong>Label:</strong> Pharmacologic Class</p>
-  <p class="sdtm-detail-meta"><strong>USDM Class:</strong> <a href="../../classes/AdministrableProduct/index.html">AdministrableProduct</a></p>
+  <p class="sdtm-detail-meta"><strong>USDM Class:</strong> <a href="../../../classes/AdministrableProduct/">AdministrableProduct</a></p>
   <p class="sdtm-detail-meta"><strong>USDM Path:</strong> <code>StudyVersion/@studyDesigns/StudyDesign/@studyInterventions/StudyIntervention/@administrations/administration/@administrableProduct/AdministrableProduct/@pharmacologicClass/Code/@decode</code></p>
 </div>
 
