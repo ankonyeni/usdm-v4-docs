@@ -14,6 +14,7 @@ SITE_PATH = REPO_ROOT / "site"
 TYPE_DOCS_PATH = DOCS_PATH / "types"
 TEMPLATE_PATH = REPO_ROOT / "templates" / "docgen"
 TYPE_HEADER_PATTERN = re.compile(r"^# Type:\s+(\S+)\s*$")
+EXAMPLE_HEADING_PATTERN = re.compile(r"^### Example:\s+(.+?)\s*$")
 GENERATED_DOC_PATHS = (
     "index.md",
     "classes",
@@ -69,6 +70,70 @@ def add_type_doc_aliases(path: Path) -> None:
             shutil.copyfile(type_doc, alias_path)
 
 
+def natural_sort_key(value: str) -> list[int | str]:
+    return [int(part) if part.isdigit() else part.lower() for part in re.split(r"(\d+)", value)]
+
+
+def reorder_example_sections_in_text(text: str) -> str:
+    lines = text.splitlines(keepends=True)
+    output: list[str] = []
+    index = 0
+
+    while index < len(lines):
+        line = lines[index]
+        output.append(line)
+        index += 1
+
+        if line.strip() != "## Examples":
+            continue
+
+        leading_lines: list[str] = []
+        while index < len(lines):
+            next_line = lines[index]
+            if next_line.startswith("## "):
+                break
+            if EXAMPLE_HEADING_PATTERN.match(next_line):
+                break
+            leading_lines.append(next_line)
+            index += 1
+
+        example_sections: list[tuple[str, list[str]]] = []
+        while index < len(lines):
+            heading_line = lines[index]
+            match = EXAMPLE_HEADING_PATTERN.match(heading_line)
+            if not match:
+                break
+
+            section_lines = [heading_line]
+            index += 1
+            while index < len(lines):
+                next_line = lines[index]
+                if next_line.startswith("## ") or EXAMPLE_HEADING_PATTERN.match(next_line):
+                    break
+                section_lines.append(next_line)
+                index += 1
+
+            example_sections.append((match.group(1), section_lines))
+
+        output.extend(leading_lines)
+        for _, section_lines in sorted(example_sections, key=lambda item: natural_sort_key(item[0])):
+            output.extend(section_lines)
+
+    return "".join(output)
+
+
+def reorder_generated_examples(path: Path) -> None:
+    classes_path = path / "classes"
+    if not classes_path.exists():
+        return
+
+    for class_doc in sorted(classes_path.glob("*.md")):
+        original_text = class_doc.read_text(encoding="utf-8")
+        updated_text = reorder_example_sections_in_text(original_text)
+        if updated_text != original_text:
+            class_doc.write_text(updated_text, encoding="utf-8")
+
+
 def build_docs(
     schema_path: Path = SCHEMA_PATH,
     docs_path: Path = DOCS_PATH,
@@ -109,6 +174,7 @@ def build_docs(
     run(gen_doc_args)
 
     add_type_doc_aliases(type_docs_path)
+    reorder_generated_examples(docs_path)
 
     print("Running mkdocs build...")
     run(["mkdocs", "build", "--clean", "--strict", "--site-dir", str(site_path)])
