@@ -4,7 +4,7 @@ label: US Enrollment
 description: Enrollment target captured for a country-specific allocation scenario.
 quantity:
   id: Quantity_3
-  value: 20.0
+  value: 20
   unit:
     id: AliasCode_15
     standardCode:
@@ -26,11 +26,10 @@ forGeographicScope:
     standardCode:
       id: Code_59
       code: USA
-      codeSystem: ncit
-      codeSystemVersion: 24.04e
+      codeSystem: ISO3166-1-alpha-3
+      codeSystemVersion: '2020'
       decode: United States of America
 extensionAttributes:
-  - id: ext-subject-enrollment-source
-    url: https://example.org/usdm/extensions/allocation-source
-    valueString: Country-specific amendment allocation
-
+- id: ext-subject-enrollment-source
+  url: https://example.org/usdm/extensions/allocation-source
+  valueString: Country-specific amendment allocation

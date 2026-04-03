@@ -9,10 +9,10 @@ numerator:
     id: ALIAS-CODE-MG-2
     standardCode:
       id: CODE-MG-2
-      code: C48150
+      code: C28253
       codeSystem: ncit
       codeSystemVersion: 24.04e
-      decode: milligram
+      decode: Milligram
 denominator:
   id: QUANT-3
   value: 5
@@ -20,8 +20,7 @@ denominator:
     id: ALIAS-CODE-ML-1
     standardCode:
       id: CODE-ML-1
-      code: C48149
+      code: C28254
       codeSystem: ncit
       codeSystemVersion: 24.04e
-      decode: milliliter
-
+      decode: Milliliter

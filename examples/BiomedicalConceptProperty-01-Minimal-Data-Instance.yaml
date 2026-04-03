@@ -1,14 +1,13 @@
-id: BCP-001
-name: Sex
+id: BCP-TEMP-VAL-001
+name: Value
 isRequired: true
 isEnabled: true
-datatype: string
+datatype: float
 code:
-  id: alias-code-sex-prop-001
+  id: alias-code-temp-val-001
   standardCode:
-    id: code-sex-prop-001
-    code: C28421
+    id: code-temp-val-001
+    code: C25712
     codeSystem: ncit
     codeSystemVersion: 24.04e
-    decode: Sex
-
+    decode: Value

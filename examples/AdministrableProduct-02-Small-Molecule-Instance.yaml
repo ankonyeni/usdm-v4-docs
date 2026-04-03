@@ -9,7 +9,7 @@ administrableDoseForm:
     code: C42998
     codeSystem: ncit
     codeSystemVersion: 24.04e
-    decode: TABLET
+    decode: Tablet
 sourcing:
   id: Code_Central
   code: C215659
@@ -21,12 +21,10 @@ productDesignation:
   code: C202579
   codeSystem: ncit
   codeSystemVersion: 24.04e
-  decode: IMP
+  decode: Investigational Medicinal Product
 pharmacologicClass:
   id: Code_PK_Inhibitor
   code: C1404
   codeSystem: ncit
   codeSystemVersion: 24.04e
   decode: Protein Kinase Inhibitor
-
-

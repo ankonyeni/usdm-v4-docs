@@ -1,6 +1,6 @@
 id: BCC-002
 name: Vital Signs
 label: Vital Signs
-description: "Measurements of the body's most basic functions."
+description: Measurements of the body's most basic functions.
 memberIds:
-  - BC-003
+- BC-003

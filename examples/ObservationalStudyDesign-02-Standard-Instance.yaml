@@ -1,155 +1,140 @@
-model:
-  id: Code_106
-  code: C82639
-  codeSystem: ncit
-  codeSystemVersion: 24.04e
-  decode: Parallel Study
-subTypes:
-- id: Code_105
-  code: C49666
-  codeSystem: ncit
-  codeSystemVersion: 24.04e
-  decode: Efficacy Study
-timePerspective:
-  id: Code_111
-  code: C53310
-  codeSystem: ncit
-  codeSystemVersion: 24.04e
-  decode: Cross-Sectional Study
-samplingMethod:
-  id: Code_112
-  code: C71517
-  codeSystem: ncit
-  codeSystemVersion: 24.04e
-  decode: Equal Probability Sampling Method
-analysisPopulations:
-- id: AnalysisPopulation_1
-  text: ITT
-  name: AP_1
-id: ObservationalStudyDesign_1
-name: Study Design 1
-label: USDM Example Study Design
-description: The main design for the study
-rationale: Basic study
-therapeuticAreas:
-- id: Code_100
-  code: T2_DIABETES
-  codeSystem: ncit
-  codeSystemVersion: 24.04e
-  decode: Type 2 diabetes
+id: ObservationalStudyDesign_T2D_001
+name: T2D Real-World Outcomes Registry
+label: T2D-RWO
+description: A prospective observational study to evaluate long-term glycemic control
+  in patients initiated on standard-of-care GLP-1 agonists.
+rationale: To understand real-world effectiveness and safety outside of a controlled
+  clinical trial environment.
 studyType:
-  id: Code_109
+  id: Code_StudyType_Obs
   code: C16084
   codeSystem: ncit
   codeSystemVersion: 24.04e
   decode: Observational Study
-characteristics:
-- id: Code_107
-  code: C99907x1
+model:
+  id: Code_Model_Cohort
+  code: C15208
   codeSystem: ncit
   codeSystemVersion: 24.04e
-  decode: EXTENSION
-studyPhase:
-  id: AliasCode_20
-  standardCode:
-    id: Code_110
-    code: C15602
-    codeSystem: ncit
-    codeSystemVersion: 24.04e
-    decode: Phase III Trial
-activities:
-- id: Activity_1
-  name: Demographics
-eligibilityCriteria:
-- id: EligibilityCriterion_1
-  name: Age Criteria
-  identifier: '1'
-  category:
-    id: Code_211
-    code: C25532
-    codeSystem: ncit
-    codeSystemVersion: 24.04e
-    decode: Inclusion Criteria
-  criterionItemId: EligibilityCriterionItem_1
-encounters:
-- id: Encounter_1
-  name: E1
-  type:
-    id: Code_74
-    code: C25716
-    codeSystem: ncit
-    codeSystemVersion: 24.04e
-    decode: Visit
-estimands:
-- id: Estimand_1
-  populationSummary: Survival of all patients
-  name: EST1
-  analysisPopulationId: AnalysisPopulation_1
-  variableOfInterestId: Endpoint_1
-  intercurrentEvents:
-  - strategy: Patients with out of range lab values before dosing will be excluded
-    id: IntercurrentEvent_1
-    name: termination
-    text: ICE Text
-  interventionIds:
-  - StudyIntervention_1
+  decode: Cohort Study
+subTypes:
+- id: Code_SubType_Prospective
+  code: C142646
+  codeSystem: ncit
+  codeSystemVersion: 24.04e
+  decode: Prospective Study
+timePerspective:
+  id: Code_Time_Prospective
+  code: C142646
+  codeSystem: ncit
+  codeSystemVersion: 24.04e
+  decode: Prospective Study
+therapeuticAreas:
+- id: Code_TA_Diabetes
+  code: C26747
+  codeSystem: ncit
+  codeSystemVersion: 24.04e
+  decode: Type 2 Diabetes Mellitus
 indications:
-- id: Indication_1
-  name: IND1
-  isRareDisease: true
-objectives:
-- level:
-    id: Code_207
-    code: C85826
+- id: Indication_T2D
+  name: Type 2 Diabetes Mellitus
+  isRareDisease: false
+population:
+  id: StudyDesignPopulation_T2D
+  name: Adult T2D Patients
+  description: Adults aged 18-75 with a diagnosis of Type 2 Diabetes and HbA1c > 7.0%.
+  includesHealthySubjects: false
+studyPhase:
+  id: AliasCode_Phase_NA
+  standardCode:
+    id: Code_Phase_NA
+    code: C93604
     codeSystem: ncit
     codeSystemVersion: 24.04e
-    decode: Primary Objective
-  id: Objective_1
-  name: OBJ1
-  text: The primary efficacy objective for this study is to evaluate the efficacy
-    of TCZ compared with placebo in combination with SOC for the treatment of severe
-    COVID-19 pneumonia
-scheduleTimelines:
-- id: ScheduleTimeline_1
-  name: Main Timeline
-  entryCondition: Potential subject identified
-  mainTimeline: true
-  entryId: ScheduledActivityInstance_1
-arms:
-- id: StudyArm_1
-  name: Active
-  type:
-    id: Code_92
-    code: C174267
-    codeSystem: ncit
-    codeSystemVersion: 24.04e
-    decode: Active Comparator Arm
-  dataOriginType:
-    id: Code_93
-    code: C188866
-    codeSystem: ncit
-    codeSystemVersion: 24.04e
-    decode: Data Generated Within Study
-  dataOriginDescription: Data collected from subjects
-studyCells:
-- id: StudyCell_1
-  armId: StudyArm_1
-  epochId: StudyEpoch_1
-  elementIds:
-  - StudyElement_1
-studyInterventionIds:
-- StudyIntervention_1
+    decode: Not Applicable
+characteristics:
+- id: Code_Char_NaturalHistory
+  code: C16136
+  codeSystem: ncit
+  codeSystemVersion: 24.04e
+  decode: Natural History and Cofactors Study
 epochs:
-- id: StudyEpoch_1
-  name: Screening
+- id: Epoch_Baseline
+  name: Baseline Enrollment
   type:
-    id: Code_96
+    id: Code_Epoch_Enrol
     code: C202487
     codeSystem: ncit
     codeSystemVersion: 24.04e
     decode: Screening Epoch
-population:
-  id: StudyDesignPopulation_1
-  name: POP1
-  includesHealthySubjects: true
-
+- id: Epoch_FollowUp
+  name: 24-Month Follow-Up
+  type:
+    id: Code_Epoch_Obs
+    code: C165873
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Observation Study Epoch
+arms:
+- id: StudyArm_GLP1_Cohort
+  name: GLP-1 Exposure Group
+  description: Patients newly initiated on GLP-1 receptor agonists as part of routine
+    care.
+  type:
+    id: Code_Arm_Obs
+    code: C174266
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Investigational Arm
+  dataOriginType:
+    id: code-orig-1
+    code: C49652
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Collected
+  dataOriginDescription: Data origin collected from subjects.
+studyCells:
+- id: StudyCell_001
+  armId: StudyArm_GLP1_Cohort
+  epochId: Epoch_FollowUp
+  elementIds:
+  - StudyElement_StandardObservation
+objectives:
+- id: Objective_Primary
+  level:
+    id: Code_Obj_Primary
+    code: C85826
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Primary Objective
+  name: Primary Effectiveness
+  text: To evaluate the change from baseline in HbA1c at 12 months in a real-world
+    setting.
+estimands:
+- id: Estimand_Primary_RWO
+  name: Primary Registry Estimand
+  populationSummary: All patients enrolled who complete the 12-month follow-up visit.
+  analysisPopulationId: AnalysisPopulation_FullSet
+  variableOfInterestId: Endpoint_HbA1c_Change
+  intercurrentEvents:
+  - id: ICE_TreatmentSwitch
+    name: Treatment Switching
+    text: Switch to insulin therapy during the observation period.
+    strategy: Treatment policy strategy.
+  interventionIds:
+  - SI-Default-1
+analysisPopulations:
+- id: AnalysisPopulation_FullSet
+  name: Full Analysis Set
+  text: All subjects with a baseline and at least one post-baseline HbA1c measurement.
+eligibilityCriteria:
+- id: EC-Obs-1
+  identifier: OBS-EC-1
+  name: Obs EC
+  category:
+    id: code-ec-1
+    code: C25532
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Inclusion Criteria
+  criterionItemId: EC-Item-1

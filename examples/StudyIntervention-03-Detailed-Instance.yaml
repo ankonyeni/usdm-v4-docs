@@ -1,129 +1,89 @@
-id: StudyIntervention_1
-name: ALXN1840
-label: ALXN1840
-description: ALXN1840 (formerly WTX101)
+id: SI-DRUG-003
+name: Biologic-Y Infusion
+label: Biologic-Y
+description: A monoclonal antibody administered via intravenous infusion.
 role:
-  id: Code_540
-  code: C41161
+  id: ROLE-CODE-03
+  code: C174265
+  decode: Investigational Product
   codeSystem: ncit
   codeSystemVersion: 24.04e
-  decode: Experimental Intervention
 type:
-  id: Code_541
+  id: TYPE-CODE-03
   code: C1909
-  codeSystem: ncit
-  codeSystemVersion: 24.04e
   decode: Pharmacologic Substance
-codes:
-- id: Code_539
-  code: ALXN1840
   codeSystem: ncit
   codeSystemVersion: 24.04e
-  decode: ALXN1840
 minimumResponseDuration:
-  value: 1.0
+  id: DUR-001
+  value: 12
   unit:
-    id: AliasCode_105
+    id: UNIT-CODE-01
     standardCode:
-      id: Code_542
-      code: C25301
+      id: UNIT-CODE-01
+      code: C29844
+      decode: Week
       codeSystem: ncit
       codeSystemVersion: 24.04e
-      decode: Day
-  id: Quantity_7
 administrations:
-- id: Administration_1
-  name: 15_MG
-  description: 15 mg/day
+- id: Admin_Det_003
+  name: Intravenous Infusion Administration
+  label: IV Infusion
+  description: A 60-minute intravenous infusion of the investigational medicinal product
+    administered at a constant rate.
+  administrableProductId: AdminProd_Det_77
+  medicalDeviceId: Device_Infusion_Pump_01
+  route:
+    id: AliasCode_IV
+    standardCode:
+      id: Code_IV
+      code: C38276
+      codeSystem: ncit
+      codeSystemVersion: 24.04e
+      decode: Intravenous
   dose:
-    value: 15.0
+    id: Dose_100mg
+    value: 100
     unit:
-      id: AliasCode_102
+      id: Alias_mg
       standardCode:
-        id: Code_536
+        id: Code_mg
         code: C28253
         codeSystem: ncit
         codeSystemVersion: 24.04e
         decode: Milligram
-    id: Quantity_6
   frequency:
-    id: AliasCode_104
+    id: AliasCode_Q3W
     standardCode:
-      id: Code_538
-      code: C25473
+      id: Code_Q3W
+      code: C64535
       codeSystem: ncit
       codeSystemVersion: 24.04e
-      decode: Daily
-  route:
-    id: AliasCode_103
-    standardCode:
-      id: Code_537
-      code: C38288
-      codeSystem: ncit
-      codeSystemVersion: 24.04e
-      decode: Oral Route of Administration
+      decode: Every Three Weeks
   duration:
-    id: Duration_1
+    id: Dur_60min
+    text: 60 minutes
+    durationWillVary: false
     quantity:
-      id: Quantity_5
-      value: 28.0
+      id: Quant_Dur_60min
+      value: 60
       unit:
-        id: AliasCode_101
+        id: Alias_min
         standardCode:
-          id: Code_535
-          code: C25301
+          id: Code_min
+          code: C48154
           codeSystem: ncit
           codeSystemVersion: 24.04e
-          decode: Day
-    durationWillVary: true
-    reasonDurationWillVary: Need reason
-- id: Administration_2
-  name: 30_MG
-  description: "30 mg/day (administered as 2 \xD7 15 mg ALXN1840 tablets)"
-  dose:
-    value: 30.0
-    unit:
-      id: AliasCode_107
-      standardCode:
-        id: Code_544
-        code: C28253
-        codeSystem: ncit
-        codeSystemVersion: 24.04e
-        decode: Milligram
-    id: Quantity_9
-  frequency:
-    id: AliasCode_109
-    standardCode:
-      id: Code_546
-      code: C25473
-      codeSystem: ncit
-      codeSystemVersion: 24.04e
-      decode: Daily
-  route:
-    id: AliasCode_108
-    standardCode:
-      id: Code_545
-      code: C38288
-      codeSystem: ncit
-      codeSystemVersion: 24.04e
-      decode: Oral Route of Administration
-  duration:
-    id: Duration_2
-    quantity:
-      id: Quantity_8
-      value: 11.0
-      unit:
-        id: AliasCode_106
-        standardCode:
-          id: Code_543
-          code: C25301
-          codeSystem: ncit
-          codeSystemVersion: 24.04e
-          decode: Day
-    durationWillVary: true
-    reasonDurationWillVary: Need reason
+          decode: Minute
+  notes:
+  - id: Comment_Admin_002
+    text: Infusion site must be monitored for signs of extravasation every 15 minutes.
+  - id: Comment_Admin_003
+    text: Use a dedicated infusion line with an in-line filter.
 notes:
-- id: note-study-intervention-01
-  text: The intervention example includes a dose escalation pattern with multiple
-    administrations.
-
+- id: NOTE-SI-003
+  text: Ensure the product is refrigerated until 30 minutes prior to administration.
+extensionAttributes:
+- id: EXT-SI-01
+  url: https://example.org/usdm/extensions/is-high-alert-med
+  valueBoolean: true

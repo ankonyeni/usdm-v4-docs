@@ -5,9 +5,8 @@ description: An exclusion criterion for the study.
 identifier: EC-01
 category:
   id: CAT-CODE-2
-  code: C83017
+  code: C25370
   codeSystem: ncit
   codeSystemVersion: 24.04e
-  decode: Exclusion Criterion
+  decode: Exclusion Criteria
 criterionItemId: ECI-2
-

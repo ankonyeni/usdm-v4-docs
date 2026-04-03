@@ -43,8 +43,7 @@ changes:
 - id: StudyChange_9
   name: AMEND_CHG_9
   rationale: Clarification of sample size.
-  summary: "The number of participants changed from \u201Cup to 10\u201D to \u201C\
-    approximately 10\u201D."
+  summary: The number of participants changed from “up to 10” to “approximately 10”.
   changedSections:
   - id: DocumentContentReference_11
     sectionNumber: '1.1'
@@ -96,8 +95,8 @@ changes:
     appliesToId: StudyDefinitionDocument_1
 - id: StudyChange_12
   name: AMEND_CHG_12
-  rationale: "Inclusion criterion for confirmation of diagnosis of WD changed to Leipzig\
-    \ score \u2265 4 and expanded to include historical test results."
+  rationale: Inclusion criterion for confirmation of diagnosis of WD changed to Leipzig
+    score ≥ 4 and expanded to include historical test results.
   summary: To clarify the process for confirming the score for patients who were diagnosed
     prior to the establishment of the 2012 European Association for the Study of Liver
     WD Clinical Practice Guidelines.
@@ -130,9 +129,9 @@ changes:
 - id: StudyChange_14
   name: AMEND_CHG_14
   rationale: For consistency across all ALXN1840 protocols.
-  summary: "Exclusion criterion 11 revised to \u201CThe use of an experimental or\
-    \ unapproved/unlicensed therapy at the same time or within 90 days or 5 half-lives,\
-    \ whichever is longer, prior to the Screening Visit.\u201D"
+  summary: Exclusion criterion 11 revised to “The use of an experimental or unapproved/unlicensed
+    therapy at the same time or within 90 days or 5 half-lives, whichever is longer,
+    prior to the Screening Visit.”
   changedSections:
   - id: DocumentContentReference_22
     sectionNumber: '5.2'
@@ -141,9 +140,9 @@ changes:
 - id: StudyChange_15
   name: AMEND_CHG_15
   rationale: To align with UK legislation
-  summary: "Added: \u201CThe Investigator will notify the IRB/IEC of deviations from\
-    \ the study protocol or GCP as defined by UK legislation as a serious breach or\
-    \ as required by IRB/IEC procedures.\u201D"
+  summary: 'Added: “The Investigator will notify the IRB/IEC of deviations from the
+    study protocol or GCP as defined by UK legislation as a serious breach or as required
+    by IRB/IEC procedures.”'
   changedSections:
   - id: DocumentContentReference_23
     sectionNumber: 10.1.1
@@ -158,4 +157,3 @@ primaryReason:
     codeSystem: ncit
     codeSystemVersion: 24.04e
     decode: New Regulatory Guidance
-

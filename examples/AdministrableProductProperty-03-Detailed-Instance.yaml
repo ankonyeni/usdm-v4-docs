@@ -17,6 +17,4 @@ quantity:
       code: C204708
       codeSystem: ncit
       codeSystemVersion: 24.04e
-      decode: mPa/s
-
-
+      decode: Millipascal per Second

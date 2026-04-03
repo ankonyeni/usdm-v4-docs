@@ -1,9 +1,8 @@
 id: StudyTitle_2
 type:
   id: Code_15
-  code: C99905x1
+  code: C207615
   codeSystem: ncit
   codeSystemVersion: 24.04e
   decode: Brief Study Title
-text: Something Brief
-
+text: Safety and PK of Xenovalumab in NSCLC Subjects with EGFR Exon 20 Insertion Mutations

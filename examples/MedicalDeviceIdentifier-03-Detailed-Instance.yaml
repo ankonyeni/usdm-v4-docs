@@ -8,6 +8,6 @@ type:
   codeSystemVersion: 24.04e
   decode: Lot Number
 extensionAttributes:
-  - id: ext-mdi-verification
-    url: https://example.org/usdm/extensions/device-identifier-verification
-    valueString: Verified against device packaging and site inventory log
+- id: ext-mdi-verification
+  url: https://example.org/usdm/extensions/device-identifier-verification
+  valueString: Verified against device packaging and site inventory log

@@ -1,22 +1,36 @@
-model:
-  id: Code_106
-  code: C82639
+id: ObservationalStudyDesign_T2D_PREV_001
+name: Type 2 Diabetes Prevalence and Comorbidities Survey
+label: T2D-Prev-2026
+description: A cross-sectional observational study to determine the prevalence of
+  cardiovascular comorbidities in adults with Type 2 Diabetes.
+rationale: To establish a baseline of disease burden in the current regional population.
+studyType:
+  id: Code_ST_Obs
+  code: C16084
   codeSystem: ncit
   codeSystemVersion: 24.04e
-  decode: Parallel Study
-timePerspective:
-  id: Code_111
+  decode: Observational Study
+model:
+  id: Code_Model_CrossSec
   code: C53310
   codeSystem: ncit
   codeSystemVersion: 24.04e
   decode: Cross-Sectional Study
-id: ObservationalStudyDesign_1
-name: Study Design 1
-rationale: Basic study
+timePerspective:
+  id: Code_Time_CrossSec
+  code: C53310
+  codeSystem: ncit
+  codeSystemVersion: 24.04e
+  decode: Cross-Sectional Study
+population:
+  id: StudyDesignPopulation_1
+  name: Adult T2D Population
+  description: Non-institutionalized adults with a confirmed diagnosis of T2D.
+  includesHealthySubjects: false
 eligibilityCriteria:
 - id: EligibilityCriterion_1
   name: Age Criteria
-  identifier: '1'
+  identifier: IC-01
   category:
     id: Code_211
     code: C25532
@@ -24,39 +38,35 @@ eligibilityCriteria:
     codeSystemVersion: 24.04e
     decode: Inclusion Criteria
   criterionItemId: EligibilityCriterionItem_1
-arms:
-- id: StudyArm_1
-  name: Active
+epochs:
+- id: StudyEpoch_1
+  name: Observation Period
   type:
-    id: Code_92
-    code: C174267
+    id: Code_96
+    code: C165873
     codeSystem: ncit
     codeSystemVersion: 24.04e
-    decode: Active Comparator Arm
+    decode: Observation Study Epoch
+arms:
+- id: StudyArm_1
+  name: General Diabetic Cohort
+  description: All subjects meeting inclusion criteria during the survey window.
+  type:
+    id: Code_Arm_Obs
+    code: C174266
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Investigational Arm
   dataOriginType:
     id: Code_93
     code: C188866
     codeSystem: ncit
     codeSystemVersion: 24.04e
     decode: Data Generated Within Study
-  dataOriginDescription: Data collected from subjects
+  dataOriginDescription: Data collected via medical record review and patient interview.
 studyCells:
 - id: StudyCell_1
   armId: StudyArm_1
   epochId: StudyEpoch_1
   elementIds:
   - StudyElement_1
-epochs:
-- id: StudyEpoch_1
-  name: Screening
-  type:
-    id: Code_96
-    code: C202487
-    codeSystem: ncit
-    codeSystemVersion: 24.04e
-    decode: Screening Epoch
-population:
-  id: StudyDesignPopulation_1
-  name: POP1
-  includesHealthySubjects: true
-

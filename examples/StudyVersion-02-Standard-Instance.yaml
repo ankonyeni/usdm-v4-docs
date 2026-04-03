@@ -1,120 +1,120 @@
 id: SV-01
-versionIdentifier: "1.0"
-rationale: Standard protocol snapshot that links the study version to its governing document, identifiers, and primary observational design reference.
+versionIdentifier: '1.0'
+rationale: Standard protocol snapshot that links the study version to its governing
+  document, identifiers, and primary observational design reference.
 dateValues:
-  - id: GovernanceDate_1
-    name: Design Approval
+- id: GovernanceDate_1
+  name: Design Approval
+  type:
+    id: Code_20
+    code: C132352
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Sponsor Approval Date
+  dateValue: '2022-12-16'
+  geographicScopes:
+  - id: GeographicScope_1
     type:
-      id: Code_20
-      code: C132352
+      id: Code_22
+      code: C25464
       codeSystem: ncit
       codeSystemVersion: 24.04e
-      decode: Sponsor Approval Date
-    dateValue: "2022-12-16"
-    geographicScopes:
-      - id: GeographicScope_1
-        type:
-          id: Code_22
-          code: C25464
-          codeSystem: ncit
-          codeSystemVersion: 24.04e
-          decode: Country
+      decode: Country
 referenceIdentifiers:
-  - id: ReferenceIdentifier_1
-    text: PIP1234
-    scopeId: Organization_3
-    type:
-      id: Code_71
-      code: C99910x1
-      codeSystem: ncit
-      codeSystemVersion: 24.04e
-      decode: Pediatric Investigation Plan
+- id: ReferenceIdentifier_1
+  text: PIP1234
+  scopeId: Organization_3
+  type:
+    id: Code_71
+    code: C99910x1
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Pediatric Investigation Plan
 documentVersionIds:
-  - StudyDefinitionDocumentVersion_1
+- StudyDefinitionDocumentVersion_1
 studyDesigns:
-  - model:
-      id: Code_106
-      code: C82639
+- model:
+    id: Code_106
+    code: C82639
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Parallel Study
+  timePerspective:
+    id: Code_111
+    code: C53310
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Cross-Sectional Study
+  id: ObservationalStudyDesign_1
+  name: Study Design 1
+  rationale: Basic study
+  eligibilityCriteria:
+  - id: EligibilityCriterion_1
+    name: Age Criteria
+    identifier: '1'
+    category:
+      id: Code_211
+      code: C25532
       codeSystem: ncit
       codeSystemVersion: 24.04e
-      decode: Parallel Study
-    timePerspective:
-      id: Code_111
-      code: C53310
+      decode: Inclusion Criteria
+    criterionItemId: EligibilityCriterionItem_1
+  arms:
+  - id: StudyArm_1
+    name: Active
+    type:
+      id: Code_92
+      code: C174267
       codeSystem: ncit
       codeSystemVersion: 24.04e
-      decode: Cross-Sectional Study
-    id: ObservationalStudyDesign_1
-    name: Study Design 1
-    rationale: Basic study
-    eligibilityCriteria:
-      - id: EligibilityCriterion_1
-        name: Age Criteria
-        identifier: "1"
-        category:
-          id: Code_211
-          code: C25532
-          codeSystem: ncit
-          codeSystemVersion: 24.04e
-          decode: Inclusion Criteria
-        criterionItemId: EligibilityCriterionItem_1
-    arms:
-      - id: StudyArm_1
-        name: Active
-        type:
-          id: Code_92
-          code: C174267
-          codeSystem: ncit
-          codeSystemVersion: 24.04e
-          decode: Active Comparator Arm
-        dataOriginType:
-          id: Code_93
-          code: C188866
-          codeSystem: ncit
-          codeSystemVersion: 24.04e
-          decode: Data Generated Within Study
-        dataOriginDescription: Data collected from subjects
-    studyCells:
-      - id: StudyCell_1
-        armId: StudyArm_1
-        epochId: StudyEpoch_1
-        elementIds:
-          - StudyElement_1
-    epochs:
-      - id: StudyEpoch_1
-        name: Screening
-        type:
-          id: Code_96
-          code: C202487
-          codeSystem: ncit
-          codeSystemVersion: 24.04e
-          decode: Screening Epoch
-    population:
-      id: StudyDesignPopulation_1
-      name: POP1
-      includesHealthySubjects: true
+      decode: Active Comparator Arm
+    dataOriginType:
+      id: Code_93
+      code: C188866
+      codeSystem: ncit
+      codeSystemVersion: 24.04e
+      decode: Data Generated Within Study
+    dataOriginDescription: Data collected from subjects
+  studyCells:
+  - id: StudyCell_1
+    armId: StudyArm_1
+    epochId: StudyEpoch_1
+    elementIds:
+    - StudyElement_1
+  epochs:
+  - id: StudyEpoch_1
+    name: Screening
+    type:
+      id: Code_96
+      code: C202487
+      codeSystem: ncit
+      codeSystemVersion: 24.04e
+      decode: Screening Epoch
+  population:
+    id: StudyDesignPopulation_1
+    name: POP1
+    includesHealthySubjects: true
 studyIdentifiers:
-  - id: SID-01
-    text: NCT12345
-    scopeId: ORG-01
+- id: SID-01
+  text: NCT12345
+  scopeId: ORG-01
 titles:
-  - id: ST-01
-    text: A Standard Study Title
-    type:
-      id: CODE-ST-TYPE-01
-      code: OFFICIAL
-      codeSystem: ncit
-      codeSystemVersion: 24.04e
-      decode: Official
+- id: ST-01
+  text: A Standard Study Title
+  type:
+    id: CODE-ST-TYPE-01
+    code: OFFICIAL
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Official
 organizations:
-  - id: ORG-01
-    name: A Standard Organization
-    identifier: "12345"
-    identifierScheme: DUNS
-    type:
-      id: CODE-ORG-TYPE-01
-      code: SPONSOR
-      codeSystem: ncit
-      codeSystemVersion: 24.04e
-      decode: Sponsor
-
+- id: ORG-01
+  name: A Standard Organization
+  identifier: '12345'
+  identifierScheme: DUNS
+  type:
+    id: CODE-ORG-TYPE-01
+    code: SPONSOR
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Sponsor

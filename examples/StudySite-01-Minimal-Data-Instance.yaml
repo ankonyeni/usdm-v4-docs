@@ -3,7 +3,7 @@ name: SITE_1
 country:
   id: Code_216
   code: DNK
-  codeSystem: ncit
-  codeSystemVersion: 24.04e
+  codeSystem: ISO3166-1-alpha-3
+  codeSystemVersion: '2020'
   decode: Denmark
 

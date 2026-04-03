@@ -9,8 +9,7 @@ type:
 templateName: SPONSOR
 language:
   id: Code_219
-  code: en
+  code: C82847
   codeSystem: ncit
   codeSystemVersion: 24.04e
   decode: English
-

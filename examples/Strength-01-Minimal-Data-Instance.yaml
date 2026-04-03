@@ -7,8 +7,7 @@ numerator:
     id: ALIAS-CODE-MG-1
     standardCode:
       id: CODE-MG-1
-      code: C48150
+      code: C28253
       codeSystem: ncit
       codeSystemVersion: 24.04e
-      decode: milligram
-
+      decode: Milligram

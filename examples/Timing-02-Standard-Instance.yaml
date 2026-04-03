@@ -21,4 +21,3 @@ windowLower: PT4H
 windowUpper: PT0H
 relativeToScheduledInstanceId: ScheduledActivityInstance_3
 relativeFromScheduledInstanceId: ScheduledActivityInstance_2
-

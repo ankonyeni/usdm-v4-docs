@@ -1,18 +1,12 @@
-id: EXT-ATTR-3
-url: https://example.com/extensions/complex-extension
-valueQuantity:
-  id: QUANTITY-EXT-ATTR-1
-  value: 10.5
-  unit:
-    id: ALIAS-CODE-EXT-ATTR-1
-    standardCode:
-      id: CODE-EXT-ATTR-1
-      code: C48150
-      codeSystem: ncit
-      codeSystemVersion: 24.04e
-      decode: milligram
+id: EXT-ATTR-SEQ-003
+url: https://example.org/usdm/extensions/sequencing-platform
+valueCode:
+  id: CODE-SEQ-001
+  code: C101293
+  codeSystem: ncit
+  codeSystemVersion: 24.04e
+  decode: Next-Generation Sequencing
 extensionAttributes:
-  - id: EXT-ATTR-4
-    url: https://example.com/extensions/nested-extension
-    valueString: nested-value
-
+- id: EXT-ATTR-SEQ-004
+  url: https://example.org/usdm/extensions/assay-software-version
+  valueString: v2.4.1-build7

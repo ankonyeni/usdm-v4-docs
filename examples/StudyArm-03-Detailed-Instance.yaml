@@ -4,23 +4,23 @@ label: Historical Control
 description: A historical control arm using data from a previous study.
 type:
   id: SA-TYPE-3
-  code: C172459
+  code: C174270
   codeSystem: ncit
   codeSystemVersion: 24.04e
-  decode: Historical Control Arm
+  decode: No Intervention Arm
 dataOriginType:
   id: SA-ORIGIN-3
-  code: C188830
+  code: C188864
   codeSystem: ncit
   codeSystemVersion: 24.04e
-  decode: Historical
+  decode: Historical Data
 dataOriginDescription: Data for this arm is from a previous study.
 notes:
-  - id: NOTE-SA-1
-    text: The previous study is NCT12345.
+- id: NOTE-SA-1
+  text: The previous study is NCT12345.
 populationIds:
-  - "SDP-1"
+- SDP-1
 extensionAttributes:
-  - id: EXT-SA-1
-    url: https://example.com/extensions/arm-randomization-ratio
-    valueString: "1:1"
+- id: EXT-SA-1
+  url: https://example.com/extensions/arm-randomization-ratio
+  valueString: '1:1'

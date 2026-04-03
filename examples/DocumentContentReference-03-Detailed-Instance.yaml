@@ -1,8 +1,8 @@
 id: DCR-3
-sectionNumber: "3.1"
+sectionNumber: '3.1'
 sectionTitle: Study Design
 appliesToId: SDD-01
 extensionAttributes:
-  - id: ext-dcr-01
-    url: https://example.org/usdm/extension/section-status
-    valueString: Draft
+- id: ext-dcr-01
+  url: https://example.org/usdm/extension/section-status
+  valueString: Draft

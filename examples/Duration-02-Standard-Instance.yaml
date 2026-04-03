@@ -10,7 +10,7 @@ quantity:
       id: Alias_day
       standardCode:
         id: Code_day
-        code: C71620
+        code: C25301
         codeSystem: ncit
         codeSystemVersion: 24.04e
         decode: Day
@@ -21,10 +21,8 @@ quantity:
       id: Alias_day
       standardCode:
         id: Code_day
-        code: C71620
+        code: C25301
         codeSystem: ncit
         codeSystemVersion: 24.04e
         decode: Day
 durationWillVary: false
-
-

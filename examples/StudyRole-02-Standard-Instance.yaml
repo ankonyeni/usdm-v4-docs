@@ -8,11 +8,11 @@ code:
   codeSystemVersion: 24.04e
   decode: Study Coordinator
 assignedPersons:
-  - id: person-001
-    name: Jane Doe
-    jobTitle: Senior Clinical Research Coordinator
-    personName:
-      id: name-001
-      familyName: Doe
-      givenNames:
-        - Jane
+- id: person-001
+  name: Jane Doe
+  jobTitle: Senior Clinical Research Coordinator
+  personName:
+    id: name-001
+    familyName: Doe
+    givenNames:
+    - Jane

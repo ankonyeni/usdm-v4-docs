@@ -5,9 +5,8 @@ description: A secondary endpoint for the study.
 text: Progression-Free Survival
 level:
   id: EP-LEVEL-2
-  code: C188827
+  code: C139173
   codeSystem: ncit
   codeSystemVersion: 24.04e
-  decode: Secondary
+  decode: Secondary Endpoint
 purpose: To assess the durability of response.
-

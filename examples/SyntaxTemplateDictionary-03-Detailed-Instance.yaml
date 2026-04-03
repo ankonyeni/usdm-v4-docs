@@ -1,18 +1,22 @@
 id: SyntaxTemplateDictionary_3
 name: ACTIVITY_Dict
 label: Activity Dictionary
-description: Dictionary supporting reusable activity labels and parameterized narrative fragments across study design content.
+description: Dictionary supporting reusable activity labels and parameterized narrative
+  fragments across study design content.
 parameterMaps:
-  - id: ParameterMap_1
-    tag: min_age
-    reference: <usdm:ref klass="StudyDesignPopulation" id="StudyDesignPopulation_1" attribute="plannedAge"></usdm:ref>
-  - id: ParameterMap_2
-    tag: max_age
-    reference: <usdm:ref klass="StudyDesignPopulation" id="StudyDesignPopulation_1" attribute="plannedAge"></usdm:ref>
-  - id: ParameterMap_4
-    tag: Activity1
-    reference: <usdm:ref klass="Activity" id="Activity_6" attribute="label"></usdm:ref>
+- id: ParameterMap_1
+  tag: min_age
+  reference: <usdm:ref klass="StudyDesignPopulation" id="StudyDesignPopulation_1"
+    attribute="plannedAge"></usdm:ref>
+- id: ParameterMap_2
+  tag: max_age
+  reference: <usdm:ref klass="StudyDesignPopulation" id="StudyDesignPopulation_1"
+    attribute="plannedAge"></usdm:ref>
+- id: ParameterMap_4
+  tag: Activity1
+  reference: <usdm:ref klass="Activity" id="Activity_6" attribute="label"></usdm:ref>
 extensionAttributes:
-  - id: ext-template-dictionary-purpose
-    url: https://example.org/usdm/extensions/template-purpose
-    valueString: Supports parameterized narrative generation for eligibility and objective text.
+- id: ext-template-dictionary-purpose
+  url: https://example.org/usdm/extensions/template-purpose
+  valueString: Supports parameterized narrative generation for eligibility and objective
+    text.

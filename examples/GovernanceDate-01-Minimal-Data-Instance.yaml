@@ -6,13 +6,12 @@ type:
   codeSystem: ncit
   codeSystemVersion: 24.04e
   decode: Protocol Approval Date
-dateValue: "2024-01-15"
+dateValue: '2024-01-15'
 geographicScopes:
-  - id: GEO-1
-    type:
-      id: GEO-TYPE-1
-      code: C25464
-      codeSystem: ncit
-      codeSystemVersion: 24.04e
-      decode: Country
-
+- id: GEO-1
+  type:
+    id: GEO-TYPE-1
+    code: C25464
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Country

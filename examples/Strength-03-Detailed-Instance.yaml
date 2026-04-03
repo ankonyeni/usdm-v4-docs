@@ -11,10 +11,10 @@ numerator:
       id: ALIAS-CODE-MG-3
       standardCode:
         id: CODE-MG-3
-        code: C48150
+        code: C28253
         codeSystem: ncit
         codeSystemVersion: 24.04e
-        decode: milligram
+        decode: Milligram
   maxValue:
     id: QUANT-5
     value: 20
@@ -22,13 +22,12 @@ numerator:
       id: ALIAS-CODE-MG-4
       standardCode:
         id: CODE-MG-4
-        code: C48150
+        code: C28253
         codeSystem: ncit
         codeSystemVersion: 24.04e
-        decode: milligram
+        decode: Milligram
   isApproximate: false
 extensionAttributes:
-  - id: EXT-STR-1
-    url: https://example.com/extensions/strength-basis
-    valueString: per tablet
-
+- id: EXT-STR-1
+  url: https://example.com/extensions/strength-basis
+  valueString: per tablet

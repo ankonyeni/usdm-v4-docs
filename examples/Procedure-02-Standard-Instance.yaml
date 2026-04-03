@@ -5,7 +5,7 @@ description: Magnetic Resonance Imaging of the brain
 procedureType: Imaging
 code:
   id: Code_73
-  code: C16834
-  codeSystem: ncit
-  codeSystemVersion: 24.04e
+  code: '113091000'
+  codeSystem: SNOMED CT
+  codeSystemVersion: '2026'
   decode: Magnetic Resonance Imaging

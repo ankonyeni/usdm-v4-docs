@@ -1,7 +1,5 @@
 id: Code_SNOMED_COVID_002
-code: "840539006"
+code: '840539006'
 codeSystem: SNOMED
-codeSystemVersion: "2026-03-01"
+codeSystemVersion: '2026-03-01'
 decode: COVID-19
-
-

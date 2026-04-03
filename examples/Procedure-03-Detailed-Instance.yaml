@@ -5,11 +5,11 @@ description: Image-guided biopsy of a suspicious lesion in the liver.
 procedureType: Biopsy
 code:
   id: Code_74
-  code: C15189
-  codeSystem: ncit
-  codeSystemVersion: '24.04e'
+  code: '86273004'
+  codeSystem: SNOMED CT
+  codeSystemVersion: '2026'
   decode: Biopsy
 studyInterventionId: StudyIntervention_1
 notes:
-- id: note-procedure-01
-  text: The patient tolerated the procedure well.
+- id: Note-PROC-3-001
+  text: Subject must remain in a supine position for 4 hours post-procedure for observation.

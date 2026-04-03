@@ -4,11 +4,10 @@ standardCode:
   code: C64502
   codeSystem: ncit
   codeSystemVersion: 24.04e
-  decode: Q12H
+  decode: Every 12 Hours
 standardCodeAliases:
-  - id: code-ref-007
-    code: 12H
-    codeSystem: ncit
-    codeSystemVersion: 24.04e
-    decode: Every 12 Hours
-
+- id: code-ref-007
+  code: 12H
+  codeSystem: SPONSOR
+  codeSystemVersion: '2026'
+  decode: 12 Hourly

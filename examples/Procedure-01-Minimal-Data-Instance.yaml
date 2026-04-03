@@ -3,7 +3,7 @@ name: Physical Examination
 procedureType: Physical Examination
 code:
   id: Code_72
-  code: C25218
-  codeSystem: ncit
-  codeSystemVersion: 24.04e
+  code: '5880005'
+  codeSystem: SNOMED CT
+  codeSystemVersion: '2026'
   decode: Physical Examination

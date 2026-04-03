@@ -1,9 +1,9 @@
 id: BC-002
 name: Race
 label: Race
-reference: /mdr/bc/packages/2023-03-31/biomedicalconcepts/C17049
+reference: https://evsexplore.semantics.cancer.gov/evsexplore/search?terminology=ncit&term=C17049
 synonyms:
-  - Racial Group
+- Racial Group
 code:
   id: alias-code-race-001
   standardCode:
@@ -12,4 +12,3 @@ code:
     codeSystem: ncit
     codeSystemVersion: 24.04e
     decode: Race
-

@@ -4,6 +4,5 @@ jobTitle: Study Pharmacist
 personName:
   id: PersonName_003
   familyName: Brown
-  givenNames: 
-    - Alice
-
+  givenNames:
+  - Alice

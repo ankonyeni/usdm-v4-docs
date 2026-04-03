@@ -7,10 +7,10 @@ minValue:
     id: unit-kg-01
     standardCode:
       id: code-kg-01
-      code: C28252 
+      code: C28252
       codeSystem: ncit
       codeSystemVersion: 24.04e
-      decode: kg
+      decode: Kilogram
 maxValue:
   id: quant-high-02
   value: 15.0
@@ -18,7 +18,7 @@ maxValue:
     id: unit-kg-01
     standardCode:
       id: code-kg-01
-      code: C28252 
+      code: C28252
       codeSystem: ncit
       codeSystemVersion: 24.04e
-      decode: kg
+      decode: Kilogram

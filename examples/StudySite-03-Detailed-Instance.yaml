@@ -5,11 +5,10 @@ description: Only Site
 country:
   id: Code_218
   code: DNK
-  codeSystem: ncit
-  codeSystemVersion: 24.04e
+  codeSystem: ISO3166-1-alpha-3
+  codeSystemVersion: '2020'
   decode: Denmark
 extensionAttributes:
 - id: ext-study-site-region
   url: https://example.org/usdm/extensions/operational-region
   valueString: Single-site pilot deployment
-

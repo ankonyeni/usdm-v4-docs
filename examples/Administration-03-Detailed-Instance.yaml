@@ -1,7 +1,8 @@
 id: Admin_Det_003
 name: Intravenous Infusion Administration
 label: IV Infusion
-description: A 60-minute intravenous infusion of the investigational medicinal product administered at a constant rate.
+description: A 60-minute intravenous infusion of the investigational medicinal product
+  administered at a constant rate.
 administrableProductId: AdminProd_Det_77
 medicalDeviceId: Device_Infusion_Pump_01
 route:
@@ -22,7 +23,7 @@ dose:
       code: C28253
       codeSystem: ncit
       codeSystemVersion: 24.04e
-      decode: mg
+      decode: Milligram
 frequency:
   id: AliasCode_Q3W
   standardCode:
@@ -42,14 +43,12 @@ duration:
       id: Alias_min
       standardCode:
         id: Code_min
-        code: C48154 
+        code: C48154
         codeSystem: ncit
         codeSystemVersion: 24.04e
-        decode: min
+        decode: Minute
 notes:
-  - id: Comment_Admin_002
-    text: Infusion site must be monitored for signs of extravasation every 15 minutes.
-  - id: Comment_Admin_003
-    text: Use a dedicated infusion line with an in-line filter.
-
-
+- id: Comment_Admin_002
+  text: Infusion site must be monitored for signs of extravasation every 15 minutes.
+- id: Comment_Admin_003
+  text: Use a dedicated infusion line with an in-line filter.

@@ -1,6 +1,6 @@
 type:
   id: Code_71
-  code: C99910x1
+  code: C126069
   codeSystem: ncit
   codeSystemVersion: 24.04e
   decode: Pediatric Investigation Plan
@@ -11,4 +11,3 @@ extensionAttributes:
 - id: ext-ref-identifier-source
   url: https://example.org/usdm/extensions/reference-source
   valueString: Linked development-plan reference used in the protocol metadata section.
-

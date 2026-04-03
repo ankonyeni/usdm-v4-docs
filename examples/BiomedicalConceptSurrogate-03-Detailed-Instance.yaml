@@ -4,5 +4,5 @@ label: Body Mass Index
 description: A measure of body fat based on height and weight.
 reference: https://www.cdc.gov/healthyweight/assessing/bmi/index.html
 notes:
-  - id: CommentAnnot_BMI_001
-    text: BMI is a widely used measure of body fat.
+- id: CommentAnnot_BMI_001
+  text: BMI is a widely used measure of body fat.

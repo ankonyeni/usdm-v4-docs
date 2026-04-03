@@ -1,6 +1,7 @@
 id: SyntaxTemplateDictionary_1
 name: IE_Dict
 parameterMaps:
-  - id: ParameterMap_1
-    tag: min_age
-    reference: <usdm:ref klass="StudyDesignPopulation" id="StudyDesignPopulation_1" attribute="plannedAge"></usdm:ref>
+- id: ParameterMap_1
+  tag: min_age
+  reference: <usdm:ref klass="StudyDesignPopulation" id="StudyDesignPopulation_1"
+    attribute="plannedAge"></usdm:ref>

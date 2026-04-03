@@ -11,9 +11,7 @@ duration:
       id: Alias_min
       standardCode:
         id: Code_min
-        code: C48154 
+        code: C48154
         codeSystem: ncit
         codeSystemVersion: 24.04e
-        decode: min
-
-
+        decode: Minute

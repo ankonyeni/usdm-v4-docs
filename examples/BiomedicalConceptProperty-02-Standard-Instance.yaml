@@ -1,15 +1,14 @@
-id: BCP-002
-name: Race
-label: Race
+id: BCP_1
+name: AETERM
+label: Reported Term
 isRequired: true
 isEnabled: true
-datatype: string
+datatype: text
 code:
-  id: alias-code-race-prop-001
+  id: AliasCode_BCP_1
   standardCode:
-    id: code-race-prop-001
-    code: C17049
+    id: Code_BCP_1
+    code: C78541
     codeSystem: ncit
     codeSystemVersion: 24.04e
-    decode: Race
-
+    decode: Adverse Event Verbatim Description

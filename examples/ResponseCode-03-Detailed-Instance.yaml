@@ -12,4 +12,3 @@ extensionAttributes:
 - id: ext-response-display-order
   url: https://example.org/usdm/extensions/display-order
   valueInteger: 1
-

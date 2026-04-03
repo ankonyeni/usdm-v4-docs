@@ -6,7 +6,7 @@ quantity:
   minValue:
     id: Quant_Duration_003_Min
     value: 12
-    unit: 
+    unit:
       id: Alias_hour
       standardCode:
         id: Code_hour
@@ -17,7 +17,7 @@ quantity:
   maxValue:
     id: Quant_Duration_003_Max
     value: 48
-    unit: 
+    unit:
       id: Alias_hour
       standardCode:
         id: Code_hour
@@ -27,4 +27,3 @@ quantity:
         decode: Hour
 durationWillVary: true
 reasonDurationWillVary: Observation time depends on clinical response
-

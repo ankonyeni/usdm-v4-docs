@@ -1,9 +1,9 @@
-id: EXT-CLASS-2
-url: https://example.com/extensions/another-class
+id: ExtClass-Style-02
+url: http://cdisc.org/usdm/extensions/doc-style-extension/Style
 extensionAttributes:
-  - id: EXT-ATTR-2
-    url: https://example.com/extensions/another-extension
-    valueInteger: 123
-  - id: EXT-ATTR-5
-    url: https://example.com/extensions/yet-another-extension
-    valueBoolean: true
+- id: ExtAttr-Font-01
+  url: font-name
+  valueString: ARIEL
+- id: ExtAttr-Color-01
+  url: font-colour
+  valueString: YELLOW

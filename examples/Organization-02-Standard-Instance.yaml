@@ -5,7 +5,7 @@ identifier: NEX-4455
 identifierScheme: FDA Facility Establishment Identifier
 type:
   id: code-org-type-02
-  code: C54149 
+  code: C54149
   codeSystem: ncit
   codeSystemVersion: 24.04e
   decode: Drug Company
@@ -14,10 +14,10 @@ legalAddress:
   text: 450 Research Way, Princeton, NJ, 08540, USA
   city: Princeton
   state: New Jersey
-  postalCode: "08540"
+  postalCode: 08540
   country:
     id: code-country-usa
     code: USA
-    codeSystem: ncit
-    codeSystemVersion: 24.04e
-    decode: United States
+    codeSystem: ISO3166-1-alpha-2
+    codeSystemVersion: '2020'
+    decode: United States of America

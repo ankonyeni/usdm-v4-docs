@@ -1,15 +1,15 @@
-id: StudyIntervention_1
-name: LY
+id: SI-DRUG-001
+name: Investigational Product X
+label: Drug X
 role:
-  id: Code_510
-  code: C41161
+  id: ROLE-CODE-01
+  code: C174265
+  decode: Investigational Product
   codeSystem: ncit
   codeSystemVersion: 24.04e
-  decode: Experimental Intervention
 type:
-  id: Code_511
+  id: TYPE-CODE-01
   code: C1909
+  decode: Pharmacologic Substance
   codeSystem: ncit
   codeSystemVersion: 24.04e
-  decode: Pharmacologic Substance
-

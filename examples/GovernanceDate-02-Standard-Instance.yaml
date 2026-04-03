@@ -4,25 +4,24 @@ label: IRB Approval
 description: The date of Institutional Review Board approval.
 type:
   id: GOV-DATE-TYPE-2
-  code: C171001
+  code: C70801
   codeSystem: ncit
   codeSystemVersion: 24.04e
-  decode: IRB Approval Date
-dateValue: "2024-02-01"
+  decode: Institutional Review Board Approval Date
+dateValue: '2024-02-01'
 geographicScopes:
-  - id: GEO-2
-    type:
-      id: GEO-TYPE-2
-      code: C41129
+- id: GEO-2
+  type:
+    id: GEO-TYPE-2
+    code: C41129
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Region
+  code:
+    id: GEO-CODE-1
+    standardCode:
+      id: CODE-GEO-1
+      code: C26274
       codeSystem: ncit
       codeSystemVersion: 24.04e
-      decode: Region
-    code:
-      id: GEO-CODE-1
-      standardCode:
-        id: CODE-GEO-1
-        code: C26274
-        codeSystem: ncit
-        codeSystemVersion: 24.04e
-        decode: Europe
-
+      decode: Europe

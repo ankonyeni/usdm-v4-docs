@@ -2,15 +2,14 @@ id: SA-1
 name: Treatment Arm A
 type:
   id: SA-TYPE-1
-  code: C172457
+  code: C174266
   codeSystem: ncit
   codeSystemVersion: 24.04e
-  decode: Treatment Arm
+  decode: Investigational Arm
 dataOriginType:
   id: SA-ORIGIN-1
-  code: C188829
+  code: C188866
   codeSystem: ncit
   codeSystemVersion: 24.04e
-  decode: Protocol
-dataOriginDescription: Data for this arm is collected as per protocol.
-
+  decode: Data Generated Within Study
+dataOriginDescription: Data generated within the study by the sponsor or its agents.

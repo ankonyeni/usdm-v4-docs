@@ -6,17 +6,16 @@ code:
   id: alias-code-sc-001
   standardCode:
     id: code-sc-001
-    code: C25208
+    code: C19332
     codeSystem: ncit
     codeSystemVersion: 24.04e
-    decode: Subject Characteristics
+    decode: Personal Attribute
 notes:
-  - id: CommentAnnot_SC_001
-    text: This category includes demographics and baseline characteristics.
+- id: CommentAnnot_SC_001
+  text: This category includes demographics and baseline characteristics.
 memberIds:
-  - BC-001
-  - BC-002
+- BC-001
+- BC-002
 childIds:
-  - BCC-001
-  - BCC-002
-
+- BCC-001
+- BCC-002

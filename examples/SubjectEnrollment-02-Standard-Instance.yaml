@@ -2,7 +2,7 @@ id: SubjectEnrollment_2
 name: Europe enrollment target
 quantity:
   id: Quantity_2
-  value: 15.0
+  value: 15
 forGeographicScope:
   id: GeographicScope_8
   type:
@@ -15,8 +15,7 @@ forGeographicScope:
     id: AliasCode_14
     standardCode:
       id: Code_56
-      code: "150"
+      code: C26274
       codeSystem: ncit
       codeSystemVersion: 24.04e
       decode: Europe
-

@@ -1,13 +1,17 @@
-id: StudyTitle_3
+id: StudyTitle_Official_001
 type:
-  id: Code_16
-  code: C99905x2
+  id: Code_TitleType_Official
+  code: C207616
   codeSystem: ncit
   codeSystemVersion: 24.04e
   decode: Official Study Title
-text: Something Very Official
+text: 'A Phase 3, Randomized, Double-Blind, Placebo-Controlled, Multicenter  Study
+  to Evaluate the Efficacy, Safety, and Tolerability of Apremilast  Administered Intravenously
+  in Pediatric Patients Aged 6 to 17 Years  with Moderate-to-Severe Chronic Plaque
+  Psoriasis who are Candidates  for Systemic Therapy or Phototherapy.
+
+  '
 extensionAttributes:
 - id: ext-study-title-audience
   url: https://example.org/usdm/extensions/title-audience
   valueString: Regulatory submission
-

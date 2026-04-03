@@ -3,54 +3,68 @@ name: A simple interventional study design
 rationale: To test the efficacy of a new drug.
 model:
   id: ISD-MODEL-1
-  code: C98746
+  code: C82639
   codeSystem: ncit
   codeSystemVersion: 24.04e
-  decode: Parallel
+  decode: Parallel Study
 population:
   id: SDP-1
   name: Adults with Type 2 Diabetes
   includesHealthySubjects: false
 eligibilityCriteria:
-  - id: EC-1
-    name: Inclusion Criterion 1
-    identifier: IC-01
-    category:
-      id: CAT-CODE-1
-      code: C83016
-      codeSystem: ncit
-      codeSystemVersion: 24.04e
-      decode: Inclusion Criterion
-    criterionItemId: "ECI-1"
+- id: EC-1
+  name: Inclusion Criterion 1
+  identifier: IC-01
+  category:
+    id: CAT-CODE-1
+    code: C25532
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Inclusion Criteria
+  criterionItemId: ECI-1
 arms:
-  - id: SA-1
-    name: Treatment Arm A
-    type:
-      id: SA-TYPE-1
-      code: C172457
-      codeSystem: ncit
-      codeSystemVersion: 24.04e
-      decode: Treatment Arm
-    dataOriginType:
-      id: SA-ORIGIN-1
-      code: C188829
-      codeSystem: ncit
-      codeSystemVersion: 24.04e
-      decode: Protocol
-    dataOriginDescription: Data for this arm is collected as per protocol.
+- id: SA-1
+  name: Treatment Arm A
+  type:
+    id: SA-TYPE-1
+    code: C174266
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Investigational Arm
+  dataOriginType:
+    id: SA-ORIGIN-1
+    code: C170551
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Protocol
+  dataOriginDescription: Data for this arm is collected as per protocol.
+- id: SA-2
+  name: Placebo Arm
+  type:
+    id: SA-TYPE-1
+    code: C174268
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Placebo Control Arm
+  dataOriginType:
+    id: SA-ORIGIN-1
+    code: C170551
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Protocol
+  dataOriginDescription: Data for this arm is collected as per protocol.
 studyCells:
-  - id: SCELL-1
-    armId: "SA-1"
-    epochId: "SE-1"
-    elementIds:
-      - "SELM-1"
+- id: SCELL-1
+  armId: SA-1
+  epochId: SE-1
+  elementIds:
+  - SELM-1
 epochs:
-  - id: SE-1
-    name: Screening
-    type:
-      id: SE-TYPE-1
-      code: C188830
-      codeSystem: ncit
-      codeSystemVersion: 24.04e
-      decode: Screening
-
+- id: SE-1
+  name: Screening
+  type:
+    id: SE-TYPE-1
+    code: C202487
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Screening Epoch

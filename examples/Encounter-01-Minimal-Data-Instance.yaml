@@ -2,8 +2,7 @@ id: ENC-1
 name: Screening Visit
 type:
   id: ENC-TYPE-1
-  code: C171010
+  code: C191214
   codeSystem: ncit
   codeSystemVersion: 24.04e
-  decode: Screening Visit
-
+  decode: Study Visit

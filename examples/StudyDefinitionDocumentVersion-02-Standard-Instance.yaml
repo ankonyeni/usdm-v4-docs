@@ -11,7 +11,7 @@ dateValues:
   name: Protocol Approval
   type:
     id: Code_29
-    code: C99903x1
+    code: C207598
     codeSystem: ncit
     codeSystemVersion: 24.04e
     decode: Protocol Effective Date
@@ -29,4 +29,3 @@ contents:
   name: SECTION 0
   displaySectionTitle: false
   displaySectionNumber: false
-

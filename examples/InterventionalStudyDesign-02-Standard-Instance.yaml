@@ -1,66 +1,147 @@
 id: ISD-2
-name: A standard interventional study design
-label: Standard ISD
-description: A standard interventional study design with a placebo arm.
-rationale: To test the efficacy and safety of a new drug compared to placebo.
+name: Double-blind Crossover Study Design
+label: Crossover ISD
+description: A 2-period, 2-sequence crossover study comparing New Drug X to Placebo.
+rationale: To evaluate efficacy while allowing each subject to serve as their own
+  control.
 model:
   id: ISD-MODEL-2
-  code: C98747
+  code: C82637
   codeSystem: ncit
   codeSystemVersion: 24.04e
-  decode: Crossover
+  decode: Crossover Study
 population:
   id: SDP-2
   name: Healthy Volunteers
   label: Healthy Volunteers
-  description: Healthy adult volunteers.
+  description: Healthy adult volunteers aged 18-55.
   includesHealthySubjects: true
 eligibilityCriteria:
-  - id: EC-2
-    name: Exclusion Criterion 1
-    label: Exclusion
-    description: An exclusion criterion for the study.
-    identifier: EC-01
-    category:
-      id: CAT-CODE-2
-      code: C83017
-      codeSystem: ncit
-      codeSystemVersion: 24.04e
-      decode: Exclusion Criterion
-    criterionItemId: "ECI-2"
+- id: EC-2
+  name: Exclusion Criterion 1
+  label: Exclusion
+  description: History of clinically significant cardiovascular disease.
+  identifier: EC-01
+  category:
+    id: CAT-CODE-2
+    code: C25370
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Exclusion Criteria
+  criterionItemId: ECI-2
 arms:
-  - id: SA-2
-    name: Placebo Arm
-    label: Placebo
-    description: The placebo control arm.
-    type:
-      id: SA-TYPE-2
-      code: C172458
-      codeSystem: ncit
-      codeSystemVersion: 24.04e
-      decode: Placebo Arm
-    dataOriginType:
-      id: SA-ORIGIN-2
-      code: C188829
-      codeSystem: ncit
-      codeSystemVersion: 24.04e
-      decode: Protocol
-    dataOriginDescription: Data for this arm is collected as per protocol.
-studyCells:
-  - id: SCELL-2
-    armId: "SA-2"
-    epochId: "SE-2"
-    elementIds:
-      - "SELM-2"
+- id: SA-SEQ-AB
+  name: Sequence AB
+  label: Active then Placebo
+  description: Subjects receive Active Drug in Period 1 and Placebo in Period 2.
+  type:
+    id: SA-TYPE-1
+    code: C174266
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Investigational Arm
+  dataOriginType:
+    id: code-orig-1
+    code: C49652
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Collected
+  dataOriginDescription: Data origin collected from subjects.
+- id: SA-SEQ-BA
+  name: Sequence BA
+  label: Placebo then Active
+  description: Subjects receive Placebo in Period 1 and Active Drug in Period 2.
+  type:
+    id: SA-TYPE-2
+    code: C174268
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Placebo Control Arm
+  dataOriginType:
+    id: code-orig-1
+    code: C49652
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Collected
+  dataOriginDescription: Data origin collected from subjects.
 epochs:
-  - id: SE-2
-    name: Treatment
-    label: Treatment
-    description: The treatment phase of the study.
-    type:
-      id: SE-TYPE-2
-      code: C188831
-      codeSystem: ncit
-      codeSystemVersion: 24.04e
-      decode: Treatment
-
+- id: SE-1
+  name: Screening
+  description: Screening phase to determine eligibility.
+  type:
+    id: SE-TYPE-1
+    code: C202487
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Screening Epoch
+- id: SE-P1
+  name: Treatment Period 1
+  label: Period 1
+  description: The first treatment phase.
+  type:
+    id: SE-TYPE-1
+    code: C101526
+    codeSystem: ncit
+    decode: Treatment Epoch
+    codeSystemVersion: 24.04e
+- id: SE-WO
+  name: Washout
+  label: Washout
+  description: Period to allow drug clearance between treatments.
+  type:
+    id: SE-TYPE-W
+    code: C42872
+    codeSystem: ncit
+    decode: Washout Period
+    codeSystemVersion: 24.04e
+- id: SE-P2
+  name: Treatment Period 2
+  label: Period 2
+  description: The second treatment phase.
+  type:
+    id: SE-TYPE-2
+    code: C101526
+    codeSystem: ncit
+    decode: Treatment Epoch
+    codeSystemVersion: 24.04e
+studyCells:
+- id: SCELL-AB-SCREENING
+  armId: SA-SEQ-AB
+  epochId: SE-1
+  elementIds:
+  - SELM-SCREENING
+- id: SCELL-BA-SCREENING
+  armId: SA-SEQ-BA
+  epochId: SE-1
+  elementIds:
+  - SELM-SCREENING
+- id: SCELL-AB-P1
+  armId: SA-SEQ-AB
+  epochId: SE-P1
+  elementIds:
+  - SELM-ACTIVE
+- id: SCELL-AB-WO
+  armId: SA-SEQ-AB
+  epochId: SE-WO
+  elementIds:
+  - SELM-WASHOUT
+- id: SCELL-AB-P2
+  armId: SA-SEQ-AB
+  epochId: SE-P2
+  elementIds:
+  - SELM-PLACEBO
+- id: SCELL-BA-P1
+  armId: SA-SEQ-BA
+  epochId: SE-P1
+  elementIds:
+  - SELM-PLACEBO
+- id: SCELL-BA-WO
+  armId: SA-SEQ-BA
+  epochId: SE-WO
+  elementIds:
+  - SELM-WASHOUT
+- id: SCELL-BA-P2
+  armId: SA-SEQ-BA
+  epochId: SE-P2
+  elementIds:
+  - SELM-ACTIVE

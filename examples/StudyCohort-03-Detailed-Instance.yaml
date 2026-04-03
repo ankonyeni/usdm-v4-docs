@@ -3,16 +3,16 @@ name: Pediatric Cohort
 label: Pediatric
 description: A cohort of pediatric subjects.
 plannedSex:
-  - id: CODE-SEX-1
-    code: C46109
-    codeSystem: ncit
-    codeSystemVersion: 24.04e
-    decode: Female
-  - id: CODE-SEX-2
-    code: C46110
-    codeSystem: ncit
-    codeSystemVersion: 24.04e
-    decode: Male
+- id: CODE-SEX-1
+  code: C16576
+  codeSystem: ncit
+  codeSystemVersion: 24.04e
+  decode: Female
+- id: CODE-SEX-2
+  code: C20197
+  codeSystem: ncit
+  codeSystemVersion: 24.04e
+  decode: Male
 includesHealthySubjects: true
 plannedAge:
   id: RANGE-AGE-1
@@ -23,7 +23,7 @@ plannedAge:
       id: ALIAS-CODE-YEAR-1
       standardCode:
         id: CODE-YEAR-1
-        code: C25301
+        code: C29848
         codeSystem: ncit
         codeSystemVersion: 24.04e
         decode: Year
@@ -34,7 +34,7 @@ plannedAge:
       id: ALIAS-CODE-YEAR-2
       standardCode:
         id: CODE-YEAR-2
-        code: C25301
+        code: C29848
         codeSystem: ncit
         codeSystemVersion: 24.04e
         decode: Year
@@ -46,18 +46,17 @@ plannedEnrollmentNumber:
   id: Q-ENROLL-1
   value: 60
 notes:
-  - id: NOTE-SC-1
-    text: Enrollment is stratified by age group.
+- id: NOTE-SC-1
+  text: Enrollment is stratified by age group.
 criterionIds:
-  - "EC-1"
+- EC-1
 characteristics:
-  - id: Characteristic-1
-    name: Age Characteristic
-    text: Age
+- id: Characteristic-1
+  name: Age Characteristic
+  text: Age
 indicationIds:
-  - "IND-1"
+- IND-1
 extensionAttributes:
-  - id: EXT-SC-1
-    url: https://example.com/extensions/cohort-type
-    valueString: Observational
-
+- id: EXT-SC-1
+  url: https://example.com/extensions/cohort-characteristic
+  valueString: Includes subjects with a specific genetic marker

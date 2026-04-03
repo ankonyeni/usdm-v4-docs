@@ -5,9 +5,9 @@ description: Retention of residual tissue samples for exploratory biomarker anal
 isRetained: true
 includesDNA: true
 extensionAttributes:
-  - id: ext-retention-01
-    url: https://example.org/usdm/ext/storage-facility-id
-    valueString: FAC-9982
-  - id: ext-retention-02
-    url: https://example.org/usdm/ext/consent-version
-    valueInteger: 4
+- id: ext-retention-01
+  url: https://example.org/usdm/ext/storage-facility-id
+  valueString: FAC-9982
+- id: ext-retention-02
+  url: https://example.org/usdm/ext/consent-version
+  valueInteger: 4
