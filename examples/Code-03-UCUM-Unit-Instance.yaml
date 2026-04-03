@@ -1,7 +1,7 @@
 id: Code_LOINC_BP_003
 code: 35094-2
-codeSystem: ncit
-codeSystemVersion: 24.04e
+codeSystem: LOINC
+codeSystemVersion: '2.82'
 decode: Blood pressure panel
 
 

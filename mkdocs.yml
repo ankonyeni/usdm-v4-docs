@@ -1,7 +1,13 @@
 site_name: USDM v4 LinkML Docs
 site_description: LinkML schema and documentation site for CDISC USDM v4 derivative work
+repo_url: https://github.com/ankonyeni/usdm-v4-docs
+repo_name: GitHub
+edit_uri: ""
 theme:
   name: mkdocs
+  custom_dir: overrides
+  color_mode: dark
+  nav_style: dark
 
 extra_javascript:
   - https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js
