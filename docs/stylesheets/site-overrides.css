@@ -17,6 +17,13 @@
   --site-shadow-soft: 0 14px 32px rgba(0, 0, 0, 0.22);
   --site-code-bg: #0d141d;
   --site-code-inline: #f1d39e;
+  --site-code-key: #e3bf84;
+  --site-code-value: #cfe4f5;
+  --site-code-string: #8ec7d8;
+  --site-code-number: #f0c674;
+  --site-code-literal: #9ec78a;
+  --site-code-comment: #7f8c9b;
+  --site-code-punctuation: #708093;
   --site-selection: rgba(199, 164, 106, 0.22);
   --bs-body-bg: var(--site-bg);
   --bs-body-color: var(--site-text);
@@ -311,6 +318,48 @@ pre code {
   border: 0;
   color: inherit;
   padding: 0;
+}
+
+pre code.hljs {
+  color: var(--site-code-value);
+}
+
+pre code.hljs .hljs-attr,
+pre code.hljs .hljs-attribute {
+  color: var(--site-code-key);
+  font-weight: 600;
+}
+
+pre code.hljs .hljs-string,
+pre code.hljs .hljs-template-variable {
+  color: var(--site-code-string);
+}
+
+pre code.hljs .hljs-number {
+  color: var(--site-code-number);
+}
+
+pre code.hljs .hljs-literal,
+pre code.hljs .hljs-keyword {
+  color: var(--site-code-literal);
+  font-weight: 600;
+}
+
+pre code.hljs .hljs-comment,
+pre code.hljs .hljs-quote {
+  color: var(--site-code-comment);
+  font-style: italic;
+}
+
+pre code.hljs .hljs-punctuation,
+pre code.hljs .hljs-bullet {
+  color: var(--site-code-punctuation);
+}
+
+pre code.hljs .hljs-meta,
+pre code.hljs .hljs-symbol,
+pre code.hljs .hljs-type {
+  color: var(--site-accent-cool);
 }
 
 .mermaid {
