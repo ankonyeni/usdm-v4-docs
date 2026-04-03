@@ -11,16 +11,16 @@ sourcing:
   codeSystemVersion: 24.04e
   decode: Locally Sourced
 identifiers:
-- id: dev-id-001
-  text: UDI-123456789
-  scopeId: org-fda-01
-  type:
-    id: code-udi-01
-    code: C155868
-    codeSystem: ncit
-    codeSystemVersion: 24.04e
-    decode: Device Unique Identifier
+  - id: dev-id-001
+    text: UDI-123456789
+    scopeId: org-fda-01
+    type:
+      id: code-udi-01
+      code: C155868
+      codeSystem: ncit
+      codeSystemVersion: 24.04e
+      decode: Device Unique Identifier
 extensionAttributes:
-- id: ext-battery-01
-  url: https://example.org/usdm/extension/battery-life-hours
-  valueInteger: 24
+  - id: ext-battery-01
+    url: https://example.org/usdm/extension/battery-life-hours
+    valueInteger: 24

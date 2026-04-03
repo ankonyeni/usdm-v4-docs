@@ -2,6 +2,6 @@ id: StudyIdentifier_3
 text: EU12345
 scopeId: Organization_3
 extensionAttributes:
-- id: ext-study-identifier-kind
-  url: https://example.org/usdm/extensions/identifier-kind
-  valueString: Regional registry identifier
+  - id: ext-study-identifier-kind
+    url: https://example.org/usdm/extensions/identifier-kind
+    valueString: Regional registry identifier

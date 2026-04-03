@@ -4,14 +4,14 @@ label: SAE
 description: A severe adverse event has occurred.
 text: Onset of symptoms is sudden and severe.
 notes:
-- id: Comment-3
-  text: Refer to protocol section 5.2 for SAE reporting requirements.
+  - id: Comment-3
+    text: Refer to protocol section 5.2 for SAE reporting requirements.
 contextIds:
-- Activity_Min_001
+  - Activity_Min_001
 appliesToIds:
-- Activity_Min_001
-- BC-001
+  - Activity_Min_001
+  - BC-001
 extensionAttributes:
-- id: ext-cond-01
-  url: https://example.org/usdm/extension/condition-status
-  valueString: Active
+  - id: ext-cond-01
+    url: https://example.org/usdm/extension/condition-status
+    valueString: Active

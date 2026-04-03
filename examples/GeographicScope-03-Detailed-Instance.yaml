@@ -14,6 +14,6 @@ code:
     codeSystemVersion: 24.04e
     decode: Hospital
 extensionAttributes:
-- id: EXT-GEO-1
-  url: https://example.com/extensions/site-capacity
-  valueInteger: 500
+  - id: EXT-GEO-1
+    url: https://example.com/extensions/site-capacity
+    valueInteger: 500

@@ -9,6 +9,6 @@ code:
   decode: Pound
 label: Pound
 extensionAttributes:
-- id: ext-response-display-order
-  url: https://example.org/usdm/extensions/display-order
-  valueInteger: 1
+  - id: ext-response-display-order
+    url: https://example.org/usdm/extensions/display-order
+    valueInteger: 1

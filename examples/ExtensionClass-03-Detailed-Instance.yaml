@@ -1,17 +1,17 @@
 id: ExtClass-03
 url: https://example.org/usdm/extensions/AuditMetadata
 extensionAttributes:
-- id: ExtAttr-Status-01
-  url: audit-status
-  valueCode:
-    id: Code-Audit-Pass
-    code: C25508
-    decode: Final
-    codeSystem: ncit
-    codeSystemVersion: 24.04e
-- id: ExtAttr-System-01
-  url: https://example.org/usdm/extensions/AuditMetadata/audit-source-system-name
-  valueString: ACME-EDC-v4
-- id: ExtAttr-Flag-01
-  url: https://example.org/usdm/extensions/AuditMetadata/flagis-automated-check
-  valueBoolean: true
+  - id: ExtAttr-Status-01
+    url: audit-status
+    valueCode:
+      id: Code-Audit-Pass
+      code: C25508
+      decode: Final
+      codeSystem: ncit
+      codeSystemVersion: 24.04e
+  - id: ExtAttr-System-01
+    url: https://example.org/usdm/extensions/AuditMetadata/audit-source-system-name
+    valueString: ACME-EDC-v4
+  - id: ExtAttr-Flag-01
+    url: https://example.org/usdm/extensions/AuditMetadata/flagis-automated-check
+    valueBoolean: true

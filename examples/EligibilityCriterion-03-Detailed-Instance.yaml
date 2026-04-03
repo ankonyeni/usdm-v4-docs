@@ -11,11 +11,11 @@ category:
   decode: Inclusion Criteria
 criterionItemId: ECI-3
 notes:
-- id: Comment-5
-  text: This criterion is critical for patient safety.
+  - id: Comment-5
+    text: This criterion is critical for patient safety.
 previousId: EC-1
 nextId: EC-2
 extensionAttributes:
-- id: ext-ec-01
-  url: https://example.org/usdm/extension/criterion-source
-  valueString: Protocol v2.0
+  - id: ext-ec-01
+    url: https://example.org/usdm/extension/criterion-source
+    valueString: Protocol v2.0

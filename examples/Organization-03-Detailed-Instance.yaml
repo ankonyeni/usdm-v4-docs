@@ -12,8 +12,8 @@ type:
 legalAddress:
   id: addr-uhn-01
   lines:
-  - 789 Medical Heights
-  - Building B
+    - 789 Medical Heights
+    - Building B
   city: Bloemfontein
   state: Free State
   postalCode: '9301'
@@ -24,16 +24,16 @@ legalAddress:
     codeSystemVersion: 24.04e
     decode: South Africa
 managedSites:
-- id: site-uhn-onc-01
-  name: UHN Oncology Department
-  label: Site 01
-  country:
-    id: code-country-za
-    code: ZAF
-    codeSystem: ncit
-    codeSystemVersion: 24.04e
-    decode: South Africa
+  - id: site-uhn-onc-01
+    name: UHN Oncology Department
+    label: Site 01
+    country:
+      id: code-country-za
+      code: ZAF
+      codeSystem: ncit
+      codeSystemVersion: 24.04e
+      decode: South Africa
 extensionAttributes:
-- id: ext-org-contact
-  url: https://example.org/usdm/extension/primary-contact-email
-  valueString: admin@uhn.ac.za
+  - id: ext-org-contact
+    url: https://example.org/usdm/extension/primary-contact-email
+    valueString: admin@uhn.ac.za

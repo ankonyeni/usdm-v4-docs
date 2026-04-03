@@ -1,6 +1,6 @@
 id: EXT-CLASS-1
 url: https://example.com/extensions/quality-control-audit
 extensionAttributes:
-- id: EXT-ATTR-1
-  url: https://example.org/usdm/extensions/qc-status
-  valueString: Passed
+  - id: EXT-ATTR-1
+    url: https://example.org/usdm/extensions/qc-status
+    valueString: Passed

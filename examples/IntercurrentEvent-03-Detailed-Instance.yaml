@@ -6,9 +6,9 @@ text: COVID-19
 strategy: Treatment policy regardless of whether subject was infected with COVID-19
   or not.
 notes:
-- id: NOTE-IE-1
-  text: This intercurrent event was added in protocol amendment 2.
+  - id: NOTE-IE-1
+    text: This intercurrent event was added in protocol amendment 2.
 extensionAttributes:
-- id: EXT-IE-1
-  url: https://example.com/extensions/intercurrent-event-category
-  valueString: Infectious disease
+  - id: EXT-IE-1
+    url: https://example.com/extensions/intercurrent-event-category
+    valueString: Infectious disease

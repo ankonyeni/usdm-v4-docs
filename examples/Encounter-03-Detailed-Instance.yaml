@@ -9,23 +9,23 @@ type:
   codeSystemVersion: 24.04e
   decode: Study Visit
 environmentalSettings:
-- id: ENV-SET-1
-  code: C182021
-  codeSystem: ncit
-  codeSystemVersion: 24.04e
-  decode: Research Center
+  - id: ENV-SET-1
+    code: C182021
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Research Center
 contactModes:
-- id: CONTACT-MODE-1
-  code: C175574
-  codeSystem: ncit
-  codeSystemVersion: 24.04e
-  decode: In-person
+  - id: CONTACT-MODE-1
+    code: C175574
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: In-person
 notes:
-- id: Note-ENC-3-001
-  text: Patients must remain fasted for at least 8 hours prior to this encounter.
+  - id: Note-ENC-3-001
+    text: Patients must remain fasted for at least 8 hours prior to this encounter.
 previousId: ENC-2
 nextId: ENC-4
 extensionAttributes:
-- id: ext-enc-01
-  url: https://example.org/usdm/extension/visit-duration
-  valueString: 2 hours
+  - id: ext-enc-01
+    url: https://example.org/usdm/extension/visit-duration
+    valueString: 2 hours

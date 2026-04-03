@@ -1,7 +1,7 @@
 conditionAssignments:
-- id: ConditionAssignment_1
-  condition: if opted out
-  conditionTargetId: ScheduledActivityInstance_6
+  - id: ConditionAssignment_1
+    condition: if opted out
+    conditionTargetId: ScheduledActivityInstance_6
 id: ScheduledDecisionInstance_1
 name: PROG
 label: Check opt In by subject
@@ -9,6 +9,6 @@ description: Check Opt In
 defaultConditionId: ScheduledActivityInstance_5
 epochId: StudyEpoch_1
 extensionAttributes:
-- id: ext-decision-trigger-source
-  url: https://example.org/usdm/extensions/decision-trigger-source
-  valueString: Derived from participant opt-in or opt-out status.
+  - id: ext-decision-trigger-source
+    url: https://example.org/usdm/extensions/decision-trigger-source
+    valueString: Derived from participant opt-in or opt-out status.

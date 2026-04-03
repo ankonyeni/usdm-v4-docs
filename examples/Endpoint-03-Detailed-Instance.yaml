@@ -11,9 +11,9 @@ level:
   decode: Exploratory Endpoint
 purpose: To assess the impact on patient's quality of life.
 notes:
-- id: Comment-7
-  text: Quality of Life will be assessed using the SF-36 questionnaire.
+  - id: Comment-7
+    text: Quality of Life will be assessed using the SF-36 questionnaire.
 extensionAttributes:
-- id: ext-ep-01
-  url: https://example.org/usdm/extension/endpoint-assessment-timing
-  valueString: Baseline, 3 months, 6 months
+  - id: ext-ep-01
+    url: https://example.org/usdm/extension/endpoint-assessment-timing
+    valueString: Baseline, 3 months, 6 months

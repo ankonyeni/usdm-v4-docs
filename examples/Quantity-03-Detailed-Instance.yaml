@@ -9,9 +9,9 @@ unit:
     codeSystemVersion: 24.04e
     decode: Milliliter
 extensionAttributes:
-- id: ext-prec-01
-  url: https://example.org/usdm/extensions/precision
-  valueInteger: 2
-- id: ext-src-01
-  url: https://example.org/usdm/extensions/source
-  valueString: Electronic Health Record
+  - id: ext-prec-01
+    url: https://example.org/usdm/extensions/precision
+    valueInteger: 2
+  - id: ext-src-01
+    url: https://example.org/usdm/extensions/source
+    valueString: Electronic Health Record

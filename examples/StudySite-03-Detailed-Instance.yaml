@@ -9,6 +9,6 @@ country:
   codeSystemVersion: '2020'
   decode: Denmark
 extensionAttributes:
-- id: ext-study-site-region
-  url: https://example.org/usdm/extensions/operational-region
-  valueString: Single-site pilot deployment
+  - id: ext-study-site-region
+    url: https://example.org/usdm/extensions/operational-region
+    valueString: Single-site pilot deployment

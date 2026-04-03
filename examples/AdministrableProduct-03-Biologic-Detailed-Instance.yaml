@@ -24,79 +24,79 @@ productDesignation:
   codeSystemVersion: 24.04e
   decode: Auxiliary Medicinal Product
 properties:
-- id: AdminProductProp_PH_01
-  name: PH
-  type:
-    id: Code_ChemicalProp
-    code: C17771
-    codeSystem: ncit
-    codeSystemVersion: 24.04e
-    decode: Chemical Property
-  text: '5.5'
-  quantity:
-    id: Quant_PH_01
-    value: 5.5
-- id: AdminProductProp_Osmolality_01
-  name: Osmolality
-  type:
-    id: Code_PhysicalProp
-    code: C158424
-    codeSystem: ncit
-    codeSystemVersion: 24.04e
-    decode: Physical Property
-  text: 270 mOsm/kg
-  quantity:
-    id: Quant_Osm_01
-    value: 270
-    unit:
-      id: Alias_mOsm_kg
-      standardCode:
-        id: Code_mOsm_kg
-        code: C67427
-        codeSystem: ncit
-        codeSystemVersion: 24.04e
-        decode: Milliosmole per Kilogram
+  - id: AdminProductProp_PH_01
+    name: PH
+    type:
+      id: Code_ChemicalProp
+      code: C17771
+      codeSystem: ncit
+      codeSystemVersion: 24.04e
+      decode: Chemical Property
+    text: '5.5'
+    quantity:
+      id: Quant_PH_01
+      value: 5.5
+  - id: AdminProductProp_Osmolality_01
+    name: Osmolality
+    type:
+      id: Code_PhysicalProp
+      code: C158424
+      codeSystem: ncit
+      codeSystemVersion: 24.04e
+      decode: Physical Property
+    text: 270 mOsm/kg
+    quantity:
+      id: Quant_Osm_01
+      value: 270
+      unit:
+        id: Alias_mOsm_kg
+        standardCode:
+          id: Code_mOsm_kg
+          code: C67427
+          codeSystem: ncit
+          codeSystemVersion: 24.04e
+          decode: Milliosmole per Kilogram
 notes:
-- id: Comment_Storage_01
-  text: Store refrigerated at 2°C to 8°C (36°F to 46°F) in original carton to protect
-    from light.
+  - id: Comment_Storage_01
+    text: Store refrigerated at 2°C to 8°C (36°F to 46°F) in original carton to protect
+      from light.
 identifiers:
-- id: AdminProdID_UNII_02
-  text: DPT0O3T46P
-  scopeId: Org_FDA
+  - id: AdminProdID_UNII_02
+    text: DPT0O3T46P
+    scopeId: Org_FDA
 ingredients:
-- id: Ingredient_Pembrolizumab
-  role:
-    id: Code_Active
-    code: C82533
-    codeSystem: ncit
-    codeSystemVersion: 24.04e
-    decode: Active Ingredient
-  substance:
-    id: Substance_Pembrolizumab
-    name: Pembrolizumab
-    strengths:
-    - id: Strength_25mg_mL
-      name: 25 mg/mL
-      numerator:
-        id: Quant_Strength_25mg_mL
-        value: 25
-        unit:
-          id: Alias_mg
-          standardCode:
-            id: Code_mg
-            code: C28253
-            codeSystem: ncit
-            codeSystemVersion: 24.04e
-            decode: Milligram
-      denominator:
-        id: Quant_Volume_1mL
-        value: 1
-        unit:
-          id: Alias_mL
-          standardCode:
-            id: Code_mL
-            code: C28254
-            codeSystem: ncit
-            codeSystemVersion: 24.04e
-            decode: Milliliter
+  - id: Ingredient_Pembrolizumab
+    role:
+      id: Code_Active
+      code: C82533
+      codeSystem: ncit
+      codeSystemVersion: 24.04e
+      decode: Active Ingredient
+    substance:
+      id: Substance_Pembrolizumab
+      name: Pembrolizumab
+      strengths:
+        - id: Strength_25mg_mL
+          name: 25 mg/mL
+          numerator:
+            id: Quant_Strength_25mg_mL
+            value: 25
+            unit:
+              id: Alias_mg
+              standardCode:
+                id: Code_mg
+                code: C28253
+                codeSystem: ncit
+                codeSystemVersion: 24.04e
+                decode: Milligram
+          denominator:
+            id: Quant_Volume_1mL
+            value: 1
+            unit:
+              id: Alias_mL
+              standardCode:
+                id: Code_mL
+                code: C28254
+                codeSystem: ncit
+                codeSystemVersion: 24.04e
+                decode: Milliliter

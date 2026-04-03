@@ -7,6 +7,6 @@ valueCode:
   codeSystemVersion: 24.04e
   decode: Next-Generation Sequencing
 extensionAttributes:
-- id: EXT-ATTR-SEQ-004
-  url: https://example.org/usdm/extensions/assay-software-version
-  valueString: v2.4.1-build7
+  - id: EXT-ATTR-SEQ-004
+    url: https://example.org/usdm/extensions/assay-software-version
+    valueString: v2.4.1-build7

@@ -8,9 +8,9 @@ text: 'The primary analysis will be performed on the  <usdm:ref klass=AnalysisPo
 
   '
 extensionAttributes:
-- id: EXT-NCI-ST-01
-  url: https://example.org/usdm/extensions/statistical-software
-  valueString: SAS Version 9.4
-- id: EXT-NCI-ST-02
-  url: https://example.org/usdm/extensions/is-primary-analysis
-  valueBoolean: true
+  - id: EXT-NCI-ST-01
+    url: https://example.org/usdm/extensions/statistical-software
+    valueString: SAS Version 9.4
+  - id: EXT-NCI-ST-02
+    url: https://example.org/usdm/extensions/is-primary-analysis
+    valueBoolean: true

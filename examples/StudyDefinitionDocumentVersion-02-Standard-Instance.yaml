@@ -7,25 +7,25 @@ status:
   decode: Draft
 version: '1'
 dateValues:
-- id: GovernanceDate_2
-  name: Protocol Approval
-  type:
-    id: Code_29
-    code: C207598
-    codeSystem: ncit
-    codeSystemVersion: 24.04e
-    decode: Protocol Effective Date
-  dateValue: '2023-01-01'
-  geographicScopes:
-  - id: GeographicScope_5
+  - id: GovernanceDate_2
+    name: Protocol Approval
     type:
-      id: Code_30
-      code: C68846
+      id: Code_29
+      code: C207598
       codeSystem: ncit
       codeSystemVersion: 24.04e
-      decode: Global
+      decode: Protocol Effective Date
+    dateValue: '2023-01-01'
+    geographicScopes:
+      - id: GeographicScope_5
+        type:
+          id: Code_30
+          code: C68846
+          codeSystem: ncit
+          codeSystemVersion: 24.04e
+          decode: Global
 contents:
-- id: NarrativeContent_1
-  name: SECTION 0
-  displaySectionTitle: false
-  displaySectionNumber: false
+  - id: NarrativeContent_1
+    name: SECTION 0
+    displaySectionTitle: false
+    displaySectionNumber: false

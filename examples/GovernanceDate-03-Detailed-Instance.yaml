@@ -10,22 +10,22 @@ type:
   decode: Date of First Enrollment into Study
 dateValue: '2024-03-01'
 geographicScopes:
-- id: GEO-3
-  type:
-    id: GEO-TYPE-3
-    code: C80403
-    codeSystem: ncit
-    codeSystemVersion: 24.04e
-    decode: Study Site
-  code:
-    id: GEO-CODE-2
-    standardCode:
-      id: CODE-GEO-2
-      code: C16696
+  - id: GEO-3
+    type:
+      id: GEO-TYPE-3
+      code: C80403
       codeSystem: ncit
       codeSystemVersion: 24.04e
-      decode: Hospital
+      decode: Study Site
+    code:
+      id: GEO-CODE-2
+      standardCode:
+        id: CODE-GEO-2
+        code: C16696
+        codeSystem: ncit
+        codeSystemVersion: 24.04e
+        decode: Hospital
 extensionAttributes:
-- id: EXT-GOV-DATE-1
-  url: https://example.com/extensions/enrollment-target
-  valueInteger: 100
+  - id: EXT-GOV-DATE-1
+    url: https://example.com/extensions/enrollment-target
+    valueInteger: 100

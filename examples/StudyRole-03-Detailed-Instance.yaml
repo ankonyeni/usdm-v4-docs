@@ -10,23 +10,23 @@ code:
   codeSystemVersion: 24.04e
   decode: Clinical Research Associate
 assignedPersons:
-- id: person-cra-01
-  name: John Smith
-  jobTitle: Senior CRA
-  personName:
-    id: name-cra-01
-    familyName: Smith
-    givenNames:
-    - John
+  - id: person-cra-01
+    name: John Smith
+    jobTitle: Senior CRA
+    personName:
+      id: name-cra-01
+      familyName: Smith
+      givenNames:
+        - John
 masking:
   id: mask-cra-01
   text: CRA is unblinded to perform drug accountability and site monitoring.
   isMasked: false
 organizationIds:
-- org-contract-research-org-01
+  - org-contract-research-org-01
 appliesToIds:
-- design-interventional-phase3
+  - design-interventional-phase3
 notes:
-- id: note-role-cra-01
-  text: This role has read-write access to the Electronic Data Capture (EDC) system
-    for monitoring purposes.
+  - id: note-role-cra-01
+    text: This role has read-write access to the Electronic Data Capture (EDC) system
+      for monitoring purposes.

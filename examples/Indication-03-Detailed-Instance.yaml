@@ -5,15 +5,15 @@ description: A progressive, genetic disease that causes persistent lung infectio
   and limits the ability to breathe over time.
 isRareDisease: true
 codes:
-- id: CODE-IND-1
-  code: '190905008'
-  codeSystem: SNOMED CT
-  codeSystemVersion: '2026'
-  decode: Cystic Fibrosis
+  - id: CODE-IND-1
+    code: '190905008'
+    codeSystem: SNOMED CT
+    codeSystemVersion: '2026'
+    decode: Cystic Fibrosis
 notes:
-- id: NOTE-IND-1
-  text: This indication is for a pediatric population.
+  - id: NOTE-IND-1
+    text: This indication is for a pediatric population.
 extensionAttributes:
-- id: EXT-IND-1
-  url: https://example.com/extensions/indication-prevalence
-  valueString: 1 in 3,000
+  - id: EXT-IND-1
+    url: https://example.com/extensions/indication-prevalence
+    valueString: 1 in 3,000

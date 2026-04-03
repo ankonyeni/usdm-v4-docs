@@ -4,8 +4,8 @@ label: Treatment
 description: A visit during the treatment phase of the study.
 defaultConditionId: SAI-1
 activityIds:
-- Activity_Min_001
+  - Activity_Min_001
 extensionAttributes:
-- id: ext-sai-01
-  url: https://example.org/usdm/extension/visit-number
-  valueInteger: 3
+  - id: ext-sai-01
+    url: https://example.org/usdm/extension/visit-number
+    valueInteger: 3

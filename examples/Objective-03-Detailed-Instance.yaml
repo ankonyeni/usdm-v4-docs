@@ -5,30 +5,30 @@ level:
   codeSystemVersion: 24.04e
   decode: Secondary Objective
 endpoints:
-- level:
-    id: Code_208
-    code: C139173
-    codeSystem: ncit
-    codeSystemVersion: 24.04e
-    decode: Secondary Endpoint
-  id: Endpoint_2
-  name: END2
-  description: TTCI
-  text: Time to clinical improvement (TTCI) defined as a National Early Warning Score
-    2 (NEWS2) of <=2 maintained for 24 hours
-  purpose: Measure the time required for sustained clinical improvement.
-- level:
-    id: Code_210
-    code: C139173
-    codeSystem: ncit
-    codeSystemVersion: 24.04e
-    decode: Secondary Endpoint
-  id: Endpoint_3
-  name: END3
-  description: Time to Imporvement
-  text: Time to improvement of at least 2 categories relative to baseline on a 7-category
-    ordinal scale of clinical status
-  purpose: Assess improvement from baseline on the ordinal clinical scale.
+  - level:
+      id: Code_208
+      code: C139173
+      codeSystem: ncit
+      codeSystemVersion: 24.04e
+      decode: Secondary Endpoint
+    id: Endpoint_2
+    name: END2
+    description: TTCI
+    text: Time to clinical improvement (TTCI) defined as a National Early Warning
+      Score 2 (NEWS2) of <=2 maintained for 24 hours
+    purpose: Measure the time required for sustained clinical improvement.
+  - level:
+      id: Code_210
+      code: C139173
+      codeSystem: ncit
+      codeSystemVersion: 24.04e
+      decode: Secondary Endpoint
+    id: Endpoint_3
+    name: END3
+    description: Time to Imporvement
+    text: Time to improvement of at least 2 categories relative to baseline on a 7-category
+      ordinal scale of clinical status
+    purpose: Assess improvement from baseline on the ordinal clinical scale.
 id: Objective_2
 name: OBJ2
 description: Secondary

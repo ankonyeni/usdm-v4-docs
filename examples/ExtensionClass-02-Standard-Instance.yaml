@@ -1,9 +1,9 @@
 id: ExtClass-Style-02
 url: http://cdisc.org/usdm/extensions/doc-style-extension/Style
 extensionAttributes:
-- id: ExtAttr-Font-01
-  url: font-name
-  valueString: ARIEL
-- id: ExtAttr-Color-01
-  url: font-colour
-  valueString: YELLOW
+  - id: ExtAttr-Font-01
+    url: font-name
+    valueString: ARIEL
+  - id: ExtAttr-Color-01
+    url: font-colour
+    valueString: YELLOW

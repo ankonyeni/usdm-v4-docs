@@ -12,6 +12,6 @@ text: 'A Phase 3, Randomized, Double-Blind, Placebo-Controlled, Multicenter  Stu
 
   '
 extensionAttributes:
-- id: ext-study-title-audience
-  url: https://example.org/usdm/extensions/title-audience
-  valueString: Regulatory submission
+  - id: ext-study-title-audience
+    url: https://example.org/usdm/extensions/title-audience
+    valueString: Regulatory submission
