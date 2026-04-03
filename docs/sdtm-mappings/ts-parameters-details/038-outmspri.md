@@ -1,0 +1,11 @@
+# TS Parameters.OUTMSPRI
+
+<div class="sdtm-detail-card">
+  <p class="sdtm-detail-meta"><strong>Label:</strong> Primary Outcome Measure</p>
+  <p class="sdtm-detail-meta"><strong>USDM Class:</strong> <a href="../../classes/Endpoint/index.html">Endpoint</a></p>
+  <p class="sdtm-detail-meta"><strong>USDM Path:</strong> <code>StudyVersion/@studyDesigns/StudyDesign/@objectives/Objective/@endpoints/Endpoint/@text</code></p>
+</div>
+
+## Mapping Details
+
+<div class="sdtm-rule-list"><p><strong>Condition Path:</strong> <code>StudyVersion/@studyDesigns/StudyDesign/@objectives/Objective/@endpoints/Endpoint/@level/code/@Code = &quot;C94496&quot;</code></p></div>

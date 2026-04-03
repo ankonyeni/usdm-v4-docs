@@ -5,12 +5,15 @@ import shutil
 import subprocess
 from pathlib import Path
 
+from sdtm_mappings import write_sdtm_mapping_page
+
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
 SCHEMA_PATH = REPO_ROOT / "schemas" / "usdm_v4.linkml.yaml"
 DOCS_PATH = REPO_ROOT / "docs"
 EXAMPLES_PATH = REPO_ROOT / "examples"
 SITE_PATH = REPO_ROOT / "site"
+SDTM_MAPPING_WORKBOOK = REPO_ROOT / "sdtm_mapping.xlsx"
 TYPE_DOCS_PATH = DOCS_PATH / "types"
 TEMPLATE_PATH = REPO_ROOT / "templates" / "docgen"
 TYPE_HEADER_PATTERN = re.compile(r"^# Type:\s+(\S+)\s*$")
@@ -24,6 +27,8 @@ GENERATED_DOC_PATHS = (
     "enums",
     "subsets",
     "reference",
+    "sdtm-mappings.md",
+    "sdtm-mappings",
 )
 
 
@@ -175,6 +180,7 @@ def build_docs(
 
     add_type_doc_aliases(type_docs_path)
     reorder_generated_examples(docs_path)
+    write_sdtm_mapping_page(SDTM_MAPPING_WORKBOOK, docs_path)
 
     print("Running mkdocs build...")
     run(["mkdocs", "build", "--clean", "--strict", "--site-dir", str(site_path)])

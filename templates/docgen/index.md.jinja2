@@ -4,6 +4,8 @@ This site is the generated reference documentation for the USDM v4 LinkML schema
 
 Use this site to understand the overall shape of the model, inspect the meaning of each class and slot, review example instances for key classes, and navigate from high-level study concepts down to the detailed attributes captured in the LinkML representation.
 
+An [SDTM Trial Domain Mappings](sdtm-mappings.md) page is also available to connect USDM classes and attributes to SDTM Trial Design and Trial Summary content.
+
 {% set type_names = gen.all_type_object_names() %}
 {% set tree_roots = gen.all_class_objects()|selectattr('tree_root')|list %}
 {% set enum_objects = gen.all_enum_objects()|list %}
