@@ -1,15 +1,18 @@
-# {% if schema.title %}{{ schema.title }}{% else %}{{ schema.name }}{% endif %}
+# USDM v4 LinkML
 
-{% if schema.description %}{{ schema.description }}{% endif %}
+This site is the generated reference documentation for the USDM v4 LinkML schema derived from the CDISC DDF-RA [dataStructure.yml](https://github.com/cdisc-org/DDF-RA/blob/aa303cb32f5d3ceecc68a16803e26720d2c1fc26/Deliverables/UML/dataStructure.yml) source model. It is intended to make the model easier to explore by publishing the schema as browsable documentation, including classes, slots, types, the relationships between them, and class instance examples.
 
-URI: {{ schema.id }}
-
-Name: {{ schema.name }}
+Use this site to understand the overall shape of the model, inspect the meaning of each class and slot, review example instances for key classes, and navigate from high-level study concepts down to the detailed attributes captured in the LinkML representation.
 
 {% set type_names = gen.all_type_object_names() %}
 {% set tree_roots = gen.all_class_objects()|selectattr('tree_root')|list %}
 {% set enum_objects = gen.all_enum_objects()|list %}
 {% set subset_objects = schemaview.all_subsets().values()|list %}
+
+Public Mermaid diagram links for the model:
+
+- [UML Diagram](https://mermaid.ai/d/175daee6-a5b3-4ada-af22-f46e3504e2e0)
+- [ER Diagram](https://mermaid.ai/d/94d41db0-53ce-4c19-a633-7bdddf464eed)
 
 {% if include_top_level_diagram %}
 
