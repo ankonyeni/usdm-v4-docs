@@ -7,6 +7,11 @@ from pathlib import Path
 import re
 
 try:
+    from linkml_runtime.utils.schemaview import SchemaView
+except ImportError:  # pragma: no cover - handled by skipping class-page injection
+    SchemaView = None
+
+try:
     from openpyxl import load_workbook
 except ImportError:  # pragma: no cover - handled with a placeholder page
     load_workbook = None
@@ -65,6 +70,13 @@ class MappingRecord:
     status: str
     change_flag: str
     parameter_name: str = ""
+
+
+@dataclass(frozen=True)
+class ClassSlotMapping:
+    slot_name: str
+    row_number: int
+    record: MappingRecord
 
 
 def _clean_text(value: object) -> str:
@@ -393,6 +405,205 @@ def _render_domain_page(section_name: str, docs_path: Path, records: list[Mappin
     return "\n".join(lines)
 
 
+def _normalize_slot_token(value: str) -> str:
+    return value.replace(" ", "").strip().lstrip("@")
+
+
+def _extract_slot_candidate_from_target_path(record: MappingRecord) -> str:
+    tokens = [_normalize_slot_token(token) for token in record.target_path.split("/") if token.strip()]
+    class_name = _normalize_slot_token(record.usdm_class)
+
+    for index, token in enumerate(tokens[:-1]):
+        if token.lower() != class_name.lower():
+            continue
+        next_token = tokens[index + 1]
+        if next_token.startswith("@"):
+            return next_token[1:]
+
+    return ""
+
+
+def _resolve_class_slot_name(record: MappingRecord, class_slot_names: set[str]) -> str:
+    normalized_slots = {_normalize_slot_token(slot_name).lower(): slot_name for slot_name in class_slot_names}
+    candidates = [
+        _extract_slot_candidate_from_target_path(record),
+        _normalize_slot_token(record.usdm_attribute),
+    ]
+
+    for candidate in candidates:
+        if not candidate:
+            continue
+
+        candidate_key = candidate.lower()
+        if candidate_key in normalized_slots:
+            return normalized_slots[candidate_key]
+
+        candidate_id_key = f"{candidate_key}id"
+        if candidate_id_key in normalized_slots:
+            return normalized_slots[candidate_id_key]
+
+    return ""
+
+
+def _build_class_slot_mappings(schema_path: Path, records: list[MappingRecord]) -> dict[str, list[ClassSlotMapping]]:
+    if SchemaView is None or not schema_path.exists():
+        return {}
+
+    schema_view = SchemaView(str(schema_path))
+    class_slot_names: dict[str, set[str]] = {}
+    mappings_by_class: dict[str, list[ClassSlotMapping]] = defaultdict(list)
+    seen: set[tuple[str, str, str, str]] = set()
+
+    records_by_section: dict[str, list[MappingRecord]] = defaultdict(list)
+    for record in records:
+        records_by_section[record.section_name].append(record)
+
+    for section_records in records_by_section.values():
+        for row_number, record in enumerate(section_records, start=1):
+            if not record.usdm_class or not record.target_path:
+                continue
+
+            class_name = record.usdm_class
+            if class_name not in class_slot_names:
+                class_definition = schema_view.get_class(class_name)
+                if class_definition is None:
+                    class_slot_names[class_name] = set()
+                else:
+                    class_slot_names[class_name] = {
+                        slot.name for slot in schema_view.class_induced_slots(class_name)
+                    }
+
+            slot_name = _resolve_class_slot_name(record, class_slot_names[class_name])
+            if not slot_name:
+                continue
+
+            mapping_key = (
+                class_name,
+                slot_name,
+                record.section_name,
+                record.sdtm_variable or record.parameter_name or record.sdtm_label,
+            )
+            if mapping_key in seen:
+                continue
+            seen.add(mapping_key)
+
+            mappings_by_class[class_name].append(
+                ClassSlotMapping(slot_name=slot_name, row_number=row_number, record=record)
+            )
+
+    return mappings_by_class
+
+
+def _class_mapping_domain_output_href(section_name: str) -> str:
+    return f"../../{DOMAIN_PAGES_DIRNAME}/{_slugify(section_name)}/"
+
+
+def _class_mapping_detail_output_href(record: MappingRecord, row_number: int) -> str:
+    return (
+        f"../../{DOMAIN_PAGES_DIRNAME}/"
+        f"{_detail_directory_name(record.section_name)}/"
+        f"{_detail_page_slug(record, row_number)}/"
+    )
+
+
+def _render_class_mapping_section(class_name: str, mappings: list[ClassSlotMapping]) -> str:
+    lines = [
+        "<!-- sdtm-class-mappings:start -->",
+        "## SDTM Trial Domain Mappings",
+        "",
+        "This class has slot-level mappings to the following SDTM trial domain items.",
+        "",
+        '<table class="sdtm-class-mapping-table">',
+        "<thead>",
+        "<tr>",
+        "<th>Domain</th>",
+        "<th>SDTM Item</th>",
+        "<th>Class Slot</th>",
+        "<th>Label</th>",
+        "</tr>",
+        "</thead>",
+        "<tbody>",
+    ]
+
+    for mapping in mappings:
+        record = mapping.record
+        item_value = record.sdtm_variable or record.parameter_name or ""
+        item_label = html.escape(record.sdtm_label or record.parameter_name or "")
+        lines.extend(
+            [
+                "<tr>",
+                (
+                    f'<td><a href="{_class_mapping_domain_output_href(record.section_name)}">'
+                    f"{html.escape(record.section_name)}</a></td>"
+                ),
+                (
+                    f'<td><a href="{_class_mapping_detail_output_href(record, mapping.row_number)}">'
+                    f"<code>{html.escape(item_value)}</code></a></td>"
+                ),
+                (
+                    f'<td><a href="../../slots/{mapping.slot_name}/">'
+                    f"{html.escape(mapping.slot_name)}</a></td>"
+                ),
+                f"<td>{item_label}</td>",
+                "</tr>",
+            ]
+        )
+
+    lines.extend(["</tbody>", "</table>", "", "<!-- sdtm-class-mappings:end -->", ""])
+    return "\n".join(lines)
+
+
+def _insert_class_mapping_section(class_doc_text: str, section_text: str) -> str:
+    start_marker = "<!-- sdtm-class-mappings:start -->"
+    end_marker = "<!-- sdtm-class-mappings:end -->"
+
+    if start_marker in class_doc_text and end_marker in class_doc_text:
+        pattern = re.compile(
+            rf"{re.escape(start_marker)}.*?{re.escape(end_marker)}\n?",
+            re.DOTALL,
+        )
+        return pattern.sub(section_text, class_doc_text, count=1)
+
+    insertion_markers = [
+        "\n## Usages\n",
+        "\n## Identifier and Mapping Information\n",
+        "\n## Examples\n",
+        "\n## LinkML Source\n",
+    ]
+    for marker in insertion_markers:
+        if marker in class_doc_text:
+            return class_doc_text.replace(marker, f"\n{section_text}{marker}", 1)
+
+    return class_doc_text.rstrip() + "\n\n" + section_text
+
+
+def inject_class_page_sdtm_sections(
+    schema_path: Path,
+    docs_path: Path,
+    records: list[MappingRecord],
+) -> None:
+    if not records:
+        return
+
+    class_docs_path = docs_path / CLASS_DOCS_DIRNAME
+    if not class_docs_path.exists():
+        return
+
+    mappings_by_class = _build_class_slot_mappings(schema_path, records)
+    for class_name, mappings in mappings_by_class.items():
+        class_doc_path = class_docs_path / f"{class_name}.md"
+        if not class_doc_path.exists():
+            continue
+
+        original_text = class_doc_path.read_text(encoding="utf-8")
+        updated_text = _insert_class_mapping_section(
+            original_text,
+            _render_class_mapping_section(class_name, mappings),
+        )
+        if updated_text != original_text:
+            class_doc_path.write_text(updated_text, encoding="utf-8")
+
+
 def _write_domain_pages(docs_path: Path, section_order: list[str], records: list[MappingRecord]) -> None:
     records_by_section: dict[str, list[MappingRecord]] = defaultdict(list)
     for record in records:
@@ -428,4 +639,4 @@ def write_sdtm_mapping_docs(workbook_path: Path, docs_path: Path) -> list[Mappin
 
     section_order, records = _collect_workbook_metadata(workbook_path)
     _write_domain_pages(docs_path, section_order, records)
-    return [record for record in records if record.usdm_class]
+    return records

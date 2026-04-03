@@ -651,6 +651,40 @@ svg {
   margin-bottom: 0;
 }
 
+.sdtm-class-mapping-table {
+  border-collapse: collapse;
+  margin: 1rem 0 1.25rem;
+  width: 100%;
+}
+
+.sdtm-class-mapping-table th,
+.sdtm-class-mapping-table td {
+  border-bottom: 1px solid var(--site-line);
+  padding: 0.7rem 0.8rem;
+  vertical-align: top;
+}
+
+.sdtm-class-mapping-table th {
+  color: var(--site-heading);
+  font-weight: 700;
+}
+
+.sdtm-class-mapping-table td code {
+  color: inherit;
+}
+
+.sdtm-class-mapping-table a {
+  color: var(--site-accent);
+  text-decoration: underline;
+  text-decoration-thickness: 1.25px;
+  text-underline-offset: 0.16em;
+}
+
+.sdtm-class-mapping-table a:hover,
+.sdtm-class-mapping-table a:focus {
+  color: var(--site-heading);
+}
+
 @media (max-width: 991.98px) {
   [role="main"] {
     margin-top: 1rem;

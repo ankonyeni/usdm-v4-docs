@@ -5,7 +5,7 @@ import shutil
 import subprocess
 from pathlib import Path
 
-from sdtm_mappings import write_sdtm_mapping_docs
+from sdtm_mappings import inject_class_page_sdtm_sections, write_sdtm_mapping_docs
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
@@ -180,7 +180,8 @@ def build_docs(
 
     add_type_doc_aliases(type_docs_path)
     reorder_generated_examples(docs_path)
-    write_sdtm_mapping_docs(SDTM_MAPPING_WORKBOOK, docs_path)
+    sdtm_records = write_sdtm_mapping_docs(SDTM_MAPPING_WORKBOOK, docs_path)
+    inject_class_page_sdtm_sections(schema_path, docs_path, sdtm_records)
 
     print("Running mkdocs build...")
     run(["mkdocs", "build", "--clean", "--strict", "--site-dir", str(site_path)])
