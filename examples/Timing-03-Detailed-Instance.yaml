@@ -21,7 +21,3 @@ windowLower: P1D
 windowUpper: P1D
 relativeToScheduledInstanceId: ScheduledActivityInstance_3
 relativeFromScheduledInstanceId: ScheduledActivityInstance_4
-extensionAttributes:
-  - id: ext-timing-anchor
-    url: https://example.org/usdm/extensions/timing-anchor
-    valueString: Visit window anchored to the treatment start

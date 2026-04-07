@@ -28,45 +28,45 @@ population:
   description: Non-institutionalized adults with a confirmed diagnosis of T2D.
   includesHealthySubjects: false
 eligibilityCriteria:
-  - id: EligibilityCriterion_1
-    name: Age Criteria
-    identifier: IC-01
-    category:
-      id: Code_211
-      code: C25532
-      codeSystem: ncit
-      codeSystemVersion: 24.04e
-      decode: Inclusion Criteria
-    criterionItemId: EligibilityCriterionItem_1
+- id: EligibilityCriterion_1
+  name: Age Criteria
+  identifier: IC-01
+  category:
+    id: Code_211
+    code: C25532
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Inclusion Criteria
+  criterionItemId: EligibilityCriterionItem_1
 epochs:
-  - id: StudyEpoch_1
-    name: Observation Period
-    type:
-      id: Code_96
-      code: C165873
-      codeSystem: ncit
-      codeSystemVersion: 24.04e
-      decode: Observation Study Epoch
+- id: StudyEpoch_1
+  name: Observation Period
+  type:
+    id: Code_96
+    code: C165873
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Observation Study Epoch
 arms:
-  - id: StudyArm_1
-    name: General Diabetic Cohort
-    description: All subjects meeting inclusion criteria during the survey window.
-    type:
-      id: Code_Arm_Obs
-      code: C174266
-      codeSystem: ncit
-      codeSystemVersion: 24.04e
-      decode: Investigational Arm
-    dataOriginType:
-      id: Code_93
-      code: C188866
-      codeSystem: ncit
-      codeSystemVersion: 24.04e
-      decode: Data Generated Within Study
-    dataOriginDescription: Data collected via medical record review and patient interview.
+- id: StudyArm_1
+  name: General Diabetic Cohort
+  description: All subjects meeting inclusion criteria during the survey window.
+  type:
+    id: Code_Arm_Obs
+    code: C174266
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Investigational Arm
+  dataOriginType:
+    id: Code_93
+    code: C188866
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Data Generated Within Study
+  dataOriginDescription: Data collected via medical record review and patient interview.
 studyCells:
-  - id: StudyCell_1
-    armId: StudyArm_1
-    epochId: StudyEpoch_1
-    elementIds:
-      - StudyElement_1
+- id: StudyCell_1
+  armId: StudyArm_1
+  epochId: StudyEpoch_1
+  elementIds:
+  - StudyElement_1

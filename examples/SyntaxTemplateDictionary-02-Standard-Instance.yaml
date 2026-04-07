@@ -3,10 +3,10 @@ name: OE_Dict
 label: OE Dictionary
 description: Dictionary for parameterized objective and endpoint narrative text.
 parameterMaps:
-  - id: ParameterMap_2
-    tag: max_age
-    reference: <usdm:ref klass="StudyDesignPopulation" id="StudyDesignPopulation_1"
-      attribute="plannedAge"></usdm:ref>
-  - id: ParameterMap_4
-    tag: Activity1
-    reference: <usdm:ref klass="Activity" id="Activity_6" attribute="label"></usdm:ref>
+- id: ParameterMap_2
+  tag: max_age
+  reference: <usdm:ref klass="StudyDesignPopulation" id="StudyDesignPopulation_1"
+    attribute="plannedAge"></usdm:ref>
+- id: ParameterMap_4
+  tag: Activity1
+  reference: <usdm:ref klass="Activity" id="Activity_6" attribute="label"></usdm:ref>

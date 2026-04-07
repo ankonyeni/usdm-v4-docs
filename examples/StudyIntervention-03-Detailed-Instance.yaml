@@ -26,65 +26,60 @@ minimumResponseDuration:
       codeSystem: ncit
       codeSystemVersion: 24.04e
 administrations:
-  - id: Admin_Det_003
-    name: Intravenous Infusion Administration
-    label: IV Infusion
-    description: A 60-minute intravenous infusion of the investigational medicinal
-      product administered at a constant rate.
-    administrableProductId: AdminProd_Det_77
-    medicalDeviceId: Device_Infusion_Pump_01
-    route:
-      id: AliasCode_IV
+- id: Admin_Det_003
+  name: Intravenous Infusion Administration
+  label: IV Infusion
+  description: A 60-minute intravenous infusion of the investigational medicinal product
+    administered at a constant rate.
+  administrableProductId: AdminProd_Det_77
+  medicalDeviceId: Device_Infusion_Pump_01
+  route:
+    id: AliasCode_IV
+    standardCode:
+      id: Code_IV
+      code: C38276
+      codeSystem: ncit
+      codeSystemVersion: 24.04e
+      decode: Intravenous
+  dose:
+    id: Dose_100mg
+    value: 100
+    unit:
+      id: Alias_mg
       standardCode:
-        id: Code_IV
-        code: C38276
+        id: Code_mg
+        code: C28253
         codeSystem: ncit
         codeSystemVersion: 24.04e
-        decode: Intravenous
-    dose:
-      id: Dose_100mg
-      value: 100
+        decode: Milligram
+  frequency:
+    id: AliasCode_Q3W
+    standardCode:
+      id: Code_Q3W
+      code: C64535
+      codeSystem: ncit
+      codeSystemVersion: 24.04e
+      decode: Every Three Weeks
+  duration:
+    id: Dur_60min
+    text: 60 minutes
+    durationWillVary: false
+    quantity:
+      id: Quant_Dur_60min
+      value: 60
       unit:
-        id: Alias_mg
+        id: Alias_min
         standardCode:
-          id: Code_mg
-          code: C28253
+          id: Code_min
+          code: C48154
           codeSystem: ncit
           codeSystemVersion: 24.04e
-          decode: Milligram
-    frequency:
-      id: AliasCode_Q3W
-      standardCode:
-        id: Code_Q3W
-        code: C64535
-        codeSystem: ncit
-        codeSystemVersion: 24.04e
-        decode: Every Three Weeks
-    duration:
-      id: Dur_60min
-      text: 60 minutes
-      durationWillVary: false
-      quantity:
-        id: Quant_Dur_60min
-        value: 60
-        unit:
-          id: Alias_min
-          standardCode:
-            id: Code_min
-            code: C48154
-            codeSystem: ncit
-            codeSystemVersion: 24.04e
-            decode: Minute
-    notes:
-      - id: Comment_Admin_002
-        text: Infusion site must be monitored for signs of extravasation every 15
-          minutes.
-      - id: Comment_Admin_003
-        text: Use a dedicated infusion line with an in-line filter.
+          decode: Minute
+  notes:
+  - id: Comment_Admin_002
+    text: Infusion site must be monitored for signs of extravasation every 15 minutes.
+  - id: Comment_Admin_003
+    text: Use a dedicated infusion line with an in-line filter.
 notes:
-  - id: NOTE-SI-003
-    text: Ensure the product is refrigerated until 30 minutes prior to administration.
-extensionAttributes:
-  - id: EXT-SI-01
-    url: https://example.org/usdm/extensions/is-high-alert-med
-    valueBoolean: true
+- id: NOTE-SI-003
+  text: Ensure the product is refrigerated until 30 minutes prior to administration.

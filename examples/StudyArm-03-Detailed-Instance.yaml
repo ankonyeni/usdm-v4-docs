@@ -16,11 +16,7 @@ dataOriginType:
   decode: Historical Data
 dataOriginDescription: Data for this arm is from a previous study.
 notes:
-  - id: NOTE-SA-1
-    text: The previous study is NCT12345.
+- id: NOTE-SA-1
+  text: The previous study is NCT12345.
 populationIds:
-  - SDP-1
-extensionAttributes:
-  - id: EXT-SA-1
-    url: https://example.com/extensions/arm-randomization-ratio
-    valueString: '1:1'
+- SDP-1

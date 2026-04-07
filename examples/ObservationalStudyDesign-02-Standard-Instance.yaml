@@ -18,11 +18,11 @@ model:
   codeSystemVersion: 24.04e
   decode: Cohort Study
 subTypes:
-  - id: Code_SubType_Prospective
-    code: C142646
-    codeSystem: ncit
-    codeSystemVersion: 24.04e
-    decode: Prospective Study
+- id: Code_SubType_Prospective
+  code: C142646
+  codeSystem: ncit
+  codeSystemVersion: 24.04e
+  decode: Prospective Study
 timePerspective:
   id: Code_Time_Prospective
   code: C142646
@@ -30,15 +30,15 @@ timePerspective:
   codeSystemVersion: 24.04e
   decode: Prospective Study
 therapeuticAreas:
-  - id: Code_TA_Diabetes
-    code: C26747
-    codeSystem: ncit
-    codeSystemVersion: 24.04e
-    decode: Type 2 Diabetes Mellitus
+- id: Code_TA_Diabetes
+  code: C26747
+  codeSystem: ncit
+  codeSystemVersion: 24.04e
+  decode: Type 2 Diabetes Mellitus
 indications:
-  - id: Indication_T2D
-    name: Type 2 Diabetes Mellitus
-    isRareDisease: false
+- id: Indication_T2D
+  name: Type 2 Diabetes Mellitus
+  isRareDisease: false
 population:
   id: StudyDesignPopulation_T2D
   name: Adult T2D Patients
@@ -53,88 +53,88 @@ studyPhase:
     codeSystemVersion: 24.04e
     decode: Not Applicable
 characteristics:
-  - id: Code_Char_NaturalHistory
-    code: C16136
+- id: Code_Char_NaturalHistory
+  code: C16136
+  codeSystem: ncit
+  codeSystemVersion: 24.04e
+  decode: Natural History and Cofactors Study
+epochs:
+- id: Epoch_Baseline
+  name: Baseline Enrollment
+  type:
+    id: Code_Epoch_Enrol
+    code: C202487
     codeSystem: ncit
     codeSystemVersion: 24.04e
-    decode: Natural History and Cofactors Study
-epochs:
-  - id: Epoch_Baseline
-    name: Baseline Enrollment
-    type:
-      id: Code_Epoch_Enrol
-      code: C202487
-      codeSystem: ncit
-      codeSystemVersion: 24.04e
-      decode: Screening Epoch
-  - id: Epoch_FollowUp
-    name: 24-Month Follow-Up
-    type:
-      id: Code_Epoch_Obs
-      code: C165873
-      codeSystem: ncit
-      codeSystemVersion: 24.04e
-      decode: Observation Study Epoch
+    decode: Screening Epoch
+- id: Epoch_FollowUp
+  name: 24-Month Follow-Up
+  type:
+    id: Code_Epoch_Obs
+    code: C165873
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Observation Study Epoch
 arms:
-  - id: StudyArm_GLP1_Cohort
-    name: GLP-1 Exposure Group
-    description: Patients newly initiated on GLP-1 receptor agonists as part of routine
-      care.
-    type:
-      id: Code_Arm_Obs
-      code: C174266
-      codeSystem: ncit
-      codeSystemVersion: 24.04e
-      decode: Investigational Arm
-    dataOriginType:
-      id: code-orig-1
-      code: C49652
-      codeSystem: ncit
-      codeSystemVersion: 24.04e
-      decode: Collected
-    dataOriginDescription: Data origin collected from subjects.
+- id: StudyArm_GLP1_Cohort
+  name: GLP-1 Exposure Group
+  description: Patients newly initiated on GLP-1 receptor agonists as part of routine
+    care.
+  type:
+    id: Code_Arm_Obs
+    code: C174266
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Investigational Arm
+  dataOriginType:
+    id: code-orig-1
+    code: C49652
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Collected
+  dataOriginDescription: Data origin collected from subjects.
 studyCells:
-  - id: StudyCell_001
-    armId: StudyArm_GLP1_Cohort
-    epochId: Epoch_FollowUp
-    elementIds:
-      - StudyElement_StandardObservation
+- id: StudyCell_001
+  armId: StudyArm_GLP1_Cohort
+  epochId: Epoch_FollowUp
+  elementIds:
+  - StudyElement_StandardObservation
 objectives:
-  - id: Objective_Primary
-    level:
-      id: Code_Obj_Primary
-      code: C85826
-      codeSystem: ncit
-      codeSystemVersion: 24.04e
-      decode: Primary Objective
-    name: Primary Effectiveness
-    text: To evaluate the change from baseline in HbA1c at 12 months in a real-world
-      setting.
+- id: Objective_Primary
+  level:
+    id: Code_Obj_Primary
+    code: C85826
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Primary Objective
+  name: Primary Effectiveness
+  text: To evaluate the change from baseline in HbA1c at 12 months in a real-world
+    setting.
 estimands:
-  - id: Estimand_Primary_RWO
-    name: Primary Registry Estimand
-    populationSummary: All patients enrolled who complete the 12-month follow-up visit.
-    analysisPopulationId: AnalysisPopulation_FullSet
-    variableOfInterestId: Endpoint_HbA1c_Change
-    intercurrentEvents:
-      - id: ICE_TreatmentSwitch
-        name: Treatment Switching
-        text: Switch to insulin therapy during the observation period.
-        strategy: Treatment policy strategy.
-    interventionIds:
-      - SI-Default-1
+- id: Estimand_Primary_RWO
+  name: Primary Registry Estimand
+  populationSummary: All patients enrolled who complete the 12-month follow-up visit.
+  analysisPopulationId: AnalysisPopulation_FullSet
+  variableOfInterestId: Endpoint_HbA1c_Change
+  intercurrentEvents:
+  - id: ICE_TreatmentSwitch
+    name: Treatment Switching
+    text: Switch to insulin therapy during the observation period.
+    strategy: Treatment policy strategy.
+  interventionIds:
+  - SI-Default-1
 analysisPopulations:
-  - id: AnalysisPopulation_FullSet
-    name: Full Analysis Set
-    text: All subjects with a baseline and at least one post-baseline HbA1c measurement.
+- id: AnalysisPopulation_FullSet
+  name: Full Analysis Set
+  text: All subjects with a baseline and at least one post-baseline HbA1c measurement.
 eligibilityCriteria:
-  - id: EC-Obs-1
-    identifier: OBS-EC-1
-    name: Obs EC
-    category:
-      id: code-ec-1
-      code: C25532
-      codeSystem: ncit
-      codeSystemVersion: 24.04e
-      decode: Inclusion Criteria
-    criterionItemId: EC-Item-1
+- id: EC-Obs-1
+  identifier: OBS-EC-1
+  name: Obs EC
+  category:
+    id: code-ec-1
+    code: C25532
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Inclusion Criteria
+  criterionItemId: EC-Item-1

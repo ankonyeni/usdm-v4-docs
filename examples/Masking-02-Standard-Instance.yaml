@@ -1,7 +1,0 @@
-id: mask-std-002
-text: Single-blind masking where only the subject is unaware of the assignment.
-isMasked: true
-extensionAttributes:
-  - id: ext-mask-level-01
-    url: https://example.org/usdm/extension/masking-level
-    valueString: Subject blinded

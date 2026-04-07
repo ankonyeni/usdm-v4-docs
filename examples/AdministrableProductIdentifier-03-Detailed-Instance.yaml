@@ -1,7 +1,0 @@
-id: API-3
-text: '98765'
-scopeId: org-det-003
-extensionAttributes:
-  - id: EXT-API-1
-    url: https://example.com/extensions/identifier-status
-    valueString: Active

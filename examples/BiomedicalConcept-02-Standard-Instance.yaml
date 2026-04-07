@@ -3,7 +3,7 @@ name: Race
 label: Race
 reference: https://evsexplore.semantics.cancer.gov/evsexplore/search?terminology=ncit&term=C17049
 synonyms:
-  - Racial Group
+- Racial Group
 code:
   id: alias-code-race-001
   standardCode:

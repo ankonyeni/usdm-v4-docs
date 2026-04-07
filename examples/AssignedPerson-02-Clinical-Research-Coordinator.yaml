@@ -6,7 +6,7 @@ jobTitle: Clinical Research Coordinator
 personName:
   id: PersonName_002
   givenNames:
-    - Robert
+  - Robert
   familyName: Johnson
   text: Robert Johnson
 organizationId: Organization_Sponsor_Corp

@@ -10,5 +10,5 @@ code:
   codeSystemVersion: 24.04e
   decode: Clinical Study Sponsor
 appliesToIds:
-  - AdminProd_Det_77
+- AdminProd_Det_77
 organizationId: org-std-002

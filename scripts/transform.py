@@ -131,7 +131,7 @@ class DdfRaToLinkmlImporter:
                 raise ImporterError(
                     f"Slot '{class_name}.{slot_name}' is not a mapping in the source model."
                 )
-            if self._slot_is_ignored(slot_name):
+            if self._slot_is_ignored(class_name, slot_name):
                 continue
             if self._slot_is_inherited_from_parent(class_name, class_is_a, slot_name, slot_definition):
                 continue
@@ -193,9 +193,12 @@ class DdfRaToLinkmlImporter:
 
         return linkml_slot
 
-    def _slot_is_ignored(self, slot_name: str) -> bool:
+    def _slot_is_ignored(self, class_name: str, slot_name: str) -> bool:
         slot_override = self.overrides.get("slots", {}).get(slot_name, {})
-        return slot_override.get("ignore", False) is True
+        if slot_override.get("ignore", False) is True:
+            except_classes = slot_override.get("except_classes", [])
+            return class_name not in except_classes
+        return False
 
     def _resolve_slot_name(self, source_slot_name: str, slot_definition: dict[str, Any]) -> str:
         naming = self.defaults["naming"]

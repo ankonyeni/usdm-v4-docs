@@ -7,5 +7,5 @@ duration:
   text: instantaneous
   durationWillVary: false
 notes:
-  - id: Comment_Admin_001
-    text: To be administered in a fasted state, at least 1 hour before breakfast.
+- id: Comment_Admin_001
+  text: To be administered in a fasted state, at least 1 hour before breakfast.

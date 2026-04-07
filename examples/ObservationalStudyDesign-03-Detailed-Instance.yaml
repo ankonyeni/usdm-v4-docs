@@ -24,11 +24,11 @@ timePerspective:
   codeSystemVersion: 24.04e
   decode: Prospective
 therapeuticAreas:
-  - id: Code_100
-    code: C3004
-    codeSystem: ncit
-    codeSystemVersion: 24.04e
-    decode: Type 2 Diabetes Mellitus
+- id: Code_100
+  code: C3004
+  codeSystem: ncit
+  codeSystemVersion: 24.04e
+  decode: Type 2 Diabetes Mellitus
 studyPhase:
   id: AliasCode_20
   standardCode:
@@ -38,94 +38,94 @@ studyPhase:
     codeSystemVersion: 24.04e
     decode: Not Applicable
 characteristics:
-  - id: Code_107
-    code: C16136
+- id: Code_107
+  code: C16136
+  codeSystem: ncit
+  codeSystemVersion: 24.04e
+  decode: Natural History and Cofactors Study
+analysisPopulations:
+- id: AnalysisPopulation_1
+  name: Full Analysis Set
+  text: All subjects enrolled with at least one follow-up observation.
+  subsetOfIds:
+  - StudyCohort_1
+  - StudyCohort_2
+arms:
+- id: StudyArm_Cohort_1
+  name: Standard Care Cohort
+  label: SOC
+  description: Subjects receiving standard-of-care metformin-based therapy.
+  type:
+    id: Code_92
+    code: C174266
     codeSystem: ncit
     codeSystemVersion: 24.04e
-    decode: Natural History and Cofactors Study
-analysisPopulations:
-  - id: AnalysisPopulation_1
-    name: Full Analysis Set
-    text: All subjects enrolled with at least one follow-up observation.
-    subsetOfIds:
-      - StudyCohort_1
-      - StudyCohort_2
-arms:
-  - id: StudyArm_Cohort_1
-    name: Standard Care Cohort
-    label: SOC
-    description: Subjects receiving standard-of-care metformin-based therapy.
-    type:
-      id: Code_92
-      code: C174266
-      codeSystem: ncit
-      codeSystemVersion: 24.04e
-      decode: Investigational Arm
-    dataOriginType:
-      id: Code_93
-      code: C188866
-      codeSystem: ncit
-      codeSystemVersion: 24.04e
-      decode: Data Generated Within Study
-    dataOriginDescription: Data origin collected from subjects.
+    decode: Investigational Arm
+  dataOriginType:
+    id: Code_93
+    code: C188866
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Data Generated Within Study
+  dataOriginDescription: Data origin collected from subjects.
 epochs:
-  - id: StudyEpoch_1
-    name: Baseline
-    label: Baseline
-    type:
-      id: Code_96
-      code: C202487
-      codeSystem: ncit
-      codeSystemVersion: 24.04e
-      decode: Screening Epoch
-  - id: StudyEpoch_2
-    name: Observation
-    label: Observation Period
-    type:
-      id: Code_98
-      code: C165873
-      codeSystem: ncit
-      codeSystemVersion: 24.04e
-      decode: Observation Study Epoch
+- id: StudyEpoch_1
+  name: Baseline
+  label: Baseline
+  type:
+    id: Code_96
+    code: C202487
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Screening Epoch
+- id: StudyEpoch_2
+  name: Observation
+  label: Observation Period
+  type:
+    id: Code_98
+    code: C165873
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Observation Study Epoch
 studyCells:
-  - id: StudyCell_1
-    armId: StudyArm_Cohort_1
-    epochId: StudyEpoch_2
-    elementIds:
-      - StudyElement_1
+- id: StudyCell_1
+  armId: StudyArm_Cohort_1
+  epochId: StudyEpoch_2
+  elementIds:
+  - StudyElement_1
 objectives:
-  - id: Objective_1
-    name: Primary Objective
+- id: Objective_1
+  name: Primary Objective
+  level:
+    id: Code_207
+    code: C85826
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Primary Objective
+  text: To evaluate the incidence of major adverse cardiovascular events (MACE) over
+    24 months.
+  endpoints:
+  - id: Endpoint_1
+    name: MACE Incidence
+    text: Composite of cardiovascular death, non-fatal MI, or non-fatal stroke.
     level:
-      id: Code_207
-      code: C85826
+      id: Code_206
+      code: C94496
       codeSystem: ncit
       codeSystemVersion: 24.04e
-      decode: Primary Objective
-    text: To evaluate the incidence of major adverse cardiovascular events (MACE)
-      over 24 months.
-    endpoints:
-      - id: Endpoint_1
-        name: MACE Incidence
-        text: Composite of cardiovascular death, non-fatal MI, or non-fatal stroke.
-        level:
-          id: Code_206
-          code: C94496
-          codeSystem: ncit
-          codeSystemVersion: 24.04e
-          decode: Primary Endpoint
-        purpose: Primary purpose
+      decode: Primary Endpoint
+    purpose: Primary purpose
 eligibilityCriteria:
-  - id: EC-Obs-1
-    identifier: OBS-EC-1
-    name: Obs EC
-    category:
-      id: code-ec-1
-      code: C25532
-      codeSystem: ncit
-      codeSystemVersion: 24.04e
-      decode: Inclusion Criteria
-    criterionItemId: EC-Item-1
+- id: EC-Obs-1
+  identifier: OBS-EC-1
+  name: Obs EC
+  category:
+    id: code-ec-1
+    code: C25532
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Inclusion Criteria
+  criterionItemId: EC-Item-1
 population:
   id: Pop-Obs-1
   name: Obs Pop

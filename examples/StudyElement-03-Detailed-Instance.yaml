@@ -4,5 +4,5 @@ label: Follow-up
 description: The period after the treatment period during which subjects are followed
   for safety and efficacy.
 notes:
-  - id: NOTE-SELM-1
-    text: Follow-up visits are scheduled every 3 months.
+- id: NOTE-SELM-1
+  text: Follow-up visits are scheduled every 3 months.

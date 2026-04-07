@@ -198,4 +198,8 @@ overrides:
   slots:
     instanceType:
       ignore: true
+    extensionAttributes:
+      ignore: true
+      except_classes:
+        - ExtensionAttribute
   refs: {}

@@ -8,5 +8,5 @@ type:
   codeSystemVersion: 24.04e
   decode: Study Subject Safety
 notes:
-  - id: note-amendment-impact-01
-    text: The impact assessment was reviewed by the protocol governance team.
+- id: note-amendment-impact-01
+  text: The impact assessment was reviewed by the protocol governance team.

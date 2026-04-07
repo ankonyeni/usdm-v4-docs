@@ -29,7 +29,3 @@ forGeographicScope:
       codeSystem: ISO3166-1-alpha-3
       codeSystemVersion: '2020'
       decode: United States of America
-extensionAttributes:
-  - id: ext-subject-enrollment-source
-    url: https://example.org/usdm/extensions/allocation-source
-    valueString: Country-specific amendment allocation

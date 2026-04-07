@@ -2,8 +2,8 @@ id: BC_Detailed_001
 name: Prespecified Adverse Event
 label: Solicited AE
 synonyms:
-  - Adverse Event
-  - Solicited Adverse Event
+- Adverse Event
+- Solicited Adverse Event
 reference: https://evsexplore.semantics.cancer.gov/evsexplore/search?terminology=ncit&term=C179175
 code:
   id: AliasCode_BC_1
@@ -14,61 +14,61 @@ code:
     codeSystemVersion: 24.04e
     decode: Solicited Adverse Event
 notes:
-  - id: Comment_BC_1
-    text: This concept captures adverse events that were specifically solicited.
-    codes:
-      - id: Code_Comment_1
-        code: C42614
-        codeSystem: ncit
-        codeSystemVersion: 24.04e
-        decode: Comment
+- id: Comment_BC_1
+  text: This concept captures adverse events that were specifically solicited.
+  codes:
+  - id: Code_Comment_1
+    code: C42614
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Comment
 properties:
-  - id: BCP_1
-    name: AETERM
-    label: Reported Term
-    isRequired: true
+- id: BCP_1
+  name: AETERM
+  label: Reported Term
+  isRequired: true
+  isEnabled: true
+  datatype: text
+  code:
+    id: AliasCode_BCP_1
+    standardCode:
+      id: Code_BCP_1
+      code: C78541
+      codeSystem: ncit
+      codeSystemVersion: 24.04e
+      decode: Adverse Event Verbatim Description
+- id: BCP_2
+  name: AESER
+  label: Serious Event
+  isRequired: true
+  isEnabled: true
+  datatype: text
+  code:
+    id: AliasCode_BCP_2
+    standardCode:
+      id: Code_BCP_2
+      code: C53252
+      codeSystem: ncit
+      codeSystemVersion: 24.04e
+      decode: Seriousness of Adverse Event
+  responseCodes:
+  - id: RC_1
+    name: No Response
+    label: 'False'
     isEnabled: true
-    datatype: text
     code:
-      id: AliasCode_BCP_1
-      standardCode:
-        id: Code_BCP_1
-        code: C78541
-        codeSystem: ncit
-        codeSystemVersion: 24.04e
-        decode: Adverse Event Verbatim Description
-  - id: BCP_2
-    name: AESER
-    label: Serious Event
-    isRequired: true
+      id: Code_RC_1
+      code: C49487
+      codeSystem: ncit
+      codeSystemVersion: 24.04e
+      decode: 'False'
+  - id: RC_2
+    name: Yes Response
+    label: 'True'
     isEnabled: true
-    datatype: text
     code:
-      id: AliasCode_BCP_2
-      standardCode:
-        id: Code_BCP_2
-        code: C53252
-        codeSystem: ncit
-        codeSystemVersion: 24.04e
-        decode: Seriousness of Adverse Event
-    responseCodes:
-      - id: RC_1
-        name: No Response
-        label: 'False'
-        isEnabled: true
-        code:
-          id: Code_RC_1
-          code: C49487
-          codeSystem: ncit
-          codeSystemVersion: 24.04e
-          decode: 'False'
-      - id: RC_2
-        name: Yes Response
-        label: 'True'
-        isEnabled: true
-        code:
-          id: Code_RC_2
-          code: C49488
-          codeSystem: ncit
-          codeSystemVersion: 24.04e
-          decode: 'True'
+      id: Code_RC_2
+      code: C49488
+      codeSystem: ncit
+      codeSystemVersion: 24.04e
+      decode: 'True'

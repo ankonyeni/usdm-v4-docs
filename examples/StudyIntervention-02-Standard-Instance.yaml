@@ -15,8 +15,8 @@ type:
   codeSystem: ncit
   codeSystemVersion: 24.04e
 codes:
-  - id: SI-CODE-002
-    code: C49648
-    decode: Placebo Control
-    codeSystem: ncit
-    codeSystemVersion: 24.04e
+- id: SI-CODE-002
+  code: C49648
+  decode: Placebo Control
+  codeSystem: ncit
+  codeSystemVersion: 24.04e

@@ -14,59 +14,59 @@ language:
   codeSystemVersion: 24.04e
   decode: English
 versions:
-  - id: StudyDefinitionDocumentVersion_1
-    status:
-      id: Code_19
-      code: C85255
+- id: StudyDefinitionDocumentVersion_1
+  status:
+    id: Code_19
+    code: C85255
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Draft
+  version: '1'
+  dateValues:
+  - id: GovernanceDate_2
+    name: Protocol Approval
+    label: Protocol Approval
+    description: Protocol document approval date
+    type:
+      id: Code_29
+      code: C207598
       codeSystem: ncit
       codeSystemVersion: 24.04e
-      decode: Draft
-    version: '1'
-    dateValues:
-      - id: GovernanceDate_2
-        name: Protocol Approval
-        label: Protocol Approval
-        description: Protocol document approval date
-        type:
-          id: Code_29
-          code: C207598
-          codeSystem: ncit
-          codeSystemVersion: 24.04e
-          decode: Protocol Effective Date
-        dateValue: '2023-01-01'
-        geographicScopes:
-          - id: GeographicScope_5
-            type:
-              id: Code_30
-              code: C68846
-              codeSystem: ncit
-              codeSystemVersion: 24.04e
-              decode: Global
-    contents:
-      - id: NarrativeContent_1
-        name: SECTION 0
-        sectionNumber: '0'
-        sectionTitle: TITLE PAGE
-        displaySectionTitle: false
-        displaySectionNumber: false
-        contentItemId: NarrativeContentItem_1
-        nextId: NarrativeContent_2
-      - id: NarrativeContent_2
-        name: SECTION 1
-        sectionNumber: '1'
-        sectionTitle: PROTOCOL SUMMARY
-        displaySectionTitle: true
-        displaySectionNumber: true
-        contentItemId: NarrativeContentItem_6
-        previousId: NarrativeContent_1
-        nextId: NarrativeContent_3
-        childIds:
-          - NarrativeContent_3
-          - NarrativeContent_4
-          - NarrativeContent_5
+      decode: Protocol Effective Date
+    dateValue: '2023-01-01'
+    geographicScopes:
+    - id: GeographicScope_5
+      type:
+        id: Code_30
+        code: C68846
+        codeSystem: ncit
+        codeSystemVersion: 24.04e
+        decode: Global
+  contents:
+  - id: NarrativeContent_1
+    name: SECTION 0
+    sectionNumber: '0'
+    sectionTitle: TITLE PAGE
+    displaySectionTitle: false
+    displaySectionNumber: false
+    contentItemId: NarrativeContentItem_1
+    nextId: NarrativeContent_2
+  - id: NarrativeContent_2
+    name: SECTION 1
+    sectionNumber: '1'
+    sectionTitle: PROTOCOL SUMMARY
+    displaySectionTitle: true
+    displaySectionNumber: true
+    contentItemId: NarrativeContentItem_6
+    previousId: NarrativeContent_1
+    nextId: NarrativeContent_3
+    childIds:
+    - NarrativeContent_3
+    - NarrativeContent_4
+    - NarrativeContent_5
 description: Protocol document with version history and structured narrative content
   sections.
 notes:
-  - id: note-protocol-document-01
-    text: This example shows how a protocol document can reference a structured document
-      version.
+- id: note-protocol-document-01
+  text: This example shows how a protocol document can reference a structured document
+    version.

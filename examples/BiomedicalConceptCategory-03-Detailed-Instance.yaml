@@ -11,11 +11,11 @@ code:
     codeSystemVersion: 24.04e
     decode: Personal Attribute
 notes:
-  - id: CommentAnnot_SC_001
-    text: This category includes demographics and baseline characteristics.
+- id: CommentAnnot_SC_001
+  text: This category includes demographics and baseline characteristics.
 memberIds:
-  - BC-001
-  - BC-002
+- BC-001
+- BC-002
 childIds:
-  - BCC-001
-  - BCC-002
+- BCC-001
+- BCC-002

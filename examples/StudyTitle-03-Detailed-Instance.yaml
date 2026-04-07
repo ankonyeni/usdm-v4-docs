@@ -11,7 +11,3 @@ text: 'A Phase 3, Randomized, Double-Blind, Placebo-Controlled, Multicenter  Stu
   Psoriasis who are Candidates  for Systemic Therapy or Phototherapy.
 
   '
-extensionAttributes:
-  - id: ext-study-title-audience
-    url: https://example.org/usdm/extensions/title-audience
-    valueString: Regulatory submission

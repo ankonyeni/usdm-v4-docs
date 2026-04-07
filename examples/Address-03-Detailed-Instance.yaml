@@ -2,9 +2,9 @@ id: Address_Det_01
 text: Clinical Research Center, Suite 400, 456 Innovation Way, Cambridge, MA 02138,
   USA
 lines:
-  - Clinical Research Center
-  - Suite 400
-  - 456 Innovation Way
+- Clinical Research Center
+- Suite 400
+- 456 Innovation Way
 city: Cambridge
 state: MA
 district: Middlesex County

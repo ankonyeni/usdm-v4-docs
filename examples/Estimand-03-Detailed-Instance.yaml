@@ -5,20 +5,20 @@ description: Comparison of mean pain scores assuming rescue medication was not u
 populationSummary: Mean change in VAS pain score from baseline to 24 hours post-dose
   in patients with chronic pain.
 notes:
-  - id: note-est-03
-    text: This estimand addresses the efficacy in a setting where rescue options are
-      restricted.
+- id: note-est-03
+  text: This estimand addresses the efficacy in a setting where rescue options are
+    restricted.
 analysisPopulationId: pop-chronic-pain-pts
 variableOfInterestId: endpoint-vas-score-24h
 intercurrentEvents:
-  - id: ice-003
-    name: Use of Prohibited Rescue Medication
-    text: Use of prohibited rescue medication for pain management.
-    strategy: Hypothetical strategy assuming rescue medication was not taken
-  - id: ice-004
-    name: Treatment Discontinuation due to Adverse Events
-    text: Treatment discontinuation due to non-fatal adverse events.
-    strategy: While-on-treatment strategy for discontinuation due to adverse events
+- id: ice-003
+  name: Use of Prohibited Rescue Medication
+  text: Use of prohibited rescue medication for pain management.
+  strategy: Hypothetical strategy assuming rescue medication was not taken
+- id: ice-004
+  name: Treatment Discontinuation due to Adverse Events
+  text: Treatment discontinuation due to non-fatal adverse events.
+  strategy: While-on-treatment strategy for discontinuation due to adverse events
 interventionIds:
-  - trt-analgesic-01
-  - trt-placebo-01
+- trt-analgesic-01
+- trt-placebo-01

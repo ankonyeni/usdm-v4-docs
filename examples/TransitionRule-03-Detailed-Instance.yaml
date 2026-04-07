@@ -3,7 +3,3 @@ name: ELEMENT_END_RULE_1
 label: Screening Complete
 description: Transition to baseline after all screening activities are complete.
 text: Screened
-extensionAttributes:
-  - id: ext-transition-rule-kind
-    url: https://example.org/usdm/extensions/rule-kind
-    valueString: Operational workflow rule

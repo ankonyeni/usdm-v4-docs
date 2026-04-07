@@ -54,12 +54,6 @@ classes:
         inlined_as_list: true
         exact_mappings:
         - ncit:C215570
-      extensionAttributes:
-        range: ExtensionAttribute
-        required: false
-        multivalued: true
-        inlined: true
-        inlined_as_list: true
   Activity:
     title: Study Activity
     description: An action, undertaking, or event, which is anticipated to be performed
@@ -163,12 +157,6 @@ classes:
         required: false
         multivalued: true
         inlined: false
-      extensionAttributes:
-        range: ExtensionAttribute
-        required: false
-        multivalued: true
-        inlined: true
-        inlined_as_list: true
   Address:
     title: Address
     description: A standardized representation of the location of a person, business,
@@ -240,12 +228,6 @@ classes:
         inlined: true
         exact_mappings:
         - ncit:C25464
-      extensionAttributes:
-        range: ExtensionAttribute
-        required: false
-        multivalued: true
-        inlined: true
-        inlined_as_list: true
   AdministrableProduct:
     title: Administrable Product
     description: Any study product that is formulated and presented in the form that
@@ -352,12 +334,6 @@ classes:
         multivalued: true
         inlined: true
         inlined_as_list: true
-      extensionAttributes:
-        range: ExtensionAttribute
-        required: false
-        multivalued: true
-        inlined: true
-        inlined_as_list: true
   AdministrableProductIdentifier:
     title: Administrable Product Identifier
     description: A sequence of characters used to identify, name, or characterize
@@ -366,13 +342,6 @@ classes:
     is_a: Identifier
     exact_mappings:
     - ncit:C215493
-    attributes:
-      extensionAttributes:
-        range: ExtensionAttribute
-        required: false
-        multivalued: true
-        inlined: true
-        inlined_as_list: true
   AdministrableProductProperty:
     title: Administrable Product Property
     description: A characteristic from a set of characteristics used to define an
@@ -418,12 +387,6 @@ classes:
         inlined: true
         exact_mappings:
         - ncit:C215584
-      extensionAttributes:
-        range: ExtensionAttribute
-        required: false
-        multivalued: true
-        inlined: true
-        inlined_as_list: true
   Administration:
     title: Administration
     description: The act of dispensing, applying, or tendering a product, agent, or
@@ -519,12 +482,6 @@ classes:
         range: MedicalDevice
         required: false
         inlined: false
-      extensionAttributes:
-        range: ExtensionAttribute
-        required: false
-        multivalued: true
-        inlined: true
-        inlined_as_list: true
   AliasCode:
     title: Alias Code
     description: An alternative symbol or combination of symbols which is assigned
@@ -557,12 +514,6 @@ classes:
         inlined_as_list: true
         exact_mappings:
         - ncit:C215529
-      extensionAttributes:
-        range: ExtensionAttribute
-        required: false
-        multivalued: true
-        inlined: true
-        inlined_as_list: true
   AnalysisPopulation:
     title: Analysis Population
     description: A target study population on which an analysis is performed. These
@@ -626,12 +577,6 @@ classes:
         required: false
         multivalued: true
         inlined: false
-      extensionAttributes:
-        range: ExtensionAttribute
-        required: false
-        multivalued: true
-        inlined: true
-        inlined_as_list: true
   AssignedPerson:
     title: Assigned Person
     description: An individual person who is allotted or appointed to a particular
@@ -690,12 +635,6 @@ classes:
         range: Organization
         required: false
         inlined: false
-      extensionAttributes:
-        range: ExtensionAttribute
-        required: false
-        multivalued: true
-        inlined: true
-        inlined_as_list: true
   BiomedicalConcept:
     title: Biomedical Concept
     description: A unit of biomedical knowledge created from a unique combination
@@ -769,12 +708,6 @@ classes:
         multivalued: true
         inlined: true
         inlined_as_list: true
-      extensionAttributes:
-        range: ExtensionAttribute
-        required: false
-        multivalued: true
-        inlined: true
-        inlined_as_list: true
   BiomedicalConceptCategory:
     title: Biomedical Concept Category
     description: A grouping of biomedical concepts based on some commonality or by
@@ -844,12 +777,6 @@ classes:
         required: false
         multivalued: true
         inlined: false
-      extensionAttributes:
-        range: ExtensionAttribute
-        required: false
-        multivalued: true
-        inlined: true
-        inlined_as_list: true
   BiomedicalConceptProperty:
     title: Biomedical Concept Property
     description: A characteristic from a set of characteristics used to define a biomedical
@@ -931,12 +858,6 @@ classes:
         multivalued: true
         inlined: true
         inlined_as_list: true
-      extensionAttributes:
-        range: ExtensionAttribute
-        required: false
-        multivalued: true
-        inlined: true
-        inlined_as_list: true
   BiomedicalConceptSurrogate:
     title: Biomedical Concept Surrogate
     description: A concept that substitutes for a standard biomedical concept from
@@ -990,12 +911,6 @@ classes:
         inlined_as_list: true
         exact_mappings:
         - ncit:C215532
-      extensionAttributes:
-        range: ExtensionAttribute
-        required: false
-        multivalued: true
-        inlined: true
-        inlined_as_list: true
   BiospecimenRetention:
     title: Biospecimen Retention
     description: The continued possession, cataloging, and storage of collected biological
@@ -1044,12 +959,6 @@ classes:
         required: false
         exact_mappings:
         - ncit:C127777
-      extensionAttributes:
-        range: ExtensionAttribute
-        required: false
-        multivalued: true
-        inlined: true
-        inlined_as_list: true
   Characteristic:
     title: Characteristic
     description: The distinguishing qualities or prominent aspects of an entity.
@@ -1057,13 +966,6 @@ classes:
     is_a: SyntaxTemplate
     exact_mappings:
     - ncit:C25447
-    attributes:
-      extensionAttributes:
-        range: ExtensionAttribute
-        required: false
-        multivalued: true
-        inlined: true
-        inlined_as_list: true
   Code:
     title: Code
     description: A symbol or combination of symbols which is assigned to the members
@@ -1106,12 +1008,6 @@ classes:
         required: true
         exact_mappings:
         - ncit:C188861
-      extensionAttributes:
-        range: ExtensionAttribute
-        required: false
-        multivalued: true
-        inlined: true
-        inlined_as_list: true
   CommentAnnotation:
     title: Comment Annotation
     description: An explanatory or critical comment, or other in-context information
@@ -1144,12 +1040,6 @@ classes:
         inlined_as_list: true
         exact_mappings:
         - ncit:C215556
-      extensionAttributes:
-        range: ExtensionAttribute
-        required: false
-        multivalued: true
-        inlined: true
-        inlined_as_list: true
   Condition:
     title: Condition
     description: A state of being.
@@ -1182,12 +1072,6 @@ classes:
         required: false
         multivalued: true
         inlined: false
-      extensionAttributes:
-        range: ExtensionAttribute
-        required: false
-        multivalued: true
-        inlined: true
-        inlined_as_list: true
   ConditionAssignment:
     title: Condition Assignment
     description: An allotting or appointment to a condition or set of conditions that
@@ -1215,12 +1099,6 @@ classes:
         range: ScheduledInstance
         required: true
         inlined: false
-      extensionAttributes:
-        range: ExtensionAttribute
-        required: false
-        multivalued: true
-        inlined: true
-        inlined_as_list: true
   DocumentContentReference:
     title: Document Content Reference
     description: A citation pointing to the location of specific content within a
@@ -1256,12 +1134,6 @@ classes:
         range: StudyDefinitionDocument
         required: true
         inlined: false
-      extensionAttributes:
-        range: ExtensionAttribute
-        required: false
-        multivalued: true
-        inlined: true
-        inlined_as_list: true
   Duration:
     title: Duration
     description: The length of time during which something continues.
@@ -1305,12 +1177,6 @@ classes:
         required: false
         exact_mappings:
         - ncit:C217010
-      extensionAttributes:
-        range: ExtensionAttribute
-        required: false
-        multivalued: true
-        inlined: true
-        inlined_as_list: true
   EligibilityCriterion:
     title: Study Eligibility Criterion
     description: Characteristics which are necessary to allow a subject to participate
@@ -1392,12 +1258,6 @@ classes:
         range: EligibilityCriterion
         required: false
         inlined: false
-      extensionAttributes:
-        range: ExtensionAttribute
-        required: false
-        multivalued: true
-        inlined: true
-        inlined_as_list: true
   EligibilityCriterionItem:
     title: Eligibility Criterion Item
     description: An individual item within the container that holds an instance of
@@ -1406,13 +1266,6 @@ classes:
     is_a: SyntaxTemplate
     exact_mappings:
     - ncit:C215506
-    attributes:
-      extensionAttributes:
-        range: ExtensionAttribute
-        required: false
-        multivalued: true
-        inlined: true
-        inlined_as_list: true
   Encounter:
     title: Study Encounter
     description: Any physical or virtual contact between two or more parties involved
@@ -1519,12 +1372,6 @@ classes:
         range: Encounter
         required: false
         inlined: false
-      extensionAttributes:
-        range: ExtensionAttribute
-        required: false
-        multivalued: true
-        inlined: true
-        inlined_as_list: true
   Endpoint:
     title: Study Endpoint
     description: 'A defined variable intended to reflect an outcome of interest that
@@ -1554,12 +1401,6 @@ classes:
         required: true
         exact_mappings:
         - ncit:C188825
-      extensionAttributes:
-        range: ExtensionAttribute
-        required: false
-        multivalued: true
-        inlined: true
-        inlined_as_list: true
   Estimand:
     title: Estimand
     description: A precise description of the treatment effect reflecting the clinical
@@ -1645,12 +1486,6 @@ classes:
         required: true
         multivalued: true
         inlined: false
-      extensionAttributes:
-        range: ExtensionAttribute
-        required: false
-        multivalued: true
-        inlined: true
-        inlined_as_list: true
   ExtensionAttribute:
     class_uri: usdm:ExtensionAttribute
     attributes:
@@ -1709,12 +1544,6 @@ classes:
       url:
         range: string
         required: true
-      extensionAttributes:
-        range: ExtensionAttribute
-        required: true
-        multivalued: true
-        inlined: true
-        inlined_as_list: true
   GeographicScope:
     title: Geographic Scope
     description: The extent or range related to the physical location of an entity.
@@ -1743,12 +1572,6 @@ classes:
         inlined: true
         exact_mappings:
         - ncit:C207494
-      extensionAttributes:
-        range: ExtensionAttribute
-        required: false
-        multivalued: true
-        inlined: true
-        inlined_as_list: true
   GovernanceDate:
     title: Study Governance Date
     description: Any of the dates associated with event milestones within a clinical
@@ -1805,12 +1628,6 @@ classes:
           governance date.
         range: GeographicScope
         required: true
-        multivalued: true
-        inlined: true
-        inlined_as_list: true
-      extensionAttributes:
-        range: ExtensionAttribute
-        required: false
         multivalued: true
         inlined: true
         inlined_as_list: true
@@ -1907,12 +1724,6 @@ classes:
         inlined_as_list: true
         exact_mappings:
         - ncit:C215509
-      extensionAttributes:
-        range: ExtensionAttribute
-        required: false
-        multivalued: true
-        inlined: true
-        inlined_as_list: true
   Ingredient:
     title: Ingredient
     description: Any component that constitutes a part of a compounded substance or
@@ -1940,12 +1751,6 @@ classes:
         range: Substance
         required: true
         inlined: true
-      extensionAttributes:
-        range: ExtensionAttribute
-        required: false
-        multivalued: true
-        inlined: true
-        inlined_as_list: true
   IntercurrentEvent:
     title: Intercurrent Event
     description: An event(s) occurring after treatment initiation that affects either
@@ -1964,12 +1769,6 @@ classes:
         required: true
         exact_mappings:
         - ncit:C188857
-      extensionAttributes:
-        range: ExtensionAttribute
-        required: false
-        multivalued: true
-        inlined: true
-        inlined_as_list: true
   InterventionalStudyDesign:
     title: Interventional Study Design
     description: The strategy that specifies the structure of an interventional trial
@@ -2022,12 +1821,6 @@ classes:
         inlined_as_list: true
         exact_mappings:
         - ncit:C49652
-      extensionAttributes:
-        range: ExtensionAttribute
-        required: false
-        multivalued: true
-        inlined: true
-        inlined_as_list: true
       analysisPopulations:
         range: AnalysisPopulation
         required: false
@@ -2062,12 +1855,6 @@ classes:
         required: true
         exact_mappings:
         - ncit:C215554
-      extensionAttributes:
-        range: ExtensionAttribute
-        required: false
-        multivalued: true
-        inlined: true
-        inlined_as_list: true
   MedicalDevice:
     title: Medical Device
     description: Any instrument, apparatus, implement, machine, appliance, implant,
@@ -2156,12 +1943,6 @@ classes:
         multivalued: true
         inlined: true
         inlined_as_list: true
-      extensionAttributes:
-        range: ExtensionAttribute
-        required: false
-        multivalued: true
-        inlined: true
-        inlined_as_list: true
   MedicalDeviceIdentifier:
     title: Medical Device Identifier
     description: A sequence of characters used to identify, name, or characterize
@@ -2179,12 +1960,6 @@ classes:
         inlined: true
         exact_mappings:
         - ncit:C215621
-      extensionAttributes:
-        range: ExtensionAttribute
-        required: false
-        multivalued: true
-        inlined: true
-        inlined_as_list: true
   NarrativeContent:
     title: Narrative Content
     description: The container that holds an instance of unstructured text and which
@@ -2265,12 +2040,6 @@ classes:
         required: false
         multivalued: true
         inlined: false
-      extensionAttributes:
-        range: ExtensionAttribute
-        required: false
-        multivalued: true
-        inlined: true
-        inlined_as_list: true
   NarrativeContentItem:
     title: Narrative Content Item
     description: An individual item within the container that holds an instance of
@@ -2300,12 +2069,6 @@ classes:
         required: true
         exact_mappings:
         - ncit:C215558
-      extensionAttributes:
-        range: ExtensionAttribute
-        required: false
-        multivalued: true
-        inlined: true
-        inlined_as_list: true
   Objective:
     title: Study Objective
     description: The reason for performing a study in terms of the scientific questions
@@ -2328,12 +2091,6 @@ classes:
         description: A USDM relationship between the Objective and Endpoint classes
           which identifies the set of endpoints associated with the study objective.
         range: Endpoint
-        required: false
-        multivalued: true
-        inlined: true
-        inlined_as_list: true
-      extensionAttributes:
-        range: ExtensionAttribute
         required: false
         multivalued: true
         inlined: true
@@ -2386,12 +2143,6 @@ classes:
         inlined: true
         exact_mappings:
         - ncit:C126067
-      extensionAttributes:
-        range: ExtensionAttribute
-        required: false
-        multivalued: true
-        inlined: true
-        inlined_as_list: true
       analysisPopulations:
         range: AnalysisPopulation
         required: false
@@ -2467,12 +2218,6 @@ classes:
         multivalued: true
         inlined: true
         inlined_as_list: true
-      extensionAttributes:
-        range: ExtensionAttribute
-        required: false
-        multivalued: true
-        inlined: true
-        inlined_as_list: true
   ParameterMap:
     title: Parameter Map
     description: The paired name and value for a given parameter.
@@ -2500,12 +2245,6 @@ classes:
         required: true
         exact_mappings:
         - ncit:C207516
-      extensionAttributes:
-        range: ExtensionAttribute
-        required: false
-        multivalued: true
-        inlined: true
-        inlined_as_list: true
   PersonName:
     title: Person Name
     description: A word or group of words indicating the identity of a person usually
@@ -2562,12 +2301,6 @@ classes:
         multivalued: true
         exact_mappings:
         - ncit:C217003
-      extensionAttributes:
-        range: ExtensionAttribute
-        required: false
-        multivalued: true
-        inlined: true
-        inlined_as_list: true
   PopulationDefinition:
     title: Population Definition
     description: A concise explanation of the meaning of a population.
@@ -2733,12 +2466,6 @@ classes:
         range: StudyIntervention
         required: false
         inlined: false
-      extensionAttributes:
-        range: ExtensionAttribute
-        required: false
-        multivalued: true
-        inlined: true
-        inlined_as_list: true
   ProductOrganizationRole:
     title: Product Organization Role
     description: A designation that identifies the function of an organization within
@@ -2800,12 +2527,6 @@ classes:
         range: Organization
         required: true
         inlined: false
-      extensionAttributes:
-        range: ExtensionAttribute
-        required: false
-        multivalued: true
-        inlined: true
-        inlined_as_list: true
   Quantity:
     title: Quantity
     description: How much there is of something that can be measured; the total amount
@@ -2830,12 +2551,6 @@ classes:
         inlined: true
         exact_mappings:
         - ncit:C44258
-      extensionAttributes:
-        range: ExtensionAttribute
-        required: false
-        multivalued: true
-        inlined: true
-        inlined_as_list: true
   QuantityRange:
     title: Quantity or Range
     description: The total amount (number), or the limits (minimum and maximum) of
@@ -2881,12 +2596,6 @@ classes:
         required: true
         exact_mappings:
         - ncit:C207525
-      extensionAttributes:
-        range: ExtensionAttribute
-        required: false
-        multivalued: true
-        inlined: true
-        inlined_as_list: true
   ReferenceIdentifier:
     title: Reference Identifier
     description: A sequence of characters used to identify, name, or characterize
@@ -2904,12 +2613,6 @@ classes:
         inlined: true
         exact_mappings:
         - ncit:C215571
-      extensionAttributes:
-        range: ExtensionAttribute
-        required: false
-        multivalued: true
-        inlined: true
-        inlined_as_list: true
   ResponseCode:
     title: Response Code
     description: A symbol or combination of symbols representing the response to the
@@ -2953,12 +2656,6 @@ classes:
         inlined: true
         exact_mappings:
         - ncit:C217013
-      extensionAttributes:
-        range: ExtensionAttribute
-        required: false
-        multivalued: true
-        inlined: true
-        inlined_as_list: true
   ScheduleTimeline:
     title: Schedule Timeline
     description: A chronological schedule of planned temporal events.
@@ -3050,12 +2747,6 @@ classes:
         multivalued: true
         inlined: true
         inlined_as_list: true
-      extensionAttributes:
-        range: ExtensionAttribute
-        required: false
-        multivalued: true
-        inlined: true
-        inlined_as_list: true
   ScheduleTimelineExit:
     title: Schedule Timeline Exit
     description: To go out of or leave the schedule timeline.
@@ -3067,12 +2758,6 @@ classes:
         range: string
         required: true
         identifier: true
-      extensionAttributes:
-        range: ExtensionAttribute
-        required: false
-        multivalued: true
-        inlined: true
-        inlined_as_list: true
   ScheduledActivityInstance:
     title: Scheduled Activity Instance
     description: A scheduled occurrence of an activity event.
@@ -3110,12 +2795,6 @@ classes:
         range: ScheduleTimelineExit
         required: false
         inlined: false
-      extensionAttributes:
-        range: ExtensionAttribute
-        required: false
-        multivalued: true
-        inlined: true
-        inlined_as_list: true
   ScheduledDecisionInstance:
     title: Scheduled Decision Instance
     description: A scheduled occurrence of a decision event.
@@ -3130,12 +2809,6 @@ classes:
           associated with a scheduled decision instance.
         range: ConditionAssignment
         required: true
-        multivalued: true
-        inlined: true
-        inlined_as_list: true
-      extensionAttributes:
-        range: ExtensionAttribute
-        required: false
         multivalued: true
         inlined: true
         inlined_as_list: true
@@ -3238,12 +2911,6 @@ classes:
         inlined: true
         exact_mappings:
         - ncit:C80489
-      extensionAttributes:
-        range: ExtensionAttribute
-        required: false
-        multivalued: true
-        inlined: true
-        inlined_as_list: true
   Study:
     title: Clinical Study
     description: 'A clinical study involves research using human volunteers (also
@@ -3293,12 +2960,6 @@ classes:
         description: A USDM relationship between the Study and StudyDefinitionDocument
           classes signifying that the study is documented in a study definition document.
         range: StudyDefinitionDocument
-        required: false
-        multivalued: true
-        inlined: true
-        inlined_as_list: true
-      extensionAttributes:
-        range: ExtensionAttribute
         required: false
         multivalued: true
         inlined: true
@@ -3427,12 +3088,6 @@ classes:
         range: StudyAmendmentReason
         required: true
         inlined: true
-      extensionAttributes:
-        range: ExtensionAttribute
-        required: false
-        multivalued: true
-        inlined: true
-        inlined_as_list: true
   StudyAmendmentImpact:
     title: Study Amendment Impact
     description: The effect or consequence of an amendment on some aspect of the study.
@@ -3478,12 +3133,6 @@ classes:
         inlined_as_list: true
         exact_mappings:
         - ncit:C215613
-      extensionAttributes:
-        range: ExtensionAttribute
-        required: false
-        multivalued: true
-        inlined: true
-        inlined_as_list: true
   StudyAmendmentReason:
     title: Study Amendment Reason
     description: The rationale for the change(s) to, or formal clarification of, a
@@ -3513,12 +3162,6 @@ classes:
         inlined: true
         exact_mappings:
         - ncit:C207540
-      extensionAttributes:
-        range: ExtensionAttribute
-        required: false
-        multivalued: true
-        inlined: true
-        inlined_as_list: true
   StudyArm:
     title: Study Arm
     description: A planned pathway assigned to the subject as they progress through
@@ -3596,12 +3239,6 @@ classes:
         required: false
         multivalued: true
         inlined: false
-      extensionAttributes:
-        range: ExtensionAttribute
-        required: false
-        multivalued: true
-        inlined: true
-        inlined_as_list: true
   StudyCell:
     title: Study Design Cell
     description: A partitioning of a study arm into individual pieces, which are associated
@@ -3633,12 +3270,6 @@ classes:
         required: true
         multivalued: true
         inlined: false
-      extensionAttributes:
-        range: ExtensionAttribute
-        required: false
-        multivalued: true
-        inlined: true
-        inlined_as_list: true
   StudyChange:
     title: Study Change
     description: The act of alteration or modification to a study.
@@ -3697,12 +3328,6 @@ classes:
         multivalued: true
         inlined: true
         inlined_as_list: true
-      extensionAttributes:
-        range: ExtensionAttribute
-        required: false
-        multivalued: true
-        inlined: true
-        inlined_as_list: true
   StudyCohort:
     title: Study Cohort
     description: A group of individuals who share a set of characteristics (e.g.,
@@ -3729,12 +3354,6 @@ classes:
         required: false
         multivalued: true
         inlined: false
-      extensionAttributes:
-        range: ExtensionAttribute
-        required: false
-        multivalued: true
-        inlined: true
-        inlined_as_list: true
   StudyDefinitionDocument:
     title: Study Definition Document
     description: Any physical or electronic document that is related to defining a
@@ -3820,12 +3439,6 @@ classes:
         multivalued: true
         inlined: true
         inlined_as_list: true
-      extensionAttributes:
-        range: ExtensionAttribute
-        required: false
-        multivalued: true
-        inlined: true
-        inlined_as_list: true
   StudyDefinitionDocumentVersion:
     title: Study Definition Document Version
     description: A representation of a particular edition or snapshot of the study
@@ -3880,12 +3493,6 @@ classes:
           and NarrativeContent classes which identifies the set of narrative content
           associated with the version of the study definition document.
         range: NarrativeContent
-        required: false
-        multivalued: true
-        inlined: true
-        inlined_as_list: true
-      extensionAttributes:
-        range: ExtensionAttribute
         required: false
         multivalued: true
         inlined: true
@@ -4142,12 +3749,6 @@ classes:
         multivalued: true
         inlined: true
         inlined_as_list: true
-      extensionAttributes:
-        range: ExtensionAttribute
-        required: false
-        multivalued: true
-        inlined: true
-        inlined_as_list: true
   StudyElement:
     title: Study Design Element
     description: 'A basic building block for time within a clinical study comprising
@@ -4216,12 +3817,6 @@ classes:
         range: TransitionRule
         required: false
         inlined: true
-      extensionAttributes:
-        range: ExtensionAttribute
-        required: false
-        multivalued: true
-        inlined: true
-        inlined_as_list: true
   StudyEpoch:
     title: Study Epoch
     description: A named time period defined in the protocol, wherein a study activity
@@ -4292,12 +3887,6 @@ classes:
         range: StudyEpoch
         required: false
         inlined: false
-      extensionAttributes:
-        range: ExtensionAttribute
-        required: false
-        multivalued: true
-        inlined: true
-        inlined_as_list: true
   StudyIdentifier:
     title: Study Identifier
     description: A sequence of characters used to identify, name, or characterize
@@ -4306,13 +3895,6 @@ classes:
     is_a: Identifier
     exact_mappings:
     - ncit:C83082
-    attributes:
-      extensionAttributes:
-        range: ExtensionAttribute
-        required: false
-        multivalued: true
-        inlined: true
-        inlined_as_list: true
   StudyIntervention:
     title: Study Intervention
     description: Any agent, device, or procedure being tested or used as a reference
@@ -4403,12 +3985,6 @@ classes:
         multivalued: true
         inlined: true
         inlined_as_list: true
-      extensionAttributes:
-        range: ExtensionAttribute
-        required: false
-        multivalued: true
-        inlined: true
-        inlined_as_list: true
   StudyRole:
     title: Study Role
     description: A designation that identifies the function of study personnel or
@@ -4494,12 +4070,6 @@ classes:
         required: false
         multivalued: true
         inlined: false
-      extensionAttributes:
-        range: ExtensionAttribute
-        required: false
-        multivalued: true
-        inlined: true
-        inlined_as_list: true
   StudySite:
     title: Study Site
     description: The location at which a study investigator conducts study activities.
@@ -4541,12 +4111,6 @@ classes:
         inlined: true
         exact_mappings:
         - ncit:C170990
-      extensionAttributes:
-        range: ExtensionAttribute
-        required: false
-        multivalued: true
-        inlined: true
-        inlined_as_list: true
   StudyTitle:
     title: Study Title
     description: The sponsor-defined name of the clinical study.
@@ -4573,12 +4137,6 @@ classes:
         required: true
         exact_mappings:
         - ncit:C207567
-      extensionAttributes:
-        range: ExtensionAttribute
-        required: false
-        multivalued: true
-        inlined: true
-        inlined_as_list: true
   StudyVersion:
     title: Study Version
     description: A plan at a particular point in time for a study.
@@ -4695,12 +4253,6 @@ classes:
           which identifies the set of study titles associated with the study version.
         range: StudyTitle
         required: true
-        multivalued: true
-        inlined: true
-        inlined_as_list: true
-      extensionAttributes:
-        range: ExtensionAttribute
-        required: false
         multivalued: true
         inlined: true
         inlined_as_list: true
@@ -4847,12 +4399,6 @@ classes:
         range: StudySite
         required: false
         inlined: false
-      extensionAttributes:
-        range: ExtensionAttribute
-        required: false
-        multivalued: true
-        inlined: true
-        inlined_as_list: true
   Substance:
     title: Substance
     description: Any matter of defined composition that has discrete existence, whose
@@ -4912,12 +4458,6 @@ classes:
         range: Substance
         required: false
         inlined: true
-      extensionAttributes:
-        range: ExtensionAttribute
-        required: false
-        multivalued: true
-        inlined: true
-        inlined_as_list: true
   SyntaxTemplate:
     title: Syntax Template
     description: A standardized pattern used for the arrangement of words and phrases
@@ -5016,12 +4556,6 @@ classes:
           map entries) associated with a syntax template dictionary.
         range: ParameterMap
         required: true
-        multivalued: true
-        inlined: true
-        inlined_as_list: true
-      extensionAttributes:
-        range: ExtensionAttribute
-        required: false
         multivalued: true
         inlined: true
         inlined_as_list: true
@@ -5132,12 +4666,6 @@ classes:
         range: ScheduledInstance
         required: true
         inlined: false
-      extensionAttributes:
-        range: ExtensionAttribute
-        required: false
-        multivalued: true
-        inlined: true
-        inlined_as_list: true
   TransitionRule:
     title: Transition Rule
     description: A guide that governs the allocation of subjects to operational options
@@ -5181,9 +4709,3 @@ classes:
         required: true
         exact_mappings:
         - ncit:C207589
-      extensionAttributes:
-        range: ExtensionAttribute
-        required: false
-        multivalued: true
-        inlined: true
-        inlined_as_list: true

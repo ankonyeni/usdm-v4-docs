@@ -6,12 +6,12 @@ jobTitle: Principal Investigator
 personName:
   id: PersonName_001
   givenNames:
-    - Jane
+  - Jane
   familyName: Smith
   prefixes:
-    - Dr.
+  - Dr.
   suffixes:
-    - MD
-    - PhD
+  - MD
+  - PhD
   text: Dr. Jane Smith, MD, PhD
 organizationId: Organization_Site_A
