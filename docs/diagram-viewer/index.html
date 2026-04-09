@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagram Viewer - USDM v4</title>
+    <link rel="shortcut icon" href="../img/favicon.ico">
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/fontawesome.min.css" rel="stylesheet">
+    <link href="../css/brands.min.css" rel="stylesheet">
+    <link href="../css/solid.min.css" rel="stylesheet">
+    <link href="../css/v4-font-face.min.css" rel="stylesheet">
+    <link href="../css/base.css" rel="stylesheet">
+    <link href="../stylesheets/site-overrides.css" rel="stylesheet">
+  </head>
+  <body class="diagram-viewer-page">
+    <div class="diagram-viewer-layout">
+      <header class="diagram-viewer-toolbar">
+        <div class="diagram-viewer-toolbar-group">
+          <button type="button" class="diagram-viewer-button" id="diagram-viewer-back">Back</button>
+          <div>
+            <p class="diagram-viewer-eyebrow">Entity Relationship Diagram</p>
+            <h1 class="diagram-viewer-title" id="diagram-viewer-title">Loading diagram...</h1>
+          </div>
+        </div>
+        <div class="diagram-viewer-toolbar-group">
+          <button type="button" class="diagram-viewer-button" id="diagram-viewer-fit">Fit width</button>
+          <button type="button" class="diagram-viewer-button" id="diagram-viewer-zoom-out">-</button>
+          <button type="button" class="diagram-viewer-button" id="diagram-viewer-reset">100%</button>
+          <button type="button" class="diagram-viewer-button" id="diagram-viewer-zoom-in">+</button>
+        </div>
+      </header>
+
+      <main class="diagram-viewer-main">
+        <div class="diagram-viewer-stage" id="diagram-viewer-stage">
+          <div class="diagram-viewer-canvas" id="diagram-viewer-canvas"></div>
+          <section class="diagram-viewer-empty" id="diagram-viewer-empty" hidden>
+            <h2>Diagram unavailable</h2>
+            <p>Open this page from an ER diagram inside the docs so the diagram source can be passed into the viewer.</p>
+          </section>
+        </div>
+        <div class="diagram-viewer-status-bar">
+          <span id="diagram-viewer-status">Preparing diagram...</span>
+        </div>
+      </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+    <script src="../javascripts/mermaid-init.js"></script>
+    <script>
+      (function initializeDiagramViewer() {
+        const docsApi = window.MermaidDocs;
+        const backButton = document.getElementById("diagram-viewer-back");
+        const titleElement = document.getElementById("diagram-viewer-title");
+        const statusElement = document.getElementById("diagram-viewer-status");
+        const fitButton = document.getElementById("diagram-viewer-fit");
+        const zoomInButton = document.getElementById("diagram-viewer-zoom-in");
+        const zoomOutButton = document.getElementById("diagram-viewer-zoom-out");
+        const resetButton = document.getElementById("diagram-viewer-reset");
+        const stage = document.getElementById("diagram-viewer-stage");
+        const canvas = document.getElementById("diagram-viewer-canvas");
+        const emptyState = document.getElementById("diagram-viewer-empty");
+
+        function goBack() {
+          if (window.history.length > 1) {
+            window.history.back();
+            return;
+          }
+
+          window.location.assign("../");
+        }
+
+        function showEmptyState(message) {
+          canvas.hidden = true;
+          emptyState.hidden = false;
+          statusElement.textContent = message;
+          emptyState.querySelector("p").textContent = message;
+        }
+
+        function updateStatus(scale, label) {
+          const percent = `${Math.round(scale * 100)}%`;
+          statusElement.textContent = label ? `${percent} • ${label}` : percent;
+        }
+
+        function initializeZoom(svg) {
+          const viewBox = svg.viewBox && svg.viewBox.baseVal ? svg.viewBox.baseVal : null;
+          const measuredWidth = viewBox && viewBox.width ? viewBox.width : svg.getBoundingClientRect().width;
+          const measuredHeight = viewBox && viewBox.height ? viewBox.height : svg.getBoundingClientRect().height;
+
+          if (!measuredWidth || !measuredHeight) {
+            updateStatus(1, "Unable to measure diagram");
+            return;
+          }
+
+          const state = {
+            activePointerId: null,
+            fitOnResize: true,
+            fitScale: 1,
+            isDragging: false,
+            maxScale: 8,
+            minScale: 0.3,
+            offsetX: 0,
+            offsetY: 0,
+            scale: 1,
+            startClientX: 0,
+            startClientY: 0,
+            startOffsetX: 0,
+            startOffsetY: 0,
+          };
+
+          svg.style.display = "block";
+          svg.style.maxWidth = "none";
+          svg.setAttribute("preserveAspectRatio", "xMinYMin meet");
+
+          function getViewportMetrics() {
+            const computed = window.getComputedStyle(stage);
+            const paddingLeft = parseFloat(computed.paddingLeft || "0");
+            const paddingRight = parseFloat(computed.paddingRight || "0");
+            const paddingTop = parseFloat(computed.paddingTop || "0");
+            const paddingBottom = parseFloat(computed.paddingBottom || "0");
+
+            return {
+              height: Math.max(stage.clientHeight - paddingTop - paddingBottom, 1),
+              paddingBottom,
+              paddingLeft,
+              paddingRight,
+              paddingTop,
+              width: Math.max(stage.clientWidth - paddingLeft - paddingRight, 1),
+            };
+          }
+
+          function getViewportSize() {
+            const { height, width } = getViewportMetrics();
+
+            return { height, width };
+          }
+
+          function getContentSize(scale = state.scale) {
+            return {
+              height: measuredHeight * scale,
+              width: measuredWidth * scale,
+            };
+          }
+
+          function clampOffsets(offsetX, offsetY) {
+            const viewport = getViewportSize();
+            const content = getContentSize();
+            const slackX = Math.max(72, viewport.width * 0.08);
+            const slackY = Math.max(72, viewport.height * 0.08);
+            const centeredX = content.width < viewport.width ? (viewport.width - content.width) / 2 : 0;
+            const centeredY = content.height < viewport.height ? (viewport.height - content.height) / 2 : 0;
+            const minX =
+              content.width < viewport.width
+                ? centeredX - slackX
+                : viewport.width - content.width - slackX;
+            const maxX = content.width < viewport.width ? centeredX + slackX : slackX;
+            const minY =
+              content.height < viewport.height
+                ? centeredY - slackY
+                : viewport.height - content.height - slackY;
+            const maxY = content.height < viewport.height ? centeredY + slackY : slackY;
+
+            return {
+              offsetX: Math.min(maxX, Math.max(minX, offsetX)),
+              offsetY: Math.min(maxY, Math.max(minY, offsetY)),
+            };
+          }
+
+          function renderLayout() {
+            const content = getContentSize();
+            const clamped = clampOffsets(state.offsetX, state.offsetY);
+
+            state.offsetX = clamped.offsetX;
+            state.offsetY = clamped.offsetY;
+            canvas.style.width = `${content.width}px`;
+            canvas.style.height = `${content.height}px`;
+            canvas.style.left = `${state.offsetX}px`;
+            canvas.style.top = `${state.offsetY}px`;
+            svg.style.width = `${content.width}px`;
+            svg.style.height = `${content.height}px`;
+          }
+
+          function updatePanState() {
+            const viewport = getViewportSize();
+            const content = getContentSize();
+            const canPan =
+              state.scale > state.fitScale + 0.01 ||
+              content.width > viewport.width + 4 ||
+              content.height > viewport.height + 4;
+
+            stage.classList.toggle("diagram-viewer-stage--pannable", canPan);
+            if (!canPan) {
+              stage.classList.remove("diagram-viewer-stage--dragging");
+              state.isDragging = false;
+              state.activePointerId = null;
+            }
+          }
+
+          function stopDragging() {
+            if (!state.isDragging) {
+              return;
+            }
+
+            state.isDragging = false;
+            state.activePointerId = null;
+            stage.classList.remove("diagram-viewer-stage--dragging");
+          }
+
+          function applyScale(nextScale, label, options = {}) {
+            const clampedScale = Math.min(state.maxScale, Math.max(state.minScale, nextScale));
+            const viewport = getViewportSize();
+            const focusX = options.focusX ?? viewport.width / 2;
+            const focusY = options.focusY ?? viewport.height / 2;
+            const diagramX = (focusX - state.offsetX) / state.scale;
+            const diagramY = (focusY - state.offsetY) / state.scale;
+
+            state.scale = clampedScale;
+            state.offsetX = focusX - diagramX * clampedScale;
+            state.offsetY = focusY - diagramY * clampedScale;
+            renderLayout();
+            updatePanState();
+            updateStatus(clampedScale, label);
+          }
+
+          function fitToWidth() {
+            const viewport = getViewportSize();
+            const availableWidth = Math.max(viewport.width, 320);
+
+            state.fitOnResize = true;
+            state.fitScale = availableWidth / measuredWidth;
+            state.scale = state.fitScale;
+            state.offsetX = 0;
+            state.offsetY = 0;
+            renderLayout();
+            updatePanState();
+            updateStatus(state.scale, "Fit to width");
+          }
+
+          function resetToActualSize() {
+            const viewport = getViewportSize();
+            const contentWidth = measuredWidth;
+
+            state.fitOnResize = false;
+            state.scale = 1;
+            state.offsetX = contentWidth < viewport.width ? (viewport.width - contentWidth) / 2 : 0;
+            state.offsetY = measuredHeight < viewport.height ? (viewport.height - measuredHeight) / 2 : 0;
+            renderLayout();
+            updatePanState();
+            updateStatus(1, "Actual size");
+          }
+
+          zoomInButton.addEventListener("click", () => {
+            state.fitOnResize = false;
+            applyScale(state.scale * 1.2, "Zoomed in");
+          });
+
+          zoomOutButton.addEventListener("click", () => {
+            state.fitOnResize = false;
+            applyScale(state.scale / 1.2, "Zoomed out");
+          });
+
+          resetButton.addEventListener("click", () => {
+            resetToActualSize();
+          });
+
+          fitButton.addEventListener("click", () => {
+            fitToWidth();
+          });
+
+          stage.addEventListener(
+            "wheel",
+            (event) => {
+              event.preventDefault();
+              stopDragging();
+
+              const metrics = getViewportMetrics();
+              const stageRect = stage.getBoundingClientRect();
+              const focusX = Math.min(
+                metrics.width,
+                Math.max(0, event.clientX - stageRect.left - metrics.paddingLeft),
+              );
+              const focusY = Math.min(
+                metrics.height,
+                Math.max(0, event.clientY - stageRect.top - metrics.paddingTop),
+              );
+              const pixelDelta =
+                event.deltaMode === 1
+                  ? event.deltaY * 16
+                  : event.deltaMode === 2
+                    ? event.deltaY * metrics.height
+                    : event.deltaY;
+              const zoomFactor = Math.exp(-pixelDelta * 0.0015);
+
+              state.fitOnResize = false;
+              applyScale(state.scale * zoomFactor, "Wheel zoom", {
+                focusX,
+                focusY,
+              });
+            },
+            { passive: false },
+          );
+
+          stage.addEventListener("pointerdown", (event) => {
+            if (event.pointerType !== "mouse" || event.button !== 0) {
+              return;
+            }
+
+            if (!stage.classList.contains("diagram-viewer-stage--pannable")) {
+              return;
+            }
+
+            state.isDragging = true;
+            state.activePointerId = event.pointerId;
+            state.startClientX = event.clientX;
+            state.startClientY = event.clientY;
+            state.startOffsetX = state.offsetX;
+            state.startOffsetY = state.offsetY;
+            stage.classList.add("diagram-viewer-stage--dragging");
+            stage.setPointerCapture(event.pointerId);
+            event.preventDefault();
+          });
+
+          stage.addEventListener("pointermove", (event) => {
+            if (!state.isDragging || event.pointerId !== state.activePointerId) {
+              return;
+            }
+
+            const deltaX = event.clientX - state.startClientX;
+            const deltaY = event.clientY - state.startClientY;
+
+            state.offsetX = state.startOffsetX + deltaX;
+            state.offsetY = state.startOffsetY + deltaY;
+            renderLayout();
+          });
+
+          stage.addEventListener("pointerup", (event) => {
+            if (event.pointerId !== state.activePointerId) {
+              return;
+            }
+
+            stopDragging();
+          });
+
+          stage.addEventListener("pointercancel", (event) => {
+            if (event.pointerId !== state.activePointerId) {
+              return;
+            }
+
+            stopDragging();
+          });
+
+          stage.addEventListener("lostpointercapture", () => {
+            stopDragging();
+          });
+
+          window.addEventListener("resize", () => {
+            if (state.fitOnResize) {
+              fitToWidth();
+              return;
+            }
+
+            renderLayout();
+            updatePanState();
+          });
+
+          renderLayout();
+          fitToWidth();
+        }
+
+        backButton.addEventListener("click", goBack);
+
+        if (!docsApi) {
+          showEmptyState("The Mermaid viewer helpers could not be loaded.");
+          return;
+        }
+
+        const payload = docsApi.readViewerDiagramPayload();
+
+        const hasSource = payload && typeof payload.source === "string" && payload.source.trim().length > 0;
+        const hasSvg = payload && typeof payload.svg === "string" && payload.svg.trim().length > 0;
+
+        if (!payload || (!hasSource && !hasSvg)) {
+          showEmptyState("Open this page from an ER diagram inside the docs so the diagram source can be passed into the viewer.");
+          return;
+        }
+
+        const title = payload.title || "Entity Relationship Diagram";
+        titleElement.textContent = title;
+        document.title = `${title} - Diagram Viewer - USDM v4`;
+
+        if (hasSvg) {
+          canvas.innerHTML = payload.svg;
+
+          const svg = canvas.querySelector("svg");
+
+          if (!svg) {
+            showEmptyState("The diagram could not be loaded in the viewer.");
+            return;
+          }
+
+          canvas.hidden = false;
+          emptyState.hidden = true;
+          initializeZoom(svg);
+          return;
+        }
+
+        docsApi
+          .renderMermaidSource(canvas, payload.source, {
+            idPrefix: "diagram-viewer",
+          })
+          .then((svg) => {
+            if (!svg) {
+              showEmptyState("The diagram could not be rendered in the viewer.");
+              return;
+            }
+
+            canvas.hidden = false;
+            emptyState.hidden = true;
+            initializeZoom(svg);
+          })
+          .catch(() => {
+            showEmptyState("The diagram could not be rendered in the viewer.");
+          });
+      })();
+    </script>
+  </body>
+</html>

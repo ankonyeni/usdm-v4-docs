@@ -5,16 +5,16 @@ level:
   codeSystemVersion: 24.04e
   decode: Primary Objective
 endpoints:
-- level:
-    id: Code_206
-    code: C94496
-    codeSystem: ncit
-    codeSystemVersion: 24.04e
-    decode: Primary Endpoint
-  id: Endpoint_1
-  name: END1
-  text: Clinical status assessed using a 7-category ordinal scale at Day 28
-  purpose: Evaluate the primary clinical status outcome at Day 28.
+  - level:
+      id: Code_206
+      code: C94496
+      codeSystem: ncit
+      codeSystemVersion: 24.04e
+      decode: Primary Endpoint
+    id: Endpoint_1
+    name: END1
+    text: Clinical status assessed using a 7-category ordinal scale at Day 28
+    purpose: Evaluate the primary clinical status outcome at Day 28.
 id: Objective_1
 name: OBJ1
 description: Primary

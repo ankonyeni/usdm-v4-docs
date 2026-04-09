@@ -3,11 +3,11 @@ name: AMEND_CHG_2
 rationale: To reflect that development of ALXN1840 is for Wilson disease.
 summary: Removal of text relating to primary biliary cholangitis.
 changedSections:
-- id: DocumentContentReference_4
-  sectionNumber: '2'
-  sectionTitle: Introduction
-  appliesToId: StudyDefinitionDocument_1
-- id: DocumentContentReference_5
-  sectionNumber: '2.2'
-  sectionTitle: Background
-  appliesToId: StudyDefinitionDocument_1
+  - id: DocumentContentReference_4
+    sectionNumber: '2'
+    sectionTitle: Introduction
+    appliesToId: StudyDefinitionDocument_1
+  - id: DocumentContentReference_5
+    sectionNumber: '2.2'
+    sectionTitle: Background
+    appliesToId: StudyDefinitionDocument_1

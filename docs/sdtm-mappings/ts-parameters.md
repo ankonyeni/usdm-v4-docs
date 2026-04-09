@@ -28,23 +28,11 @@ Open any row to view the full mapping details and notes on its details page.
 <td><a class="sdtm-class-link" href="../../classes/Range/" onclick="event.stopPropagation()">Range</a></td>
 <td><a class="sdtm-row-link" href="../ts-parameters-details/002-agemin/index.html">StudyVersion/@studyDesigns/StudyDesign/@population/StudyDesignPopulation/@plannedAge/Range/@minValue/Quantity/@value + @unit/AliasCode/@standardCode/Code/@decode</a></td>
 </tr>
-<tr class="sdtm-clickable-row" tabindex="0" role="link" onclick="window.location.href='../ts-parameters-details/003-agemin/index.html'" onkeydown="if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); window.location.href='../ts-parameters-details/003-agemin/index.html'; }">
-<td><a class="sdtm-row-link" href="../ts-parameters-details/003-agemin/index.html"><code>AGEMIN</code></a></td>
-<td><a class="sdtm-row-link" href="../ts-parameters-details/003-agemin/index.html">Planned Minimum Age of Subjects</a></td>
-<td><a class="sdtm-class-link" href="../../classes/Range/" onclick="event.stopPropagation()">Range</a></td>
-<td><a class="sdtm-row-link" href="../ts-parameters-details/003-agemin/index.html">StudyVersion/@studyDesigns/StudyDesign/@population/StudyDesignPopulation/@cohorts/StudyCohort/@plannedAge/Range/@minValue/Quantity/@value + @unit/AliasCode/@standardCode/Code/@decode</a></td>
-</tr>
 <tr class="sdtm-clickable-row" tabindex="0" role="link" onclick="window.location.href='../ts-parameters-details/004-agemax/index.html'" onkeydown="if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); window.location.href='../ts-parameters-details/004-agemax/index.html'; }">
 <td><a class="sdtm-row-link" href="../ts-parameters-details/004-agemax/index.html"><code>AGEMAX</code></a></td>
 <td><a class="sdtm-row-link" href="../ts-parameters-details/004-agemax/index.html">Planned Minimum Age of Subjects</a></td>
 <td><a class="sdtm-class-link" href="../../classes/Range/" onclick="event.stopPropagation()">Range</a></td>
 <td><a class="sdtm-row-link" href="../ts-parameters-details/004-agemax/index.html">StudyVersion/@studyDesigns/StudyDesign/@population/StudyDesignPopulation/@plannedAge/Range/@maxValue/Quantity/@value + @unit/AliasCode/@standardCode/Code/@decode</a></td>
-</tr>
-<tr class="sdtm-clickable-row" tabindex="0" role="link" onclick="window.location.href='../ts-parameters-details/005-agemax/index.html'" onkeydown="if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); window.location.href='../ts-parameters-details/005-agemax/index.html'; }">
-<td><a class="sdtm-row-link" href="../ts-parameters-details/005-agemax/index.html"><code>AGEMAX</code></a></td>
-<td><a class="sdtm-row-link" href="../ts-parameters-details/005-agemax/index.html">Planned Minimum Age of Subjects</a></td>
-<td><a class="sdtm-class-link" href="../../classes/Range/" onclick="event.stopPropagation()">Range</a></td>
-<td><a class="sdtm-row-link" href="../ts-parameters-details/005-agemax/index.html">StudyVersion/@studyDesigns/StudyDesign/@population/StudyDesignPopulation/@cohorts/StudyCohort/@plannedAge/Range/@maxValue/Quantity/@value + @unit/AliasCode/@standardCode/Code/@decode</a></td>
 </tr>
 <tr class="sdtm-clickable-row" tabindex="0" role="link" onclick="window.location.href='../ts-parameters-details/006-brdnaind/index.html'" onkeydown="if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); window.location.href='../ts-parameters-details/006-brdnaind/index.html'; }">
 <td><a class="sdtm-row-link" href="../ts-parameters-details/006-brdnaind/index.html"><code>BRDNAIND</code></a></td>
@@ -135,12 +123,6 @@ Open any row to view the full mapping details and notes on its details page.
 <td><a class="sdtm-row-link" href="../ts-parameters-details/020-hltsubji/index.html">Healthy Subject Indicator</a></td>
 <td><a class="sdtm-class-link" href="../../classes/StudyDesignPopulation/" onclick="event.stopPropagation()">StudyDesignPopulation</a></td>
 <td><a class="sdtm-row-link" href="../ts-parameters-details/020-hltsubji/index.html">StudyVersion/@studyDesigns/StudyDesign/@population/StudyDesignPopulation/@includesHealthySubjects</a></td>
-</tr>
-<tr class="sdtm-clickable-row" tabindex="0" role="link" onclick="window.location.href='../ts-parameters-details/021-hltsubji/index.html'" onkeydown="if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); window.location.href='../ts-parameters-details/021-hltsubji/index.html'; }">
-<td><a class="sdtm-row-link" href="../ts-parameters-details/021-hltsubji/index.html"><code>HLTSUBJI</code></a></td>
-<td><a class="sdtm-row-link" href="../ts-parameters-details/021-hltsubji/index.html">Healthy Subject Indicator</a></td>
-<td><a class="sdtm-class-link" href="../../classes/StudyCohort/" onclick="event.stopPropagation()">StudyCohort</a></td>
-<td><a class="sdtm-row-link" href="../ts-parameters-details/021-hltsubji/index.html">StudyVersion/@studyDesigns/StudyDesign/@population/StudyDesignPopulation/@cohorts/StudyCohort/@includesHealthySubjects</a></td>
 </tr>
 <tr class="sdtm-clickable-row" tabindex="0" role="link" onclick="window.location.href='../ts-parameters-details/022-indic/index.html'" onkeydown="if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); window.location.href='../ts-parameters-details/022-indic/index.html'; }">
 <td><a class="sdtm-row-link" href="../ts-parameters-details/022-indic/index.html"><code>INDIC</code></a></td>
@@ -315,12 +297,6 @@ Open any row to view the full mapping details and notes on its details page.
 <td><a class="sdtm-row-link" href="../ts-parameters-details/050-sponsor/index.html">Clinical Study Sponsor; Sponsor; Study Sponsor</a></td>
 <td><a class="sdtm-class-link" href="../../classes/Organization/" onclick="event.stopPropagation()">Organization</a></td>
 <td><a class="sdtm-row-link" href="../ts-parameters-details/050-sponsor/index.html">StudyRole/@organizations/Organization/@label</a></td>
-</tr>
-<tr class="sdtm-clickable-row" tabindex="0" role="link" onclick="window.location.href='../ts-parameters-details/051-sponsor/index.html'" onkeydown="if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); window.location.href='../ts-parameters-details/051-sponsor/index.html'; }">
-<td><a class="sdtm-row-link" href="../ts-parameters-details/051-sponsor/index.html"><code>SPONSOR</code></a></td>
-<td><a class="sdtm-row-link" href="../ts-parameters-details/051-sponsor/index.html">Clinical Study Sponsor; Sponsor; Study Sponsor</a></td>
-<td><a class="sdtm-class-link" href="../../classes/AssignedPerson/" onclick="event.stopPropagation()">AssignedPerson</a></td>
-<td><a class="sdtm-row-link" href="../ts-parameters-details/051-sponsor/index.html">StudyRole/@assignedPersons/AssignedPerson/@label</a></td>
 </tr>
 <tr class="sdtm-clickable-row" tabindex="0" role="link" onclick="window.location.href='../ts-parameters-details/052-sprefid/index.html'" onkeydown="if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); window.location.href='../ts-parameters-details/052-sprefid/index.html'; }">
 <td><a class="sdtm-row-link" href="../ts-parameters-details/052-sprefid/index.html"><code>SPREFID</code></a></td>

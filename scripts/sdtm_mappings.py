@@ -47,6 +47,35 @@ SECTION_METADATA: dict[str, tuple[str, str]] = {
     ),
 }
 SECTION_SUMMARY_EXCLUDES = {"TS Parameters"}
+DETAIL_GUIDANCE_PAGE = "../../sdtm-mapping-considerations.md"
+DETAIL_GUIDANCE_LINKS: dict[tuple[str, str], list[tuple[str, str]]] = {
+    ("TA", "ARMCD"): [
+        ("SDTM variable constraints", "sdtm-variable-constraints"),
+    ],
+    ("TV", "ARMCD"): [
+        ("SDTM variable constraints", "sdtm-variable-constraints"),
+    ],
+    ("TA", "ETCD"): [
+        ("SDTM variable constraints", "sdtm-variable-constraints"),
+    ],
+    ("TE", "ETCD"): [
+        ("SDTM variable constraints", "sdtm-variable-constraints"),
+    ],
+    ("TI", "IETESTCD"): [
+        ("SDTM variable constraints", "sdtm-variable-constraints"),
+    ],
+    ("TI", "IETEST"): [
+        ("Long eligibility criterion text", "long-eligibility-criterion-text"),
+    ],
+    ("TV", "VISITDY"): [
+        ("Data type mismatches and structured values", "data-type-mismatches-and-structured-values"),
+        ("Using the USDM extension mechanism", "using-the-usdm-extension-mechanism"),
+    ],
+    ("TA", "EPOCH"): [
+        ("Epoch mapping for TA.EPOCH", "epoch-mapping-for-taepoch"),
+        ("Using the USDM extension mechanism", "using-the-usdm-extension-mechanism"),
+    ],
+}
 
 
 @dataclass(frozen=True)
@@ -305,6 +334,45 @@ def _render_mapping_insight(record: MappingRecord) -> str:
     return '<div class="sdtm-rule-list">' + "".join(detail_blocks) + "</div>"
 
 
+def _detail_guidance_entries(record: MappingRecord) -> list[tuple[str, str]]:
+    entries: list[tuple[str, str]] = []
+    target_path = record.target_path or ""
+
+    if "@label" in target_path or "@description" in target_path:
+        entries.append(("Optional USDM source slots", "optional-usdm-source-slots"))
+
+    entries.extend(DETAIL_GUIDANCE_LINKS.get((record.section_name, record.sdtm_variable), []))
+
+    deduped_entries: list[tuple[str, str]] = []
+    seen: set[tuple[str, str]] = set()
+    for entry in entries:
+        if entry in seen:
+            continue
+        seen.add(entry)
+        deduped_entries.append(entry)
+
+    return deduped_entries
+
+
+def _render_related_guidance(record: MappingRecord) -> str:
+    entries = _detail_guidance_entries(record)
+    if not entries:
+        return ""
+
+    lines = [
+        "## Related Considerations",
+        "",
+        "The following cross-cutting considerations may be relevant when implementing this mapping:",
+        "",
+    ]
+
+    for label, anchor in entries:
+        lines.append(f"- [{label}]({DETAIL_GUIDANCE_PAGE}#{anchor})")
+
+    lines.append("")
+    return "\n".join(lines)
+
+
 def _render_metadata_list(record: MappingRecord, docs_path: Path) -> str:
     items: list[tuple[str, str]] = []
     label_value = record.sdtm_label or record.parameter_name or ""
@@ -325,6 +393,24 @@ def _render_metadata_list(record: MappingRecord, docs_path: Path) -> str:
     return "\n".join(lines)
 
 
+def _table_records(section_name: str, records: list[MappingRecord]) -> list[tuple[int, MappingRecord]]:
+    indexed_records = list(enumerate(records, start=1))
+    if section_name != "TS Parameters":
+        return indexed_records
+
+    deduped_records: list[tuple[int, MappingRecord]] = []
+    seen_parameters: set[str] = set()
+    for row_number, record in indexed_records:
+        parameter_code = (record.sdtm_variable or record.parameter_name or "").strip()
+        if parameter_code and parameter_code in seen_parameters:
+            continue
+        if parameter_code:
+            seen_parameters.add(parameter_code)
+        deduped_records.append((row_number, record))
+
+    return deduped_records
+
+
 def _render_domain_table_html(section_name: str, docs_path: Path, records: list[MappingRecord]) -> str:
     rows: list[str] = [
         '<table class="sdtm-mapping-table">',
@@ -339,7 +425,7 @@ def _render_domain_table_html(section_name: str, docs_path: Path, records: list[
         "<tbody>",
     ]
 
-    for row_number, record in enumerate(records, start=1):
+    for row_number, record in _table_records(section_name, records):
         detail_href = _detail_page_output_href(record.section_name, record, row_number)
         primary_value = _table_primary_column_value(record)
         primary_content = f"<code>{html.escape(primary_value)}</code>" if primary_value else ""
@@ -361,6 +447,7 @@ def _render_domain_table_html(section_name: str, docs_path: Path, records: list[
 
 def _render_detail_page(section_name: str, docs_path: Path, record: MappingRecord) -> str:
     mapping_insight = _render_mapping_insight(record)
+    related_guidance = _render_related_guidance(record)
     lines = [
         f"# {_detail_page_title(section_name, record)}",
         "",
@@ -371,6 +458,9 @@ def _render_detail_page(section_name: str, docs_path: Path, record: MappingRecor
         mapping_insight if mapping_insight != "-" else "No additional mapping details.",
         "",
     ]
+
+    if related_guidance:
+        lines.append(related_guidance)
 
     return "\n".join(lines)
 
@@ -511,15 +601,15 @@ def _render_class_mapping_section(class_name: str, mappings: list[ClassSlotMappi
         "<!-- sdtm-class-mappings:start -->",
         "## SDTM Trial Domain Mappings",
         "",
-        "This class has slot-level mappings to the following SDTM trial domain items.",
+        "This class has slot-level mappings to the following SDTM trial domain variables.",
         "",
         '<table class="sdtm-class-mapping-table">',
         "<thead>",
         "<tr>",
         "<th>Domain</th>",
-        "<th>SDTM Item</th>",
-        "<th>Class Slot</th>",
+        "<th>Variable</th>",
         "<th>Label</th>",
+        "<th>Class Slot</th>",
         "</tr>",
         "</thead>",
         "<tbody>",
@@ -540,11 +630,11 @@ def _render_class_mapping_section(class_name: str, mappings: list[ClassSlotMappi
                     f'<td><a href="{_class_mapping_detail_output_href(record, mapping.row_number)}">'
                     f"<code>{html.escape(item_value)}</code></a></td>"
                 ),
+                f"<td>{item_label}</td>",
                 (
                     f'<td><a href="../../slots/{mapping.slot_name}/">'
                     f"{html.escape(mapping.slot_name)}</a></td>"
                 ),
-                f"<td>{item_label}</td>",
                 "</tr>",
             ]
         )
@@ -565,8 +655,6 @@ def _insert_class_mapping_section(class_doc_text: str, section_text: str) -> str
         return pattern.sub(section_text, class_doc_text, count=1)
 
     insertion_markers = [
-        "\n## Usages\n",
-        "\n## Identifier and Mapping Information\n",
         "\n## Examples\n",
         "\n## LinkML Source\n",
     ]

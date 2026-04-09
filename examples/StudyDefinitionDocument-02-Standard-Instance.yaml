@@ -14,11 +14,11 @@ language:
   codeSystemVersion: 24.04e
   decode: English
 versions:
-- id: StudyDefinitionDocumentVersion_1
-  status:
-    id: Code_19
-    code: C85255
-    codeSystem: ncit
-    codeSystemVersion: 24.04e
-    decode: Draft
-  version: '1'
+  - id: StudyDefinitionDocumentVersion_1
+    status:
+      id: Code_19
+      code: C85255
+      codeSystem: ncit
+      codeSystemVersion: 24.04e
+      decode: Draft
+    version: '1'

@@ -8,6 +8,18 @@ __pycache__/
 build/
 dist/
 site/
+/.npm-cache/
+/.pip-cache/
+/.pip-tmp/
+/.mkdocs-temp/
+/.mkdocs-temp-test/
+/.temp-prefix-test/
+/validation-report.html
+/validation_report.txt
+/mapping_considerations*.md
+/Screenshot *.png
+/ncit.txt
+/nci/
 docs/index.md
 docs/classes/
 docs/slots/
@@ -19,3 +31,5 @@ schemas/generated/
 scripts/check_example_coverage.py
 scripts/create_examples.py
 scripts/validate_examples.py
+node_modules
+temp/

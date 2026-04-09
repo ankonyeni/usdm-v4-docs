@@ -8,149 +8,150 @@ summary: The main reason for preparation of this amendment was to update procedu
   of serious adverse events, and add details of an interim analysis. Additional, minor
   changes are included in the table below.
 geographicScopes:
-- id: GeographicScope_11
-  type:
-    id: Code_176
-    code: C68846
-    codeSystem: ncit
-    codeSystemVersion: 24.04e
-    decode: Global
+  - id: GeographicScope_11
+    type:
+      id: Code_176
+      code: C68846
+      codeSystem: ncit
+      codeSystemVersion: 24.04e
+      decode: Global
 dateValues:
-- id: GovernanceDate_6
-  name: AMEND_DATE_A1
-  label: Protocol Approval
-  description: Amendment approval date
-  type:
-    id: Code_28
-    code: C132352
-    codeSystem: ncit
-    codeSystemVersion: 24.04e
-    decode: Sponsor Approval Date
-  dateValue: '2020-08-18'
-  geographicScopes:
-  - id: GeographicScope_6
+  - id: GovernanceDate_6
+    name: AMEND_DATE_A1
+    label: Protocol Approval
+    description: Amendment approval date
     type:
-      id: Code_29
-      code: C68846
+      id: Code_28
+      code: C132352
       codeSystem: ncit
       codeSystemVersion: 24.04e
-      decode: Global
+      decode: Sponsor Approval Date
+    dateValue: '2020-08-18'
+    geographicScopes:
+      - id: GeographicScope_6
+        type:
+          id: Code_29
+          code: C68846
+          codeSystem: ncit
+          codeSystemVersion: 24.04e
+          decode: Global
 impacts:
-- id: StudyAmendmentImpact_1
-  text: Amendment 1
-  isSubstantial: true
-  type:
-    id: Code_191
-    code: C99912x4
-    codeSystem: ncit
-    codeSystemVersion: 24.04e
-    decode: Study Data Robustness
-  notes:
-  - id: note-amendment-impact-01
-    text: The impact assessment was reviewed by the protocol governance team.
-enrollments:
-- id: SubjectEnrollment_1
-  name: Global enrollment target
-  quantity:
-    value: 0.0
-    id: Quantity_1
-  forGeographicScope:
-    id: GeographicScope_10
+  - id: StudyAmendmentImpact_1
+    text: Amendment 1
+    isSubstantial: true
     type:
-      id: Code_175
-      code: C68846
+      id: Code_191
+      code: C99912x4
       codeSystem: ncit
       codeSystemVersion: 24.04e
-      decode: Global
-  description: Enrollment target captured for a specific geographic allocation scenario.
+      decode: Study Data Robustness
+    notes:
+      - id: note-amendment-impact-01
+        text: The impact assessment was reviewed by the protocol governance team.
+enrollments:
+  - id: SubjectEnrollment_1
+    name: Global enrollment target
+    quantity:
+      value: 0.0
+      id: Quantity_1
+    forGeographicScope:
+      id: GeographicScope_10
+      type:
+        id: Code_175
+        code: C68846
+        codeSystem: ncit
+        codeSystemVersion: 24.04e
+        decode: Global
+    description: Enrollment target captured for a specific geographic allocation scenario.
 secondaryReasons:
-- id: StudyAmendmentReason_2
-  code:
-    id: Code_174
-    code: C99904x12
-    codeSystem: ncit
-    codeSystemVersion: 24.04e
-    decode: Inconsistency And/Or Error In The Protocol
+  - id: StudyAmendmentReason_2
+    code:
+      id: Code_174
+      code: C99904x12
+      codeSystem: ncit
+      codeSystemVersion: 24.04e
+      decode: Inconsistency And/Or Error In The Protocol
 changes:
-- id: StudyChange_1
-  name: AMEND_CHG_1
-  rationale: Data collected for analysis of patient population and study intervention
-    compliance, and to compare endpoints with other ALXN1840 studies.
-  summary: Procedures updated include Wilson disease history and treatment; study
-    intervention compliance during outpatient period captured with study dosing diary;
-    light exercise.
-  changedSections:
-  - id: DocumentContentReference_1
-    sectionNumber: '1.3'
-    sectionTitle: Schedule of Activities
-    appliesToId: StudyDefinitionDocument_1
-  - id: DocumentContentReference_2
-    sectionNumber: '4.1'
-    sectionTitle: Overall Design
-    appliesToId: StudyDefinitionDocument_1
-  - id: DocumentContentReference_3
-    sectionNumber: '6.4'
-    sectionTitle: Study Intervention Compliance
-    appliesToId: StudyDefinitionDocument_1
-- id: StudyChange_2
-  name: AMEND_CHG_2
-  rationale: To reflect that development of ALXN1840 is for Wilson disease.
-  summary: Removal of text relating to primary biliary cholangitis.
-  changedSections:
-  - id: DocumentContentReference_4
-    sectionNumber: '2'
-    sectionTitle: Introduction
-    appliesToId: StudyDefinitionDocument_1
-  - id: DocumentContentReference_5
-    sectionNumber: '2.2'
-    sectionTitle: Background
-    appliesToId: StudyDefinitionDocument_1
-- id: StudyChange_3
-  name: AMEND_CHG_3
-  rationale: To clarify the option for study intervention access at the end of study.
-  summary: Text updated regarding access to study intervention after the end of study.
-  changedSections:
-  - id: DocumentContentReference_6
-    sectionNumber: '6.7'
-    sectionTitle: Intervention After the End of Study
-    appliesToId: StudyDefinitionDocument_1
-- id: StudyChange_4
-  name: AMEND_CHG_4
-  rationale: To align the definition with the Statistical Analysis Plan.
-  summary: Definition of the Per Protocol set was updated.
-  changedSections:
-  - id: DocumentContentReference_7
-    sectionNumber: '9.3'
-    sectionTitle: Populations for Analysis
-    appliesToId: StudyDefinitionDocument_1
-- id: StudyChange_5
-  name: AMEND_CHG_5
-  rationale: Interim data may support Marketing Authorisation Application(s).
-  summary: Text pertaining to an interim analysis was added.
-  changedSections:
-  - id: DocumentContentReference_8
-    sectionNumber: '9.5'
-    sectionTitle: Interim Analyses
-    appliesToId: StudyDefinitionDocument_1
-- id: StudyChange_6
-  name: AMEND_CHG_6
-  rationale: To align with current Alexion approved language
-  summary: Definition of SUSAR was added.
-  changedSections:
-  - id: DocumentContentReference_9
-    sectionNumber: 10.3.2
-    sectionTitle: Definition of SAE
-    appliesToId: StudyDefinitionDocument_1
-- id: StudyChange_7
-  name: AMEND_CHG_7
-  rationale: SAE reporting will be via a paper safety reporting form.
-  summary: Removal of contradictory text on SAE reporting via an electronic data collection
-    tool.
-  changedSections:
-  - id: DocumentContentReference_10
-    sectionNumber: 10.3.4
-    sectionTitle: Reporting of SAEs
-    appliesToId: StudyDefinitionDocument_1
+  - id: StudyChange_1
+    name: AMEND_CHG_1
+    rationale: Data collected for analysis of patient population and study intervention
+      compliance, and to compare endpoints with other ALXN1840 studies.
+    summary: Procedures updated include Wilson disease history and treatment; study
+      intervention compliance during outpatient period captured with study dosing
+      diary; light exercise.
+    changedSections:
+      - id: DocumentContentReference_1
+        sectionNumber: '1.3'
+        sectionTitle: Schedule of Activities
+        appliesToId: StudyDefinitionDocument_1
+      - id: DocumentContentReference_2
+        sectionNumber: '4.1'
+        sectionTitle: Overall Design
+        appliesToId: StudyDefinitionDocument_1
+      - id: DocumentContentReference_3
+        sectionNumber: '6.4'
+        sectionTitle: Study Intervention Compliance
+        appliesToId: StudyDefinitionDocument_1
+  - id: StudyChange_2
+    name: AMEND_CHG_2
+    rationale: To reflect that development of ALXN1840 is for Wilson disease.
+    summary: Removal of text relating to primary biliary cholangitis.
+    changedSections:
+      - id: DocumentContentReference_4
+        sectionNumber: '2'
+        sectionTitle: Introduction
+        appliesToId: StudyDefinitionDocument_1
+      - id: DocumentContentReference_5
+        sectionNumber: '2.2'
+        sectionTitle: Background
+        appliesToId: StudyDefinitionDocument_1
+  - id: StudyChange_3
+    name: AMEND_CHG_3
+    rationale: To clarify the option for study intervention access at the end of study.
+    summary: Text updated regarding access to study intervention after the end of
+      study.
+    changedSections:
+      - id: DocumentContentReference_6
+        sectionNumber: '6.7'
+        sectionTitle: Intervention After the End of Study
+        appliesToId: StudyDefinitionDocument_1
+  - id: StudyChange_4
+    name: AMEND_CHG_4
+    rationale: To align the definition with the Statistical Analysis Plan.
+    summary: Definition of the Per Protocol set was updated.
+    changedSections:
+      - id: DocumentContentReference_7
+        sectionNumber: '9.3'
+        sectionTitle: Populations for Analysis
+        appliesToId: StudyDefinitionDocument_1
+  - id: StudyChange_5
+    name: AMEND_CHG_5
+    rationale: Interim data may support Marketing Authorisation Application(s).
+    summary: Text pertaining to an interim analysis was added.
+    changedSections:
+      - id: DocumentContentReference_8
+        sectionNumber: '9.5'
+        sectionTitle: Interim Analyses
+        appliesToId: StudyDefinitionDocument_1
+  - id: StudyChange_6
+    name: AMEND_CHG_6
+    rationale: To align with current Alexion approved language
+    summary: Definition of SUSAR was added.
+    changedSections:
+      - id: DocumentContentReference_9
+        sectionNumber: 10.3.2
+        sectionTitle: Definition of SAE
+        appliesToId: StudyDefinitionDocument_1
+  - id: StudyChange_7
+    name: AMEND_CHG_7
+    rationale: SAE reporting will be via a paper safety reporting form.
+    summary: Removal of contradictory text on SAE reporting via an electronic data
+      collection tool.
+    changedSections:
+      - id: DocumentContentReference_10
+        sectionNumber: 10.3.4
+        sectionTitle: Reporting of SAEs
+        appliesToId: StudyDefinitionDocument_1
 primaryReason:
   id: StudyAmendmentReason_1
   code:

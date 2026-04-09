@@ -1,5 +1,6 @@
 site_name: USDM v4
 site_description: LinkML schema and documentation site for CDISC USDM v4 derivative work
+site_url: https://ankonyeni.github.io/usdm-v4-docs/
 repo_url: https://github.com/ankonyeni/usdm-v4-docs
 repo_name: GitHub
 edit_uri: ""

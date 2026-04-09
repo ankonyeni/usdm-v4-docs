@@ -3,7 +3,7 @@ name: AMEND_CHG_5
 rationale: Interim data may support Marketing Authorisation Application(s).
 summary: Text pertaining to an interim analysis was added.
 changedSections:
-- id: DocumentContentReference_8
-  sectionNumber: '9.5'
-  sectionTitle: Interim Analyses
-  appliesToId: StudyDefinitionDocument_1
+  - id: DocumentContentReference_8
+    sectionNumber: '9.5'
+    sectionTitle: Interim Analyses
+    appliesToId: StudyDefinitionDocument_1

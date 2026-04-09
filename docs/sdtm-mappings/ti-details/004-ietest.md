@@ -9,3 +9,9 @@
 ## Mapping Details
 
 No additional mapping details.
+
+## Related Considerations
+
+The following cross-cutting considerations may be relevant when implementing this mapping:
+
+- [Long eligibility criterion text](../../sdtm-mapping-considerations.md#long-eligibility-criterion-text)

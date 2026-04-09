@@ -13,23 +13,23 @@ code:
     codeSystemVersion: 24.04e
     decode: Unit
 responseCodes:
-- id: RC-TEMP-UNIT-C
-  name: Celsius
-  label: Degrees Celsius
-  isEnabled: true
-  code:
-    id: code-unit-c
-    code: C42559
-    decode: Degree Celsius
-    codeSystem: ncit
-    codeSystemVersion: 24.04e
-- id: RC-TEMP-UNIT-F
-  name: Fahrenheit
-  label: Degrees Fahrenheit
-  isEnabled: true
-  code:
-    id: code-unit-f
-    code: C44277
-    decode: Fahrenheit
-    codeSystem: ncit
-    codeSystemVersion: 24.04e
+  - id: RC-TEMP-UNIT-C
+    name: Celsius
+    label: Degrees Celsius
+    isEnabled: true
+    code:
+      id: code-unit-c
+      code: C42559
+      decode: Degree Celsius
+      codeSystem: ncit
+      codeSystemVersion: 24.04e
+  - id: RC-TEMP-UNIT-F
+    name: Fahrenheit
+    label: Degrees Fahrenheit
+    isEnabled: true
+    code:
+      id: code-unit-f
+      code: C44277
+      decode: Fahrenheit
+      codeSystem: ncit
+      codeSystemVersion: 24.04e

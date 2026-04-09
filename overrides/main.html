@@ -3,13 +3,14 @@
 {% block site_nav %}
   {% macro render_sdtm_dropdown() -%}
     {%- set sdtm_domain_items = [
+      ("General Considerations", "sdtm-mapping-considerations/", ["sdtm-mapping-considerations/"]),
       ("Trial Arms (TA)", "sdtm-mappings/ta/", ["sdtm-mappings/ta/", "sdtm-mappings/ta-details/"]),
       ("Trial Elements (TE)", "sdtm-mappings/te/", ["sdtm-mappings/te/", "sdtm-mappings/te-details/"]),
       ("Trial Visits (TV)", "sdtm-mappings/tv/", ["sdtm-mappings/tv/", "sdtm-mappings/tv-details/"]),
       ("Trial Inclusion/Exclusion (TI)", "sdtm-mappings/ti/", ["sdtm-mappings/ti/", "sdtm-mappings/ti-details/"]),
       ("Trial Summary (TS)", "sdtm-mappings/ts/", ["sdtm-mappings/ts/", "sdtm-mappings/ts-details/", "sdtm-mappings/ts-parameters/", "sdtm-mappings/ts-parameters-details/"]),
     ] %}
-    {%- set sdtm_active = page and page.url.startswith("sdtm-mappings/") %}
+    {%- set sdtm_active = page and (page.url.startswith("sdtm-mappings/") or page.url.startswith("sdtm-mapping-considerations/")) %}
     <li class="nav-item dropdown">
         <a href="#" class="nav-link dropdown-toggle{% if sdtm_active %} active{% endif %}" aria-current="page{% if sdtm_active %}{% endif %}" role="button" data-bs-toggle="dropdown" aria-expanded="false">SDTM Trial Domain Mappings</a>
         <ul class="dropdown-menu">
@@ -46,7 +47,7 @@
     {%- endif %}
   {%- endmacro %}
   {%- if nav|length > 1 %}
-      {%- set hidden_titles = ["sdtm mappings", "schemas"] %}
+      {%- set hidden_titles = ["sdtm mappings", "schemas", "general considerations"] %}
       {%- set preferred_order = ["classes", "slots", "types", "__sdtm__", "enums", "reference", "subsets"] %}
       {%- set nav_state = namespace(has_sdtm_nav=false) %}
       {%- for nav_item in nav %}

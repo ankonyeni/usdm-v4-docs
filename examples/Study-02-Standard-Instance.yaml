@@ -1,52 +1,52 @@
 id: ST-AL-2026-001
 name: ST_AL_2026
 versions:
-- id: SV-AL-2026-001-V1
-  versionIdentifier: '1.0'
-  rationale: Initial Study Design
-  titles:
-  - id: STitle-01
-    text: Phase 3 Efficacy Study of Albiglutide
-    type:
-      id: Code-TitleType-1
-      code: C93721
-      codeSystem: NCIt
-      codeSystemVersion: 24.04e
-      decode: Official Title
-  studyIdentifiers:
-  - id: SIdent-01
-    text: NCT04573309
-    scopeId: Org-Default-1
-  conditions:
-  - id: Cond-01
-    name: Type 2 Diabetes Mellitus
-    label: T2DM
-    description: Patients diagnosed with Type 2 Diabetes Mellitus.
-    text: Type 2 Diabetes Mellitus
-  roles:
-  - id: Role-01
-    name: Sponsor
-    label: Study Sponsor
-    description: The organization responsible for the initiation, management, and/or
-      financing of a clinical trial.
-    code:
-      id: Code-Role-1
-      code: C70793
-      codeSystem: NCIt
-      codeSystemVersion: 24.04e
-      decode: Clinical Study Sponsor
-  organizations:
-  - id: Org-01
-    name: Global Pharma Inc.
-    label: Global Pharma
-    type:
-      id: Code-OrgType-1
-      code: C11235
-      codeSystem: NCIt
-      codeSystemVersion: 24.04e
-      decode: Pharmaceutical Company
-    identifier: ORG-ID-123
-    identifierScheme: Custom
+  - id: SV-AL-2026-001-V1
+    versionIdentifier: '1.0'
+    rationale: Initial Study Design
+    titles:
+      - id: STitle-01
+        text: Phase 3 Efficacy Study of Albiglutide
+        type:
+          id: Code-TitleType-1
+          code: C93721
+          codeSystem: NCIt
+          codeSystemVersion: 24.04e
+          decode: Official Title
+    studyIdentifiers:
+      - id: SIdent-01
+        text: NCT04573309
+        scopeId: Org-Default-1
+    conditions:
+      - id: Cond-01
+        name: Type 2 Diabetes Mellitus
+        label: T2DM
+        description: Patients diagnosed with Type 2 Diabetes Mellitus.
+        text: Type 2 Diabetes Mellitus
+    roles:
+      - id: Role-01
+        name: Sponsor
+        label: Study Sponsor
+        description: The organization responsible for the initiation, management,
+          and/or financing of a clinical trial.
+        code:
+          id: Code-Role-1
+          code: C70793
+          codeSystem: NCIt
+          codeSystemVersion: 24.04e
+          decode: Clinical Study Sponsor
+    organizations:
+      - id: Org-01
+        name: Global Pharma Inc.
+        label: Global Pharma
+        type:
+          id: Code-OrgType-1
+          code: C11235
+          codeSystem: NCIt
+          codeSystemVersion: 24.04e
+          decode: Pharmaceutical Company
+        identifier: ORG-ID-123
+        identifierScheme: Custom
 label: Phase 3 Efficacy Study of Albiglutide
 description: A Phase 3, Multicenter, Randomized, Double-blind, Placebo-controlled
   Study to Evaluate the Efficacy and Safety of Albiglutide in Patients with Type 2

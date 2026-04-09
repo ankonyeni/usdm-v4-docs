@@ -18,6 +18,10 @@ TYPE_DOCS_PATH = DOCS_PATH / "types"
 TEMPLATE_PATH = REPO_ROOT / "templates" / "docgen"
 TYPE_HEADER_PATTERN = re.compile(r"^# Type:\s+(\S+)\s*$")
 EXAMPLE_HEADING_PATTERN = re.compile(r"^### Example:\s+(.+?)\s*$")
+GENERATED_TODO_COMMENT_PATTERN = re.compile(
+    r"<!-- TODO: investigate https://stackoverflow\.com/questions/37606292/how-to-create-tabbed-code-blocks-in-mkdocs-or-sphinx -->\n?",
+    re.MULTILINE,
+)
 GENERATED_DOC_PATHS = (
     "index.md",
     "classes",
@@ -139,6 +143,18 @@ def reorder_generated_examples(path: Path) -> None:
             class_doc.write_text(updated_text, encoding="utf-8")
 
 
+def strip_generated_todo_comments(path: Path) -> None:
+    classes_path = path / "classes"
+    if not classes_path.exists():
+        return
+
+    for class_doc in sorted(classes_path.glob("*.md")):
+        original_text = class_doc.read_text(encoding="utf-8")
+        updated_text = GENERATED_TODO_COMMENT_PATTERN.sub("", original_text)
+        if updated_text != original_text:
+            class_doc.write_text(updated_text, encoding="utf-8")
+
+
 def build_docs(
     schema_path: Path = SCHEMA_PATH,
     docs_path: Path = DOCS_PATH,
@@ -163,7 +179,7 @@ def build_docs(
         str(docs_path),
         "--preserve-names",
         "--diagram-type",
-        "mermaid_class_diagram",
+        "er_diagram",
         "--subfolder-type-separation",
         "--truncate-descriptions",
         "false",
@@ -180,6 +196,7 @@ def build_docs(
 
     add_type_doc_aliases(type_docs_path)
     reorder_generated_examples(docs_path)
+    strip_generated_todo_comments(docs_path)
     sdtm_records = write_sdtm_mapping_docs(SDTM_MAPPING_WORKBOOK, docs_path)
     inject_class_page_sdtm_sections(schema_path, docs_path, sdtm_records)
 

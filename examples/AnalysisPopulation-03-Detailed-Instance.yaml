@@ -6,7 +6,8 @@ label: ITT Population
 description: This population will be used as the primary set for all efficacy analyses
   based on the treatment assigned at randomization.
 notes:
-- id: Comment_AP_01
-  text: Consistent with ICH E9 guidelines for statistical principles in clinical trials.
+  - id: Comment_AP_01
+    text: Consistent with ICH E9 guidelines for statistical principles in clinical
+      trials.
 subsetOfIds:
-- PopulationDefinition_Randomized_01
+  - PopulationDefinition_Randomized_01

@@ -9,7 +9,7 @@ type:
   codeSystemVersion: 24.04e
   decode: Follow-Up Epoch
 notes:
-- id: NOTE-SE-1
-  text: Follow-up visits are scheduled every 3 months.
+  - id: NOTE-SE-1
+    text: Follow-up visits are scheduled every 3 months.
 previousId: SE-2
 nextId: SE-4

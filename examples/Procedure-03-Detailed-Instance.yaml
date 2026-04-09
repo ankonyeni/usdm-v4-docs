@@ -11,5 +11,6 @@ code:
   decode: Biopsy
 studyInterventionId: StudyIntervention_1
 notes:
-- id: Note-PROC-3-001
-  text: Subject must remain in a supine position for 4 hours post-procedure for observation.
+  - id: Note-PROC-3-001
+    text: Subject must remain in a supine position for 4 hours post-procedure for
+      observation.

@@ -9,3 +9,9 @@
 ## Mapping Details
 
 No additional mapping details.
+
+## Related Considerations
+
+The following cross-cutting considerations may be relevant when implementing this mapping:
+
+- [SDTM variable constraints](../../sdtm-mapping-considerations.md#sdtm-variable-constraints)

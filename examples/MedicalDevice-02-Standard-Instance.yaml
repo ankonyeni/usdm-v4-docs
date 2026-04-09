@@ -8,5 +8,5 @@ sourcing:
   codeSystemVersion: 24.04e
   decode: Centrally Sourced
 notes:
-- id: note-dev-01
-  text: Calibrated for pediatric use.
+  - id: note-dev-01
+    text: Calibrated for pediatric use.

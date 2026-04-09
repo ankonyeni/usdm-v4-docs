@@ -9,3 +9,9 @@
 ## Mapping Details
 
 <div class="sdtm-rule-list"><p><strong>Target Notes:</strong> Most likely this is the label of the active substance. Additional verification is needed to check if the outcome of the mapping aligns with the non proprietary requirement and whether it is international (INN) or not.</p><p><strong>Condition Path:</strong> <code>StudyVersion/@studyDesigns/StudyDesign/@studyIntervention/StudyIntervention/@administrations/Administration/@administrableProduct/AdministrableProduct/@productDesignation/Code/@code=&quot;C156473&quot; | StudyVersion/@studyDesigns/StudyDesign/@studyIntervention/StudyIntervention/@administrations/Administration/@administrableProduct/AdministrableProduct/@ingredient/Ingredient/@role/Code/@code=&quot;100000072072&quot;</code></p></div>
+
+## Related Considerations
+
+The following cross-cutting considerations may be relevant when implementing this mapping:
+
+- [Optional USDM source slots](../../sdtm-mapping-considerations.md#optional-usdm-source-slots)

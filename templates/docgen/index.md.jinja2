@@ -4,42 +4,14 @@ This site is the generated reference documentation for the USDM v4 schema derive
 
 Use this site to understand the overall shape of the model, inspect the meaning of each class and slot, review example instances for key classes, and navigate from high-level study concepts down to the detailed attributes captured in the LinkML representation.
 
-{% set type_names = gen.all_type_object_names() %}
-{% set tree_roots = gen.all_class_objects()|selectattr('tree_root')|list %}
+For cross-cutting implementation considerations and non-normative suggestions that apply across multiple trial design mapping pages, see [General Considerations](sdtm-mapping-considerations.md).
+
 {% set enum_objects = gen.all_enum_objects()|list %}
 {% set subset_objects = schemaview.all_subsets().values()|list %}
 
-Public Mermaid diagram links for the model:
-
-- [UML Diagram](https://mermaid.ai/d/175daee6-a5b3-4ada-af22-f46e3504e2e0)
-- [ER Diagram](https://mermaid.ai/d/94d41db0-53ce-4c19-a633-7bdddf464eed)
-
-{% if include_top_level_diagram %}
-
-## Schema Diagram
-
-{% if diagram_type == "mermaid_class_diagram" and tree_roots %}
-{% set root = tree_roots[0] %}
-```{{ gen.mermaid_directive() }}
- classDiagram
-    class {{ gen.name(root) }}
-    click {{ gen.name(root) }} href "classes/{{ gen.name(root) }}/"
-{% for slot in schemaview.class_induced_slots(root.name)|sort(attribute='name') -%}
-{% if slot.range is not none and slot.range not in type_names -%}
-{% set target = schemaview.get_element(slot.range) -%}
-{% if target -%}
-    {{ gen.name(root) }} --> "{{ gen.cardinality(slot) }}" {{ gen.name(target) }} : {{ gen.name(slot) }}
-    click {{ gen.name(target) }} href "classes/{{ gen.name(target) }}/"
-{% endif -%}
-{% endif -%}
-{% endfor -%}
-```
-{% else %}
 ```{{ gen.mermaid_directive() }}
 {{ gen.mermaid_diagram() }}
 ```
-{% endif %}
-{% endif %}
 
 ## Classes
 

@@ -6,8 +6,8 @@ standardCode:
   codeSystemVersion: 24.04e
   decode: Every 12 Hours
 standardCodeAliases:
-- id: code-ref-007
-  code: 12H
-  codeSystem: SPONSOR
-  codeSystemVersion: '2026'
-  decode: 12 Hourly
+  - id: code-ref-007
+    code: 12H
+    codeSystem: SPONSOR
+    codeSystemVersion: '2026'
+    decode: 12 Hourly

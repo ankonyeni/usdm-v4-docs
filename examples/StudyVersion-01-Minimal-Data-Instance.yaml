@@ -2,15 +2,15 @@ id: SV-01
 versionIdentifier: '1.0'
 rationale: Initial protocol release for the observational diabetes study example.
 studyIdentifiers:
-- id: SID-01
-  text: NCT12345
-  scopeId: ORG-01
+  - id: SID-01
+    text: NCT12345
+    scopeId: ORG-01
 titles:
-- id: ST-01
-  text: A Standard Study Title
-  type:
-    id: CODE-ST-TYPE-01
-    code: OFFICIAL
-    codeSystem: ncit
-    codeSystemVersion: 24.04e
-    decode: Official
+  - id: ST-01
+    text: A Standard Study Title
+    type:
+      id: CODE-ST-TYPE-01
+      code: OFFICIAL
+      codeSystem: ncit
+      codeSystemVersion: 24.04e
+      decode: Official

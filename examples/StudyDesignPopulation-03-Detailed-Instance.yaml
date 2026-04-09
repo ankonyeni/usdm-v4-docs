@@ -3,16 +3,16 @@ name: Adult and Pediatric Population
 label: Adult and Pediatric
 description: A population including both adult and pediatric subjects.
 plannedSex:
-- id: CODE-SEX-1
-  code: C16576
-  codeSystem: ncit
-  codeSystemVersion: 24.04e
-  decode: Female
-- id: CODE-SEX-2
-  code: C20197
-  codeSystem: ncit
-  codeSystemVersion: 24.04e
-  decode: Male
+  - id: CODE-SEX-1
+    code: C16576
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Female
+  - id: CODE-SEX-2
+    code: C20197
+    codeSystem: ncit
+    codeSystemVersion: 24.04e
+    decode: Male
 includesHealthySubjects: true
 plannedAge:
   id: RANGE-AGE-1
@@ -46,69 +46,69 @@ plannedEnrollmentNumber:
   id: Q-ENROLL-2
   value: 120
 notes:
-- id: NOTE-SDP-1
-  text: Enrollment is stratified by cohort.
+  - id: NOTE-SDP-1
+    text: Enrollment is stratified by cohort.
 criterionIds:
-- EC-1
-cohorts:
-- id: SC-1
-  name: Treatment Arm A
-  includesHealthySubjects: false
-- id: SC-3
-  name: Pediatric Cohort
-  label: Pediatric
-  description: A cohort of pediatric subjects.
-  plannedSex:
-  - id: CODE-SEX-1
-    code: C16576
-    codeSystem: ncit
-    codeSystemVersion: 24.04e
-    decode: Female
-  - id: CODE-SEX-2
-    code: C20197
-    codeSystem: ncit
-    codeSystemVersion: 24.04e
-    decode: Male
-  includesHealthySubjects: true
-  plannedAge:
-    id: RANGE-AGE-1
-    minValue:
-      id: QUANT-AGE-1
-      value: 6
-      unit:
-        id: ALIAS-CODE-YEAR-1
-        standardCode:
-          id: CODE-YEAR-1
-          code: C29848
-          codeSystem: ncit
-          codeSystemVersion: 24.04e
-          decode: Year
-    maxValue:
-      id: QUANT-AGE-2
-      value: 17
-      unit:
-        id: ALIAS-CODE-YEAR-2
-        standardCode:
-          id: CODE-YEAR-2
-          code: C29848
-          codeSystem: ncit
-          codeSystemVersion: 24.04e
-          decode: Year
-    isApproximate: false
-  plannedCompletionNumber:
-    id: Q-COMP-1
-    value: 50
-  plannedEnrollmentNumber:
-    id: Q-ENROLL-1
-    value: 60
-  notes:
-  - id: NOTE-SC-1
-    text: Enrollment is stratified by age group.
-  criterionIds:
   - EC-1
-  characteristics:
-  - id: Characteristic-1
-    name: Age Characteristic
-    text: Age
-  indicationIds:
-  - IND-1
+cohorts:
+  - id: SC-1
+    name: Treatment Arm A
+    includesHealthySubjects: false
+  - id: SC-3
+    name: Pediatric Cohort
+    label: Pediatric
+    description: A cohort of pediatric subjects.
+    plannedSex:
+      - id: CODE-SEX-1
+        code: C16576
+        codeSystem: ncit
+        codeSystemVersion: 24.04e
+        decode: Female
+      - id: CODE-SEX-2
+        code: C20197
+        codeSystem: ncit
+        codeSystemVersion: 24.04e
+        decode: Male
+    includesHealthySubjects: true
+    plannedAge:
+      id: RANGE-AGE-1
+      minValue:
+        id: QUANT-AGE-1
+        value: 6
+        unit:
+          id: ALIAS-CODE-YEAR-1
+          standardCode:
+            id: CODE-YEAR-1
+            code: C29848
+            codeSystem: ncit
+            codeSystemVersion: 24.04e
+            decode: Year
+      maxValue:
+        id: QUANT-AGE-2
+        value: 17
+        unit:
+          id: ALIAS-CODE-YEAR-2
+          standardCode:
+            id: CODE-YEAR-2
+            code: C29848
+            codeSystem: ncit
+            codeSystemVersion: 24.04e
+            decode: Year
+      isApproximate: false
+    plannedCompletionNumber:
+      id: Q-COMP-1
+      value: 50
+    plannedEnrollmentNumber:
+      id: Q-ENROLL-1
+      value: 60
+    notes:
+      - id: NOTE-SC-1
+        text: Enrollment is stratified by age group.
+    criterionIds:
+      - EC-1
+    characteristics:
+      - id: Characteristic-1
+        name: Age Characteristic
+        text: Age
+    indicationIds:
+      - IND-1

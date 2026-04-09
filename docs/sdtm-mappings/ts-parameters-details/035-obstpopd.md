@@ -9,3 +9,9 @@
 ## Mapping Details
 
 <div class="sdtm-rule-list"><p><strong>Condition Path:</strong> <code>StudyVersion/@studyDesigns/StudyDesign/@studyType/Code/@code=&quot;C16084&quot;</code></p></div>
+
+## Related Considerations
+
+The following cross-cutting considerations may be relevant when implementing this mapping:
+
+- [Optional USDM source slots](../../sdtm-mapping-considerations.md#optional-usdm-source-slots)
