@@ -1,37 +1,10 @@
 # USDM v4
 
-This repository publishes a browsable documentation site for a derivative LinkML representation of CDISC USDM v4.
+This repository publishes a browsable documentation site for a derivative LinkML representation of CDISC USDM v4, including model documentation, example YAML instances, and SDTM trial domain mapping pages.
 
-It includes:
-
-- generated class, slot, type, and schema docs
-- example YAML instances
-- SDTM trial domain mapping pages
-- the source files and scripts used to rebuild the site
-
-Documentation site:
-
-- https://ankonyeni.github.io/usdm-v4-docs/
+Documentation site: https://ankonyeni.github.io/usdm-v4-docs/
 
 This is not an official CDISC repository.
-
-## Key Paths
-
-- `upstream/`: pinned upstream source inputs
-- `schemas/usdm_v4.linkml.yaml`: derived LinkML schema
-- `mappings/usdm_v4.mapping.yaml`: importer mapping rules
-- `mappings/sdtm_mapping.xlsx`: SDTM trial domain mapping workbook
-- `examples/`: example instances used in the docs
-- `scripts/`: schema and docs build scripts
-- `docs/`: generated documentation source for MkDocs
-
-## Rebuild Docs
-
-Run:
-
-```bash
-python scripts/build_docs.py
-```
 
 ## License and Attribution
 
