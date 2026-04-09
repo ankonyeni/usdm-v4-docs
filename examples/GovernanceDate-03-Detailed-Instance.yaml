@@ -1,0 +1,31 @@
+id: GOV-DATE-3
+name: First Subject Enrolled Date
+label: First Subject Enrolled
+description: The date the first subject was enrolled in the study.
+type:
+  id: GOV-DATE-TYPE-3
+  code: C139171
+  codeSystem: ncit
+  codeSystemVersion: 24.04e
+  decode: Date of First Enrollment into Study
+dateValue: '2024-03-01'
+geographicScopes:
+  - id: GEO-3
+    type:
+      id: GEO-TYPE-3
+      code: C80403
+      codeSystem: ncit
+      codeSystemVersion: 24.04e
+      decode: Study Site
+    code:
+      id: GEO-CODE-2
+      standardCode:
+        id: CODE-GEO-2
+        code: C16696
+        codeSystem: ncit
+        codeSystemVersion: 24.04e
+        decode: Hospital
+extensionAttributes:
+  - id: EXT-GOV-DATE-1
+    url: https://example.com/extensions/enrollment-target
+    valueInteger: 100

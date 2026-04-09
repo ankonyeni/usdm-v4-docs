@@ -1,0 +1,10 @@
+id: CA-3
+condition: Subject is randomized to treatment arm A
+conditionTargetId: SAI-3
+extensionAttributes:
+  - id: ExtAttr-Val-001
+    url: http://cdisc.org/usdm/extensions/validation-status
+    valueString: Validated
+  - id: ExtAttr-Src-001
+    url: http://cdisc.org/usdm/extensions/source-system
+    valueString: IRT-System-Alpha

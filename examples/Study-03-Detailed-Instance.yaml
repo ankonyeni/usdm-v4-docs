@@ -1,0 +1,1086 @@
+id: Study_Synthesized_001
+name: Synthesized Study
+label: A complete synthesized study
+description: This is a synthesized study containing all related examples.
+versions:
+  - id: StudyVersion_Synthesized_001
+    versionIdentifier: '1.0'
+    rationale: Synthesized for demonstration purposes
+    titles:
+      - id: StudyTitle_Official_001
+        type:
+          id: Code_TitleType_Official
+          code: C207616
+          codeSystem: ncit
+          codeSystemVersion: 24.04e
+          decode: Official Study Title
+        text: 'A Phase 3, Randomized, Double-Blind, Placebo-Controlled, Multicenter  Study
+          to Evaluate the Efficacy, Safety, and Tolerability of Apremilast  Administered
+          Intravenously in Pediatric Patients Aged 6 to 17 Years  with Moderate-to-Severe
+          Chronic Plaque Psoriasis who are Candidates  for Systemic Therapy or Phototherapy.
+
+          '
+        extensionAttributes:
+          - id: ext-study-title-audience
+            url: https://example.org/usdm/extensions/title-audience
+            valueString: Regulatory submission
+    studyIdentifiers:
+      - id: StudyIdentifier_3
+        text: EU12345
+        scopeId: Organization_3
+        extensionAttributes:
+          - id: ext-study-identifier-kind
+            url: https://example.org/usdm/extensions/identifier-kind
+            valueString: Regional registry identifier
+    studyDesigns:
+      - id: ISD-3
+        name: Phase 3 Study of New Drug X in Pediatric Cystic Fibrosis
+        label: Pediatric CF Phase 3
+        description: A randomized, double-blind, placebo-controlled, parallel-group
+          study.
+        rationale: To evaluate the long-term safety and efficacy of New Drug X in
+          improving lung function in pediatric patients.
+        therapeuticAreas:
+          - id: TA-1
+            code: C3489
+            codeSystem: ncit
+            codeSystemVersion: 24.04e
+            decode: Cystic Fibrosis
+        studyType:
+          id: ST-1
+          code: C98388
+          codeSystem: ncit
+          codeSystemVersion: 24.04e
+          decode: Interventional Study
+        characteristics:
+          - id: CHAR-1
+            code: C82639
+            codeSystem: ncit
+            codeSystemVersion: 24.04e
+            decode: Parallel Study
+          - id: CHAR-1
+            code: C49068
+            codeSystem: ncit
+            codeSystemVersion: 24.04e
+            decode: Blinded
+        studyPhase:
+          id: SP-1
+          standardCode:
+            id: CODE-SP-1
+            code: C15602
+            codeSystem: ncit
+            codeSystemVersion: 24.04e
+            decode: Phase III Trial
+        notes:
+          - id: NOTE-ISD-1
+            text: Global multicenter study including specialized pediatric respiratory
+              centers.
+        activities:
+          - id: ACT-1
+            name: Informed Consent
+        eligibilityCriteria:
+          - id: EC-3
+            name: Inclusion Criterion 2
+            label: Age Range
+            description: Pediatric subjects aged 6 to 17 years at the time of screening.
+            identifier: IC-02
+            category:
+              id: CAT-CODE-1
+              code: C25532
+              codeSystem: ncit
+              codeSystemVersion: 24.04e
+              decode: Inclusion Criteria
+            criterionItemId: ECI-3
+        encounters:
+          - id: ENC-1
+            name: Screening Visit
+            type:
+              id: ENC-TYPE-1
+              code: C191214
+              codeSystem: ncit
+              codeSystemVersion: 24.04e
+              decode: Study Visit
+        estimands:
+          - id: EST-1
+            name: Primary Estimand
+            populationSummary: Change from baseline in ppFEV1 at Week 24.
+            analysisPopulationId: AP-1
+            variableOfInterestId: EP-1
+            intercurrentEvents:
+              - id: IE-1
+                name: Discontinuation of study drug
+                text: Discontinuation due to adverse events.
+                strategy: Treatment policy strategy.
+            interventionIds:
+              - SI-1
+        indications:
+          - id: IND-3
+            name: Cystic Fibrosis
+            label: CF
+            description: A progressive, genetic disease causing persistent lung infections.
+            isRareDisease: true
+        epochs:
+          - id: SE-SCR
+            name: Screening
+            label: Screening Phase
+            type:
+              id: SE-TYPE-1
+              code: C202487
+              codeSystem: ncit
+              codeSystemVersion: 24.04e
+              decode: Screening Epoch
+          - id: SE-TRT
+            name: Treatment
+            label: Treatment Phase
+            type:
+              id: SE-TYPE-2
+              code: C101526
+              codeSystem: ncit
+              codeSystemVersion: 24.04e
+              decode: Treatment Epoch
+          - id: SE-FOL
+            name: Follow-up
+            label: Follow-up Phase
+            type:
+              id: SE-TYPE-3
+              code: C202578
+              codeSystem: ncit
+              codeSystemVersion: 24.04e
+              decode: Follow-Up Epoch
+        arms:
+          - id: SA-ACTIVE
+            name: Active Arm
+            label: New Drug X
+            description: Subjects receiving New Drug X 150mg BID.
+            type:
+              id: SA-TYPE-A
+              code: C174266
+              codeSystem: ncit
+              codeSystemVersion: 24.04e
+              decode: Investigational Arm
+            dataOriginType:
+              id: code-orig-1
+              code: C49652
+              codeSystem: ncit
+              codeSystemVersion: 24.04e
+              decode: Collected
+            dataOriginDescription: Data origin collected from subjects.
+          - id: SA-PLACEBO
+            name: Placebo Arm
+            label: Placebo
+            description: Subjects receiving matching placebo BID.
+            type:
+              id: SA-TYPE-P
+              code: C174268
+              codeSystem: ncit
+              codeSystemVersion: 24.04e
+              decode: Placebo Control Arm
+            dataOriginType:
+              id: code-orig-1
+              code: C49652
+              codeSystem: ncit
+              codeSystemVersion: 24.04e
+              decode: Collected
+            dataOriginDescription: Data origin collected from subjects.
+        studyCells:
+          - id: SCELL-ACT-P1
+            armId: SA-ACTIVE
+            epochId: SE-TRT
+            elementIds:
+              - SELM-DRUGX
+          - id: SCELL-PLA-P1
+            armId: SA-PLACEBO
+            epochId: SE-TRT
+            elementIds:
+              - SELM-PBO
+          - id: SCELL-ALL-FOL
+            armId: SA-ACTIVE
+            epochId: SE-FOL
+            elementIds:
+              - SELM-FOLLOWUP
+        elements:
+          - id: SELM-DRUGX
+            name: Active Treatment Element
+            description: Administration of active study intervention.
+          - id: SELM-PBO
+            name: Placebo Element
+            description: Administration of placebo intervention.
+          - id: SELM-FOLLOWUP
+            name: Follow-up Period
+            label: Follow-up
+            description: Observation period after the last dose.
+        population:
+          id: SDP-3
+          name: Pediatric CF Population
+          label: Pediatric CF
+          description: Subjects with confirmed CF diagnosis and ppFEV1 between 40-90%.
+          includesHealthySubjects: false
+        model:
+          id: ISD-MODEL-3
+          code: C82639
+          codeSystem: ncit
+          codeSystemVersion: 24.04e
+          decode: Parallel Study
+        subTypes:
+          - id: SUBT-1
+            code: C49666
+            codeSystem: ncit
+            codeSystemVersion: 24.04e
+            decode: Efficacy Study
+          - id: SUBT-1
+            code: C49667
+            codeSystem: ncit
+            codeSystemVersion: 24.04e
+            decode: Safety Study
+        intentTypes:
+          - id: INT-1
+            code: C49656
+            codeSystem: ncit
+            codeSystemVersion: 24.04e
+            decode: Treatment Study
+        analysisPopulations:
+          - id: AP-1
+            name: Intention-to-Treat Population
+            text: All randomized subjects who received at least one dose of study
+              drug.
+        extensionAttributes:
+          - id: EXT-ISD-1
+            url: https://example.com/extensions/isd-sponsor
+            valueString: Global Pharma Corp
+    conditions:
+      - id: Condition-3
+        name: Severe Adverse Event Condition
+        label: SAE
+        description: A severe adverse event has occurred.
+        text: Onset of symptoms is sudden and severe.
+        notes:
+          - id: Comment-3
+            text: Refer to protocol section 5.2 for SAE reporting requirements.
+        contextIds:
+          - Activity_Min_001
+        appliesToIds:
+          - Activity_Min_001
+          - BC-001
+        extensionAttributes:
+          - id: ext-cond-01
+            url: https://example.org/usdm/extension/condition-status
+            valueString: Active
+    bcSurrogates:
+      - id: BCS-003
+        name: Body Mass Index
+        label: Body Mass Index
+        description: A measure of body fat based on height and weight.
+        reference: https://www.cdc.gov/healthyweight/assessing/bmi/index.html
+        notes:
+          - id: CommentAnnot_BMI_001
+            text: BMI is a widely used measure of body fat.
+    bcCategories:
+      - id: BCC-003
+        name: Subject Characteristics
+        label: Subject Characteristics
+        description: A category for biomedical concepts related to subject characteristics.
+        code:
+          id: alias-code-sc-001
+          standardCode:
+            id: code-sc-001
+            code: C19332
+            codeSystem: ncit
+            codeSystemVersion: 24.04e
+            decode: Personal Attribute
+        notes:
+          - id: CommentAnnot_SC_001
+            text: This category includes demographics and baseline characteristics.
+        memberIds:
+          - BC-001
+          - BC-002
+        childIds:
+          - BCC-001
+          - BCC-002
+    biomedicalConcepts:
+      - id: BC_Detailed_001
+        name: Prespecified Adverse Event
+        label: Solicited AE
+        synonyms:
+          - Adverse Event
+          - Solicited Adverse Event
+        reference: https://evsexplore.semantics.cancer.gov/evsexplore/search?terminology=ncit&term=C179175
+        code:
+          id: AliasCode_BC_1
+          standardCode:
+            id: Code_BC_1
+            code: C179175
+            codeSystem: ncit
+            codeSystemVersion: 24.04e
+            decode: Solicited Adverse Event
+        notes:
+          - id: Comment_BC_1
+            text: This concept captures adverse events that were specifically solicited.
+            codes:
+              - id: Code_Comment_1
+                code: C42614
+                codeSystem: ncit
+                codeSystemVersion: 24.04e
+                decode: Comment
+        properties:
+          - id: BCP_1
+            name: AETERM
+            label: Reported Term
+            isRequired: true
+            isEnabled: true
+            datatype: text
+            code:
+              id: AliasCode_BCP_1
+              standardCode:
+                id: Code_BCP_1
+                code: C78541
+                codeSystem: ncit
+                codeSystemVersion: 24.04e
+                decode: Adverse Event Verbatim Description
+          - id: BCP_2
+            name: AESER
+            label: Serious Event
+            isRequired: true
+            isEnabled: true
+            datatype: text
+            code:
+              id: AliasCode_BCP_2
+              standardCode:
+                id: Code_BCP_2
+                code: C53252
+                codeSystem: ncit
+                codeSystemVersion: 24.04e
+                decode: Seriousness of Adverse Event
+            responseCodes:
+              - id: RC_1
+                name: No Response
+                label: 'False'
+                isEnabled: true
+                code:
+                  id: Code_RC_1
+                  code: C49487
+                  codeSystem: ncit
+                  codeSystemVersion: 24.04e
+                  decode: 'False'
+              - id: RC_2
+                name: Yes Response
+                label: 'True'
+                isEnabled: true
+                code:
+                  id: Code_RC_2
+                  code: C49488
+                  codeSystem: ncit
+                  codeSystemVersion: 24.04e
+                  decode: 'True'
+    productOrganizationRoles:
+      - id: por-det-003
+        name: Regional Distribution Role
+        label: Distributor Role
+        description: Captures the organization responsible for product distribution
+          and logistics support for both a medicinal product and a connected device.
+        code:
+          id: code-por-distributor-03
+          code: C48289
+          codeSystem: ncit
+          codeSystemVersion: 24.04e
+          decode: Distributor
+        appliesToIds:
+          - AdminProd_Det_77
+          - dev-det-003
+        organizationId: org-det-003
+        extensionAttributes:
+          - id: ext-por-service-region
+            url: https://example.org/usdm/extensions/service-region
+            valueString: Southern Africa and global depots
+    medicalDevices:
+      - id: dev-det-003
+        name: Continuous Glucose Monitor System
+        label: CGM-v5
+        description: A wearable device for real-time monitoring of interstitial glucose
+          levels.
+        hardwareVersion: Gen 5 Sensor Pad
+        softwareVersion: Mobile App v2.1.0
+        sourcing:
+          id: code-source-02
+          code: C215660
+          codeSystem: ncit
+          codeSystemVersion: 24.04e
+          decode: Locally Sourced
+        identifiers:
+          - id: dev-id-001
+            text: UDI-123456789
+            scopeId: org-fda-01
+            type:
+              id: code-udi-01
+              code: C155868
+              codeSystem: ncit
+              codeSystemVersion: 24.04e
+              decode: Device Unique Identifier
+        extensionAttributes:
+          - id: ext-battery-01
+            url: https://example.org/usdm/extension/battery-life-hours
+            valueInteger: 24
+    administrableProducts:
+      - id: AdminProd_Det_77
+        name: Pembrolizumab Solution for Infusion
+        label: Keytruda 100 mg/4 mL
+        description: A humanized monoclonal antibody that blocks the interaction between
+          PD-1 and its ligands, PD-L1 and PD-L2.
+        administrableDoseForm:
+          id: AliasCode_Infusion
+          standardCode:
+            id: Code_Infusion
+            code: C42945
+            codeSystem: ncit
+            codeSystemVersion: 24.04e
+            decode: Injectable Solution
+        sourcing:
+          id: Code_Local
+          code: C215660
+          codeSystem: ncit
+          codeSystemVersion: 24.04e
+          decode: Locally Sourced
+        productDesignation:
+          id: Code_Reference
+          code: C156473
+          codeSystem: ncit
+          codeSystemVersion: 24.04e
+          decode: Auxiliary Medicinal Product
+        properties:
+          - id: AdminProductProp_PH_01
+            name: PH
+            type:
+              id: Code_ChemicalProp
+              code: C17771
+              codeSystem: ncit
+              codeSystemVersion: 24.04e
+              decode: Chemical Property
+            text: '5.5'
+            quantity:
+              id: Quant_PH_01
+              value: 5.5
+          - id: AdminProductProp_Osmolality_01
+            name: Osmolality
+            type:
+              id: Code_PhysicalProp
+              code: C158424
+              codeSystem: ncit
+              codeSystemVersion: 24.04e
+              decode: Physical Property
+            text: 270 mOsm/kg
+            quantity:
+              id: Quant_Osm_01
+              value: 270
+              unit:
+                id: Alias_mOsm_kg
+                standardCode:
+                  id: Code_mOsm_kg
+                  code: C67427
+                  codeSystem: ncit
+                  codeSystemVersion: 24.04e
+                  decode: Milliosmole per Kilogram
+        notes:
+          - id: Comment_Storage_01
+            text: Store refrigerated at 2°C to 8°C (36°F to 46°F) in original carton
+              to protect from light.
+        identifiers:
+          - id: AdminProdID_UNII_02
+            text: DPT0O3T46P
+            scopeId: Org_FDA
+        ingredients:
+          - id: Ingredient_Pembrolizumab
+            role:
+              id: Code_Active
+              code: C82533
+              codeSystem: ncit
+              codeSystemVersion: 24.04e
+              decode: Active Ingredient
+            substance:
+              id: Substance_Pembrolizumab
+              name: Pembrolizumab
+              strengths:
+                - id: Strength_25mg_mL
+                  name: 25 mg/mL
+                  numerator:
+                    id: Quant_Strength_25mg_mL
+                    value: 25
+                    unit:
+                      id: Alias_mg
+                      standardCode:
+                        id: Code_mg
+                        code: C28253
+                        codeSystem: ncit
+                        codeSystemVersion: 24.04e
+                        decode: Milligram
+                  denominator:
+                    id: Quant_Volume_1mL
+                    value: 1
+                    unit:
+                      id: Alias_mL
+                      standardCode:
+                        id: Code_mL
+                        code: C28254
+                        codeSystem: ncit
+                        codeSystemVersion: 24.04e
+                        decode: Milliliter
+    studyInterventions:
+      - id: SI-DRUG-003
+        name: Biologic-Y Infusion
+        label: Biologic-Y
+        description: A monoclonal antibody administered via intravenous infusion.
+        role:
+          id: ROLE-CODE-03
+          code: C174265
+          decode: Investigational Product
+          codeSystem: ncit
+          codeSystemVersion: 24.04e
+        type:
+          id: TYPE-CODE-03
+          code: C1909
+          decode: Pharmacologic Substance
+          codeSystem: ncit
+          codeSystemVersion: 24.04e
+        minimumResponseDuration:
+          id: DUR-001
+          value: 12
+          unit:
+            id: UNIT-CODE-01
+            standardCode:
+              id: UNIT-CODE-01
+              code: C29844
+              decode: Week
+              codeSystem: ncit
+              codeSystemVersion: 24.04e
+        administrations:
+          - id: Admin_Det_003
+            name: Intravenous Infusion Administration
+            label: IV Infusion
+            description: A 60-minute intravenous infusion of the investigational medicinal
+              product administered at a constant rate.
+            administrableProductId: AdminProd_Det_77
+            medicalDeviceId: Device_Infusion_Pump_01
+            route:
+              id: AliasCode_IV
+              standardCode:
+                id: Code_IV
+                code: C38276
+                codeSystem: ncit
+                codeSystemVersion: 24.04e
+                decode: Intravenous
+            dose:
+              id: Dose_100mg
+              value: 100
+              unit:
+                id: Alias_mg
+                standardCode:
+                  id: Code_mg
+                  code: C28253
+                  codeSystem: ncit
+                  codeSystemVersion: 24.04e
+                  decode: Milligram
+            frequency:
+              id: AliasCode_Q3W
+              standardCode:
+                id: Code_Q3W
+                code: C64535
+                codeSystem: ncit
+                codeSystemVersion: 24.04e
+                decode: Every Three Weeks
+            duration:
+              id: Dur_60min
+              text: 60 minutes
+              durationWillVary: false
+              quantity:
+                id: Quant_Dur_60min
+                value: 60
+                unit:
+                  id: Alias_min
+                  standardCode:
+                    id: Code_min
+                    code: C48154
+                    codeSystem: ncit
+                    codeSystemVersion: 24.04e
+                    decode: Minute
+            notes:
+              - id: Comment_Admin_002
+                text: Infusion site must be monitored for signs of extravasation every
+                  15 minutes.
+              - id: Comment_Admin_003
+                text: Use a dedicated infusion line with an in-line filter.
+        notes:
+          - id: NOTE-SI-003
+            text: Ensure the product is refrigerated until 30 minutes prior to administration.
+        extensionAttributes:
+          - id: EXT-SI-01
+            url: https://example.org/usdm/extensions/is-high-alert-med
+            valueBoolean: true
+    organizations:
+      - id: org-det-003
+        name: University Health Network
+        label: Coordinating Center
+        identifier: UHN-ZAF-001
+        identifierScheme: South African Health Products Regulatory Authority
+        type:
+          id: code-org-type-03
+          code: C16666
+          codeSystem: ncit
+          codeSystemVersion: 24.04e
+          decode: Health Care Provider
+        legalAddress:
+          id: addr-uhn-01
+          lines:
+            - 789 Medical Heights
+            - Building B
+          city: Bloemfontein
+          state: Free State
+          postalCode: '9301'
+          country:
+            id: code-country-za
+            code: ZAF
+            codeSystem: ncit
+            codeSystemVersion: 24.04e
+            decode: South Africa
+        managedSites:
+          - id: site-uhn-onc-01
+            name: UHN Oncology Department
+            label: Site 01
+            country:
+              id: code-country-za
+              code: ZAF
+              codeSystem: ncit
+              codeSystemVersion: 24.04e
+              decode: South Africa
+        extensionAttributes:
+          - id: ext-org-contact
+            url: https://example.org/usdm/extension/primary-contact-email
+            valueString: admin@uhn.ac.za
+    roles:
+      - id: role-det-cra-001
+        name: Clinical Research Associate
+        label: CRA
+        description: Responsible for monitoring the clinical trial at the site level
+          to ensure compliance with the protocol and regulatory requirements.
+        code:
+          id: code-role-cra-01
+          code: C25465
+          codeSystem: ncit
+          codeSystemVersion: 24.04e
+          decode: Clinical Research Associate
+        assignedPersons:
+          - id: person-cra-01
+            name: John Smith
+            jobTitle: Senior CRA
+            personName:
+              id: name-cra-01
+              familyName: Smith
+              givenNames:
+                - John
+        masking:
+          id: mask-cra-01
+          text: CRA is unblinded to perform drug accountability and site monitoring.
+          isMasked: false
+        organizationIds:
+          - org-contract-research-org-01
+        appliesToIds:
+          - design-interventional-phase3
+        notes:
+          - id: note-role-cra-01
+            text: This role has read-write access to the Electronic Data Capture (EDC)
+              system for monitoring purposes.
+    narrativeContentItems:
+      - id: NCI-ST-ANALYSIS-004
+        name: Primary Endpoint Statistical Method
+        text: 'The primary analysis will be performed on the  <usdm:ref klass=AnalysisPopulation
+          id=AP-1 attribute=name/>  set. The <usdm:ref klass=Endpoint id=EP-001 attribute=label/>  will
+          be analyzed using a Mixed Model for Repeated Measures (MMRM).  Missing data
+          for the <usdm:ref klass=Variable id=VAR-FEV1 attribute=name/>  will be handled
+          according to the strategy defined in the  <usdm:ref klass=Estimand id=EST-1
+          attribute=name/>.
+
+          '
+        extensionAttributes:
+          - id: EXT-NCI-ST-01
+            url: https://example.org/usdm/extensions/statistical-software
+            valueString: SAS Version 9.4
+          - id: EXT-NCI-ST-02
+            url: https://example.org/usdm/extensions/is-primary-analysis
+            valueBoolean: true
+    eligibilityCriterionItems:
+      - id: ECI-3
+        name: Washout Period
+        label: Washout Period
+        description: Subject must have completed a washout period for prohibited medications.
+        text: A washout period of at least 14 days is required.
+        notes:
+          - id: Comment-4
+            text: Refer to appendix for a list of prohibited medications.
+        extensionAttributes:
+          - id: ext-ec-01
+            url: https://example.org/usdm/extension/criterion-version
+            valueString: v2.0
+    documentVersionIds:
+      - StudyDefinitionDocumentVersion_1
+    amendments:
+      - id: StudyAmendment_1
+        name: AMEND_1
+        label: Amendment 1
+        description: The first amendment
+        number: '1'
+        summary: The main reason for preparation of this amendment was to update procedures
+          outlined in the Schedule of Activities, remove contradictory text on the
+          reporting of serious adverse events, and add details of an interim analysis.
+          Additional, minor changes are included in the table below.
+        geographicScopes:
+          - id: GeographicScope_11
+            type:
+              id: Code_176
+              code: C68846
+              codeSystem: ncit
+              codeSystemVersion: 24.04e
+              decode: Global
+        dateValues:
+          - id: GovernanceDate_6
+            name: AMEND_DATE_A1
+            label: Protocol Approval
+            description: Amendment approval date
+            type:
+              id: Code_28
+              code: C132352
+              codeSystem: ncit
+              codeSystemVersion: 24.04e
+              decode: Sponsor Approval Date
+            dateValue: '2020-08-18'
+            geographicScopes:
+              - id: GeographicScope_6
+                type:
+                  id: Code_29
+                  code: C68846
+                  codeSystem: ncit
+                  codeSystemVersion: 24.04e
+                  decode: Global
+        impacts:
+          - id: StudyAmendmentImpact_1
+            text: Amendment 1
+            isSubstantial: true
+            type:
+              id: Code_191
+              code: C99912x4
+              codeSystem: ncit
+              codeSystemVersion: 24.04e
+              decode: Study Data Robustness
+            notes:
+              - id: note-amendment-impact-01
+                text: The impact assessment was reviewed by the protocol governance
+                  team.
+        enrollments:
+          - id: SubjectEnrollment_1
+            name: Global enrollment target
+            quantity:
+              value: 0.0
+              id: Quantity_1
+            forGeographicScope:
+              id: GeographicScope_10
+              type:
+                id: Code_175
+                code: C68846
+                codeSystem: ncit
+                codeSystemVersion: 24.04e
+                decode: Global
+            description: Enrollment target captured for a specific geographic allocation
+              scenario.
+        secondaryReasons:
+          - id: StudyAmendmentReason_2
+            code:
+              id: Code_174
+              code: C99904x12
+              codeSystem: ncit
+              codeSystemVersion: 24.04e
+              decode: Inconsistency And/Or Error In The Protocol
+        changes:
+          - id: StudyChange_1
+            name: AMEND_CHG_1
+            rationale: Data collected for analysis of patient population and study
+              intervention compliance, and to compare endpoints with other ALXN1840
+              studies.
+            summary: Procedures updated include Wilson disease history and treatment;
+              study intervention compliance during outpatient period captured with
+              study dosing diary; light exercise.
+            changedSections:
+              - id: DocumentContentReference_1
+                sectionNumber: '1.3'
+                sectionTitle: Schedule of Activities
+                appliesToId: StudyDefinitionDocument_1
+              - id: DocumentContentReference_2
+                sectionNumber: '4.1'
+                sectionTitle: Overall Design
+                appliesToId: StudyDefinitionDocument_1
+              - id: DocumentContentReference_3
+                sectionNumber: '6.4'
+                sectionTitle: Study Intervention Compliance
+                appliesToId: StudyDefinitionDocument_1
+            extensionAttributes:
+              - id: ext-study-change-reviewer
+                url: https://example.org/usdm/extensions/reviewer
+                valueString: Protocol Change Control Board
+          - id: StudyChange_2
+            name: AMEND_CHG_2
+            rationale: To reflect that development of ALXN1840 is for Wilson disease.
+            summary: Removal of text relating to primary biliary cholangitis.
+            changedSections:
+              - id: DocumentContentReference_4
+                sectionNumber: '2'
+                sectionTitle: Introduction
+                appliesToId: StudyDefinitionDocument_1
+              - id: DocumentContentReference_5
+                sectionNumber: '2.2'
+                sectionTitle: Background
+                appliesToId: StudyDefinitionDocument_1
+            extensionAttributes:
+              - id: ext-study-change-reviewer
+                url: https://example.org/usdm/extensions/reviewer
+                valueString: Protocol Change Control Board
+          - id: StudyChange_3
+            name: AMEND_CHG_3
+            rationale: To clarify the option for study intervention access at the
+              end of study.
+            summary: Text updated regarding access to study intervention after the
+              end of study.
+            changedSections:
+              - id: DocumentContentReference_6
+                sectionNumber: '6.7'
+                sectionTitle: Intervention After the End of Study
+                appliesToId: StudyDefinitionDocument_1
+            extensionAttributes:
+              - id: ext-study-change-reviewer
+                url: https://example.org/usdm/extensions/reviewer
+                valueString: Protocol Change Control Board
+          - id: StudyChange_4
+            name: AMEND_CHG_4
+            rationale: To align the definition with the Statistical Analysis Plan.
+            summary: Definition of the Per Protocol set was updated.
+            changedSections:
+              - id: DocumentContentReference_7
+                sectionNumber: '9.3'
+                sectionTitle: Populations for Analysis
+                appliesToId: StudyDefinitionDocument_1
+            extensionAttributes:
+              - id: ext-study-change-reviewer
+                url: https://example.org/usdm/extensions/reviewer
+                valueString: Protocol Change Control Board
+          - id: StudyChange_5
+            name: AMEND_CHG_5
+            rationale: Interim data may support Marketing Authorisation Application(s).
+            summary: Text pertaining to an interim analysis was added.
+            changedSections:
+              - id: DocumentContentReference_8
+                sectionNumber: '9.5'
+                sectionTitle: Interim Analyses
+                appliesToId: StudyDefinitionDocument_1
+            extensionAttributes:
+              - id: ext-study-change-reviewer
+                url: https://example.org/usdm/extensions/reviewer
+                valueString: Protocol Change Control Board
+          - id: StudyChange_6
+            name: AMEND_CHG_6
+            rationale: To align with current Alexion approved language
+            summary: Definition of SUSAR was added.
+            changedSections:
+              - id: DocumentContentReference_9
+                sectionNumber: 10.3.2
+                sectionTitle: Definition of SAE
+                appliesToId: StudyDefinitionDocument_1
+            extensionAttributes:
+              - id: ext-study-change-reviewer
+                url: https://example.org/usdm/extensions/reviewer
+                valueString: Protocol Change Control Board
+          - id: StudyChange_7
+            name: AMEND_CHG_7
+            rationale: SAE reporting will be via a paper safety reporting form.
+            summary: Removal of contradictory text on SAE reporting via an electronic
+              data collection tool.
+            changedSections:
+              - id: DocumentContentReference_10
+                sectionNumber: 10.3.4
+                sectionTitle: Reporting of SAEs
+                appliesToId: StudyDefinitionDocument_1
+            extensionAttributes:
+              - id: ext-study-change-reviewer
+                url: https://example.org/usdm/extensions/reviewer
+                valueString: Protocol Change Control Board
+        primaryReason:
+          id: StudyAmendmentReason_1
+          code:
+            id: Code_173
+            code: C99904x13
+            codeSystem: ncit
+            codeSystemVersion: 24.04e
+            decode: Protocol Design Error
+    referenceIdentifiers:
+      - type:
+          id: Code_71
+          code: C126069
+          codeSystem: ncit
+          codeSystemVersion: 24.04e
+          decode: Pediatric Investigation Plan
+        id: ReferenceIdentifier_1
+        text: PIP1234
+        scopeId: Organization_3
+        extensionAttributes:
+          - id: ext-ref-identifier-source
+            url: https://example.org/usdm/extensions/reference-source
+            valueString: Linked development-plan reference used in the protocol metadata
+              section.
+    dateValues:
+      - id: GOV-DATE-3
+        name: First Subject Enrolled Date
+        label: First Subject Enrolled
+        description: The date the first subject was enrolled in the study.
+        type:
+          id: GOV-DATE-TYPE-3
+          code: C139171
+          codeSystem: ncit
+          codeSystemVersion: 24.04e
+          decode: Date of First Enrollment into Study
+        dateValue: '2024-03-01'
+        geographicScopes:
+          - id: GEO-3
+            type:
+              id: GEO-TYPE-3
+              code: C80403
+              codeSystem: ncit
+              codeSystemVersion: 24.04e
+              decode: Study Site
+            code:
+              id: GEO-CODE-2
+              standardCode:
+                id: CODE-GEO-2
+                code: C16696
+                codeSystem: ncit
+                codeSystemVersion: 24.04e
+                decode: Hospital
+        extensionAttributes:
+          - id: EXT-GOV-DATE-1
+            url: https://example.com/extensions/enrollment-target
+            valueInteger: 100
+    abbreviations:
+      - id: Abbr_003
+        abbreviatedText: MedDRA
+        expandedText: Medical Dictionary for Regulatory Activities
+        notes:
+          - id: Comment_002
+            text: A clinically-validated international medical terminology used by
+              regulatory authorities and the regulated biopharmaceutical industry.
+          - id: Comment_003
+            text: Used throughout the entire regulatory process, from pre-marketing
+              to post-marketing.
+    notes:
+      - id: CommentAnnot_Deviation_001
+        text: Fasting state was not maintained for the required 8 hours prior to the
+          glucose check.
+        codes:
+          - id: Code_Protocol_Deviation
+            code: C50996
+            codeSystem: ncit
+            codeSystemVersion: 24.04e
+            decode: Protocol Deviation
+    businessTherapeuticAreas:
+      - id: Code_LOINC_BP_003
+        code: 35094-2
+        codeSystem: LOINC
+        codeSystemVersion: '2.82'
+        decode: Blood pressure panel
+    dictionaries:
+      - id: SyntaxTemplateDictionary_3
+        name: ACTIVITY_Dict
+        label: Activity Dictionary
+        description: Dictionary supporting reusable activity labels and parameterized
+          narrative fragments across study design content.
+        parameterMaps:
+          - id: ParameterMap_1
+            tag: min_age
+            reference: <usdm:ref klass="StudyDesignPopulation" id="StudyDesignPopulation_1"
+              attribute="plannedAge"></usdm:ref>
+          - id: ParameterMap_2
+            tag: max_age
+            reference: <usdm:ref klass="StudyDesignPopulation" id="StudyDesignPopulation_1"
+              attribute="plannedAge"></usdm:ref>
+          - id: ParameterMap_4
+            tag: Activity1
+            reference: <usdm:ref klass="Activity" id="Activity_6" attribute="label"></usdm:ref>
+        extensionAttributes:
+          - id: ext-template-dictionary-purpose
+            url: https://example.org/usdm/extensions/template-purpose
+            valueString: Supports parameterized narrative generation for eligibility
+              and objective text.
+documentedBy:
+  - id: StudyDefinitionDocument_1
+    name: Protocol_Document_SCOPE1
+    type:
+      id: code-study-protocol-document
+      code: C93381
+      codeSystem: ncit
+      codeSystemVersion: 24.04e
+      decode: Study Protocol Document
+    templateName: SPONSOR
+    language:
+      id: Code_219
+      code: C82847
+      codeSystem: ncit
+      codeSystemVersion: 24.04e
+      decode: English
+    versions:
+      - id: StudyDefinitionDocumentVersion_1
+        status:
+          id: Code_19
+          code: C85255
+          codeSystem: ncit
+          codeSystemVersion: 24.04e
+          decode: Draft
+        version: '1'
+        dateValues:
+          - id: GovernanceDate_2
+            name: Protocol Approval
+            label: Protocol Approval
+            description: Protocol document approval date
+            type:
+              id: Code_29
+              code: C207598
+              codeSystem: ncit
+              codeSystemVersion: 24.04e
+              decode: Protocol Effective Date
+            dateValue: '2023-01-01'
+            geographicScopes:
+              - id: GeographicScope_5
+                type:
+                  id: Code_30
+                  code: C68846
+                  codeSystem: ncit
+                  codeSystemVersion: 24.04e
+                  decode: Global
+        contents:
+          - id: NarrativeContent_1
+            name: SECTION 0
+            sectionNumber: '0'
+            sectionTitle: TITLE PAGE
+            displaySectionTitle: false
+            displaySectionNumber: false
+            contentItemId: NarrativeContentItem_1
+            nextId: NarrativeContent_2
+          - id: NarrativeContent_2
+            name: SECTION 1
+            sectionNumber: '1'
+            sectionTitle: PROTOCOL SUMMARY
+            displaySectionTitle: true
+            displaySectionNumber: true
+            contentItemId: NarrativeContentItem_6
+            previousId: NarrativeContent_1
+            nextId: NarrativeContent_3
+            childIds:
+              - NarrativeContent_3
+              - NarrativeContent_4
+              - NarrativeContent_5
+    description: Protocol document with version history and structured narrative content
+      sections.
+    notes:
+      - id: note-protocol-document-01
+        text: This example shows how a protocol document can reference a structured
+          document version.

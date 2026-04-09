@@ -1,0 +1,28 @@
+id: range-003
+isApproximate: false
+minValue:
+  id: quant-low-03
+  value: 36.5
+  unit:
+    id: unit-c-01
+    standardCode:
+      id: code-c-01
+      code: C42559
+      codeSystem: ncit
+      codeSystemVersion: 24.04e
+      decode: Degree Celsius
+maxValue:
+  id: quant-high-03
+  value: 37.5
+  unit:
+    id: unit-c-01
+    standardCode:
+      id: code-c-01
+      code: C42559
+      codeSystem: ncit
+      codeSystemVersion: 24.04e
+      decode: Degree Celsius
+extensionAttributes:
+  - id: ext-range-01
+    url: https://example.org/usdm/extension/range-type
+    valueString: Normal Physiological Range

@@ -1,0 +1,33 @@
+id: STR-3
+name: 10-20mg
+label: 10-20mg
+description: A range of 10 to 20 milligrams
+numerator:
+  id: RANGE-1
+  minValue:
+    id: QUANT-4
+    value: 10
+    unit:
+      id: ALIAS-CODE-MG-3
+      standardCode:
+        id: CODE-MG-3
+        code: C28253
+        codeSystem: ncit
+        codeSystemVersion: 24.04e
+        decode: Milligram
+  maxValue:
+    id: QUANT-5
+    value: 20
+    unit:
+      id: ALIAS-CODE-MG-4
+      standardCode:
+        id: CODE-MG-4
+        code: C28253
+        codeSystem: ncit
+        codeSystemVersion: 24.04e
+        decode: Milligram
+  isApproximate: false
+extensionAttributes:
+  - id: EXT-STR-1
+    url: https://example.com/extensions/strength-basis
+    valueString: per tablet
