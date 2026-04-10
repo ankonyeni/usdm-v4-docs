@@ -8,7 +8,3 @@ notes:
     text: Weight should be measured to the nearest 0.1 kg.
   - id: Comment-2
     text: Ensure the scale is calibrated.
-extensionAttributes:
-  - id: ext-char-01
-    url: https://example.org/usdm/extension/char-source
-    valueString: Investigator measurement

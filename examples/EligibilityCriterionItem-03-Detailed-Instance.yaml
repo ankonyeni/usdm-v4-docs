@@ -6,7 +6,3 @@ text: A washout period of at least 14 days is required.
 notes:
   - id: Comment-4
     text: Refer to appendix for a list of prohibited medications.
-extensionAttributes:
-  - id: ext-ec-01
-    url: https://example.org/usdm/extension/criterion-version
-    valueString: v2.0

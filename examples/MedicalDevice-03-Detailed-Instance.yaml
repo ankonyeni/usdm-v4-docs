@@ -20,7 +20,3 @@ identifiers:
       codeSystem: ncit
       codeSystemVersion: 24.04e
       decode: Device Unique Identifier
-extensionAttributes:
-  - id: ext-battery-01
-    url: https://example.org/usdm/extension/battery-life-hours
-    valueInteger: 24

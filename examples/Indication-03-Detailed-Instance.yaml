@@ -13,7 +13,3 @@ codes:
 notes:
   - id: NOTE-IND-1
     text: This indication is for a pediatric population.
-extensionAttributes:
-  - id: EXT-IND-1
-    url: https://example.com/extensions/indication-prevalence
-    valueString: 1 in 3,000

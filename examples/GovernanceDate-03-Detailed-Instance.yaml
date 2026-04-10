@@ -25,7 +25,3 @@ geographicScopes:
         codeSystem: ncit
         codeSystemVersion: 24.04e
         decode: Hospital
-extensionAttributes:
-  - id: EXT-GOV-DATE-1
-    url: https://example.com/extensions/enrollment-target
-    valueInteger: 100

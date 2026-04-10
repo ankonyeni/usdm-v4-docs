@@ -1,5 +1,1 @@
 id: ScheduleTimelineExit_1
-extensionAttributes:
-  - id: ext-schedule-exit-detailed
-    url: https://example.org/usdm/extensions/exit-condition
-    valueString: Timeline exits when the final scheduled assessment is complete.

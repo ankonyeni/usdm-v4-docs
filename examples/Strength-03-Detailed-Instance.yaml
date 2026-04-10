@@ -27,7 +27,3 @@ numerator:
         codeSystemVersion: 24.04e
         decode: Milligram
   isApproximate: false
-extensionAttributes:
-  - id: EXT-STR-1
-    url: https://example.com/extensions/strength-basis
-    valueString: per tablet

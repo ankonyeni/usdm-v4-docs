@@ -33,7 +33,3 @@ managedSites:
       codeSystem: ncit
       codeSystemVersion: 24.04e
       decode: South Africa
-extensionAttributes:
-  - id: ext-org-contact
-    url: https://example.org/usdm/extension/primary-contact-email
-    valueString: admin@uhn.ac.za

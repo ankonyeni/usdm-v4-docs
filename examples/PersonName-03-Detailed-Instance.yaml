@@ -8,12 +8,3 @@ givenNames:
 familyName: Smith
 suffixes:
   - PhD
-extensionAttributes:
-  - id: ext-familyname-category-01
-    url: https://example.org/usdm/extension/familyname-category
-    valueCode:
-      id: code-maiden-01
-      code: C25381
-      codeSystem: ncit
-      codeSystemVersion: 24.04e
-      decode: Maiden Name

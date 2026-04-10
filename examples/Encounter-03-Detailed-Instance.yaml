@@ -25,7 +25,3 @@ notes:
     text: Patients must remain fasted for at least 8 hours prior to this encounter.
 previousId: ENC-2
 nextId: ENC-4
-extensionAttributes:
-  - id: ext-enc-01
-    url: https://example.org/usdm/extension/visit-duration
-    valueString: 2 hours

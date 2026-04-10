@@ -205,7 +205,3 @@ analysisPopulations:
   - id: AP-1
     name: Intention-to-Treat Population
     text: All randomized subjects who received at least one dose of study drug.
-extensionAttributes:
-  - id: EXT-ISD-1
-    url: https://example.com/extensions/isd-sponsor
-    valueString: Global Pharma Corp

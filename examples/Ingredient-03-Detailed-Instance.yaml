@@ -63,7 +63,3 @@ substance:
               codeSystem: ncit
               codeSystemVersion: 24.04e
               decode: Milligram
-extensionAttributes:
-  - id: EXT-ING-1
-    url: https://example.com/extensions/ingredient-grade
-    valueString: Pharmaceutical Grade

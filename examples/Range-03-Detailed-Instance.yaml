@@ -22,7 +22,3 @@ maxValue:
       codeSystem: ncit
       codeSystemVersion: 24.04e
       decode: Degree Celsius
-extensionAttributes:
-  - id: ext-range-01
-    url: https://example.org/usdm/extension/range-type
-    valueString: Normal Physiological Range

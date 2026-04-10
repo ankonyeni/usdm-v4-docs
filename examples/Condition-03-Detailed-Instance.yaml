@@ -11,7 +11,3 @@ contextIds:
 appliesToIds:
   - Activity_Min_001
   - BC-001
-extensionAttributes:
-  - id: ext-cond-01
-    url: https://example.org/usdm/extension/condition-status
-    valueString: Active
