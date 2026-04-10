@@ -6,7 +6,7 @@ The content reflects repository-specific implementation suggestions and is not o
 
 ## Optional USDM Source Slots
 
-Some SDTM mappings rely on USDM fields such as [`label`](slots/label.md) or [`description`](slots/description.md). These fields can be useful mapping sources, but they are optional in the base model.
+Some SDTM mappings rely on USDM fields such as [`label`](slots/label.md) or [`description`](slots/description.md). These fields can be useful mapping sources, but they are optional in the model.
 
 If a mapping depends on an optional slot and that slot is not populated, the SDTM variable may be missing or require special-case fallback logic. This creates avoidable variability across studies and implementations.
 
@@ -66,9 +66,9 @@ If [`label`](slots/label.md) remains the mapping source, a terminology normaliza
 
 Some SDTM requirements may not be represented cleanly using only the base USDM slots. In these cases, the USDM extension mechanism can be used to capture additional structured information needed for downstream processing.
 
-It may also be helpful to keep in mind that the USDM model is not intended solely for mapping SDTM trial domains. Because USDM supports broader study definition use cases, it may not always be desirable to change the wording, structure, or formatting of core USDM slots only to make a particular SDTM mapping easier. In that kind of situation, the extension mechanism can offer a way to preserve the broader intent of the base USDM content while still carrying implementation-specific values that support SDTM derivation.
+It may also be helpful to keep in mind that USDM is not intended solely for mapping SDTM trial domains. Because USDM supports broader study definition use cases, it may not always be desirable to change the wording, structure, or formatting of core USDM slots only to make a particular SDTM mapping easier. In that kind of situation, the extension mechanism can offer a way to preserve the broader intent of the base USDM content while still carrying implementation-specific values that support SDTM derivation.
 
-From an implementation perspective, it may also help to remember that the extension mechanism is exposed through the API rather than through the core logical model itself. In practice, this means a class can carry an [`extensionAttribute`](slots/extensionAttributes.md) collection made up of [`ExtensionAttribute`](classes/ExtensionAttribute.md) entries. Each entry can be thought of as a small extension container that identifies the extension through its own identifier and URL, and then carries the extension value. Depending on the use case, that value may be represented as a simple datatype, a more complex datatype, or by using one or more [`ExtensionClass`](classes/ExtensionClass.md) instances. For clarity and ease of processing, the pattern is easiest to work with when each [`ExtensionAttribute`](classes/ExtensionAttribute.md) instance expresses a single extension value. The URL also helps make the extension uniquely identifiable, while separate implementation documentation can describe how a given extension is intended to be used.
+From an implementation perspective, it may also help to remember that the extension mechanism is exposed through the API rather than through the core logical model itself. In practice, this means a class can carry an [`extensionAttributes`](slots/extensionAttributes.md) collection made up of [`ExtensionAttribute`](classes/ExtensionAttribute.md) entries. Each entry can be thought of as a small extension container that identifies the extension through its own identifier and URL, and then carries the extension value. Depending on the use case, that value may be represented as a simple datatype, a more complex datatype, or by using one or more [`ExtensionClass`](classes/ExtensionClass.md) instances. For clarity and ease of processing, the pattern is easiest to work with when each [`ExtensionAttribute`](classes/ExtensionAttribute.md) instance expresses a single extension value. The URL also helps make the extension uniquely identifiable, while separate implementation documentation can describe how a given extension is intended to be used.
 
 ### When extensions are useful
 
@@ -101,13 +101,19 @@ relativeToFrom:
 value: P3D
 valueLabel: 3 days
 relativeToScheduledInstanceId: ScheduledActivityInstance_3
-extensionAttribute:
+extensionAttributes:
   - id: ext-study-day
     url: https://example.org/usdm/extensions/study-day
     valueInteger: 7
 ```
 
 This approach makes the intended numeric mapping explicit and reduces reliance on parsing conventions.
+
+## External Proof of Concept
+
+Users who want to see one practical example of SDTM trial design mapping from USDM can look at Anthony Chow's [USDM to TDM Converter](https://github.com/chowsanthony/usdm2tdm). It is an external proof of concept that converts USDM JSON into SDTM trial design datasets using JSONata expressions.
+
+The repository can be useful to review or try out if you want to see how TA, TE, TI, and TV-style mappings can be derived from USDM in code. Its README notes that it was developed with USDM v3 guidance, so it is best viewed as an illustrative example rather than a reference implementation for this site.
 
 ## Possible Implementation Practices
 
@@ -117,4 +123,4 @@ Possible practices that may improve the quality and consistency of SDTM trial de
 - establish documented transformation rules for code shortening, terminology normalization, and text reduction;
 - validate source values before SDTM derivation begins;
 - prefer structured or coded source fields over free-text fields when both are available; and
-- use extensions deliberately when the base model does not provide a suitable mapping source.
+- use extensions deliberately when the model does not provide a suitable mapping source.

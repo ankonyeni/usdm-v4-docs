@@ -407,12 +407,12 @@ function enhanceERDiagramViewers() {
     container.classList.add("mermaid--openable");
     container.tabIndex = 0;
     container.setAttribute("role", "link");
-    container.setAttribute("aria-label", "Open this entity relationship diagram in the full-width viewer");
+    container.setAttribute("aria-label", "Open this entity relationship diagram in the full-screen viewer");
 
     const viewerLink = document.createElement("button");
     viewerLink.type = "button";
     viewerLink.className = "mermaid-viewer-link";
-    viewerLink.textContent = "Open full-width viewer";
+    viewerLink.textContent = "Open full-screen viewer";
 
     viewerLink.addEventListener("click", (event) => {
       event.preventDefault();
